@@ -134,39 +134,39 @@ A list of other resources that you might find helpful:
 - **C++ and UNIX:**<br/>
   - Thomas Anderson's Quick Introduction to C++ may be useful if you know C but are not familiar with all of the C++ subset we use in the programming projects.
   - A more thorough guide to using the version of Gnu C++ installed on our Linux machines is here.
-Quick guide to UNIX development tools (one of the many useful documents available in Nick Parlante's ever-growing CS library)
+Quick guide to <a href="http://cslibrary.stanford.edu/107">UNIX development tools</a> (one of the many useful documents available in Nick Parlante's ever-growing <a href="http://cslibrary.stanford.edu">CS library</a>)
 
 - **Help with the gdb debugger:**<br/>
-  - GNU's online gdb users guide
+  - GNU's online <a href="http://sourceware.org/gdb/current/onlinedocs/gdb/">gdb users guide</a>
   - Printable quick reference: gdbref.ps
-  - A GDB article that Julie Zelenski wrote a few years ago for a programming journal: GDB breakpoint tricks
+  - A GDB article that Julie Zelenski wrote a few years ago for a programming journal: <a target="[object Object]" href="http://web.stanford.edu/class/cs107/gdb_coredump1.pdf">GDB breakpoint tricks</a>
 
 - **References on lex & yacc:**<br/>
 Lex is the original lexical scanner developed by Lesk and Schmidt; Paxson's improved version is flex. Similarly, yacc is Johnson and Sethi's original parser; bison is the GNU-equivalent written by Corbett and Stallman. Both are designed to be upward-compatible with the original while adding extensions and improvements.
   - Original documentation by the authors of the tools themselves. These papers are quite readable and serve as an excellent introduction for familiarizing yourself with the tools.
-    - Lesk and Schmidt on lex
-    - Johnson on yacc
-  - Man pages are available from command line, e.g., man lex. We've also put up browsable versions of the Solaris man pages for lex, flex, yacc, and bison.
+    - <a href="http://dinosaur.compilertools.net/lex/index.html">Lesk and Schmidt on lex</a>
+    - <a href="http://dinosaur.compilertools.net/#yacc">Johnson on yacc</a>
+  - Man pages are available from command line, e.g., man lex. We've also put up browsable versions of the Solaris man pages for <a href="http://www.stanford.edu/class/archive/cs/cs143/cs143.1112/materials/other/manlex.html">lex</a>, <a href="http://www.stanford.edu/class/archive/cs/cs143/cs143.1112/materials/other/manflex.html">flex</a>, <a href="http://www.stanford.edu/class/archive/cs/cs143/cs143.1112/materials/other/manyacc.html">yacc</a>, and <a href="http://www.stanford.edu/class/archive/cs/cs143/cs143.1112/materials/other/manbison.html">bison</a>.
   - GNU's online documentation (full manuals, long, but very complete)
-    - flex
-    - bison
-  - The lex & yacc page from Combo.org.
-  - An article from the Linux Journal singing the praises of lex & yacc.
+    - <a href="http://flex.sourceforge.net/manual/">flex</a>
+    - <a target="[object Object]" href="http://www.gnu.org/software/bison/manual/bison.html">bison</a>
+  - The <a href="http://www.combo.org/lex_yacc_page/">lex &amp; yacc page</a> page from Combo.org.
+  - An <a href="http://www2.linuxjournal.com/lj-issues/issue51/2227.html">article</a> from the Linux Journal singing the praises of lex & yacc.
   
 - **References on JLex and Java_cup:**<br/>
-  - Manual for JLex, Java CUP.
-  - JLex.
-  - Java CUP.
-  - Cool Trees (Start with class TreeNode).
+  - Manual for <a href="http://www.cs.princeton.edu/~appel/modern/java/JLex/current/manual.html">JLex</a>, <a href="http://www2.cs.tum.edu/projects/cup/manual.html">Java CUP</a>.
+  - <a href="http://www.cs.princeton.edu/~appel/modern/java/JLex/">JLex</a>.
+  - <a href="http://www.stanford.edu/class/archive/cs/cs143/cs143.1112/javadoc/java_cup/">Java CUP</a>.
+  - <a href="http://www.stanford.edu/class/archive/cs/cs143/cs143.1112/javadoc/cool_ast/">Cool Trees</a> (Start with class TreeNode).
 
 - **References on MIPS & SPIM:**<br/>
-A PDF version of the SPIM Manual (appendix from Hennessy & Patterson's architecture book)
-The SPIM home page (downloadable versions, more docs).
+A PDF version of the <a href="http://www.stanford.edu/class/archive/cs/cs143/cs143.1112/materials/other/SPIM_Manual.pdf">SPIM Manual</a> (appendix from Hennessy & Patterson's architecture book)
+The <a href="http://www.cs.wisc.edu/~larus/spim.html">SPIM home page</a> (downloadable versions, more docs).
 
 Just for fun:
 
-- A list of funny error messages from the old MPW C compiler.
-- A translator for Latin to Perl (and you thought there was no practical use for what you learned in 143!)
+- A list of <a href="Http://www.netfunny.com/rhf/jokes/91q3/cerrors.html">funny error messages</a> from the old MPW C compiler.
+- A translator for <a href="http://www.csse.monash.edu.au/~damian/papers/HTML/Perligata.html">Latin to Perl</a> (and you thought there was no practical use for what you learned in 143!)
 
 ****
 
