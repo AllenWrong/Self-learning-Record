@@ -7,6 +7,7 @@ Steps:
 
 - Install packages (If you only intend to use the C++ version, you don't need the jdk). For Ubuntu:
 sudo apt-get install flex bison build-essential csh openjdk-6-jdk libxaw7-dev
+
 - Make the /usr/class directory:
 sudo mkdir /usr/class
 - Make the directory owned by you:
