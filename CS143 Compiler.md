@@ -11,11 +11,11 @@ Quick guide to UNIX development tools (one of the many useful documents availabl
   - Printable quick reference: gdbref.ps
   - A GDB article that Julie Zelenski wrote a few years ago for a programming journal: GDB breakpoint tricks
 
-- References on lex & yacc:
+- **References on lex & yacc:**
 Lex is the original lexical scanner developed by Lesk and Schmidt; Paxson's improved version is flex. Similarly, yacc is Johnson and Sethi's original parser; bison is the GNU-equivalent written by Corbett and Stallman. Both are designed to be upward-compatible with the original while adding extensions and improvements.
-Original documentation by the authors of the tools themselves. These papers are quite readable and serve as an excellent introduction for familiarizing yourself with the tools.
-Lesk and Schmidt on lex
-Johnson on yacc
+ - Original documentation by the authors of the tools themselves. These papers are quite readable and serve as an excellent introduction for familiarizing yourself with the tools.
+  - Lesk and Schmidt on lex
+  - Johnson on yacc
 Man pages are available from command line, e.g., man lex. We've also put up browsable versions of the Solaris man pages for lex, flex, yacc, and bison.
 GNU's online documentation (full manuals, long, but very complete)
 flex
