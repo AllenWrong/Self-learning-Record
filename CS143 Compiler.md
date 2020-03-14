@@ -5,8 +5,7 @@ However, there was enough demand that we are providing these instructions for pe
 
 Steps:
 
-- Install packages (If you only intend to use the C++ version, you don't need the jdk). For Ubuntu:
-
+- Install packages (If you only intend to use the C++ version, you don't need the jdk). For Ubuntu:<br/>
 sudo apt-get install flex bison build-essential csh openjdk-6-jdk libxaw7-dev
 
 - Make the /usr/class directory:
