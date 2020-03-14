@@ -1,3 +1,43 @@
+## Other Project Resources
+A list of other resources that you might find helpful:
+
+- **C++ and UNIX:**<br/>
+  - Thomas Anderson's Quick Introduction to C++ may be useful if you know C but are not familiar with all of the C++ subset we use in the programming projects.
+  - A more thorough guide to using the version of Gnu C++ installed on our Linux machines is here.
+Quick guide to UNIX development tools (one of the many useful documents available in Nick Parlante's ever-growing CS library)
+
+- **Help with the gdb debugger:**
+  - GNU's online gdb users guide
+  - Printable quick reference: gdbref.ps
+  - A GDB article that Julie Zelenski wrote a few years ago for a programming journal: GDB breakpoint tricks
+
+- References on lex & yacc:
+Lex is the original lexical scanner developed by Lesk and Schmidt; Paxson's improved version is flex. Similarly, yacc is Johnson and Sethi's original parser; bison is the GNU-equivalent written by Corbett and Stallman. Both are designed to be upward-compatible with the original while adding extensions and improvements.
+Original documentation by the authors of the tools themselves. These papers are quite readable and serve as an excellent introduction for familiarizing yourself with the tools.
+Lesk and Schmidt on lex
+Johnson on yacc
+Man pages are available from command line, e.g., man lex. We've also put up browsable versions of the Solaris man pages for lex, flex, yacc, and bison.
+GNU's online documentation (full manuals, long, but very complete)
+flex
+bison
+The lex & yacc page from Combo.org.
+An article from the Linux Journal singing the praises of lex & yacc.
+References on JLex and Java_cup:
+Manual for JLex, Java CUP.
+JLex.
+Java CUP.
+Cool Trees (Start with class TreeNode).
+References on MIPS & SPIM:
+A PDF version of the SPIM Manual (appendix from Hennessy & Patterson's architecture book)
+The SPIM home page (downloadable versions, more docs).
+
+Just for fun:
+
+- A list of funny error messages from the old MPW C compiler.
+- A translator for Latin to Perl (and you thought there was no practical use for what you learned in 143!)
+
+****
+
 ## Installing Directly on Linux
 **NOTE: We highly recommend using the VirtualBox VM.**
 
@@ -6,27 +46,27 @@ However, there was enough demand that we are providing these instructions for pe
 Steps:
 
 - Install packages (If you only intend to use the C++ version, you don't need the jdk). For Ubuntu:<br/>
-sudo apt-get install flex bison build-essential csh openjdk-6-jdk libxaw7-dev
+`sudo apt-get install flex bison build-essential csh openjdk-6-jdk libxaw7-dev`
 
 - Make the /usr/class directory:<br/>
-sudo mkdir /usr/class
+`sudo mkdir /usr/class`
 
 - Make the directory owned by you:<br/>
-sudo chown $USER /usr/class
+`sudo chown $USER /usr/class`
 
 - Go to /usr/class and download the tarball:<br/>
-cd /usr/class
-wget https://s3-us-west-1.amazonaws.com/prod-edx/Compilers/Misc/student-dist.tar.gz
+`cd /usr/class`
+`wget https://s3-us-west-1.amazonaws.com/prod-edx/Compilers/Misc/student-dist.tar.gz`
 - Untar:<br/>
-tar -xf student-dist.tar.gz
+`tar -xf student-dist.tar.gz`
 
 If you want things exactly like the VM:
 
 - Add a symlink to your home directory:<br/>
-ln -s /usr/class/cs143/cool ~/cool
+`ln -s /usr/class/cs143/cool ~/cool`
 
 - Add the bin directory to your $PATH environment variable. If you are using bash, add to your .profile (or .bash_profile, etc. depending on your configuration; note that in Ubuntu have to log out and back in for this to take effect):<br/>
-PATH=/usr/class/cs143/cool/bin:$PATH
+`PATH=/usr/class/cs143/cool/bin:$PATH`
 
 ****
 
