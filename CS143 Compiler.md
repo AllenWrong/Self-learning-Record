@@ -13,21 +13,23 @@ Quick guide to UNIX development tools (one of the many useful documents availabl
 
 - **References on lex & yacc:**
 Lex is the original lexical scanner developed by Lesk and Schmidt; Paxson's improved version is flex. Similarly, yacc is Johnson and Sethi's original parser; bison is the GNU-equivalent written by Corbett and Stallman. Both are designed to be upward-compatible with the original while adding extensions and improvements.
- - Original documentation by the authors of the tools themselves. These papers are quite readable and serve as an excellent introduction for familiarizing yourself with the tools.
-  - Lesk and Schmidt on lex
-  - Johnson on yacc
-Man pages are available from command line, e.g., man lex. We've also put up browsable versions of the Solaris man pages for lex, flex, yacc, and bison.
-GNU's online documentation (full manuals, long, but very complete)
-flex
-bison
-The lex & yacc page from Combo.org.
-An article from the Linux Journal singing the praises of lex & yacc.
-References on JLex and Java_cup:
-Manual for JLex, Java CUP.
-JLex.
-Java CUP.
-Cool Trees (Start with class TreeNode).
-References on MIPS & SPIM:
+  - Original documentation by the authors of the tools themselves. These papers are quite readable and serve as an excellent introduction for familiarizing yourself with the tools.
+    - Lesk and Schmidt on lex
+    - Johnson on yacc
+  - Man pages are available from command line, e.g., man lex. We've also put up browsable versions of the Solaris man pages for lex, flex, yacc, and bison.
+  - GNU's online documentation (full manuals, long, but very complete)
+    - flex
+    - bison
+  - The lex & yacc page from Combo.org.
+  - An article from the Linux Journal singing the praises of lex & yacc.
+  
+- **References on JLex and Java_cup:**
+  - Manual for JLex, Java CUP.
+  - JLex.
+  - Java CUP.
+  - Cool Trees (Start with class TreeNode).
+
+- **References on MIPS & SPIM:**
 A PDF version of the SPIM Manual (appendix from Hennessy & Patterson's architecture book)
 The SPIM home page (downloadable versions, more docs).
 
