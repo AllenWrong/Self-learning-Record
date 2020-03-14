@@ -8,23 +8,24 @@ Steps:
 - Install packages (If you only intend to use the C++ version, you don't need the jdk). For Ubuntu:<br/>
 sudo apt-get install flex bison build-essential csh openjdk-6-jdk libxaw7-dev
 
-- Make the /usr/class directory:
-
+- Make the /usr/class directory:<br/>
 sudo mkdir /usr/class
-- Make the directory owned by you:
+
+- Make the directory owned by you:<br/>
 sudo chown $USER /usr/class
-- Go to /usr/class and download the tarball:
+
+- Go to /usr/class and download the tarball:<br/>
 cd /usr/class
 wget https://s3-us-west-1.amazonaws.com/prod-edx/Compilers/Misc/student-dist.tar.gz
-- Untar:
+- Untar:<br/>
 tar -xf student-dist.tar.gz
 
 If you want things exactly like the VM:
 
-- Add a symlink to your home directory:
+- Add a symlink to your home directory:<br/>
 ln -s /usr/class/cs143/cool ~/cool
-- Add the bin directory to your $PATH environment variable. If you are using bash, add to your .profile (or .bash_profile, etc. depending on your configuration; note that in Ubuntu have to log out and back in for this to take effect):
 
+- Add the bin directory to your $PATH environment variable. If you are using bash, add to your .profile (or .bash_profile, etc. depending on your configuration; note that in Ubuntu have to log out and back in for this to take effect):<br/>
 PATH=/usr/class/cs143/cool/bin:$PATH
 
 ****
