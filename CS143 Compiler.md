@@ -1,3 +1,102 @@
+## Syllabus
+
+This online class will be available as soon as the course begins, but is organized around a weekly cycle.
+
+If you follow the structure of the course, working through one section each week, you will receive a quiz every week.  It's advisable to complete the quiz within two weeks of beginning a section.  You will have the option to take each quiz multiple times and only your highest score will be used. There will be no quizzes the first week, the week of the midterm, or the week of the final.
+
+The midterm and final will contain problems at a similar level of difficulty to that in the quizzes, but the exams will be longer. There will also be no retries on exams (you can take an exam only once).  
+
+The compiler project consists of four programming assignments. This part of the course is optional; you can take the class without doing the project. In fact, if you start the project and later decide not to turn in all of the project assignments we will simply consider you to be taking the non-project version of the course. Students who complete the project will have that noted on their Statement of Accomplishment at the end of the course.
+
+The first two project assignments are easier than the last two, so you may end up taking more time with the later assignments.  Each part of the project can be written independently of the other parts and for each assignment we will give you the reference implementation's other components to use for testing. Thus, even if one of the parts of your compiler does not work correctly you can still do the next assignment using the reference compiler's components.
+
+The project can be done either in C++ or Java. If you really, really want to, you can in fact write the project in any language you like, but you will have to reimplement some basic functionality that we provide in C++ and Java. You will also need to ensure you adhere to the (undocumented) interfaces between the compiler passes. We don't recommend this option, but people have asked and if you are an experienced programmer who doesn't mind figuring things out on your own it is at least plausible that you could do this and enjoy it.
+
+The weight for the various assignments in the course will be: 20% electronic quizzes, 15% midterm, 25% final, 40% programming assignments.
+
+Finally, this course is self-paced. The self-paced course has exactly the same materials and you will learn the same things. The differences are that there is not necessarily going to be a cohort of other students to interact with; and there is no instructional staff support.
+
+Below is a table with a recommended "schedule" to follow.  There are no deadlines, but we suggest completing a programming assignment no later than two weeks after you start it. 
+
+Key: PA = Programming Assignment
+
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr><th align="left" bgcolor="#333399" valign="top" width="10%"><span style="color: #000000; font-family: Arial;" color="white" face="Arial"><b>Week</b></span></th><th align="left" bgcolor="#333399" valign="top" width="25%"><span style="color: #000000; font-family: Arial;" color="white" face="Arial">Videos</span></th><th align="left" bgcolor="#333399" valign="top" width="15%"><span style="color: #000000; font-family: Arial;" color="white" face="Arial">Quiz / Exam</span></th><th align="left" bgcolor="#333399" valign="top" width="15%"><span style="color: #000000; font-family: Arial;" color="white" face="Arial">PA assigned</span></th><th align="left" bgcolor="#333399" valign="top" width="15%"><span style="color: #000000; font-family: Arial;" color="white" face="Arial">PA due</span></th></tr>
+<tr>
+<td>1</td>
+<td>Course Overview<br>Cool: The Course Project</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lexical Analysis<br>Finite Automata</td>
+<td>Quiz #1</td>
+<td>PA1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Parsing<br>Top-Down Parsing</td>
+<td>Quiz #2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bottom-Up Parsing I<br>Bottom-Up Parsing II</td>
+<td>Quiz #3</td>
+<td>PA2</td>
+<td>PA1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Semantic Analysis and Type Checking</td>
+<td>Midterm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Cool Type Checking<br>Runtime Organization</td>
+<td>Quiz #4</td>
+<td>PA3</td>
+<td>PA2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Code Generation<br>Operational Semantics</td>
+<td>Quiz #5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Local Optimization<br>Global Optimization</td>
+<td>Quiz #6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Register Allocation<br>Garbage Collection</td>
+<td></td>
+<td>PA4</td>
+<td>PA3</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Java</td>
+<td>Final Exam</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+****
+
 ## Other Project Resources
 A list of other resources that you might find helpful:
 
