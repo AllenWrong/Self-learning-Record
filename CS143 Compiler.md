@@ -6,12 +6,12 @@ A list of other resources that you might find helpful:
   - A more thorough guide to using the version of Gnu C++ installed on our Linux machines is here.
 Quick guide to UNIX development tools (one of the many useful documents available in Nick Parlante's ever-growing CS library)
 
-- **Help with the gdb debugger:**
+- **Help with the gdb debugger:**<br/>
   - GNU's online gdb users guide
   - Printable quick reference: gdbref.ps
   - A GDB article that Julie Zelenski wrote a few years ago for a programming journal: GDB breakpoint tricks
 
-- **References on lex & yacc:**
+- **References on lex & yacc:**<br/>
 Lex is the original lexical scanner developed by Lesk and Schmidt; Paxson's improved version is flex. Similarly, yacc is Johnson and Sethi's original parser; bison is the GNU-equivalent written by Corbett and Stallman. Both are designed to be upward-compatible with the original while adding extensions and improvements.
   - Original documentation by the authors of the tools themselves. These papers are quite readable and serve as an excellent introduction for familiarizing yourself with the tools.
     - Lesk and Schmidt on lex
@@ -23,13 +23,13 @@ Lex is the original lexical scanner developed by Lesk and Schmidt; Paxson's impr
   - The lex & yacc page from Combo.org.
   - An article from the Linux Journal singing the praises of lex & yacc.
   
-- **References on JLex and Java_cup:**
+- **References on JLex and Java_cup:**<br/>
   - Manual for JLex, Java CUP.
   - JLex.
   - Java CUP.
   - Cool Trees (Start with class TreeNode).
 
-- **References on MIPS & SPIM:**
+- **References on MIPS & SPIM:**<br/>
 A PDF version of the SPIM Manual (appendix from Hennessy & Patterson's architecture book)
 The SPIM home page (downloadable versions, more docs).
 
@@ -87,33 +87,33 @@ Cooper and Torczon
 Appel, with Palsberg
 Note: there are versions of this book tailored to C and Java, as well as ML.
 
-### Lexical Analysis and Finite Automata
+#### Lexical Analysis and Finite Automata
 
 - CPTT: Sections 3.1, 3.3, 3.4, 3.6, 3.7, 3.8
 - EC: Chapter 2 through Section 2.5.1 except for 2.4.4
 - MCI: Chapter 2
 
-### Parsing
+#### Parsing
 - CPTT: Sections 4.1-4.6, 4.8.1, 4.8.2
 - EC: Sections 3.1-3.5
 - MCI: Chapter 3
 
-### Semantic Analysis and Types
+#### Semantic Analysis and Types
 - CPTT: Sections 5.1-5.3 6.3, 6.5
 - EC: Sections 4.1-4.4
 - MCI: Chapters 4 and 5
 
-### Runtime Systems and Code Generation
+#### Runtime Systems and Code Generation
 - CPTT: Sections 6.2, 7.1-7.4, 8.1-8.3, 8.6
 - EC: Chapter 5, Sections 7.1-7.2
 - MCI: Chapters 6, 7, and 14
 
-### Optimization
+#### Optimization
 - CPTT: Sections 8.5, 8.7, 9.1-9.4
 - EC: Sections 8.1-8.4, 8.6, 9.1-9.3
 - MCI: Chapter 10
 
-### Advanced Topics: Register Allocation, Garbage Collection
+#### Advanced Topics: Register Allocation, Garbage Collection
 - CPTT: Sections 7.5-7.6, Section 8.8
 - EC: Sections 13.1-13.2, 13.4,
 - MCI: Chapters 11 and 13
