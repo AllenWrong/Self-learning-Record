@@ -40,11 +40,11 @@ other way around. But, the important thing here is that the proof has the shape 
 
 10
 00:00:45,670 --> 00:00:50,260
-abstract syntax tree and there&#39;s one type rule that&#39;s used for each abstract syntax
+abstract syntax tree and there's one type rule that's used for each abstract syntax
 
 11
 00:00:50,260 --> 00:00:54,210
-tree node. So there&#39;s a very direct correspondence between the structure of the
+tree node. So there's a very direct correspondence between the structure of the
 
 12
 00:00:54,210 --> 00:00:59,160
@@ -56,11 +56,11 @@ used for a particular node of the abstract syntax string, the hypothesis, are go
 
 14
 00:01:03,600 --> 00:01:08,070
-be the proofs of the type of E&#39;s sub-expressions. So, whatever sub-expressions
+be the proofs of the type of E's sub-expressions. So, whatever sub-expressions
 
 15
 00:01:08,070 --> 00:01:12,320
-make up E we&#39;re going to need types for them first. And the conclusion
+make up E we're going to need types for them first. And the conclusion
 
 16
 00:01:12,320 --> 00:01:16,159
@@ -80,7 +80,7 @@ that one has type int and two has type int and then. The types flow towards the 
 
 20
 00:01:29,710 --> 00:01:33,700
-I&#39;m able to compute then the next level abstract of syntax tree and so on And then
+I'm able to compute then the next level abstract of syntax tree and so on And then
 
 21
 00:01:33,700 --> 00:01:38,509
@@ -89,4 +89,3 @@ once I computed the types of all the sub expression of a knob. Then I can comput
 22
 00:01:38,509 --> 00:01:40,290
 type at that knob.
-

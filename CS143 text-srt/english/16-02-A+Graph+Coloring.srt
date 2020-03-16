@@ -8,7 +8,7 @@ and talk about how to use RIGS to come up with register assignments for procedur
 
 2
 00:00:13,570 --> 00:00:16,770
-And we&#39;re going to look at one particular technique that&#39;s popular called graph
+And we're going to look at one particular technique that's popular called graph
 
 3
 00:00:16,770 --> 00:00:23,770
@@ -20,7 +20,7 @@ assignment of colors to nodes such that the nodes connected by an edge have
 
 5
 00:00:27,930 --> 00:00:34,930
-different colors. So if I have a graph let&#39;s say with, with three nodes and it&#39;s
+different colors. So if I have a graph let's say with, with three nodes and it's
 
 6
 00:00:35,280 --> 00:00:40,370
@@ -56,7 +56,7 @@ corresponds to registers so we want to do is to assign colors or registers to th
 
 14
 00:01:17,969 --> 00:01:22,850
-graph nodes. And we&#39;re going to let k, the number, the maximum number of colors we&#39;re
+graph nodes. And we're going to let k, the number, the maximum number of colors we're
 
 15
 00:01:22,850 --> 00:01:26,170
@@ -64,15 +64,15 @@ allowed to use be the number of machine register. So the actual number of
 
 16
 00:01:26,170 --> 00:01:31,270
-registers present on the architecture for which we&#39;re generating code. And then if,
+registers present on the architecture for which we're generating code. And then if,
 
 17
 00:01:31,270 --> 00:01:34,889
-if a RIG, if a registered interference graph is k-colorable, then there&#39;s going
+if a RIG, if a registered interference graph is k-colorable, then there's going
 
 18
 00:01:34,889 --> 00:01:41,240
-to be a register assignment that uses no more than k registers. So let&#39;s take a
+to be a register assignment that uses no more than k registers. So let's take a
 
 19
 00:01:41,240 --> 00:01:46,539
@@ -84,7 +84,7 @@ turns out that it uses fewer than four colors. But there is at least one for
 
 21
 00:01:52,649 --> 00:01:59,249
-coloring of this graph. And then here it is so I&#39;ve used colored labels but also
+coloring of this graph. And then here it is so I've used colored labels but also
 
 22
 00:01:59,249 --> 00:02:04,630
@@ -120,11 +120,11 @@ the temporaries by their corresponding register names, and then we get this
 
 30
 00:02:40,090 --> 00:02:46,760
-control flow graph. So, here we&#39;ve just renamed each of the variables of the
+control flow graph. So, here we've just renamed each of the variables of the
 
 31
 00:02:46,760 --> 00:02:51,430
-program with its register that it was assigned to. And now we&#39;re very close, as
+program with its register that it was assigned to. And now we're very close, as
 
 32
 00:02:51,430 --> 00:02:56,379
@@ -133,4 +133,3 @@ you can see, to having code that we can emit and execute on the target
 33
 00:02:56,379 --> 00:02:56,879
 architecture.
-

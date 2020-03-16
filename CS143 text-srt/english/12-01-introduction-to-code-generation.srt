@@ -8,23 +8,23 @@ finally ready to begin our discussion of code generation. So as I mentioned in t
 
 2
 00:00:16,510 --> 00:00:20,279
-previous video we&#39;re going to focus on generating code for stack machines. This
+previous video we're going to focus on generating code for stack machines. This
 
 3
 00:00:20,279 --> 00:00:24,659
-is probably the simplest code generation strategy. It doesn&#39;t generally yield
+is probably the simplest code generation strategy. It doesn't generally yield
 
 4
 00:00:24,659 --> 00:00:28,890
-extremely efficient code. It&#39;s an interesting strategy and certainly not,
+extremely efficient code. It's an interesting strategy and certainly not,
 
 5
 00:00:28,890 --> 00:00:35,030
-totally not an unrealistic one. It&#39;s more than complex enough for our purposes. We
+totally not an unrealistic one. It's more than complex enough for our purposes. We
 
 6
 00:00:35,030 --> 00:00:39,520
-want to run a real machine and we&#39;re going to the mix processor. In particular we&#39;re
+want to run a real machine and we're going to the mix processor. In particular we're
 
 7
 00:00:39,520 --> 00:00:43,520
@@ -36,7 +36,7 @@ will be very convenient for the course project And the basic idea, the basic
 
 9
 00:00:48,370 --> 00:00:52,940
-strategy, is going to be to simulate a stack machine using Mipp&#39;s instructions
+strategy, is going to be to simulate a stack machine using Mipp's instructions
 
 10
 00:00:52,940 --> 00:00:59,010
@@ -44,11 +44,11 @@ and registers. So the first decision in, designing our simulation, is deciding
 
 11
 00:00:59,010 --> 00:01:03,329
-where to put the accumulator in. We&#39;ll keep that, in this register, A0. Any
+where to put the accumulator in. We'll keep that, in this register, A0. Any
 
 12
 00:01:03,329 --> 00:01:08,970
-register would have done but we&#39;ll just use A0 always for the accumulator And then
+register would have done but we'll just use A0 always for the accumulator And then
 
 13
 00:01:08,970 --> 00:01:13,080
@@ -64,11 +64,11 @@ is the top of the logical stack of the stack machine But just to avoid confusion
 
 16
 00:01:25,320 --> 00:01:30,810
-in the terminology, I&#39;m going to refer to A0 as the accumulator and the stack as all
+in the terminology, I'm going to refer to A0 as the accumulator and the stack as all
 
 17
 00:01:30,810 --> 00:01:36,200
-of the other data that&#39;s kept in a memory stack on the MISC processor, so we&#39;ll just
+of the other data that's kept in a memory stack on the MISC processor, so we'll just
 
 18
 00:01:36,200 --> 00:01:42,220
@@ -116,7 +116,7 @@ the MIPS architecture is quite an old architecture. It was designed in the
 
 29
 00:02:34,840 --> 00:02:40,550
-1980&#39;s and it was, or is, the prototypical reduced instruction set computer, or risk
+1980's and it was, or is, the prototypical reduced instruction set computer, or risk
 
 30
 00:02:40,550 --> 00:02:44,760
@@ -140,7 +140,7 @@ are primarily are just loading and storing data. There are 32 purp-, there are 3
 
 35
 00:03:05,230 --> 00:03:08,680
-general-purpose registers on the MITS, it&#39;s a 32 bit machine. We&#39;re only going to
+general-purpose registers on the MITS, it's a 32 bit machine. We're only going to
 
 36
 00:03:08,680 --> 00:03:13,500
@@ -148,7 +148,7 @@ use three of those registers. We already talked about SP, the stack pointer. A0 
 
 37
 00:03:13,500 --> 00:03:18,310
-accumulator, and we&#39;ll need one more register for temporary values. So some
+accumulator, and we'll need one more register for temporary values. So some
 
 38
 00:03:18,310 --> 00:03:22,870
@@ -156,7 +156,7 @@ operations that take two arguments like plus and times will have to have two
 
 39
 00:03:22,870 --> 00:03:25,849
-registers to hold the arguments to the operation. So we&#39;ll use the accumulator
+registers to hold the arguments to the operation. So we'll use the accumulator
 
 40
 00:03:25,849 --> 00:03:29,120
@@ -168,11 +168,11 @@ information on the MIPS architecture in the SPIM documentation. Spim is the
 
 42
 00:03:34,959 --> 00:03:41,959
-simulator that we, we&#39;ll use to execute MIPS code. Now of course, to, generate
+simulator that we, we'll use to execute MIPS code. Now of course, to, generate
 
 43
 00:03:44,620 --> 00:03:49,099
-code for the mix. We&#39;ll also need some mix instructions. And we&#39;ll be able to get
+code for the mix. We'll also need some mix instructions. And we'll be able to get
 
 44
 00:03:49,099 --> 00:03:52,489
@@ -188,7 +188,7 @@ And the way this works is it takes the value of register two, takes the contents
 
 47
 00:04:03,220 --> 00:04:07,920
-that are in register two Adds a fixed offset. So this is a number that&#39;s,
+that are in register two Adds a fixed offset. So this is a number that's,
 
 48
 00:04:07,920 --> 00:04:12,739
@@ -196,7 +196,7 @@ directly in the code Adds a fixed offset to that to the contents of register two
 
 49
 00:04:12,739 --> 00:04:17,599
-That&#39;s a memory address. It loads the value of that memory address into register
+That's a memory address. It loads the value of that memory address into register
 
 50
 00:04:17,599 --> 00:04:22,600
@@ -212,11 +212,11 @@ or store word operation takes the value in register one and stores it into memor
 
 53
 00:04:33,560 --> 00:04:37,570
-that&#39;s stored at a memory address, and with the memory address is the contents of
+that's stored at a memory address, and with the memory address is the contents of
 
 54
 00:04:37,570 --> 00:04:44,570
-register two, plus a fixed offset that&#39;s in the code. And an add immediate
+register two, plus a fixed offset that's in the code. And an add immediate
 
 55
 00:04:44,970 --> 00:04:51,970
@@ -224,7 +224,7 @@ unsigned, takes, is an unsigned add, and it takes a value in register two, an
 
 56
 00:04:52,850 --> 00:04:56,810
-immediate value. So, this is just a number, that&#39;s a constant that&#39;s directly
+immediate value. So, this is just a number, that's a constant that's directly
 
 57
 00:04:56,810 --> 00:05:01,220
@@ -236,7 +236,7 @@ in register one. And the unsigned aspect here just means that the overflow is no
 
 59
 00:05:06,229 --> 00:05:10,380
-checked, we&#39;re not, we&#39;re not checking whether we generate a number that&#39;s
+checked, we're not, we're not checking whether we generate a number that's
 
 60
 00:05:10,380 --> 00:05:17,380
@@ -244,23 +244,23 @@ beyond, beyond what we could represent if we had sine numbers. Finally, load
 
 61
 00:05:18,160 --> 00:05:23,300
-immediate just takes a constant that&#39;s in the code, and puts it into, the register
+immediate just takes a constant that's in the code, and puts it into, the register
 
 62
 00:05:23,300 --> 00:05:25,780
-that&#39;s named as the first argument Alright? So those are the five
+that's named as the first argument Alright? So those are the five
 
 63
 00:05:25,780 --> 00:05:32,400
-instructions that we need, to do a, one very simple example. So now we&#39;re ready to
+instructions that we need, to do a, one very simple example. So now we're ready to
 
 64
 00:05:32,400 --> 00:05:37,660
-do our first program, and not surprisingly it&#39;s the same program that we looked at in
+do our first program, and not surprisingly it's the same program that we looked at in
 
 65
 00:05:37,660 --> 00:05:41,009
-previous videos when we were talking about stack machine code. So let&#39;s look, here&#39;s
+previous videos when we were talking about stack machine code. So let's look, here's
 
 66
 00:05:41,009 --> 00:05:46,070
@@ -272,7 +272,7 @@ machine language. Now our goal is to implement this program using MIPS
 
 68
 00:05:51,030 --> 00:05:55,470
-instructions. So over here on the right, I&#39;m going to layout the instructions we
+instructions. So over here on the right, I'm going to layout the instructions we
 
 69
 00:05:55,470 --> 00:05:59,530
@@ -284,7 +284,7 @@ Alright? So the first instruction is to load seven into the accumulator. And we
 
 71
 00:06:05,430 --> 00:06:08,590
-can do that with a load immediate. We&#39;re going to load immediate the value seven.
+can do that with a load immediate. We're going to load immediate the value seven.
 
 72
 00:06:08,590 --> 00:06:12,810
@@ -300,11 +300,11 @@ stack. How do we do that? Well we have to store the value onto the stack, and
 
 75
 00:06:22,270 --> 00:06:26,710
-remember the stack pointer points to the next unused memory location. And so we&#39;re
+remember the stack pointer points to the next unused memory location. And so we're
 
 76
 00:06:26,710 --> 00:06:30,160
-just storing directly at what the stack pointer points to, so that&#39;s at zero
+just storing directly at what the stack pointer points to, so that's at zero
 
 77
 00:06:30,160 --> 00:06:34,220
@@ -328,11 +328,11 @@ onto the stack, and they move the stack pointer to the next unused address.
 
 82
 00:06:51,259 --> 00:06:55,639
-Alright, now I&#39;m ready to do the next instruction, loading five into the
+Alright, now I'm ready to do the next instruction, loading five into the
 
 83
 00:06:55,639 --> 00:07:00,150
-accumulator. Well, we already know how to do that. We&#39;ll be a load immediate into
+accumulator. Well, we already know how to do that. We'll be a load immediate into
 
 84
 00:07:00,150 --> 00:07:06,490
@@ -340,11 +340,11 @@ the accumulator register A0, the immediate value five Are now ready to do the ad
 
 85
 00:07:06,490 --> 00:07:13,210
-how does that work? Well, first, we have to load the value of that&#39;s on the top of
+how does that work? Well, first, we have to load the value of that's on the top of
 
 86
 00:07:13,210 --> 00:07:16,400
-the stack, alright. Because it&#39;s like an argument is taken from the top of the
+the stack, alright. Because it's like an argument is taken from the top of the
 
 87
 00:07:16,400 --> 00:07:20,090
@@ -368,11 +368,11 @@ Okay, And then we can actually perform the add. And so we add the accumulator to
 
 92
 00:07:38,539 --> 00:07:43,610
-value of T1 and we store the result back into the accumulator And finally we&#39;re
+value of T1 and we store the result back into the accumulator And finally we're
 
 93
 00:07:43,610 --> 00:07:46,560
-going to pop the stack so we&#39;re done with the value that&#39;s on the stack, And how do
+going to pop the stack so we're done with the value that's on the stack, And how do
 
 94
 00:07:46,560 --> 00:07:50,460
@@ -381,4 +381,3 @@ we pop? Well, we just add four to the stack pointer, and that moves the stack
 95
 00:07:50,460 --> 00:07:54,169
 pointer back popping that value off of the stack.
-

@@ -1,6 +1,6 @@
 0
 00:00:03,470 --> 00:00:10,470
-In this video, we&#39;re gonna talk about static typing versus dynamic typing. One
+In this video, we're gonna talk about static typing versus dynamic typing. One
 
 1
 00:00:10,540 --> 00:00:13,950
@@ -16,11 +16,11 @@ program is compiled. And in particular they do it without knowing any input to
 
 4
 00:00:23,230 --> 00:00:26,960
-the program. So the only thing that is available is the program text, and that&#39;s
+the program. So the only thing that is available is the program text, and that's
 
 5
 00:00:26,960 --> 00:00:30,759
-why we call them static Because they don&#39;t involve any of the dynamic behavior, the
+why we call them static Because they don't involve any of the dynamic behavior, the
 
 6
 00:00:30,759 --> 00:00:36,170
@@ -32,7 +32,7 @@ static type system that actually does the right thing, is going to have to disal
 
 8
 00:00:40,180 --> 00:00:45,690
-some correct programs. It can&#39;t reason completely precisely at compile time about
+some correct programs. It can't reason completely precisely at compile time about
 
 9
 00:00:45,690 --> 00:00:49,030
@@ -52,7 +52,7 @@ for this reason some people argue for a dynamic type checking instead, and this 
 
 13
 00:01:02,250 --> 00:01:07,970
-type checking that&#39;s done solely when the program runs. So at run time we check
+type checking that's done solely when the program runs. So at run time we check
 
 14
 00:01:07,970 --> 00:01:11,920
@@ -64,11 +64,11 @@ data that arises when the program executes. Other people say well the
 
 16
 00:01:17,310 --> 00:01:21,860
-problem is really just that the type systems just aren&#39;t expressive enough and
+problem is really just that the type systems just aren't expressive enough and
 
 17
 00:01:21,860 --> 00:01:28,700
-we should work on fancier static type checking systems. And. Over time, there&#39;s
+we should work on fancier static type checking systems. And. Over time, there's
 
 18
 00:01:28,700 --> 00:01:32,460
@@ -84,7 +84,7 @@ and domain specific languages have some form of dynamic type checking. Other
 
 21
 00:01:41,250 --> 00:01:46,590
-people have been working on fancier and fancier type systems and actually there&#39;s
+people have been working on fancier and fancier type systems and actually there's
 
 22
 00:01:46,590 --> 00:01:53,140
@@ -108,7 +108,7 @@ suggests is that there are two different notions of type. There is the dynamic
 
 27
 00:02:12,130 --> 00:02:16,920
-type. That is the type that the object or the value that we&#39;re talking about
+type. That is the type that the object or the value that we're talking about
 
 28
 00:02:16,920 --> 00:02:23,920
@@ -128,7 +128,7 @@ checker is to be correct. In this relationship can be formalized by some
 
 32
 00:02:43,920 --> 00:02:47,720
-kind of a theorem that proves something like the following, what we&#39;d like to know
+kind of a theorem that proves something like the following, what we'd like to know
 
 33
 00:02:47,720 --> 00:02:52,270
@@ -168,15 +168,15 @@ the languages at that time. Now the situations a little more complicated for a
 
 42
 00:03:31,640 --> 00:03:37,050
-language like COOL. So let&#39;s take a look at the execution of a, a typical COOL
+language like COOL. So let's take a look at the execution of a, a typical COOL
 
 43
 00:03:37,050 --> 00:03:41,269
-program. So here&#39;s a couple of classes, class A and a class B that inherits from
+program. So here's a couple of classes, class A and a class B that inherits from
 
 44
 00:03:41,269 --> 00:03:47,459
-A. So B is going to be a subtype of A which we&#39;ll write like that. And now we
+A. So B is going to be a subtype of A which we'll write like that. And now we
 
 45
 00:03:47,459 --> 00:03:53,870
@@ -184,7 +184,7 @@ have a declaration here of X having type A and this is the static type of X. So 
 
 46
 00:03:53,870 --> 00:04:00,870
-static type of X is A. And that&#39;s what the compiler knows about X&#39;s value. And then
+static type of X is A. And that's what the compiler knows about X's value. And then
 
 47
 00:04:03,260 --> 00:04:09,190
@@ -192,11 +192,11 @@ here, when we execute this line of code, we can see that we assign a new A objec
 
 48
 00:04:09,190 --> 00:04:11,739
-to X. And the fact that it&#39;s new is not important. All that&#39;s important is the
+to X. And the fact that it's new is not important. All that's important is the
 
 49
 00:04:11,739 --> 00:04:16,840
-fact that it&#39;s an A object. And so, at this point, the dynamic type of X is also
+fact that it's an A object. And so, at this point, the dynamic type of X is also
 
 50
 00:04:16,839 --> 00:04:22,090
@@ -216,15 +216,15 @@ type here of X Is going to be B. K line of code executes x holds a b object even
 
 54
 00:04:40,990 --> 00:04:45,370
-though it&#39;s declared Have a different type. And this is a very, very important
+though it's declared Have a different type. And this is a very, very important
 
 55
 00:04:45,370 --> 00:04:48,930
-distinction to keep in mind. So there&#39;s a static type, there&#39;s a type that the
+distinction to keep in mind. So there's a static type, there's a type that the
 
 56
 00:04:48,930 --> 00:04:53,340
-compiler knows about, and that&#39;s invariant. X has type A It always has type
+compiler knows about, and that's invariant. X has type A It always has type
 
 57
 00:04:53,340 --> 00:05:00,220
@@ -240,5 +240,4 @@ objects to x, x can actually take on objects of different types, different run
 
 60
 00:05:08,660 --> 00:05:15,660
-time types. Type b, that&#39;s assigned x when the program executes.
-
+time types. Type b, that's assigned x when the program executes.

@@ -1,6 +1,6 @@
 0
 00:00:03,899 --> 00:00:07,960
-In this video, we&#39;re gonna continue our discussion of analysis of controlled flow
+In this video, we're gonna continue our discussion of analysis of controlled flow
 
 1
 00:00:07,960 --> 00:00:12,530
@@ -8,7 +8,7 @@ graphs by focusing on what is undoubtedly the most interesting aspect of the who
 
 2
 00:00:12,530 --> 00:00:19,230
-problem, the analysis of loops. Here&#39;s an example of control flow graph with a loop
+problem, the analysis of loops. Here's an example of control flow graph with a loop
 
 3
 00:00:19,230 --> 00:00:25,849
@@ -16,7 +16,7 @@ in it. And it turns out that the need for the special element bottom in our anal
 
 4
 00:00:25,849 --> 00:00:29,980
-is intimately tied to the analysis of loops. And so, let&#39;s just think about how
+is intimately tied to the analysis of loops. And so, let's just think about how
 
 5
 00:00:29,980 --> 00:00:36,130
@@ -28,23 +28,23 @@ control flow graph, all right. So, what do we know about x? Okay. So, initially,
 
 7
 00:00:42,070 --> 00:00:45,710
-don&#39;t know anything so before we enter the control flow graph, its value, its top
+don't know anything so before we enter the control flow graph, its value, its top
 
 8
 00:00:45,710 --> 00:00:52,670
-and, and after the assignment of three, we&#39;ll know that x has the value three. The
+and, and after the assignment of three, we'll know that x has the value three. The
 
 9
 00:00:52,670 --> 00:00:57,710
-conditional branch here, the predicate won&#39;t affect the value of x. So, it&#39;ll be
+conditional branch here, the predicate won't affect the value of x. So, it'll be
 
 10
 00:00:57,710 --> 00:01:02,190
-three on both branches. The assignment to y won&#39;t affect it so it&#39;ll be three here
+three on both branches. The assignment to y won't affect it so it'll be three here
 
 11
 00:01:02,190 --> 00:01:08,430
-as well. And now we come here okay, and let&#39;s focus on this statement right here.
+as well. And now we come here okay, and let's focus on this statement right here.
 
 12
 00:01:08,430 --> 00:01:15,430
@@ -60,7 +60,7 @@ predecessors. So, we need to know what the value of x is on both of the incoming
 
 15
 00:01:27,520 --> 00:01:30,890
-edges. Okay. Well, we don&#39;t have a value down here yet. So, the question is, you
+edges. Okay. Well, we don't have a value down here yet. So, the question is, you
 
 16
 00:01:30,890 --> 00:01:36,630
@@ -68,15 +68,15 @@ know, what is the value of x here on this edge? And in order to figure that out,
 
 17
 00:01:36,630 --> 00:01:39,620
-we&#39;d have to look at its predecessors. Okay, what are its predecessors? Well,
+we'd have to look at its predecessors. Okay, what are its predecessors? Well,
 
 18
 00:01:39,620 --> 00:01:43,470
-there&#39;s this point here after the predicate there&#39;s this point here between
+there's this point here after the predicate there's this point here between
 
 19
 00:01:43,470 --> 00:01:47,659
-the two statements, and then there&#39;s this point here after the execution of y. We&#39;re
+the two statements, and then there's this point here after the execution of y. We're
 
 20
 00:01:47,659 --> 00:01:51,920
@@ -92,7 +92,7 @@ it here, alright? And then because of this edge, that means we again need to kno
 
 23
 00:02:03,130 --> 00:02:08,420
-at both of the predecessors of y = zero. So, now we&#39;re in the loop and this isn&#39;t
+at both of the predecessors of y = zero. So, now we're in the loop and this isn't
 
 24
 00:02:08,419 --> 00:02:13,079
@@ -100,11 +100,11 @@ too surprising. I mean, if you have, if information about x depends on t he
 
 25
 00:02:13,079 --> 00:02:15,950
-predecessors of a statement and you do follow that recursively then you&#39;re gonna
+predecessors of a statement and you do follow that recursively then you're gonna
 
 26
 00:02:15,950 --> 00:02:22,670
-wind up going around loops like this. And, and there&#39;s no good way at least there&#39;s
+wind up going around loops like this. And, and there's no good way at least there's
 
 27
 00:02:22,670 --> 00:02:28,170
@@ -132,7 +132,7 @@ information depends on his predecessors, which include y = zero. Okay, so this i
 
 33
 00:02:56,010 --> 00:03:03,010
-the conundrum. So, how are we to solve this recursive problem. And there&#39;s a
+the conundrum. So, how are we to solve this recursive problem. And there's a
 
 34
 00:03:04,739 --> 00:03:10,629
@@ -156,11 +156,11 @@ that is really not perhaps even expected to be the final result but allows you t
 
 39
 00:03:32,419 --> 00:03:36,099
-get going. So, and so, what we&#39;re going to do is that because of the cycles, all of
+get going. So, and so, what we're going to do is that because of the cycles, all of
 
 40
 00:03:36,099 --> 00:03:40,879
-the points, all the program points have to have values at all times. And so we&#39;re
+the points, all the program points have to have values at all times. And so we're
 
 41
 00:03:40,879 --> 00:03:44,909
@@ -172,11 +172,11 @@ value bottom means, so far as we know, control never reaches this point. Remembe
 
 43
 00:03:49,129 --> 00:03:54,370
-this, we&#39;ve said this quite a while ago on several videos ago. And this will allow us
+this, we've said this quite a while ago on several videos ago. And this will allow us
 
 44
 00:03:54,370 --> 00:04:01,370
-to make progress. And to see that let&#39;s go ahead and analyze this control flow graph
+to make progress. And to see that let's go ahead and analyze this control flow graph
 
 45
 00:04:03,370 --> 00:04:09,120
@@ -188,23 +188,23 @@ bottom except at the entry point. So, the entry point is special. Here, we assum
 
 47
 00:04:13,699 --> 00:04:16,780
-that we don&#39;t know anything about x because we know the control reaches the
+that we don't know anything about x because we know the control reaches the
 
 48
 00:04:16,779 --> 00:04:21,970
-initial point. But, initially, we&#39;re going to just say, well, x is bottom everywhere
+initial point. But, initially, we're going to just say, well, x is bottom everywhere
 
 49
 00:04:21,970 --> 00:04:28,970
-else. Okay, so, [inaudible] the bottom there, [inaudible] bottom there, okay, I&#39;m
+else. Okay, so, [inaudible] the bottom there, [inaudible] bottom there, okay, I'm
 
 50
 00:04:29,300 --> 00:04:36,300
-gonna just fill in all the values. And I&#39;m just writing it everywhere here. And
+gonna just fill in all the values. And I'm just writing it everywhere here. And
 
 51
 00:04:41,169 --> 00:04:45,599
-there&#39;s really another one right here after the merge of these two paths. So, I
+there's really another one right here after the merge of these two paths. So, I
 
 52
 00:04:45,599 --> 00:04:50,870
@@ -220,7 +220,7 @@ we update it. So where is the place where the information is inconsistent? Well,
 
 55
 00:04:57,780 --> 00:05:02,370
-clearly it&#39;s not correct here, all right, because we know that after if, if control
+clearly it's not correct here, all right, because we know that after if, if control
 
 56
 00:05:02,370 --> 00:05:07,159
@@ -232,11 +232,11 @@ three. Again the predicate will not change the value of x, so we have to update 
 
 58
 00:05:14,639 --> 00:05:18,400
-results of the two branches after the predicate, and after it&#39;s assignment, that
+results of the two branches after the predicate, and after it's assignment, that
 
 59
 00:05:18,400 --> 00:05:21,919
-doesn&#39;t affect x to make that information consistent that we have that. Now, let&#39;s
+doesn't affect x to make that information consistent that we have that. Now, let's
 
 60
 00:05:21,919 --> 00:05:27,710
@@ -248,11 +248,11 @@ in to y = zero. And, so far as we know, control never reaches the other
 
 62
 00:05:34,110 --> 00:05:37,860
-predecessor. So, we&#39;re gonna start out by assuming that, that, that part, that path
+predecessor. So, we're gonna start out by assuming that, that, that part, that path
 
 63
 00:05:37,860 --> 00:05:41,599
-is never taken. And if that path is never taken, then it won&#39;t contribute anything.
+is never taken. And if that path is never taken, then it won't contribute anything.
 
 64
 00:05:41,599 --> 00:05:46,050
@@ -264,7 +264,7 @@ that all this information is correct we will be able to conclude that x = three 
 
 66
 00:05:50,360 --> 00:05:53,990
-this point. And notice how we&#39;ve been able to break the cycle here and get started.
+this point. And notice how we've been able to break the cycle here and get started.
 
 67
 00:05:53,990 --> 00:05:58,990
@@ -272,15 +272,15 @@ So, we just assume that the, you know, this last edge in the cycle never execute
 
 68
 00:05:58,990 --> 00:06:03,259
-and if that&#39;s not correct, we&#39;ll find out later and this value down here will become
+and if that's not correct, we'll find out later and this value down here will become
 
 69
 00:06:03,259 --> 00:06:07,030
-something other than bottom and then we&#39;ll update the assignment again. Alright, so
+something other than bottom and then we'll update the assignment again. Alright, so
 
 70
 00:06:07,030 --> 00:06:14,030
-let&#39;s continue on. So, we have x = three before y is assigned zero. So the
+let's continue on. So, we have x = three before y is assigned zero. So the
 
 71
 00:06:15,340 --> 00:06:18,379
@@ -288,7 +288,7 @@ assignment of y will not affect the value of x. So, make the information afterwa
 
 72
 00:06:18,379 --> 00:06:23,689
-consistent we&#39;ll have to make x=3 there. Now, we have a merge of two paths. Okay.
+consistent we'll have to make x=3 there. Now, we have a merge of two paths. Okay.
 
 73
 00:06:23,689 --> 00:06:29,050
@@ -296,11 +296,11 @@ So, the, at this point here before the execution of this assignment we will also
 
 74
 00:06:29,050 --> 00:06:34,030
-know that x = three. The assignment a will not affect x. We&#39;ll update that point
+know that x = three. The assignment a will not affect x. We'll update that point
 
 75
 00:06:34,030 --> 00:06:38,840
-there and the predicate will not affect the value of x. So, we&#39;ll know that x =
+there and the predicate will not affect the value of x. So, we'll know that x =
 
 76
 00:06:38,840 --> 00:06:43,030
@@ -332,7 +332,7 @@ graph that are inconsistent. So, all the information is consistent with all the
 
 83
 00:07:10,249 --> 00:07:14,620
-rules And so we&#39;re done, and this is the final analysis. We&#39;re able to conclude
+rules And so we're done, and this is the final analysis. We're able to conclude
 
 84
 00:07:14,620 --> 00:07:18,280
@@ -341,4 +341,3 @@ that all, at all of these points here, like I say, every point except the entry
 85
 00:07:18,280 --> 00:07:20,349
 point, that x is in fact, the constant three.
-

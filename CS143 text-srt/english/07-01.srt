@@ -1,6 +1,6 @@
 0
 00:00:03,780 --> 00:00:07,960
-In this video, we&#39;re going to continue our discussion of top-down parsing algorithms
+In this video, we're going to continue our discussion of top-down parsing algorithms
 
 1
 00:00:07,960 --> 00:00:14,960
@@ -8,11 +8,11 @@ with another strategy called predictive parsing. So, predictive parsing is a lot
 
 2
 00:00:16,480 --> 00:00:21,290
-like recursive descent. It&#39;s still a top-down parser. But the parser is able to
+like recursive descent. It's still a top-down parser. But the parser is able to
 
 3
 00:00:21,290 --> 00:00:25,500
-predict which production to use. And it&#39;s never wrong. [inaudible] parser is always
+predict which production to use. And it's never wrong. [inaudible] parser is always
 
 4
 00:00:25,500 --> 00:00:31,840
@@ -28,7 +28,7 @@ two ways; first of all it looks at the next few tokens, so it uses look-ahead to
 
 7
 00:00:41,449 --> 00:00:46,519
-try to figure out which production should be used. So, based on what&#39;s coming up in
+try to figure out which production should be used. So, based on what's coming up in
 
 8
 00:00:46,519 --> 00:00:52,559
@@ -36,7 +36,7 @@ the input string, but also it restricts the grammars. So this, this is only work
 
 9
 00:00:52,559 --> 00:00:59,079
-for a restricted form of grammars. And there&#39;s, the advantage is that there&#39;s no
+for a restricted form of grammars. And there's, the advantage is that there's no
 
 10
 00:00:59,079 --> 00:01:04,059
@@ -52,11 +52,11 @@ And this is a really cryptic name, and so let me explain it. The first L stands 
 
 13
 00:01:18,140 --> 00:01:22,990
-left-to-right scan. So that means we&#39;re starting at the left end of the input and
+left-to-right scan. So that means we're starting at the left end of the input and
 
 14
 00:01:22,990 --> 00:01:26,789
-reading left to right. And in fact that&#39;s what we always do, so all the techniques
+reading left to right. And in fact that's what we always do, so all the techniques
 
 15
 00:01:26,789 --> 00:01:32,770
@@ -68,7 +68,7 @@ for a leftmost derivation. So we are constructing a leftmost derivation. That
 
 17
 00:01:38,020 --> 00:01:44,280
-means we&#39;re always working on the leftmost non-terminal in the parse tree. And K
+means we're always working on the leftmost non-terminal in the parse tree. And K
 
 18
 00:01:44,280 --> 00:01:51,280
@@ -76,11 +76,11 @@ here, stands for K tokens of look ahead. And in practice, while the theory is
 
 19
 00:01:55,060 --> 00:01:59,979
-developed for arbitrary &#39;k&#39;, in practice, &#39;k&#39; is always equal to one. And so in
+developed for arbitrary 'k', in practice, 'k' is always equal to one. And so in
 
 20
 00:01:59,979 --> 00:02:06,979
-fact, we&#39;ll only discuss the &#39;k&#39;s, &#39;k&#39; equals to one, in these videos. To review,
+fact, we'll only discuss the 'k's, 'k' equals to one, in these videos. To review,
 
 21
 00:02:07,049 --> 00:02:11,510
@@ -92,7 +92,7 @@ use, and so we need to use backtracking to undo bad choices. In an LL-1 parser, 
 
 23
 00:02:19,120 --> 00:02:23,319
-every step, there&#39;s only going to be one choice of productions, of possible
+every step, there's only going to be one choice of productions, of possible
 
 24
 00:02:23,319 --> 00:02:28,720
@@ -116,7 +116,7 @@ leftmost nonterminal. And, the next input. Is a token T Well then there is exact
 
 29
 00:02:54,519 --> 00:03:01,519
-one production A goes to alpha on input T. Okay, there&#39;s only one possible production
+one production A goes to alpha on input T. Okay, there's only one possible production
 
 30
 00:03:05,480 --> 00:03:12,010
@@ -124,11 +124,11 @@ that we can use. And any other production is guaranteed to be incorrect. Now it 
 
 31
 00:03:12,010 --> 00:03:17,700
-be that, that even A goes to Alpha won&#39;t succeed. It could be that we will be in a
+be that, that even A goes to Alpha won't succeed. It could be that we will be in a
 
 32
 00:03:17,700 --> 00:03:22,209
-situation where there&#39;s no production we could use. But in [inaudible] parser,
+situation where there's no production we could use. But in [inaudible] parser,
 
 33
 00:03:22,209 --> 00:03:27,790
@@ -136,11 +136,11 @@ there will always be at most one that we could use. So in this case we would cho
 
 34
 00:03:27,790 --> 00:03:34,790
-to rewrite the string to Omega Alpha Beta. Let&#39;s take a look at our favorite grammar,
+to rewrite the string to Omega Alpha Beta. Let's take a look at our favorite grammar,
 
 35
 00:03:36,110 --> 00:03:41,189
-the one we&#39;ve been using for the last couple of videos. We can see an issue here
+the one we've been using for the last couple of videos. We can see an issue here
 
 36
 00:03:41,189 --> 00:03:45,370
@@ -148,11 +148,11 @@ with using this grammar for a predictive parser. Take a look at the first two
 
 37
 00:03:45,370 --> 00:03:51,409
-productions for T. They both begin with N&#39;s. And so if I tell you that the next
+productions for T. They both begin with N's. And so if I tell you that the next
 
 38
 00:03:51,409 --> 00:03:56,640
-terminal in the input stream as we&#39;re parsing along is an integer that doesn&#39;t
+terminal in the input stream as we're parsing along is an integer that doesn't
 
 39
 00:03:56,640 --> 00:04:01,739
@@ -160,7 +160,7 @@ really help you in trying to distinguish between these two productions in decidi
 
 40
 00:04:01,739 --> 00:04:07,099
-deciding which one to use. So in fact with only one token of look ahead, I can&#39;t
+deciding which one to use. So in fact with only one token of look ahead, I can't
 
 41
 00:04:07,099 --> 00:04:13,430
@@ -176,7 +176,7 @@ both production for E begin with the non-terminal T, and it is really clear
 
 44
 00:04:24,830 --> 00:04:29,190
-what we&#39;re to make of that because a T against a non-terminal terminal, so how we
+what we're to make of that because a T against a non-terminal terminal, so how we
 
 45
 00:04:29,190 --> 00:04:34,220
@@ -184,7 +184,7 @@ even do the prediction but the fact that they begin with the same thing suggest
 
 46
 00:04:34,220 --> 00:04:38,600
-that it&#39;s not going to be easy for us to predict which production to use based of
+that it's not going to be easy for us to predict which production to use based of
 
 47
 00:04:38,600 --> 00:04:44,620
@@ -196,7 +196,7 @@ the grammar. This grammar is actually unacceptable for predictive parsing, or at
 
 49
 00:04:49,199 --> 00:04:53,720
-least for LL1 parsing. And we need to do something that&#39;s called left factoring the
+least for LL1 parsing. And we need to do something that's called left factoring the
 
 50
 00:04:53,720 --> 00:05:00,720
@@ -204,31 +204,31 @@ grammar. So the idea behind left factoring is to eliminate the common prefixes o
 
 51
 00:05:02,009 --> 00:05:07,410
-multiple productions for one non terminal. So that&#39;s a mouthful. Let&#39;s do an example.
+multiple productions for one non terminal. So that's a mouthful. Let's do an example.
 
 52
 00:05:07,410 --> 00:05:12,120
-Let&#39;s begin with the productions for E. And we can see, again, that E, that both
+Let's begin with the productions for E. And we can see, again, that E, that both
 
 53
 00:05:12,120 --> 00:05:16,530
-productions for E begin with the same, the same prefix. What we&#39;re going to do is
+productions for E begin with the same, the same prefix. What we're going to do is
 
 54
 00:05:16,530 --> 00:05:20,530
-just factor out that common prefix into a single production. So we&#39;re going to have
+just factor out that common prefix into a single production. So we're going to have
 
 55
 00:05:20,530 --> 00:05:27,530
-one production where E goes to T. And then we&#39;re going to have multiple suffixes. So
+one production where E goes to T. And then we're going to have multiple suffixes. So
 
 56
 00:05:27,560 --> 00:05:31,729
-let&#39;s introduce a new non terminal X that will handle the rest. So here, we have E
+let's introduce a new non terminal X that will handle the rest. So here, we have E
 
 57
 00:05:31,729 --> 00:05:35,550
-goes to TX. So it says that everything that E produces begins with T, and that&#39;s
+goes to TX. So it says that everything that E produces begins with T, and that's
 
 58
 00:05:35,550 --> 00:05:39,360
@@ -240,11 +240,11 @@ for X that handles the rest. And what would that be? Well, one possibility is if
 
 60
 00:05:45,850 --> 00:05:48,699
-we&#39;re in this production, we need to have a Plus E and then in this production
+we're in this production, we need to have a Plus E and then in this production
 
 61
 00:05:48,699 --> 00:05:53,630
-there&#39;s nothing. So that&#39;s easy to handle, right. One possibility for X as it goes to
+there's nothing. So that's easy to handle, right. One possibility for X as it goes to
 
 62
 00:05:53,630 --> 00:05:59,199
@@ -268,15 +268,15 @@ possible suffix. And you can see what this is going to do. This is effectively g
 
 67
 00:06:19,889 --> 00:06:24,389
-to delay the decision about which production we&#39;re using. So instead of
+to delay the decision about which production we're using. So instead of
 
 68
 00:06:24,389 --> 00:06:30,039
-having to decide immediately which production we&#39;re going to use for E. Here,
+having to decide immediately which production we're going to use for E. Here,
 
 69
 00:06:30,039 --> 00:06:34,240
-in this grammar, we wait until we&#39;ve already seen the T, whatever is derived
+in this grammar, we wait until we've already seen the T, whatever is derived
 
 70
 00:06:34,240 --> 00:06:38,580
@@ -284,15 +284,15 @@ from the T. And then we have to decide whether the rest of the production is a
 
 71
 00:06:38,580 --> 00:06:45,580
-plus, E or the empty string. Let&#39;s do the other, set of productions. So we have tea
+plus, E or the empty string. Let's do the other, set of productions. So we have tea
 
 72
 00:06:48,990 --> 00:06:53,669
-goes to, and now the common prefix is int that we want to eliminate So we&#39;re going
+goes to, and now the common prefix is int that we want to eliminate So we're going
 
 73
 00:06:53,669 --> 00:06:59,229
-to have just one production that begins with int and then we&#39;ll have a new, a
+to have just one production that begins with int and then we'll have a new, a
 
 74
 00:06:59,229 --> 00:07:03,610
@@ -300,7 +300,7 @@ non-terminal to stand for the various possible suffixes. And now we also have
 
 75
 00:07:03,610 --> 00:07:06,389
-another production that doesn&#39;t h ave anything to do with int, and so we&#39;ll just
+another production that doesn't h ave anything to do with int, and so we'll just
 
 76
 00:07:06,389 --> 00:07:10,449
@@ -308,7 +308,7 @@ leave that one alone, that production just stays here. Because it already begins
 
 77
 00:07:10,449 --> 00:07:14,910
-something different we won&#39;t have any trouble predicting between these two
+something different we won't have any trouble predicting between these two
 
 78
 00:07:14,910 --> 00:07:20,970
@@ -325,4 +325,3 @@ left factored and write them down as alternatives. So one is empty and the
 81
 00:07:30,660 --> 00:07:36,340
 other one is times T. So we wind up with times T or epsilon.
-

@@ -8,15 +8,15 @@ that the activation record has to be designed together with the code generation.
 
 2
 00:00:08,420 --> 00:00:12,300
-So you have to do these things at the same time. You can&#39;t just design the
+So you have to do these things at the same time. You can't just design the
 
 3
 00:00:12,300 --> 00:00:15,400
-activation record without thinking about what code you&#39;re going to generate And
+activation record without thinking about what code you're going to generate And
 
 4
 00:00:15,400 --> 00:00:19,270
-you can&#39;t just think about generating code without making some decisions about where
+you can't just think about generating code without making some decisions about where
 
 5
 00:00:19,270 --> 00:00:23,300
@@ -32,7 +32,7 @@ of the abstract syntax street, so just like type checking. Cogeneration can
 
 8
 00:00:34,289 --> 00:00:39,440
-be expressed as a r ecursive tree-walk And that&#39;s a very handy way to think about
+be expressed as a r ecursive tree-walk And that's a very handy way to think about
 
 9
 00:00:39,440 --> 00:00:43,829
@@ -40,11 +40,11 @@ cogeneration because it allows you to think about one case at a time without hav
 
 10
 00:00:43,829 --> 00:00:48,979
-to get mixed up thinking about all the different constructs at one time. &gt;&gt; And
+to get mixed up thinking about all the different constructs at one time. >> And
 
 11
 00:00:48,979 --> 00:00:55,440
-finally I recommend that you use a stack machine for your compiler. So if you&#39;re
+finally I recommend that you use a stack machine for your compiler. So if you're
 
 12
 00:00:55,440 --> 00:00:59,679
@@ -56,7 +56,7 @@ it gives you a nice framework for think, for breaking up the project into manage
 
 14
 00:01:03,959 --> 00:01:07,850
-pieces. And because of that simplicity, I think it&#39;s a really good way
+pieces. And because of that simplicity, I think it's a really good way
 
 15
 00:01:07,850 --> 00:01:14,850
@@ -64,7 +64,7 @@ to learn about writing compilers. Now, it is important to realize that productio
 
 16
 00:01:15,120 --> 00:01:20,230
-do, do some different things. They&#39;re not quite as simple as, the stack
+do, do some different things. They're not quite as simple as, the stack
 
 17
 00:01:20,230 --> 00:01:26,320
@@ -76,7 +76,7 @@ or, or, the main difference, is that the big emphasis in a production compiler
 
 19
 00:01:30,900 --> 00:01:35,900
-is on keeping values and registers. It&#39;s much more efficient to do
+is on keeping values and registers. It's much more efficient to do
 
 20
 00:01:35,900 --> 00:01:41,370
@@ -100,7 +100,7 @@ temporaries, in the activation record. These would be resolved, laid out directl
 
 25
 00:02:01,390 --> 00:02:04,590
-in the activation record, not pushed and popped from the stack. That means they&#39;d be
+in the activation record, not pushed and popped from the stack. That means they'd be
 
 26
 00:02:04,590 --> 00:02:09,869
@@ -117,4 +117,3 @@ record. So those temporary values would also be assigned fixed positions,
 29
 00:02:17,290 --> 00:02:20,709
 so you could save the trouble of manipulating the stack pointer.
-

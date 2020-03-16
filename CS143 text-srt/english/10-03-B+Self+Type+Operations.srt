@@ -1,6 +1,6 @@
 0
 00:00:00,530 --> 00:00:03,679
-So now, let&#39;s move on to the least upper bound operation. And once again, T and
+So now, let's move on to the least upper bound operation. And once again, T and
 
 1
 00:00:03,679 --> 00:00:08,500
@@ -8,7 +8,7 @@ T prime will be any types except self-type. The least upper bound of self-type
 
 2
 00:00:08,500 --> 00:00:12,530
-with itself is just self-type, and I think that that&#39;s pret ty clear. The
+with itself is just self-type, and I think that that's pret ty clear. The
 
 3
 00:00:12,530 --> 00:00:17,550
@@ -41,4 +41,3 @@ we just do what we do before. The self-type, the least upper bound definition
 10
 00:00:48,809 --> 00:00:53,719
 excuse me, has not changed for class names for type names other than self-type.
-

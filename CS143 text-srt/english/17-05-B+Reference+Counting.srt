@@ -1,6 +1,6 @@
 0
 00:00:00,900 --> 00:00:04,400
-We&#39;re now ready to wrap up our discussion of automatic memory management.
+We're now ready to wrap up our discussion of automatic memory management.
 
 1
 00:00:04,400 --> 00:00:07,840
@@ -8,7 +8,7 @@ And so I just want to make a few, high level points here. First of all,
 
 2
 00:00:07,840 --> 00:00:13,480
-there&#39;s no question that automatic memory management is a great thing. It prevents very
+there's no question that automatic memory management is a great thing. It prevents very
 
 3
 00:00:13,480 --> 00:00:19,189
@@ -16,11 +16,11 @@ serious storage bugs, some of the most difficult bugs in programming, and when
 
 4
 00:00:19,189 --> 00:00:24,349
-you&#39;re writing in the garbage collected language you really have just a
+you're writing in the garbage collected language you really have just a
 
 5
 00:00:24,349 --> 00:00:28,390
-whole class of things you don&#39;t have to worry about and so it is certainly a more
+whole class of things you don't have to worry about and so it is certainly a more
 
 6
 00:00:28,390 --> 00:00:35,390
@@ -28,7 +28,7 @@ productive way to program. So if, if your problem, your program is really a good
 
 7
 00:00:36,000 --> 00:00:40,750
-for automatic memory management then you&#39;d be crazy not to use a system that provided
+for automatic memory management then you'd be crazy not to use a system that provided
 
 8
 00:00:40,750 --> 00:00:44,480
@@ -36,11 +36,11 @@ that kind of support. Now, the disadvantage of automatic memory management
 
 9
 00:00:44,480 --> 00:00:48,530
-is that it reduces programmer control. So you don&#39;t have control anymore
+is that it reduces programmer control. So you don't have control anymore
 
 10
 00:00:48,530 --> 00:00:53,760
-over the layout of data and memory, and you don&#39;t have control over when the memory
+over the layout of data and memory, and you don't have control over when the memory
 
 11
 00:00:53,760 --> 00:00:57,700
@@ -52,7 +52,7 @@ and you have only a very limited amount of control over how much memory your
 
 13
 00:01:02,500 --> 00:01:08,520
-program is using, okay? And so if these two things don&#39;t matter, if your, if
+program is using, okay? And so if these two things don't matter, if your, if
 
 14
 00:01:08,520 --> 00:01:13,430
@@ -108,7 +108,7 @@ system that might pause for arbitrary amounts of time you know, makes that a ver
 
 27
 00:02:12,170 --> 00:02:17,519
-problematic things guaranty. So, you don&#39;t always see garbage selection used in
+problematic things guaranty. So, you don't always see garbage selection used in
 
 28
 00:02:17,519 --> 00:02:22,680
@@ -128,7 +128,7 @@ leaks. So, while automatic memory management prevents you from corrupting your
 
 32
 00:02:38,180 --> 00:02:44,840
-memory, it really doesn&#39;t prevent you from hanging on to too much data and possibly
+memory, it really doesn't prevent you from hanging on to too much data and possibly
 
 33
 00:02:44,840 --> 00:02:48,999
@@ -140,7 +140,7 @@ possible in garbage collected languages and I would say they are even likely. Sa
 
 35
 00:02:52,799 --> 00:02:57,469
-you know, the fact that you&#39;re not as aware or not as forced to be aware of how
+you know, the fact that you're not as aware or not as forced to be aware of how
 
 36
 00:02:57,469 --> 00:03:02,120
@@ -148,7 +148,7 @@ the memory is being used makes it easier to have memory leaks. And the kind
 
 37
 00:03:02,120 --> 00:03:08,230
-of memory leak that you will have in say, a Java program is that you&#39;ll have some you
+of memory leak that you will have in say, a Java program is that you'll have some you
 
 38
 00:03:08,230 --> 00:03:14,180
@@ -160,11 +160,11 @@ is gigantic, okay? So lets say that this is the abstract syntax tree, in
 
 40
 00:03:19,150 --> 00:03:25,699
-a compiler, alright? Now there may come a point in the computation where you don&#39;t need
+a compiler, alright? Now there may come a point in the computation where you don't need
 
 41
 00:03:25,699 --> 00:03:30,430
-the abstract syntax tree anymore. So let&#39;s say that we have converted to an intermediate
+the abstract syntax tree anymore. So let's say that we have converted to an intermediate
 
 42
 00:03:30,430 --> 00:03:35,309
@@ -184,15 +184,15 @@ syntax tree again. Well, the compiler I mean, excuse me, the, the garbage
 
 46
 00:03:47,099 --> 00:03:50,129
-collector doesn&#39;t know that you are not going to use the abstract syntax tree
+collector doesn't know that you are not going to use the abstract syntax tree
 
 47
 00:03:50,129 --> 00:03:54,109
-again in the future. And if you have a variable that&#39;s pointing to this gigantic
+again in the future. And if you have a variable that's pointing to this gigantic
 
 48
 00:03:54,109 --> 00:03:58,049
-data structure even if you are not using it, it&#39;s gong to hang around and
+data structure even if you are not using it, it's gong to hang around and
 
 49
 00:03:58,049 --> 00:04:02,870
@@ -228,7 +228,7 @@ have these kinds of memory leaks where you just have pointers that you forgot ab
 
 57
 00:04:32,840 --> 00:04:39,550
-data that you&#39;re no longer going to use. So as a whole, I have conveyed in the
+data that you're no longer going to use. So as a whole, I have conveyed in the
 
 58
 00:04:39,550 --> 00:04:44,289
@@ -236,7 +236,7 @@ last few lectures, garbage collection is a very important technique. Every progr
 
 59
 00:04:44,289 --> 00:04:50,150
-should be aware of its benefits and costs and it&#39;s also very interesting aspect of programming
+should be aware of its benefits and costs and it's also very interesting aspect of programming
 
 60
 00:04:50,150 --> 00:04:53,479
@@ -260,15 +260,15 @@ collection is happening. So the collector is working in the background actively 
 
 65
 00:05:10,740 --> 00:05:16,599
-the program is running. Another thing that&#39;s very common actually in, in production
+the program is running. Another thing that's very common actually in, in production
 
 66
 00:05:16,599 --> 00:05:21,099
-collectors is to what&#39;s called a generational collector. And the basic idea
+collectors is to what's called a generational collector. And the basic idea
 
 67
 00:05:21,099 --> 00:05:28,090
-here is that we don&#39;t want to keep going over lo oking at objects that are very
+here is that we don't want to keep going over lo oking at objects that are very
 
 68
 00:05:28,090 --> 00:05:32,500
@@ -284,7 +284,7 @@ that hang around for most of the program. And once we have seen them, in
 
 71
 00:05:40,979 --> 00:05:44,479
-a couple of collections we probably can assume that they&#39;re going to be around for
+a couple of collections we probably can assume that they're going to be around for
 
 72
 00:05:44,479 --> 00:05:49,099
@@ -296,7 +296,7 @@ collector older objects, objects that have been around for a while
 
 74
 00:05:52,539 --> 00:05:56,889
-are put in a seperate area and they&#39;re collected less frequently. And this just allows
+are put in a seperate area and they're collected less frequently. And this just allows
 
 75
 00:05:56,889 --> 00:06:01,379
@@ -316,9 +316,8 @@ of the maximum pause, the maximum interruption to the program. And finally paral
 
 79
 00:06:15,759 --> 00:06:19,580
-collectors. So collector systems where the garbage, there&#39;s actually several
+collectors. So collector systems where the garbage, there's actually several
 
 80
 00:06:19,580 --> 00:06:24,199
 garbage collectors running at the same time and somehow coordinating their actions.
-

@@ -1,6 +1,6 @@
 0
 00:00:04,580 --> 00:00:11,580
-Welcome back, in this video we&#39;re going to have an introductions to types. So a very
+Welcome back, in this video we're going to have an introductions to types. So a very
 
 1
 00:00:13,080 --> 00:00:18,430
@@ -56,7 +56,7 @@ the important thing that these operations are different from the operations defi
 
 14
 00:01:15,080 --> 00:01:19,710
-on integers and we don&#39;t want to mix them up. It would be bad if we started doing
+on integers and we don't want to mix them up. It would be bad if we started doing
 
 15
 00:01:19,710 --> 00:01:24,500
@@ -72,7 +72,7 @@ orient languages. Often we see classes being the notion of type. So, [inaudible]
 
 18
 00:01:35,400 --> 00:01:41,130
-in cool, the class names are the types, they&#39;re all, the, with one exception,
+in cool, the class names are the types, they're all, the, with one exception,
 
 19
 00:01:41,130 --> 00:01:45,590
@@ -80,7 +80,7 @@ called self type. The class names are exactly the types. And I just wanted to
 
 20
 00:01:45,590 --> 00:01:49,680
-point out that this need not be the case. It happens that it&#39;s often convenient in
+point out that this need not be the case. It happens that it's often convenient in
 
 21
 00:01:49,680 --> 00:01:53,420
@@ -92,7 +92,7 @@ designs that, where the classes are not the only kinds of types, or whether
 
 23
 00:01:57,780 --> 00:02:00,570
-they&#39;re. And in some languages, [inaudible] where there&#39;s no notion of
+they're. And in some languages, [inaudible] where there's no notion of
 
 24
 00:02:00,570 --> 00:02:03,979
@@ -104,7 +104,7 @@ two different things that happen, to be identif ied in a lot of object oriented
 
 26
 00:02:09,038 --> 00:02:13,080
-designs. And I just want you to be aware that that&#39;s not necessarily the only way
+designs. And I just want you to be aware that that's not necessarily the only way
 
 27
 00:02:13,080 --> 00:02:20,080
@@ -120,7 +120,7 @@ of register R3 it adds them together, and it puts the results in register R1. An
 
 30
 00:02:32,670 --> 00:02:38,280
-the question is, what are the types of R1 R2 and R3 And you might hope that they&#39;re
+the question is, what are the types of R1 R2 and R3 And you might hope that they're
 
 31
 00:02:38,280 --> 00:02:42,620
@@ -128,7 +128,7 @@ integers but in fact this is a, this is a trick question Because at the assembly
 
 32
 00:02:42,620 --> 00:02:47,980
-language level I can&#39;t tell. There&#39;s nothing that prevents R1, R2, and R3 from
+language level I can't tell. There's nothing that prevents R1, R2, and R3 from
 
 33
 00:02:47,980 --> 00:02:52,280
@@ -136,11 +136,11 @@ having arbitrary types. They could be, they could be representatives of any kind
 
 34
 00:02:52,280 --> 00:02:57,310
-of type and because they&#39;re just a bunch of registers with zero and 1&#39;s in them the
+of type and because they're just a bunch of registers with zero and 1's in them the
 
 35
 00:02:57,310 --> 00:03:00,790
-add operation will be happy to take them and add them up even if it doesn&#39;t make
+add operation will be happy to take them and add them up even if it doesn't make
 
 36
 00:03:00,790 --> 00:03:06,540
@@ -148,7 +148,7 @@ sense And produce a bit pattern that then stores into R1. So, to make this a lit
 
 37
 00:03:06,540 --> 00:03:11,770
-clear perhaps it&#39;s useful to think about a, a certain operations that are legal for
+clear perhaps it's useful to think about a, a certain operations that are legal for
 
 38
 00:03:11,770 --> 00:03:15,860
@@ -168,7 +168,7 @@ hand, if I take a function pointer and integer and I add them together, I really
 
 42
 00:03:28,410 --> 00:03:32,690
-don&#39;t get anything. Okay this is another the function pointer is a bit pattern. The
+don't get anything. Okay this is another the function pointer is a bit pattern. The
 
 43
 00:03:32,690 --> 00:03:36,700
@@ -176,11 +176,11 @@ imaginer s a bit pattern I can take those two bit patterns. I could run them thr
 
 44
 00:03:36,700 --> 00:03:41,349
-and I do get out a new set of bits. But there&#39;s no useful interpretation of that
+and I do get out a new set of bits. But there's no useful interpretation of that
 
 45
 00:03:41,349 --> 00:03:45,280
-results. The resulting things I get doesn&#39;t mean anything, but the problem is
+results. The resulting things I get doesn't mean anything, but the problem is
 
 46
 00:03:45,280 --> 00:03:50,660
@@ -192,7 +192,7 @@ the assembly language level, these two operations look exactly the same. So I
 
 48
 00:03:54,950 --> 00:04:00,200
-can&#39;t tell at the assembly language level, which one of these I&#39;m doing. If I want
+can't tell at the assembly language level, which one of these I'm doing. If I want
 
 49
 00:04:00,200 --> 00:04:07,200
@@ -208,7 +208,7 @@ sort of type description, some sort of type system to enforce those distinctions
 
 52
 00:04:17,899 --> 00:04:21,769
-Perhaps I&#39;m belaboring this point, but I think it&#39;s important, so one more time. A
+Perhaps I'm belaboring this point, but I think it's important, so one more time. A
 
 53
 00:04:21,769 --> 00:04:25,909
@@ -228,11 +228,11 @@ interpretation of values because nothing else is going to check. Once we get to 
 
 57
 00:04:41,059 --> 00:04:46,319
-machine code level, it&#39;s all just a lot of 0&#39;s and 1&#39;s, and the machine will be happy
+machine code level, it's all just a lot of 0's and 1's, and the machine will be happy
 
 58
 00:04:46,319 --> 00:04:50,330
-to do whatever operations we tell it to on those 0&#39;s and 1&#39;s, whether or not those
+to do whatever operations we tell it to on those 0's and 1's, whether or not those
 
 59
 00:04:50,330 --> 00:04:56,210
@@ -244,7 +244,7 @@ interpretations of those bit patterns and make sure that if I have a bit pattern
 
 61
 00:05:00,539 --> 00:05:05,449
-integers that I don&#39;t do any non-integer operations on that and get something that
+integers that I don't do any non-integer operations on that and get something that
 
 62
 00:05:05,449 --> 00:05:11,330
@@ -260,7 +260,7 @@ languages, where all, or almost all, of the checking of types is done as part of
 
 65
 00:05:19,039 --> 00:05:24,360
-compilation, and Cool is one of these And other languages that you&#39;ve probably seen,
+compilation, and Cool is one of these And other languages that you've probably seen,
 
 66
 00:05:24,360 --> 00:05:28,599
@@ -276,7 +276,7 @@ program execution. And the Lisp family of languages, like Scheme and Lisp itself
 
 69
 00:05:37,869 --> 00:05:44,710
-are in this category, as are languages like Python And pearl So you&#39;ve probably
+are in this category, as are languages like Python And pearl So you've probably
 
 70
 00:05:44,710 --> 00:05:49,460
@@ -316,11 +316,11 @@ also avoids the overhead of runtime type checks. If I hooked on all the type
 
 79
 00:06:26,479 --> 00:06:30,039
-checking and compiled time well I don&#39;t have to check the types at runtime. I
+checking and compiled time well I don't have to check the types at runtime. I
 
 80
 00:06:30,039 --> 00:06:34,169
-don&#39;t have to check when I go do an operation that the arguments are of the
+don't have to check when I go do an operation that the arguments are of the
 
 81
 00:06:34,169 --> 00:06:38,349
@@ -360,7 +360,7 @@ write in an aesthetic type language because the compiler has a hard time
 
 90
 00:07:14,869 --> 00:07:21,509
-proving them correct. And there&#39;s also a belief that I, I see commonly stated that
+proving them correct. And there's also a belief that I, I see commonly stated that
 
 91
 00:07:21,509 --> 00:07:25,469
@@ -368,7 +368,7 @@ rapid prototyping is more difficult with ecstatic type system. I think the idea
 
 92
 00:07:25,469 --> 00:07:29,979
-here is that if you&#39;re prototyping something, if you&#39;re exploring some idea
+here is that if you're prototyping something, if you're exploring some idea
 
 93
 00:07:29,979 --> 00:07:34,559
@@ -380,15 +380,15 @@ having to commit to something that is going to work in all cases. You know, to
 
 95
 00:07:39,309 --> 00:07:43,020
-having a type correct program when you&#39;re just trying to fiddle around and figure
+having a type correct program when you're just trying to fiddle around and figure
 
 96
 00:07:43,020 --> 00:07:48,089
-out what it is you&#39;re trying to do. That&#39;s very constraining and makes the work go
+out what it is you're trying to do. That's very constraining and makes the work go
 
 97
 00:07:48,089 --> 00:07:54,830
-quite a bit slower. So what&#39;s the actual situation and practice today? Well, an
+quite a bit slower. So what's the actual situation and practice today? Well, an
 
 98
 00:07:54,830 --> 00:07:57,929
@@ -448,7 +448,7 @@ types languages as soon as they start trying to build serious tools to improve
 
 112
 00:09:02,060 --> 00:09:06,940
-the programs written in these languages. And in my opinion it&#39;s really debatable
+the programs written in these languages. And in my opinion it's really debatable
 
 113
 00:09:06,940 --> 00:09:12,370
@@ -472,7 +472,7 @@ in Cool are the class names, so every time you define a class you define a new t
 
 118
 00:09:33,330 --> 00:09:38,050
-and the special reserve symbol SELF&lt;u&gt;TYPE which we&#39;ll be talking about in a separate&lt;/u&gt;
+and the special reserve symbol SELF'lt;u>TYPE which we'll be talking about in a separate'lt;/u>
 
 119
 00:09:38,050 --> 00:09:42,940
@@ -500,7 +500,7 @@ declared types for identifiers it will calculate a type for every expression and
 
 125
 00:10:06,610 --> 00:10:11,880
-sub-expression. To wrap up, it&#39;s worth mentioning that there&#39;s a couple of
+sub-expression. To wrap up, it's worth mentioning that there's a couple of
 
 126
 00:10:11,880 --> 00:10:16,200
@@ -548,7 +548,7 @@ then we want to fill in missing types. We have some nodes in there, there with
 
 137
 00:10:59,900 --> 00:11:03,750
-absolutely no type information at all, and it&#39;s not just a question of confirming or
+absolutely no type information at all, and it's not just a question of confirming or
 
 138
 00:11:03,750 --> 00:11:07,230
@@ -569,4 +569,3 @@ interchangeably, and will not be particularly careful in my videos about
 142
 00:11:19,540 --> 00:11:20,920
 which term I am using either.
-

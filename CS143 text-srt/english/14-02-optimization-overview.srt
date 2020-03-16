@@ -4,7 +4,7 @@ We are now ready to begin our next major topic, Program Optimization. In this
 
 1
 00:00:07,980 --> 00:00:12,400
-video, we&#39;re just going to give overview discussing why we want to perform
+video, we're just going to give overview discussing why we want to perform
 
 2
 00:00:12,400 --> 00:00:16,740
@@ -12,19 +12,19 @@ optimization and what the trade-offs are for compilers and deciding what kind of
 
 3
 00:00:16,740 --> 00:00:23,740
-optimizations to implement. Optimization is the last compiler phase that we&#39;re
+optimizations to implement. Optimization is the last compiler phase that we're
 
 4
 00:00:24,609 --> 00:00:29,380
-going to discuss. Let&#39;s just very briefly review the compiler phases. First there is
+going to discuss. Let's just very briefly review the compiler phases. First there is
 
 5
 00:00:29,380 --> 00:00:35,050
-lexical analysis and then that&#39;s followed by parsing. Then we have semantic
+lexical analysis and then that's followed by parsing. Then we have semantic
 
 6
 00:00:35,050 --> 00:00:42,050
-analysis. And after that we talked about code generation. And now we&#39;re going to
+analysis. And after that we talked about code generation. And now we're going to
 
 7
 00:00:47,500 --> 00:00:51,870
@@ -36,7 +36,7 @@ generation because we want to improve the program before we commit it to machine
 
 9
 00:00:56,109 --> 00:01:01,100
-code but it is of course the last one that we&#39;ve discussed. But, just point out here,
+code but it is of course the last one that we've discussed. But, just point out here,
 
 10
 00:01:01,100 --> 00:01:05,360
@@ -44,11 +44,11 @@ optimization fits in between generally semantic analysis and code generation and
 
 11
 00:01:05,360 --> 00:01:10,520
-in modern compilers this is where most of the action is. It&#39;s usually has by far the
+in modern compilers this is where most of the action is. It's usually has by far the
 
 12
 00:01:10,520 --> 00:01:17,250
-most code, and it&#39;s also the most complex part of the compiler. Now, a very basic
+most code, and it's also the most complex part of the compiler. Now, a very basic
 
 13
 00:01:17,250 --> 00:01:21,550
@@ -60,7 +60,7 @@ choices. We could perform them on the abstract syntax tree and, a big advantage
 
 15
 00:01:26,310 --> 00:01:32,060
-of that is that it&#39;s machine independent but for many optimizations we want to do,
+of that is that it's machine independent but for many optimizations we want to do,
 
 16
 00:01:32,060 --> 00:01:36,310
@@ -68,7 +68,7 @@ this, it turns out that the abstract syntax tree will be too high level that we
 
 17
 00:01:36,310 --> 00:01:40,090
-can&#39;t actually even express the optimizations we want to perform because
+can't actually even express the optimizations we want to perform because
 
 18
 00:01:40,090 --> 00:01:46,030
@@ -76,7 +76,7 @@ those optimizations depend on lower level details of the machine or of the kind 
 
 19
 00:01:46,030 --> 00:01:49,140
-machine that we&#39;re generating code for that aren&#39;t present in the abstract syntax
+machine that we're generating code for that aren't present in the abstract syntax
 
 20
 00:01:49,140 --> 00:01:54,490
@@ -116,7 +116,7 @@ use an intermediate language And the intermediate language has the advantage
 
 29
 00:02:33,819 --> 00:02:38,239
-potentially, if it&#39;s designed well, of still being machine independent. Meaning
+potentially, if it's designed well, of still being machine independent. Meaning
 
 30
 00:02:38,239 --> 00:02:42,140
@@ -132,7 +132,7 @@ machines but while, at the same time, exposing enough optimization opportunities
 
 33
 00:02:53,189 --> 00:03:00,189
-that the compiler can do a good job of improving the program&#39;s performance. So,
+that the compiler can do a good job of improving the program's performance. So,
 
 34
 00:03:00,969 --> 00:03:06,980
@@ -172,11 +172,11 @@ and we could also use immediate values on the right hand side of operations inst
 
 43
 00:03:48,279 --> 00:03:53,010
-of registers and the typical operators, we&#39;re just going to assume some typical
+of registers and the typical operators, we're just going to assume some typical
 
 44
 00:03:53,010 --> 00:04:00,010
-family of operators like +,,, -,,, &lt;i&gt;, etcetera. Now, optimizations typically&lt;/i&gt;
+family of operators like +,,, -,,, 'lt;i>, etcetera. Now, optimizations typically'lt;/i>
 
 45
 00:04:00,730 --> 00:04:05,680
@@ -208,7 +208,7 @@ And a basic block the ide a behind a basic block, and the reason we require thes
 
 52
 00:04:34,980 --> 00:04:40,340
-properties is that it&#39;s guaranteed to flow, the execution is guaranteed to
+properties is that it's guaranteed to flow, the execution is guaranteed to
 
 53
 00:04:40,340 --> 00:04:43,970
@@ -236,11 +236,11 @@ of the code. But once we get here, once we get to this very first statement, the
 
 59
 00:05:08,400 --> 00:05:14,230
-we&#39;re guaranteed to execute the entire block without jumping out And furthermore,
+we're guaranteed to execute the entire block without jumping out And furthermore,
 
 60
 00:05:14,230 --> 00:05:17,550
-there&#39;s no way to jump into the block. You couldn&#39;t just come from some other random
+there's no way to jump into the block. You couldn't just come from some other random
 
 61
 00:05:17,550 --> 00:05:22,060
@@ -252,11 +252,11 @@ The only way into the block is through the first statement, and the only way out
 
 63
 00:05:26,180 --> 00:05:33,180
-through the last statement. Say here&#39;s a example basic block and just to show you
+through the last statement. Say here's a example basic block and just to show you
 
 64
 00:05:34,320 --> 00:05:39,620
-why basic blocks are useful. Let&#39;s observ that we can actually optimize this piece
+why basic blocks are useful. Let's observ that we can actually optimize this piece
 
 65
 00:05:39,620 --> 00:05:45,160
@@ -272,7 +272,7 @@ w = three x. Okay because we can see here that t is getting two x + x or two
 
 68
 00:05:57,910 --> 00:06:02,040
-x and here we&#39;re adding in another x and so w is actually always equal to three
+x and here we're adding in another x and so w is actually always equal to three
 
 69
 00:06:02,040 --> 00:06:08,730
@@ -280,7 +280,7 @@ x. And a question then, so that, that is certainly a correct optimization and, a
 
 70
 00:06:08,730 --> 00:06:14,110
-it&#39;s correct exactly because statement two is always guaranteed to execute before
+it's correct exactly because statement two is always guaranteed to execute before
 
 71
 00:06:14,110 --> 00:06:18,450
@@ -288,7 +288,7 @@ statement three. Another question we might be is whether we can eliminate this
 
 72
 00:06:18,450 --> 00:06:25,450
-statement so once we replace this by three x, you know maybe we don&#39;t need this
+statement so once we replace this by three x, you know maybe we don't need this
 
 73
 00:06:27,090 --> 00:06:31,690
@@ -304,7 +304,7 @@ this statement and this depends on the rest of the program. We have to know
 
 76
 00:06:42,130 --> 00:06:46,440
-whether t has any other uses someplace else in the program w hich we can&#39;t see
+whether t has any other uses someplace else in the program w hich we can't see
 
 77
 00:06:46,440 --> 00:06:53,170
@@ -316,7 +316,7 @@ is a control flow graph. And a control flow graph is a, just a graph of basic
 
 79
 00:06:58,620 --> 00:07:04,210
-blocks. And so there&#39;s an edge from block a to block b. If execution could pass from
+blocks. And so there's an edge from block a to block b. If execution could pass from
 
 80
 00:07:04,210 --> 00:07:08,750
@@ -328,7 +328,7 @@ control flow graph just shows how control flow can pass between the blocks and t
 
 82
 00:07:13,720 --> 00:07:17,580
-isn&#39;t of course no interesting control flow within the block. We know that the
+isn't of course no interesting control flow within the block. We know that the
 
 83
 00:07:17,580 --> 00:07:20,990
@@ -344,7 +344,7 @@ points in a, in a procedure or a other piece of code showing where some
 
 86
 00:07:30,990 --> 00:07:37,200
-interesting control flow decision is actually made. So here&#39;s a simple control
+interesting control flow decision is actually made. So here's a simple control
 
 87
 00:07:37,200 --> 00:07:42,810
@@ -372,11 +372,11 @@ body of a method can always be represented as a control flow graph. The conventi
 
 93
 00:08:09,100 --> 00:08:13,180
-that we&#39;ll use is always a distinguished entry node so a distinguished start node
+that we'll use is always a distinguished entry node so a distinguished start node
 
 94
 00:08:13,180 --> 00:08:15,820
-of the control flow graph and typically it&#39;ll just be obvious it&#39;ll be the one
+of the control flow graph and typically it'll just be obvious it'll be the one
 
 95
 00:08:15,820 --> 00:08:21,060
@@ -396,7 +396,7 @@ Meaning there will be no edges out of those blocks. Now, the purpose of
 
 99
 00:08:37,529 --> 00:08:42,749
-optimization is to improve a program&#39;s resource utilization. And for the purposes
+optimization is to improve a program's resource utilization. And for the purposes
 
 100
 00:08:42,749 --> 00:08:46,389
@@ -404,11 +404,11 @@ of this classroom, when we talk about optimization in, in our examples and in
 
 101
 00:08:46,389 --> 00:08:49,930
-the videos we&#39;re gonna be talking about execution time. And we&#39;re gonna be talking
+the videos we're gonna be talking about execution time. And we're gonna be talking
 
 102
 00:08:49,930 --> 00:08:53,230
-about, we&#39;re g onna be talking about making the program run faster. And this is
+about, we're g onna be talking about making the program run faster. And this is
 
 103
 00:08:53,230 --> 00:08:58,449
@@ -416,7 +416,7 @@ mostly what people are interested in. So most compilers do spent quite a bit of
 
 104
 00:08:58,449 --> 00:09:02,800
-effort on making programs run faster but it&#39;s important to realize that there are
+effort on making programs run faster but it's important to realize that there are
 
 105
 00:09:02,800 --> 00:09:07,949
@@ -452,11 +452,11 @@ devices. And the important thing about optimization is that it should not alter
 
 113
 00:09:45,300 --> 00:09:50,459
-what the program computes. The answer still must be the same, okay? So we&#39;re
+what the program computes. The answer still must be the same, okay? So we're
 
 114
 00:09:50,459 --> 00:09:55,319
-allowed to improve, the program&#39;s resource utilization, but we can&#39;t change what the
+allowed to improve, the program's resource utilization, but we can't change what the
 
 115
 00:09:55,319 --> 00:10:02,319
@@ -464,7 +464,7 @@ program will produce. Now, for languages like C and Cool, and all of the languag
 
 116
 00:10:03,370 --> 00:10:07,370
-that you&#39;re probably familiar with, there are three granularities of optimization
+that you're probably familiar with, there are three granularities of optimization
 
 117
 00:10:07,370 --> 00:10:12,160
@@ -480,7 +480,7 @@ that occur within a single basic block. Then there are what are called global
 
 120
 00:10:22,579 --> 00:10:27,360
-optimizations and this is really misnamed because it&#39;s not global across the entire
+optimizations and this is really misnamed because it's not global across the entire
 
 121
 00:10:27,360 --> 00:10:31,430
@@ -488,7 +488,7 @@ program. What people mean by global optimization is that implies to a control
 
 122
 00:10:31,430 --> 00:10:37,279
-flow graph. It&#39;s global across an entire function alright so, so global
+flow graph. It's global across an entire function alright so, so global
 
 123
 00:10:37,279 --> 00:10:40,860
@@ -520,15 +520,15 @@ decreasing numbers of compilers doing, these optimizations as you move up in the
 
 130
 00:11:14,439 --> 00:11:20,480
-granularity, and partly that&#39;s because the optimization&#39;s are more difficult to
+granularity, and partly that's because the optimization's are more difficult to
 
 131
 00:11:20,480 --> 00:11:23,730
-implement so it&#39;s just more work to implement the inter-procedural
+implement so it's just more work to implement the inter-procedural
 
 132
 00:11:23,730 --> 00:11:29,480
-optimization&#39;s but also because a lot of the payoff is in the more local
+optimization's but also because a lot of the payoff is in the more local
 
 133
 00:11:29,480 --> 00:11:35,379
@@ -544,23 +544,23 @@ conscious decision is made not to implement the fanciest optimization that
 
 136
 00:11:45,499 --> 00:11:50,449
-is known in the research literature. And that&#39;s kind of an unfortunate thing from
+is known in the research literature. And that's kind of an unfortunate thing from
 
 137
 00:11:50,449 --> 00:11:54,899
-my point of view being somebody who&#39;s really likes compilers and spent a lot of
+my point of view being somebody who's really likes compilers and spent a lot of
 
 138
 00:11:54,899 --> 00:11:59,089
-time thinking about optimization. And maybe it&#39;s a little bit hard to accept for
+time thinking about optimization. And maybe it's a little bit hard to accept for
 
 139
 00:11:59,089 --> 00:12:04,569
-the professional compiler researchers that, that people don&#39;t always want to
+the professional compiler researchers that, that people don't always want to
 
 140
 00:12:04,569 --> 00:12:08,869
-implement the latest and greatest optimization. But it&#39;s worth understanding
+implement the latest and greatest optimization. But it's worth understanding
 
 141
 00:12:08,869 --> 00:12:13,680
@@ -572,7 +572,7 @@ engineering. Some of these optimizations are really hard to implement, I mean
 
 143
 00:12:17,170 --> 00:12:20,839
-they&#39;re just complicated to implement. Some of the optimizations are costly in
+they're just complicated to implement. Some of the optimizations are costly in
 
 144
 00:12:20,839 --> 00:12:27,100
@@ -588,7 +588,7 @@ optimizing compiler compiles, does its compilation and if it takes hours or in
 
 147
 00:12:37,139 --> 00:12:42,699
-some cases days, to optimize a program, you know, that&#39;s not necessarily great.
+some cases days, to optimize a program, you know, that's not necessarily great.
 
 148
 00:12:42,699 --> 00:12:49,399
@@ -604,11 +604,11 @@ of the fanciest optimizations in the literature have all three of these
 
 151
 00:12:57,379 --> 00:13:02,100
-properties. They&#39;re complicated, they take a long time to run, and they don&#39;t do very
+properties. They're complicated, they take a long time to run, and they don't do very
 
 152
 00:13:02,100 --> 00:13:06,639
-much. And so it&#39;s not so surprising That and not all of these to get implemented in
+much. And so it's not so surprising That and not all of these to get implemented in
 
 153
 00:13:06,639 --> 00:13:12,619
@@ -616,7 +616,7 @@ production compilers. And this actually, you kn ow points out what the real goal
 
 154
 00:13:12,619 --> 00:13:17,019
-in optimization. What we really want is maximum benefit for minimum cost. We&#39;re
+in optimization. What we really want is maximum benefit for minimum cost. We're
 
 155
 00:13:17,019 --> 00:13:21,889
@@ -633,4 +633,3 @@ waiting for the compiler to run and, and the benefit, the amount that it improve
 158
 00:13:32,569 --> 00:13:35,889
 the program has to be sufficient to justify those costs.
-

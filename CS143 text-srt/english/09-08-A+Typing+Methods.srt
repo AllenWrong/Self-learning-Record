@@ -1,30 +1,30 @@
 0
 00:00:04,029 --> 00:00:07,439
-In this video, we&#39;re going to continue our discussion of type checking and cool with
+In this video, we're going to continue our discussion of type checking and cool with
 
 1
 00:00:07,439 --> 00:00:14,439
-the rules for type checking methods and method calls. So here&#39;s the situation, we
+the rules for type checking methods and method calls. So here's the situation, we
 
 2
 00:00:15,690 --> 00:00:19,829
-want to type check a method call, let&#39;s say that we have a dispatch on some
+want to type check a method call, let's say that we have a dispatch on some
 
 3
 00:00:19,829 --> 00:00:24,029
-expression easier, and we&#39;re calling some method named F, and we have some arguments
+expression easier, and we're calling some method named F, and we have some arguments
 
 4
 00:00:24,029 --> 00:00:28,090
-E one through E N. Well, so clearly we&#39;re gonna type check E zero, it&#39;s gonna have
+E one through E N. Well, so clearly we're gonna type check E zero, it's gonna have
 
 5
 00:00:28,090 --> 00:00:32,340
-some type E zero, and similarly we&#39;re gonna type check all of the arguments and
+some type E zero, and similarly we're gonna type check all of the arguments and
 
 6
 00:00:32,340 --> 00:00:36,710
-they&#39;re gonna have some types, and then the question is, what is the return type
+they're gonna have some types, and then the question is, what is the return type
 
 7
 00:00:36,710 --> 00:00:40,769
@@ -32,7 +32,7 @@ of this method call, what value, what kind of value do we get back after we call
 
 8
 00:00:40,769 --> 00:00:46,129
-method? And as you can probably see we&#39;re in a very similar situation here that we
+method? And as you can probably see we're in a very similar situation here that we
 
 9
 00:00:46,129 --> 00:00:50,769
@@ -40,11 +40,11 @@ were in before when we were typing check the variable reference. We have this na
 
 10
 00:00:50,769 --> 00:00:56,339
-F and we don&#39;t know anything about what it does, we don&#39;t know the behavior of F is
+F and we don't know anything about what it does, we don't know the behavior of F is
 
 11
 00:00:56,339 --> 00:01:01,059
-unless we have some information about F&#39;s behavior, we can&#39;t really say what kind of
+unless we have some information about F's behavior, we can't really say what kind of
 
 12
 00:01:01,059 --> 00:01:07,600
@@ -56,7 +56,7 @@ identifiers live in different name spaces. That is, it is possible in the same s
 
 14
 00:01:12,439 --> 00:01:17,659
-to have a method called foo and also an object called foo and we won&#39;t get them
+to have a method called foo and also an object called foo and we won't get them
 
 15
 00:01:17,659 --> 00:01:21,659
@@ -64,11 +64,11 @@ confused. They are different enough and used differently enough in the language
 
 16
 00:01:21,659 --> 00:01:24,990
-that we can always tell when we&#39;re talking about the object foo and when we&#39;re
+that we can always tell when we're talking about the object foo and when we're
 
 17
 00:01:24,990 --> 00:01:28,909
-talking about the method foo. But what this means in effect is that there&#39;s two
+talking about the method foo. But what this means in effect is that there's two
 
 18
 00:01:28,909 --> 00:01:34,740
@@ -80,11 +80,11 @@ rules, this is going to be reflected by having a separate mapping a separate
 
 20
 00:01:38,479 --> 00:01:44,130
-method environment that&#39;s going to record the signature of each of the methods. And
+method environment that's going to record the signature of each of the methods. And
 
 21
 00:01:44,130 --> 00:01:48,210
-a signature, as is a standard name that you&#39;ll probably hear used in other
+a signature, as is a standard name that you'll probably hear used in other
 
 22
 00:01:48,210 --> 00:01:54,259
@@ -92,7 +92,7 @@ contexts, but the signature of a function is just its input and output types. An
 
 23
 00:01:54,259 --> 00:01:58,920
-this table, m, is gonna take the name of a class. It&#39;s gonna take the name of a
+this table, m, is gonna take the name of a class. It's gonna take the name of a
 
 24
 00:01:58,920 --> 00:02:04,229
@@ -104,7 +104,7 @@ methods. So all but the last type in the list here is one of the arguing types o
 
 26
 00:02:08,949 --> 00:02:14,610
-the method and then the last type is the result type. That&#39;s the type of the return
+the method and then the last type is the result type. That's the type of the return
 
 27
 00:02:14,610 --> 00:02:18,330
@@ -148,7 +148,7 @@ through all the typing for the sub expressions and for the case of method
 
 37
 00:03:06,540 --> 00:03:12,439
-dispatch, we just type The, type of the expression we&#39;re dispatching to e zero,
+dispatch, we just type The, type of the expression we're dispatching to e zero,
 
 38
 00:03:12,439 --> 00:03:17,640
@@ -156,7 +156,7 @@ and all of the arguments and get types t one through t n, and then we look up th
 
 39
 00:03:17,640 --> 00:03:24,390
-type of f in the class t zero. So, what class are we dispatching to? Well, that&#39;s
+type of f in the class t zero. So, what class are we dispatching to? Well, that's
 
 40
 00:03:24,390 --> 00:03:28,680
@@ -172,7 +172,7 @@ signature with the right number of arguments. And then, the actual arguments
 
 43
 00:03:39,430 --> 00:03:44,010
-that we&#39;re passing, the E1 through E-N, they&#39;re types have to be sub-types of the
+that we're passing, the E1 through E-N, they're types have to be sub-types of the
 
 44
 00:03:44,010 --> 00:03:49,269
@@ -180,7 +180,7 @@ declared formal parameter. So here, the signature of F. Says that, for example,
 
 45
 00:03:49,269 --> 00:03:54,870
-the first argument of f has type t one prime, and so we&#39;re going to require that
+the first argument of f has type t one prime, and so we're going to require that
 
 46
 00:03:54,870 --> 00:04:00,409
@@ -196,7 +196,7 @@ checks out, if that has a signature like this, and all the sub type requirements
 
 49
 00:04:09,980 --> 00:04:15,519
-the actual arguments and the formal arguments match, then we&#39;re going to say
+the actual arguments and the formal arguments match, then we're going to say
 
 50
 00:04:15,519 --> 00:04:21,209
@@ -208,7 +208,7 @@ return type of the method. The typing rule for static dispatch is very similar t
 
 52
 00:04:28,030 --> 00:04:32,580
-rule for regular dispatch. So recall that, syntactically, the only thing that&#39;s
+rule for regular dispatch. So recall that, syntactically, the only thing that's
 
 53
 00:04:32,580 --> 00:04:36,030
@@ -220,7 +220,7 @@ to run the, the method. So instead of running the method F as defined in the
 
 55
 00:04:42,210 --> 00:04:46,120
-class E0, whatever that class happens to be, we&#39;re going to run whatever that
+class E0, whatever that class happens to be, we're going to run whatever that
 
 56
 00:04:46,120 --> 00:04:51,340
@@ -256,9 +256,8 @@ types of the corresponding formal argument types, and then if all of that is tru
 
 64
 00:05:29,990 --> 00:05:34,979
-we&#39;ll be able to conclude that the entire dispatch expression has a type t n plus
+we'll be able to conclude that the entire dispatch expression has a type t n plus
 
 65
 00:05:34,979 --> 00:05:38,110
 one which is the return type of the method.
-

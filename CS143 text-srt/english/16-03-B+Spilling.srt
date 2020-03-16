@@ -4,7 +4,7 @@ To summarize this video, register allocation is one of the most important jobs t
 
 1
 00:00:07,340 --> 00:00:11,740
-performs. And it&#39;s really, these days they must have an any kind of reasonable
+performs. And it's really, these days they must have an any kind of reasonable
 
 2
 00:00:11,740 --> 00:00:15,499
@@ -12,7 +12,7 @@ production compiler. And, the reason you need it is because the inter-media
 
 3
 00:00:15,499 --> 00:00:19,320
-code just generally uses too many temporaries. We&#39;re allowed to be a little
+code just generally uses too many temporaries. We're allowed to be a little
 
 4
 00:00:19,320 --> 00:00:24,240
@@ -81,4 +81,3 @@ we discussed. There are just additional. Steps in those algorithms and places wh
 20
 00:01:36,750 --> 00:01:40,340
 the particular constraints are what registers can be used have to be observed.
-

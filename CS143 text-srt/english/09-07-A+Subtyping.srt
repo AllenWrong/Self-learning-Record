@@ -1,22 +1,22 @@
 0
 00:00:04,230 --> 00:00:07,890
-In this video, we&#39;re going to talk about sub typing another important idea in cool
+In this video, we're going to talk about sub typing another important idea in cool
 
 1
 00:00:07,890 --> 00:00:14,890
-and other object oriented languages. Let&#39;s begin by taking a look at the typing rule
+and other object oriented languages. Let's begin by taking a look at the typing rule
 
 2
 00:00:17,060 --> 00:00:21,560
-for let with initialization. So last time we looked at the let rule, but didn&#39;t have
+for let with initialization. So last time we looked at the let rule, but didn't have
 
 3
 00:00:21,560 --> 00:00:26,189
-the initializers. Let&#39;s just see how adding the initializer right here changes
+the initializers. Let's just see how adding the initializer right here changes
 
 4
 00:00:26,189 --> 00:00:31,449
-things. So what&#39;s going to happen here? Well first of all, notice that the body of
+things. So what's going to happen here? Well first of all, notice that the body of
 
 5
 00:00:31,449 --> 00:00:38,140
@@ -28,11 +28,11 @@ type T0. The type is declared to have in the let And all the other variables hav
 
 7
 00:00:43,170 --> 00:00:47,309
-whatever types O gives them And we can add some type T1, and that&#39;ll be the type of
+whatever types O gives them And we can add some type T1, and that'll be the type of
 
 8
 00:00:47,309 --> 00:00:52,050
-the whole thing. So this piece Right here is exactly the same as before. So what&#39;s
+the whole thing. So this piece Right here is exactly the same as before. So what's
 
 9
 00:00:52,050 --> 00:00:58,280
@@ -52,11 +52,11 @@ we use the environment o, in particular x. The new definition of X is not availa
 
 13
 00:01:13,810 --> 00:01:20,510
-in E0, so if E0 uses the name X that means it uses the name of some other X that&#39;s
+in E0, so if E0 uses the name X that means it uses the name of some other X that's
 
 14
 00:01:20,510 --> 00:01:26,380
-defined outside Of the lead because we didn&#39;t include a, this definition of X in
+defined outside Of the lead because we didn't include a, this definition of X in
 
 15
 00:01:26,380 --> 00:01:30,800
@@ -64,15 +64,15 @@ the environment for type checking E0. All right now, but the main point a, thing
 
 16
 00:01:30,800 --> 00:01:35,950
-want to point oh I&#39;m a sly, is that easier or here has type zero which is exactly
+want to point oh I'm a sly, is that easier or here has type zero which is exactly
 
 17
 00:01:35,950 --> 00:01:41,940
-same type as X, and that&#39;s a requirement of this rule, it says that E0 has to have
+same type as X, and that's a requirement of this rule, it says that E0 has to have
 
 18
 00:01:41,940 --> 00:01:47,770
-the same type as X, and that&#39;s actually fairly weak of because it&#39;s really a, no
+the same type as X, and that's actually fairly weak of because it's really a, no
 
 19
 00:01:47,770 --> 00:01:54,770
@@ -80,7 +80,7 @@ problem if E0 has a type which is a subtype of T0, a. T zero can hold any
 
 20
 00:01:54,970 --> 00:01:59,110
-sub-type of T zero, that would be absolutely fine. But here we&#39;ve limited
+sub-type of T zero, that would be absolutely fine. But here we've limited
 
 21
 00:01:59,110 --> 00:02:06,110
@@ -96,7 +96,7 @@ obvious form of sub typing is that if X is a class and inherits directly from, f
 
 24
 00:02:17,379 --> 00:02:23,510
-Y, meaning there&#39;s a line in the code that says X inherits from Y. Then x should be a
+Y, meaning there's a line in the code that says X inherits from Y. Then x should be a
 
 25
 00:02:23,510 --> 00:02:28,269
@@ -108,7 +108,7 @@ sub type of y, and y is a sub type of z, then x is a sub type of z. And finally 
 
 27
 00:02:33,060 --> 00:02:38,629
-you might expect, it&#39;s also reflexive, so every class is a sub type of itself. And
+you might expect, it's also reflexive, so every class is a sub type of itself. And
 
 28
 00:02:38,629 --> 00:02:43,290
@@ -120,11 +120,11 @@ initialization. So once again, the body, the, the part of the rule that deals wi
 
 30
 00:02:48,340 --> 00:02:52,909
-the body of the let is exactly the same as before, so let&#39;s not look at that, and.
+the body of the let is exactly the same as before, so let's not look at that, and.
 
 31
 00:02:52,909 --> 00:02:57,239
-Now what we&#39;re going to do is we&#39;re gonna type check E0 and we get some type T0 out,
+Now what we're going to do is we're gonna type check E0 and we get some type T0 out,
 
 32
 00:02:57,239 --> 00:03:02,280
@@ -140,7 +140,7 @@ well T is now the type that X is declared to be. So this allows E zero to have a
 
 35
 00:03:11,170 --> 00:03:16,010
-type that&#39;s different from the type of X, and the only issue here is that more
+type that's different from the type of X, and the only issue here is that more
 
 36
 00:03:16,010 --> 00:03:20,180
@@ -160,7 +160,7 @@ compile and type check correctly, using this rule. Sub-typing shows up in a numb
 
 40
 00:03:36,420 --> 00:03:41,010
-of places in the cool type system. Here&#39;s the rule for assignment, which is in many
+of places in the cool type system. Here's the rule for assignment, which is in many
 
 41
 00:03:41,010 --> 00:03:45,779
@@ -168,7 +168,7 @@ ways similar to the rule for let. So, how does an assignment work, well on the l
 
 42
 00:03:45,779 --> 00:03:49,370
-hand side is a variable and the right hand side is an expression, we&#39;re gonna
+hand side is a variable and the right hand side is an expression, we're gonna
 
 43
 00:03:49,370 --> 00:03:53,489
@@ -196,7 +196,7 @@ some type T1. And now what has to be true for this assignment to be correct? Wel
 
 49
 00:04:15,659 --> 00:04:22,340
-has to possible for X to hold the value of type T1. So X&#39;s type T0 has to be a super
+has to possible for X to hold the value of type T1. So X's type T0 has to be a super
 
 50
 00:04:22,340 --> 00:04:28,160
@@ -224,7 +224,7 @@ attributes and methods. And what does an attribute Definition look like. Well it
 
 56
 00:04:55,810 --> 00:05:00,150
-looks like one of these things. It&#39;s, a variable declared to some type and you can
+looks like one of these things. It's, a variable declared to some type and you can
 
 57
 00:05:00,150 --> 00:05:04,670
@@ -256,15 +256,15 @@ check the initialize rs because remember the initializer for an attribute can re
 
 64
 00:05:32,080 --> 00:05:38,030
-to any of the initialize rs for the class. So, let&#39;s take a look at how this works.
+to any of the initialize rs for the class. So, let's take a look at how this works.
 
 65
 00:05:38,030 --> 00:05:42,180
-First we look up the type of X in the environment. That&#39;s sum type T O. Now we
+First we look up the type of X in the environment. That's sum type T O. Now we
 
 66
 00:05:42,180 --> 00:05:46,190
-type check E1 in the same environment. That&#39;s sum type T1. And then just as with
+type check E1 in the same environment. That's sum type T1. And then just as with
 
 67
 00:05:46,190 --> 00:05:53,190
@@ -276,11 +276,11 @@ another interesting example how we type check If and Else. And the important thi
 
 69
 00:06:00,510 --> 00:06:04,630
-about If and Else is that when we&#39;re doing type checking we don&#39;t know which branch
+about If and Else is that when we're doing type checking we don't know which branch
 
 70
 00:06:04,630 --> 00:06:07,730
-is going to be taken, we don&#39;t know whether the program is going to execute E1
+is going to be taken, we don't know whether the program is going to execute E1
 
 71
 00:06:07,730 --> 00:06:12,220
@@ -296,7 +296,7 @@ one, other times it may execute it two. And so what that means that the resultin
 
 74
 00:06:20,230 --> 00:06:26,870
-type of am If and Else is either the type of E1 or the type E2 and we don&#39;t. Know a
+type of am If and Else is either the type of E1 or the type E2 and we don't. Know a
 
 75
 00:06:26,870 --> 00:06:30,770
@@ -312,7 +312,7 @@ need to compute an upper bound over two or more types comes up often enough that
 
 78
 00:06:43,510 --> 00:06:48,310
-we&#39;re going to give the operation a special name. We&#39;ll call it the LUB or
+we're going to give the operation a special name. We'll call it the LUB or
 
 79
 00:06:48,310 --> 00:06:53,130
@@ -320,7 +320,7 @@ least upper bound of X and Y. And the least upper bound of X and Y is going to
 
 80
 00:06:53,130 --> 00:06:59,420
-be Z if Z is an upper bound, so meaning it&#39;s bigger than both X and Y, and also if
+be Z if Z is an upper bound, so meaning it's bigger than both X and Y, and also if
 
 81
 00:06:59,420 --> 00:07:03,250
@@ -328,7 +328,7 @@ it is the least among all possible upper bounds. So what this line here says, is
 
 82
 00:07:03,250 --> 00:07:09,080
-that there is some other Z prime that&#39;s bigger than X and Y. Well then z has to be
+that there is some other Z prime that's bigger than X and Y. Well then z has to be
 
 83
 00:07:09,080 --> 00:07:15,270
@@ -352,7 +352,7 @@ named class that incorporates, that includes all possible classes of the
 
 88
 00:07:35,280 --> 00:07:40,960
-program. And then there&#39;s some kind of a hierarchy which is a tree, That descends
+program. And then there's some kind of a hierarchy which is a tree, That descends
 
 89
 00:07:40,960 --> 00:07:46,160
@@ -369,4 +369,3 @@ their least common ancestor. And so, in this case, if I pick these two types out
 92
 00:07:53,720 --> 00:07:57,280
 of my tree, this would be the least upper bound of those two types.
-

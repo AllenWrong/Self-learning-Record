@@ -12,15 +12,15 @@ generation for more advanced feature objects. Fortunately, this dated code
 
 3
 00:00:17,849 --> 00:00:22,289
-generation strategy for objects is really just an extension of what we&#39;ve already
+generation strategy for objects is really just an extension of what we've already
 
 4
 00:00:22,289 --> 00:00:25,179
-learned. So, everything that you learn before we&#39;re going to be using and then
+learned. So, everything that you learn before we're going to be using and then
 
 5
 00:00:25,179 --> 00:00:29,919
-there&#39;s going to be some additional things that we do specifically for objects And,
+there's going to be some additional things that we do specifically for objects And,
 
 6
 00:00:29,919 --> 00:00:34,810
@@ -36,11 +36,11 @@ then an object of class b can be used wherever an object of class a as expected.
 
 9
 00:00:46,840 --> 00:00:51,359
-So there&#39;s a substitutability property. If I have a piece of code that can work on
+So there's a substitutability property. If I have a piece of code that can work on
 
 10
 00:00:51,359 --> 00:00:58,359
-a&#39;s then it could also work on b&#39;s and any other subclass of a. What this means for
+a's then it could also work on b's and any other subclass of a. What this means for
 
 11
 00:00:58,719 --> 00:01:04,390
@@ -84,7 +84,7 @@ representation for objects And the second one is how is dynamic dispatch impleme
 
 21
 00:01:56,990 --> 00:02:01,490
-so that&#39;s the characteristic feature of using objects just so we can dispatch in
+so that's the characteristic feature of using objects just so we can dispatch in
 
 22
 00:02:01,490 --> 00:02:08,490
@@ -92,7 +92,7 @@ the method of an object and we need an implementation of that. So, to be
 
 23
 00:02:08,729 --> 00:02:13,890
-concrete, we&#39;re going to use this little example throughout this video and I&#39;ll
+concrete, we're going to use this little example throughout this video and I'll
 
 24
 00:02:13,890 --> 00:02:17,830
@@ -124,7 +124,7 @@ two attributes that are defined in class a are available in class b and in class
 
 31
 00:02:58,790 --> 00:03:05,790
-even though there&#39;s no mention Of a, and d in the definition say of class b. The
+even though there's no mention Of a, and d in the definition say of class b. The
 
 32
 00:03:06,069 --> 00:03:11,930
@@ -196,7 +196,7 @@ attribute is stored at a fixed off set in the objects. So for example, there may
 
 49
 00:04:44,009 --> 00:04:51,009
-a place in this object for attribute a On this case it&#39;s at in the middle of the
+a place in this object for attribute a On this case it's at in the middle of the
 
 50
 00:04:51,460 --> 00:04:57,180
@@ -204,7 +204,7 @@ object is in the, in the fourth position And, no matter what kind of object it i
 
 51
 00:04:57,180 --> 00:05:03,259
-whether it&#39;s an a. B or c objects and are example as with a we always live with that
+whether it's an a. B or c objects and are example as with a we always live with that
 
 52
 00:05:03,259 --> 00:05:08,979
@@ -212,11 +212,11 @@ position so that any piece of code that refers to a, any method that refers a ca
 
 53
 00:05:08,979 --> 00:05:15,860
-find can find the a attribute. Now the other thing that&#39;s important to understand
+find can find the a attribute. Now the other thing that's important to understand
 
 54
 00:05:15,860 --> 00:05:19,969
-and this is you know slight digression from what we&#39;re talking about but it&#39;s a
+and this is you know slight digression from what we're talking about but it's a
 
 55
 00:05:19,969 --> 00:05:26,330
@@ -276,11 +276,11 @@ have three classes a, b, and c and the compiler for example might assign them th
 
 69
 00:06:41,150 --> 00:06:46,869
-numbers one, two, and three. It doesn&#39;t matter what these numbers are As long as
+numbers one, two, and three. It doesn't matter what these numbers are As long as
 
 70
 00:06:46,869 --> 00:06:50,960
-they are different from each other. So, it doesn&#39;t have these numbers consecutively
+they are different from each other. So, it doesn't have these numbers consecutively
 
 71
 00:06:50,960 --> 00:06:55,529
@@ -304,7 +304,7 @@ pointer to a table of methods so the methods are stored off to the side and the
 
 76
 00:07:16,680 --> 00:07:21,439
-dispatch pointer is a pointer to that table and we&#39;ll talk about this more later
+dispatch pointer is a pointer to that table and we'll talk about this more later
 
 77
 00:07:21,439 --> 00:07:26,369
@@ -312,7 +312,7 @@ and then all the attributes are laid out in the sub-sequence slots in some order
 
 78
 00:07:26,369 --> 00:07:30,360
-that&#39;s determined by the compiler so the compiler will fix and order for the
+that's determined by the compiler so the compiler will fix and order for the
 
 79
 00:07:30,360 --> 00:07:34,309
@@ -324,7 +324,7 @@ attributes of that class in the same order. And again all of this is laid out
 
 81
 00:07:39,259 --> 00:07:46,259
-in the continuous chunk of memory. Now, I&#39;m ready to talk about how inheritance
+in the continuous chunk of memory. Now, I'm ready to talk about how inheritance
 
 82
 00:07:46,539 --> 00:07:52,300
@@ -336,11 +336,11 @@ subclass b, so this is a subclass of a can be defined by extending the layout of
 
 84
 00:07:58,460 --> 00:08:05,460
-So, we don&#39;t need to move any of the attribute of a, we can just add more
+So, we don't need to move any of the attribute of a, we can just add more
 
 85
 00:08:05,629 --> 00:08:10,879
-fields onto the end of a&#39;s layout. And so, that&#39;s going to leave the layout of a
+fields onto the end of a's layout. And so, that's going to leave the layout of a
 
 86
 00:08:10,879 --> 00:08:17,110
@@ -360,7 +360,7 @@ will never change for any of the subclasses of that object. So b is just
 
 90
 00:08:30,949 --> 00:08:36,519
-going to be an extension of the layout of a. So, let&#39;s take a look at our example
+going to be an extension of the layout of a. So, let's take a look at our example
 
 91
 00:08:36,519 --> 00:08:43,039
@@ -368,15 +368,15 @@ here and see how that, that works. Let me just write down here a little bit abou
 
 92
 00:08:43,039 --> 00:08:46,440
-these classes because we don&#39;t have the example on the screen. So we have a class
+these classes because we don't have the example on the screen. So we have a class
 
 93
 00:08:46,440 --> 00:08:52,709
-a, and class a, had two attributes, a, and d, okay? And it doesn&#39;t matter what their
+a, and class a, had two attributes, a, and d, okay? And it doesn't matter what their
 
 94
 00:08:52,709 --> 00:08:57,029
-types are or what the methods were here. We&#39;re just looking at the class names and
+types are or what the methods were here. We're just looking at the class names and
 
 95
 00:08:57,029 --> 00:09:02,050
@@ -392,27 +392,27 @@ inherits from a but has no relationship to b. And class c define an attribute li
 
 98
 00:09:19,480 --> 00:09:26,480
-c. Alright. So, that&#39;s the structure of our example is relevant to the layout of
+c. Alright. So, that's the structure of our example is relevant to the layout of
 
 99
 00:09:28,199 --> 00:09:34,990
-the objects. Okay. So Let&#39;s talk about the layout of class a. So, in position zero at
+the objects. Okay. So Let's talk about the layout of class a. So, in position zero at
 
 100
 00:09:34,990 --> 00:09:39,050
-all sub zero, there&#39;ll be a tag for a that will be some small integer at the compiler
+all sub zero, there'll be a tag for a that will be some small integer at the compiler
 
 101
 00:09:39,050 --> 00:09:44,160
-picks. There&#39;ll be a size of a, we&#39;ll come back to that in just a se cond. There will
+picks. There'll be a size of a, we'll come back to that in just a se cond. There will
 
 102
 00:09:44,160 --> 00:09:48,579
-be a dispatch pointer again, which we&#39;re going to talk about later. And then come
+be a dispatch pointer again, which we're going to talk about later. And then come
 
 103
 00:09:48,579 --> 00:09:53,810
-the attributes of a, and it just laid out the compiler, the way it&#39;s done in the,
+the attributes of a, and it just laid out the compiler, the way it's done in the,
 
 104
 00:09:53,810 --> 00:09:58,089
@@ -432,7 +432,7 @@ attributes and three header words that means the size of the object is five word
 
 108
 00:10:14,310 --> 00:10:21,310
-and so it&#39;s a five that goes in the size field for a objects. Now, let&#39;s take a
+and so it's a five that goes in the size field for a objects. Now, let's take a
 
 109
 00:10:21,959 --> 00:10:27,959
@@ -440,7 +440,7 @@ look at b. Okay? So b is going to have a different tag, b objects will have a
 
 110
 00:10:27,959 --> 00:10:32,930
-different tag so they to distinguish them from a objects. There&#39;s going to be extra
+different tag so they to distinguish them from a objects. There's going to be extra
 
 111
 00:10:32,930 --> 00:10:37,019
@@ -492,15 +492,15 @@ more field here. Which is the new attribute b It just gets laid out after
 
 123
 00:11:37,629 --> 00:11:41,639
-all of a&#39;s fields. So after all of a&#39;s fields come all of b&#39;s fields in the same
+all of a's fields. So after all of a's fields come all of b's fields in the same
 
 124
 00:11:41,639 --> 00:11:45,959
-order which they appear textually in the class because there&#39;s just only one,
+order which they appear textually in the class because there's just only one,
 
 125
 00:11:45,959 --> 00:11:49,819
-there&#39;s just one new field there. And now looking with class c or the story with
+there's just one new field there. And now looking with class c or the story with
 
 126
 00:11:49,819 --> 00:11:54,680
@@ -532,11 +532,11 @@ because they have different attributes in the third position. We may have comple
 
 133
 00:12:28,779 --> 00:12:33,329
-different types. It may not make sense to invoke a b method on c object but that&#39;s
+different types. It may not make sense to invoke a b method on c object but that's
 
 134
 00:12:33,329 --> 00:12:37,790
-just fine because if we look at our inheritance hierarchy over here we&#39;ll see that b and
+just fine because if we look at our inheritance hierarchy over here we'll see that b and
 
 135
 00:12:37,790 --> 00:12:42,480
@@ -556,7 +556,7 @@ different in the layout. So, more generally, if we have a chain of
 
 139
 00:12:59,620 --> 00:13:05,110
-inheritance relationship, so let&#39;s say, we have a base class a1 and a1 inherits some
+inheritance relationship, so let's say, we have a base class a1 and a1 inherits some
 
 140
 00:13:05,110 --> 00:13:12,110
@@ -572,15 +572,15 @@ classes, you know, what is the layout of all these classes going to look like.
 
 143
 00:13:23,000 --> 00:13:26,750
-Well, there&#39;s going to be a header. Okay, the three word header and that will be
+Well, there's going to be a header. Okay, the three word header and that will be
 
 144
 00:13:26,750 --> 00:13:32,240
-followed by a1&#39;s attributes. And then followed by a2&#39;s attributes followed by
+followed by a1's attributes. And then followed by a2's attributes followed by
 
 145
 00:13:32,240 --> 00:13:39,240
-a3&#39;s attributes and so on all the way down to an&#39;s attributes down here. Okay. And if
+a3's attributes and so on all the way down to an's attributes down here. Okay. And if
 
 146
 00:13:40,699 --> 00:13:46,839
@@ -604,7 +604,7 @@ a valid layout for a2 object going all the way from the header down to you know,
 
 151
 00:14:04,139 --> 00:14:10,959
-including the a1 and a2 objects. And then a3 includes all a1, a2 and a3&#39;s attributes
+including the a1 and a2 objects. And then a3 includes all a1, a2 and a3's attributes
 
 152
 00:14:10,959 --> 00:14:17,959
@@ -613,4 +613,3 @@ and so on. Okay? So, each prefix Of, of this object, Of this a and object has a
 153
 00:14:21,170 --> 00:14:25,009
 correct layout for some for some super class of A n.
-

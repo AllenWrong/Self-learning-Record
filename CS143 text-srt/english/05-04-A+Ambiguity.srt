@@ -1,18 +1,18 @@
 0
 00:00:03,780 --> 00:00:07,200
-In this video we&#39;re going to talk about ambiguous context free grammars in
+In this video we're going to talk about ambiguous context free grammars in
 
 1
 00:00:07,200 --> 00:00:14,200
-programming languages and what to do about them. We&#39;ll begin by looking at our
+programming languages and what to do about them. We'll begin by looking at our
 
 2
 00:00:16,120 --> 00:00:21,670
-favorite grammar for expressions over + and and identifiers and we&#39;ll just look
+favorite grammar for expressions over + and and identifiers and we'll just look
 
 3
 00:00:21,670 --> 00:00:28,670
-at the string id id + id. Now it turns out that this particular string and let&#39;s
+at the string id id + id. Now it turns out that this particular string and let's
 
 4
 00:00:29,230 --> 00:00:36,230
@@ -20,7 +20,7 @@ write it down one more time, id id + id. This string has two parse tree using th
 
 5
 00:00:38,429 --> 00:00:43,409
-grammar. Let&#39;s do the Parse tree on the left first. We begin with the start symbol
+grammar. Let's do the Parse tree on the left first. We begin with the start symbol
 
 6
 00:00:43,409 --> 00:00:48,929
@@ -36,7 +36,7 @@ We use the production e goes to e e and we still have the plus e left over and a
 
 9
 00:01:07,950 --> 00:01:11,060
-this point you can see that we&#39;re going to get this parse tree. We&#39;ve done with those
+this point you can see that we're going to get this parse tree. We've done with those
 
 10
 00:01:11,060 --> 00:01:16,570
@@ -44,15 +44,15 @@ two productions. We have done this much. The construction of the parse tree and 
 
 11
 00:01:16,570 --> 00:01:20,369
-rest of productions are just generating these id&#39;s. So that&#39;s a three more
+rest of productions are just generating these id's. So that's a three more
 
 12
 00:01:20,369 --> 00:01:27,369
-productions and we can see that, you know if we do those we&#39;ll get id id + id no
+productions and we can see that, you know if we do those we'll get id id + id no
 
 13
 00:01:27,990 --> 00:01:33,810
-problem, alright. So now let&#39;s switch and do the derivation on the right or excuse
+problem, alright. So now let's switch and do the derivation on the right or excuse
 
 14
 00:01:33,810 --> 00:01:38,930
@@ -60,19 +60,19 @@ me, the parse tree on the right so this begins also with e. But this time we use
 
 15
 00:01:38,930 --> 00:01:44,350
-the production e goes to e e first, all right? And now we&#39;re gonna replace the
+the production e goes to e e first, all right? And now we're gonna replace the
 
 16
 00:01:44,350 --> 00:01:51,350
-right most e. By e goes to e + e so we have e e + e and now we&#39;ve, with those
+right most e. By e goes to e + e so we have e e + e and now we've, with those
 
 17
 00:01:55,560 --> 00:02:00,200
-two productions we&#39;ve done this portion of the parse tree and once again with three
+two productions we've done this portion of the parse tree and once again with three
 
 18
 00:02:00,200 --> 00:02:07,200
-more productions we can get to id id + id so there you can see we&#39;ve got two
+more productions we can get to id id + id so there you can see we've got two
 
 19
 00:02:13,450 --> 00:02:20,239
@@ -80,7 +80,7 @@ derivations. That produced two distinct Parse trees. And just to be completely
 
 20
 00:02:20,239 --> 00:02:24,459
-clear about this, in this case we&#39;re getting two different Parse trees. Each of
+clear about this, in this case we're getting two different Parse trees. Each of
 
 21
 00:02:24,459 --> 00:02:29,239
@@ -124,7 +124,7 @@ that grammar will be ambiguous. Ambiguity is bad. If you have multiple parse tre
 
 31
 00:03:17,230 --> 00:03:20,819
-for some program then that essentially means that you&#39;re leaving it up to the
+for some program then that essentially means that you're leaving it up to the
 
 32
 00:03:20,819 --> 00:03:25,569
@@ -132,7 +132,7 @@ compiler to pick which of those two possible interpretations of the program
 
 33
 00:03:25,569 --> 00:03:30,790
-you want it to generate code for and that&#39;s not a good idea. We don&#39;t like to
+you want it to generate code for and that's not a good idea. We don't like to
 
 34
 00:03:30,790 --> 00:03:34,189
@@ -141,4 +141,3 @@ have ambiguity in our programming languages and leave decisions about what
 35
 00:03:34,189 --> 00:03:36,110
 the program means up to the compiler.
-

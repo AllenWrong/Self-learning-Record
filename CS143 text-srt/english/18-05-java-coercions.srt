@@ -1,6 +1,6 @@
 0
 00:00:04,040 --> 00:00:07,990
-In this video, we&#39;re going to talk about Coercions which is a feature of type
+In this video, we're going to talk about Coercions which is a feature of type
 
 1
 00:00:07,990 --> 00:00:12,380
@@ -12,7 +12,7 @@ coercions are done in Java. Java allows primitive types to be coerced in certain
 
 3
 00:00:22,020 --> 00:00:26,680
-context. And, coerced means converted from one type to another. So here&#39;s an example,
+context. And, coerced means converted from one type to another. So here's an example,
 
 4
 00:00:26,680 --> 00:00:32,780
@@ -48,11 +48,11 @@ convert the integer to the floating point number 1.0. Now, a coercion the right 
 
 12
 00:01:09,340 --> 00:01:13,580
-I think, to think of coercions is they&#39;re really just primitive functions that the
+I think, to think of coercions is they're really just primitive functions that the
 
 13
 00:01:13,580 --> 00:01:17,720
-compiler inserts for you. So it&#39;s like, you left out a function call and the
+compiler inserts for you. So it's like, you left out a function call and the
 
 14
 00:01:17,720 --> 00:01:21,140
@@ -120,7 +120,7 @@ saw one of those, so the conversion from int to float is an example of a widenin
 
 30
 00:02:38,659 --> 00:02:44,540
-cast. Now, narrowing casts may fail if the data can&#39;t be converted to the desired
+cast. Now, narrowing casts may fail if the data can't be converted to the desired
 
 31
 00:02:44,540 --> 00:02:51,540
@@ -128,11 +128,11 @@ type. So in particular, float to int well, this will work fine. Something like 2
 
 32
 00:02:51,790 --> 00:02:57,099
-can be converted in obvious way to two but if you&#39;re converting something that
+can be converted in obvious way to two but if you're converting something that
 
 33
 00:02:57,099 --> 00:03:00,909
-doesn&#39;t have an integer representation something say like 2.5 you know, there&#39;s a
+doesn't have an integer representation something say like 2.5 you know, there's a
 
 34
 00:03:00,909 --> 00:03:06,219
@@ -140,7 +140,7 @@ question of what we should do here. Okay, and for such narrowing casts, where th
 
 35
 00:03:06,219 --> 00:03:09,069
-isn&#39;t a, a clear mapping, whether we should go or, you know or whether we
+isn't a, a clear mapping, whether we should go or, you know or whether we
 
 36
 00:03:09,069 --> 00:03:15,879
@@ -152,7 +152,7 @@ let you do it. Okay perhaps for better example of the kind of narrowing cast
 
 38
 00:03:23,650 --> 00:03:30,650
-that&#39;s that Java will complain about is something like a down cast. So if I have
+that's that Java will complain about is something like a down cast. So if I have
 
 39
 00:03:31,290 --> 00:03:38,139
@@ -160,7 +160,7 @@ two classes A and B. And B is a subtype of A and then I have something of type A
 
 40
 00:03:38,139 --> 00:03:45,139
-Well, I can cast it to B. I can say, let&#39;s say I have X which is a type A and then I
+Well, I can cast it to B. I can say, let's say I have X which is a type A and then I
 
 41
 00:03:46,389 --> 00:03:51,849
@@ -168,7 +168,7 @@ can have an expression where I try to convert x to a B object. So here I have a
 
 42
 00:03:51,849 --> 00:03:57,609
-cast, I&#39;ve indicated that I want to treat this expression x as a B object and this
+cast, I've indicated that I want to treat this expression x as a B object and this
 
 43
 00:03:57,609 --> 00:04:01,790
@@ -176,11 +176,11 @@ will type check, okay. So the, the compiler will let this through since B is
 
 44
 00:04:01,790 --> 00:04:06,249
-subtype of A. But at run time, it&#39;s actually going to check whether x is
+subtype of A. But at run time, it's actually going to check whether x is
 
 45
 00:04:06,249 --> 00:04:10,049
-actually a B object and if it&#39;s not you&#39;re going to get an exception. So this can
+actually a B object and if it's not you're going to get an exception. So this can
 
 46
 00:04:10,049 --> 00:04:14,599
@@ -196,15 +196,15 @@ have to put the function in yourself. You have to put in the typecase in the cod
 
 49
 00:04:25,540 --> 00:04:30,280
-that it&#39;s obvious that you really want to do it, but widening casts in coercions can
+that it's obvious that you really want to do it, but widening casts in coercions can
 
 50
 00:04:30,280 --> 00:04:34,160
-be implicit, so it&#39;s alright. If you&#39;re widening, if you&#39;re either promoting to a
+be implicit, so it's alright. If you're widening, if you're either promoting to a
 
 51
 00:04:34,160 --> 00:04:39,350
-super type or you are converting between initial type where it&#39;s clear that the,
+super type or you are converting between initial type where it's clear that the,
 
 52
 00:04:39,350 --> 00:04:45,820
@@ -212,7 +212,7 @@ one type embeds in the other then those can be filled in for you by the compiler
 
 53
 00:04:45,820 --> 00:04:51,190
-And here&#39;s a little Java trivia question. So it turns out that there is one type in
+And here's a little Java trivia question. So it turns out that there is one type in
 
 54
 00:04:51,190 --> 00:04:57,430
@@ -228,15 +228,15 @@ type. And the answer to the question, which is the only one, is bool. Okay so
 
 57
 00:05:07,810 --> 00:05:14,810
-only the type boolean has no conercions or casts to another type. Now personally, I&#39;m
+only the type boolean has no conercions or casts to another type. Now personally, I'm
 
 58
 00:05:17,800 --> 00:05:24,100
-not a big fan of coercions. I think that it&#39;s clearly a convenience for
+not a big fan of coercions. I think that it's clearly a convenience for
 
 59
 00:05:24,100 --> 00:05:28,620
-programmers, it&#39;s clearly something that is widely accepted as being necessary in
+programmers, it's clearly something that is widely accepted as being necessary in
 
 60
 00:05:28,620 --> 00:05:34,220
@@ -244,11 +244,11 @@ programming languages because casts, implicit casts and conversions are so
 
 61
 00:05:34,220 --> 00:05:40,570
-ubiquitous but I do think that it tends to lead to programs that have behavior that&#39;s
+ubiquitous but I do think that it tends to lead to programs that have behavior that's
 
 62
 00:05:40,570 --> 00:05:44,300
-different from what the programmer probably expected. And, here&#39;s a good
+different from what the programmer probably expected. And, here's a good
 
 63
 00:05:44,300 --> 00:05:48,780
@@ -256,7 +256,7 @@ example from the language PL/1, which recalls stood for Programming Language one
 
 64
 00:05:48,780 --> 00:05:53,890
-designed by IBM in the 1960s. And had many, many features in it so we&#39;ve talked
+designed by IBM in the 1960s. And had many, many features in it so we've talked
 
 65
 00:05:53,890 --> 00:06:00,190
@@ -264,15 +264,15 @@ about PL/1 a few times in this class. And one thing that PL/1 had was very exten
 
 66
 00:06:00,190 --> 00:06:04,700
-cast and coercions and this could lead us to some surprising behaviors. So here&#39;s an
+cast and coercions and this could lead us to some surprising behaviors. So here's an
 
 67
 00:06:04,700 --> 00:06:10,100
-example we have a, A, B, and C are strings of three characters so it&#39;s important to
+example we have a, A, B, and C are strings of three characters so it's important to
 
 68
 00:06:10,100 --> 00:06:17,100
-know here that the length three is part of the type. So B is string &#39;123&#39; C is &#39;456&#39;
+know here that the length three is part of the type. So B is string '123' C is '456'
 
 69
 00:06:17,780 --> 00:06:24,160
@@ -280,7 +280,7 @@ and then A is going to be B + c and the question is what is A? And, and you
 
 70
 00:06:24,160 --> 00:06:30,680
-probably won&#39;t guess, so let me show you what I think is the right answer. So first
+probably won't guess, so let me show you what I think is the right answer. So first
 
 71
 00:06:30,680 --> 00:06:34,840
@@ -300,7 +300,7 @@ converted to the number 123. C will get conver ted to the number 456, okay? And
 
 75
 00:06:52,540 --> 00:06:59,540
-then we&#39;ll add them and we&#39;ll get out the number 579. Okay, so the result of this
+then we'll add them and we'll get out the number 579. Okay, so the result of this
 
 76
 00:07:00,620 --> 00:07:06,670
@@ -320,7 +320,7 @@ default length happens to be six so this is cast to a string looks like this.
 
 80
 00:07:25,580 --> 00:07:32,580
-There&#39;s three blanks followed by 579. And then that string of six characters is
+There's three blanks followed by 579. And then that string of six characters is
 
 81
 00:07:33,200 --> 00:07:35,810
@@ -333,4 +333,3 @@ characters and so we get out that, and so the answer is that this program stores
 83
 00:07:43,920 --> 00:07:48,240
 string of three blanks in A. Which is probably not what was expected.
-

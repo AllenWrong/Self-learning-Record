@@ -1,10 +1,10 @@
 0
 00:00:04,430 --> 00:00:07,879
-Welcome back. In this video, we&#39;re going to give a very brief introduction, an
+Welcome back. In this video, we're going to give a very brief introduction, an
 
 1
 00:00:07,879 --> 00:00:14,879
-overview, of what we&#39;re going to be talking about in semantic analysis. Let&#39;s
+overview, of what we're going to be talking about in semantic analysis. Let's
 
 2
 00:00:15,469 --> 00:00:19,869
@@ -20,7 +20,7 @@ language definition the main job that lexical analyses does is detect input
 
 5
 00:00:28,550 --> 00:00:35,550
-[inaudible] preemptive symbols that aren&#39;t part of our language. The next step is
+[inaudible] preemptive symbols that aren't part of our language. The next step is
 
 6
 00:00:36,480 --> 00:00:40,510
@@ -28,7 +28,7 @@ parsing. We finished talking about that too. And, again, from the point of view 
 
 7
 00:00:40,510 --> 00:00:43,649
-trying to determine whether a program is well-formed or not, or whether it&#39;s a
+trying to determine whether a program is well-formed or not, or whether it's a
 
 8
 00:00:43,649 --> 00:00:48,280
@@ -36,11 +36,11 @@ valid program, the job of parsing is to detect all the sentences in the language
 
 9
 00:00:48,280 --> 00:00:53,920
-that are ill-formed, or that don&#39;t have a parse string. And finally What we&#39;re going
+that are ill-formed, or that don't have a parse string. And finally What we're going
 
 10
 00:00:53,920 --> 00:00:58,469
-to talk about now, what&#39;s going to occupy us for a while is semantic analysis. And
+to talk about now, what's going to occupy us for a while is semantic analysis. And
 
 11
 00:00:58,469 --> 00:01:02,780
@@ -52,7 +52,7 @@ lexical analysis, parsing, and semantic analysis as filters that progressively
 
 13
 00:01:07,360 --> 00:01:13,450
-reject more and more input strings until finally you&#39;re left after all three phases
+reject more and more input strings until finally you're left after all three phases
 
 14
 00:01:13,450 --> 00:01:18,460
@@ -60,7 +60,7 @@ have run with only valid programs to compile, well semantic analysis is the
 
 15
 00:01:18,460 --> 00:01:23,650
-last line of defense. It&#39;s the last one in that pipeline and its job is to catch all
+last line of defense. It's the last one in that pipeline and its job is to catch all
 
 16
 00:01:23,650 --> 00:01:30,430
@@ -68,7 +68,7 @@ potential remaining errors in a program. Now you might ask yourself, why do we e
 
 17
 00:01:30,430 --> 00:01:34,520
-need a separate semantic analysis phase? And the answer to that&#39;s very simple,
+need a separate semantic analysis phase? And the answer to that's very simple,
 
 18
 00:01:34,520 --> 00:01:37,860
@@ -76,11 +76,11 @@ There are, there are some features of programming languages, some kinds of
 
 19
 00:01:37,860 --> 00:01:42,630
-mistakes you can make that parsings simply can&#39;t catch. Parsing we&#39;ll use in context
+mistakes you can make that parsings simply can't catch. Parsing we'll use in context
 
 20
 00:01:42,630 --> 00:01:47,070
-free grammars is not expressive enough to describe everything that we&#39;re interested
+free grammars is not expressive enough to describe everything that we're interested
 
 21
 00:01:47,070 --> 00:01:51,310
@@ -108,7 +108,7 @@ by themselves are also not enough, and there some additional features beyond
 
 27
 00:02:11,409 --> 00:02:18,409
-those that can&#39;t be easily expressed using context free constructs. So what does
+those that can't be easily expressed using context free constructs. So what does
 
 28
 00:02:18,469 --> 00:02:22,959
@@ -116,11 +116,11 @@ semantic analysis actually do? In a case of cool C, it does checks of many
 
 29
 00:02:22,959 --> 00:02:26,709
-different kinds, and that&#39;s pretty typical. So here&#39;s a list of six classes
+different kinds, and that's pretty typical. So here's a list of six classes
 
 30
 00:02:26,709 --> 00:02:30,559
-of checks that are done by Cool C, and let&#39;s just run through them quickly. First
+of checks that are done by Cool C, and let's just run through them quickly. First
 
 31
 00:02:30,559 --> 00:02:33,489
@@ -144,7 +144,7 @@ oriented nature of Cool. We have to check that the inheritance relationships bet
 
 36
 00:02:51,449 --> 00:02:56,319
-classes make sense. We don&#39;t want classes to be redefined; we only want one class
+classes make sense. We don't want classes to be redefined; we only want one class
 
 37
 00:02:56,319 --> 00:03:01,109
@@ -156,7 +156,7 @@ class. Cool has a number of reserved identifiers and we have to be careful that
 
 39
 00:03:05,279 --> 00:03:09,209
-those aren&#39;t misused. And this is pretty typical; lots of languages have some
+those aren't misused. And this is pretty typical; lots of languages have some
 
 40
 00:03:09,209 --> 00:03:13,120
@@ -168,7 +168,7 @@ identifiers. And, actually this list is not even complete. There are a number of
 
 42
 00:03:17,159 --> 00:03:22,230
-other restrictions. And we&#39;ll be talking about all of those in future videos. The
+other restrictions. And we'll be talking about all of those in future videos. The
 
 43
 00:03:22,230 --> 00:03:26,150
@@ -185,4 +185,3 @@ that cool C does are pretty typical of statically typed checked object oriented
 46
 00:03:36,290 --> 00:03:40,180
 languages. But other families of languages will have different kinds of checks.
-

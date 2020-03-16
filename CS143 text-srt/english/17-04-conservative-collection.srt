@@ -1,6 +1,6 @@
 0
 00:00:03,340 --> 00:00:06,850
-In this very short video, I&#39;m going to say a few words about a technique called
+In this very short video, I'm going to say a few words about a technique called
 
 1
 00:00:06,850 --> 00:00:13,850
@@ -20,7 +20,7 @@ the difficultly with doing garbage collection for a language like C or C++ is
 
 5
 00:00:27,310 --> 00:00:31,820
-that it&#39;s very difficult or even impossible to identify the contents of
+that it's very difficult or even impossible to identify the contents of
 
 6
 00:00:31,820 --> 00:00:37,470
@@ -32,7 +32,7 @@ memory, you know, it might be a list cell that has, a data and next field. So we
 
 8
 00:00:42,620 --> 00:00:48,219
-just two words here. And there are some bit patterns in here, 0&#39;s and 1&#39;s. Okay
+just two words here. And there are some bit patterns in here, 0's and 1's. Okay
 
 9
 00:00:48,219 --> 00:00:52,149
@@ -52,7 +52,7 @@ something like a binary tree node where both of these words are pointers. And
 
 13
 00:01:04,968 --> 00:01:09,670
-because of this weakness really in the C and C++ type systems, we just can&#39;t
+because of this weakness really in the C and C++ type systems, we just can't
 
 14
 00:01:09,670 --> 00:01:15,240
@@ -64,11 +64,11 @@ possible to extend garbage collection techniques to work with languages like C
 
 16
 00:01:19,560 --> 00:01:26,259
-and C++. And the basic idea, or insight, is that it&#39;s always okay to be
+and C++. And the basic idea, or insight, is that it's always okay to be
 
 17
 00:01:26,259 --> 00:01:28,859
-conservative. And if we&#39;re not sure whether something might be used in the
+conservative. And if we're not sure whether something might be used in the
 
 18
 00:01:28,859 --> 00:01:33,169
@@ -88,11 +88,11 @@ approximation to that, so because reachable objects might be used. And now,
 
 22
 00:01:47,579 --> 00:01:51,149
-the problem with C and C++ is that we don&#39;t know where the pointers are. We
+the problem with C and C++ is that we don't know where the pointers are. We
 
 23
 00:01:51,149 --> 00:01:54,380
-don&#39;t have a guarantee from the type system about where the pointers are. And
+don't have a guarantee from the type system about where the pointers are. And
 
 24
 00:01:54,380 --> 00:01:58,639
@@ -148,31 +148,31 @@ most likely, only things that are pointers, or very few things that are not
 
 37
 00:02:50,579 --> 00:02:54,340
-pointers will be treated as pointers. And what we&#39;re going to do then, is, if it
+pointers will be treated as pointers. And what we're going to do then, is, if it
 
 38
 00:02:54,340 --> 00:02:57,950
-looks like a pointer, we&#39;re going to consider it to be a pointer. We&#39;ll follow
+looks like a pointer, we're going to consider it to be a pointer. We'll follow
 
 39
 00:02:57,950 --> 00:03:01,709
-it, and then we&#39;ll end up overestimating the set of reachable objects. We may keep
+it, and then we'll end up overestimating the set of reachable objects. We may keep
 
 40
 00:03:01,709 --> 00:03:07,049
-around some stuff, that isn&#39;t reachable at all. But that&#39;s alright, it&#39;s always okay
+around some stuff, that isn't reachable at all. But that's alright, it's always okay
 
 41
 00:03:07,049 --> 00:03:12,780
-to keep around more stuff than necessary. Now, we still can&#39;t move the object,
+to keep around more stuff than necessary. Now, we still can't move the object,
 
 42
 00:03:12,780 --> 00:03:15,290
-alright? Because we can&#39;t update the pointers to them. If we don&#39;t know that
+alright? Because we can't update the pointers to them. If we don't know that
 
 43
 00:03:15,290 --> 00:03:19,469
-something is a pointer, we certainly don&#39;t want to change it, okay? And, you know,
+something is a pointer, we certainly don't want to change it, okay? And, you know,
 
 44
 00:03:19,469 --> 00:03:22,760
@@ -189,4 +189,3 @@ completely change what the program does. So, this only really works when you mar
 47
 00:03:30,010 --> 00:03:30,260
 this way.
-

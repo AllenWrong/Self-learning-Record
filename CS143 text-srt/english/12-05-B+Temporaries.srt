@@ -16,7 +16,7 @@ is how many temporaries are in use at each point in the program. Change colors
 
 4
 00:00:21,499 --> 00:00:25,050
-here and so the way we&#39;re going to do that is we&#39;re going to add a new argument
+here and so the way we're going to do that is we're going to add a new argument
 
 5
 00:00:25,050 --> 00:00:29,949
@@ -32,7 +32,7 @@ other expressions to save their values and save places without stepping on
 
 8
 00:00:39,370 --> 00:00:44,460
-temporaries that are already having saved by all other expressions. And as you&#39;ll see
+temporaries that are already having saved by all other expressions. And as you'll see
 
 9
 00:00:44,460 --> 00:00:49,940
@@ -44,7 +44,7 @@ r ecord is going to be used like a small fixed size stack. Essentially,
 
 11
 00:00:52,870 --> 00:00:57,030
-we&#39;re going to have the same stack discipline that we had before only all
+we're going to have the same stack discipline that we had before only all
 
 12
 00:00:57,030 --> 00:01:01,239
@@ -64,15 +64,15 @@ has been moved into the compiler and all that happens now is a bunch
 
 16
 00:01:15,259 --> 00:01:21,649
-of stores and load. To fix off that from the frame pointer So let&#39;s take a look
+of stores and load. To fix off that from the frame pointer So let's take a look
 
 17
 00:01:21,649 --> 00:01:27,359
-at how this works. Here&#39;s the code that we had for e1 + e2 under the old scheme
+at how this works. Here's the code that we had for e1 + e2 under the old scheme
 
 18
 00:01:27,359 --> 00:01:32,060
-where we didn&#39;t have a separate area in the activation records for temporaries.
+where we didn't have a separate area in the activation records for temporaries.
 
 19
 00:01:32,060 --> 00:01:35,479
@@ -165,4 +165,3 @@ shorter than the one we had before and this actually substantially more
 41
 00:03:25,160 --> 00:03:25,410
 efficient.
-

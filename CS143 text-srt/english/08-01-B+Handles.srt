@@ -20,11 +20,11 @@ that all the action will take place immediately to the left of the focus point.
 
 5
 00:00:19,930 --> 00:00:25,060
-We won&#39;t have to dive down to the string to look at its [inaudible] and therefore
+We won't have to dive down to the string to look at its [inaudible] and therefore
 
 6
 00:00:25,060 --> 00:00:31,130
-the stack will be sufficient. So here&#39;s an informal proof, that handles only
+the stack will be sufficient. So here's an informal proof, that handles only
 
 7
 00:00:31,130 --> 00:00:34,580
@@ -32,11 +32,11 @@ appear at the top of the stack. And this is by induction on the number of reduce
 
 8
 00:00:34,580 --> 00:00:39,070
-moves. So this is true initially because the stack is empty. And so, we don&#39;t,
+moves. So this is true initially because the stack is empty. And so, we don't,
 
 9
 00:00:39,070 --> 00:00:42,080
-you know, so the only possible reduction is at the top of the stack if there&#39;s
+you know, so the only possible reduction is at the top of the stack if there's
 
 10
 00:00:42,080 --> 00:00:48,360
@@ -64,15 +64,15 @@ next handle has to be, It has to include something that, and you know possibly
 
 16
 00:01:16,680 --> 00:01:20,780
-include some of this stuff. But it&#39;s either right here at the current focus
+include some of this stuff. But it's either right here at the current focus
 
 17
 00:01:20,780 --> 00:01:25,100
-point, or it&#39;s to the right, Because we can&#39;t be doing any reductions to the left
+point, or it's to the right, Because we can't be doing any reductions to the left
 
 18
 00:01:25,100 --> 00:01:30,120
-of the rightmost non-terminal. And so it&#39;s gonna require a sequence of shift moves
+of the rightmost non-terminal. And so it's gonna require a sequence of shift moves
 
 19
 00:01:30,120 --> 00:01:33,530
@@ -108,9 +108,8 @@ in the example at the beginning of this video. Just because you have a right han
 
 27
 00:02:05,190 --> 00:02:10,130
-side on top of the stack that doesn&#39;t mean that it&#39;s a handle. And so we need to be smarter
+side on top of the stack that doesn't mean that it's a handle. And so we need to be smarter
 
 28
 00:02:10,130 --> 00:02:12,000
 about where we perform our
-

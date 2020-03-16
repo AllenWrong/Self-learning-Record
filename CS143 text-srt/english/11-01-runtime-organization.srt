@@ -1,6 +1,6 @@
 0
 00:00:03,730 --> 00:00:10,730
-In this video we&#39;re going to begin our discussion of run time systems. Now, at
+In this video we're going to begin our discussion of run time systems. Now, at
 
 1
 00:00:12,670 --> 00:00:17,410
@@ -28,7 +28,7 @@ those phases then the program is actually a valid program in the programming
 
 7
 00:00:47,590 --> 00:00:51,829
-language that we&#39;re compiling And at this point the compiler is going to be able to
+language that we're compiling And at this point the compiler is going to be able to
 
 8
 00:00:51,829 --> 00:00:56,910
@@ -48,15 +48,15 @@ needed to do co-generation as we seen but there is a real. Once we get through t
 
 12
 00:01:10,720 --> 00:01:15,720
-front-end we no longer looking for errors in the program. We&#39;re no longer trying to
+front-end we no longer looking for errors in the program. We're no longer trying to
 
 13
 00:01:15,720 --> 00:01:19,660
-figure out whether it&#39;s a valid program. Now we&#39;re really down to the point where
+figure out whether it's a valid program. Now we're really down to the point where
 
 14
 00:01:19,660 --> 00:01:25,970
-we&#39;re going to generate code And that is a job at the back end. So cogeneration is
+we're going to generate code And that is a job at the back end. So cogeneration is
 
 15
 00:01:25,970 --> 00:01:30,570
@@ -72,19 +72,19 @@ either one of those things, we need to talk about Runtime organization And why i
 
 18
 00:01:42,230 --> 00:01:46,630
-that, well because we need to understand what it is we&#39;re trying to generate before
+that, well because we need to understand what it is we're trying to generate before
 
 19
 00:01:46,630 --> 00:01:50,320
-we can talk about how we generated and have that makes sense. So first, we&#39;re
+we can talk about how we generated and have that makes sense. So first, we're
 
 20
 00:01:50,320 --> 00:01:54,870
-gonna talk about what the, the translator program looks like and how it&#39;s organized
+gonna talk about what the, the translator program looks like and how it's organized
 
 21
 00:01:54,870 --> 00:01:57,950
-and then we&#39;ll talk about algorithms and code generation algorithms were actually
+and then we'll talk about algorithms and code generation algorithms were actually
 
 22
 00:01:57,950 --> 00:02:02,710
@@ -96,7 +96,7 @@ standard techniques that are widely used and those are the ones we wanted to cov
 
 24
 00:02:06,080 --> 00:02:13,080
-and, and encourage you to use in your project. The main thing we&#39;re going to
+and, and encourage you to use in your project. The main thing we're going to
 
 25
 00:02:14,629 --> 00:02:19,489
@@ -104,7 +104,7 @@ cover in this sequence of videos is the management of Runtime resources and in
 
 26
 00:02:19,489 --> 00:02:24,310
-particular I&#39;m going to be stressing the correspondence and the distinction between
+particular I'm going to be stressing the correspondence and the distinction between
 
 27
 00:02:24,310 --> 00:02:29,879
@@ -136,7 +136,7 @@ to when the target program or the generated program actually runs that is
 
 34
 00:02:59,709 --> 00:03:05,819
-key to really understanding how compilers work. And we&#39;ll also be talking about
+key to really understanding how compilers work. And we'll also be talking about
 
 35
 00:03:05,819 --> 00:03:10,670
@@ -144,7 +144,7 @@ storage organization. So how memory is used to store the data structures of the
 
 36
 00:03:10,670 --> 00:03:17,670
-executing program. So let&#39;s begin at the beginning. So initially there is the
+executing program. So let's begin at the beginning. So initially there is the
 
 37
 00:03:19,310 --> 00:03:22,230
@@ -168,7 +168,7 @@ operating system is going to execute a job to the entry point or the main functi
 
 42
 00:03:42,499 --> 00:03:49,349
-the program and then your program will be off and running. So, let&#39;s take a look at
+the program and then your program will be off and running. So, let's take a look at
 
 43
 00:03:49,349 --> 00:03:54,200
@@ -176,7 +176,7 @@ what the organization memory looks like very roughly when the Operating System
 
 44
 00:03:54,200 --> 00:03:59,480
-began execution of the compiled program. So we&#39;re gonna draw our pictures of memory
+began execution of the compiled program. So we're gonna draw our pictures of memory
 
 45
 00:03:59,480 --> 00:04:04,859
@@ -200,7 +200,7 @@ of the memory space allocated to the program. And then there is a bunch. Of
 
 50
 00:04:25,320 --> 00:04:29,850
-other space that is going to be used for other things and we&#39;ll talk about that in
+other space that is going to be used for other things and we'll talk about that in
 
 51
 00:04:29,850 --> 00:04:36,470
@@ -208,15 +208,15 @@ a minute. Before going on, I want to say a few words about this pictures of Run-
 
 52
 00:04:36,470 --> 00:04:40,840
-Organization because I&#39;m going to be drawing a lot of them over the next few
+Organization because I'm going to be drawing a lot of them over the next few
 
 53
 00:04:40,840 --> 00:04:47,210
-videos. So, it&#39;s just traditional to have memory drawn as a rectangle with the low
+videos. So, it's just traditional to have memory drawn as a rectangle with the low
 
 54
 00:04:47,210 --> 00:04:52,340
-address at the top and the high address at the bottom. There&#39;s nothing magic about
+address at the top and the high address at the bottom. There's nothing magic about
 
 55
 00:04:52,340 --> 00:04:55,620
@@ -224,11 +224,11 @@ that, just a convention we could adjust it easily every verse or order of the
 
 56
 00:04:55,620 --> 00:05:01,370
-address, no big deal. And then we&#39;ll be drawing lines to the limit different
+address, no big deal. And then we'll be drawing lines to the limit different
 
 57
 00:05:01,370 --> 00:05:07,530
-regions of this memory showing different kinds of data and how they&#39;re stored in
+regions of this memory showing different kinds of data and how they're stored in
 
 58
 00:05:07,530 --> 00:05:12,370
@@ -236,7 +236,7 @@ the memory allocated to the program. And clearly these pictures are simplificati
 
 59
 00:05:12,370 --> 00:05:17,450
-if this, is a virtual memory system for example, there&#39;s no guarantee that these
+if this, is a virtual memory system for example, there's no guarantee that these
 
 60
 00:05:17,450 --> 00:05:23,370
@@ -256,7 +256,7 @@ we have some block memory and the first portion of that is occupied by the actua
 
 64
 00:05:43,350 --> 00:05:46,970
-generated code for the program and then there was this other space and we&#39;re what
+generated code for the program and then there was this other space and we're what
 
 65
 00:05:46,970 --> 00:05:51,930
@@ -268,7 +268,7 @@ all the data is in the rest of the space and the tricky thing about code generat
 
 67
 00:05:57,520 --> 00:06:01,870
-that the compiler is responsible for generating the code but it&#39;s also
+that the compiler is responsible for generating the code but it's also
 
 68
 00:06:01,870 --> 00:06:06,620
@@ -296,7 +296,7 @@ turns out that this actually more than one kind of data that the compiler is goi
 
 74
 00:06:31,870 --> 00:06:36,520
-be interested in and what we&#39;ll be talking about. In the next video is the different
+be interested in and what we'll be talking about. In the next video is the different
 
 75
 00:06:36,520 --> 00:06:39,440
@@ -305,4 +305,3 @@ kinds of data and the different distinction between the kinds of data that
 76
 00:06:39,440 --> 00:06:41,490
 go in this data area.
-

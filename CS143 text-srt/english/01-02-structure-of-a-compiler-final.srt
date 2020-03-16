@@ -1,6 +1,6 @@
 0
 00:00:03,169 --> 00:00:06,670
-Welcome back, in this second half of the lecture we&#39;ll continue with our overview
+Welcome back, in this second half of the lecture we'll continue with our overview
 
 1
 00:00:06,670 --> 00:00:13,670
@@ -12,7 +12,7 @@ lexical analysis, parsing, semantic analysis, optimization, and code
 
 3
 00:00:21,390 --> 00:00:25,510
-generation. And now we&#39;re going to briefly talk about each one, and we&#39;re going to
+generation. And now we're going to briefly talk about each one, and we're going to
 
 4
 00:00:25,510 --> 00:00:30,850
@@ -28,11 +28,11 @@ human, is to understand the words. Now, humans can look at this example sentence
 
 7
 00:00:45,069 --> 00:00:52,069
-and immediately recognize that there are four words &#39;this is a&#39; and &#39;sentence. And
+and immediately recognize that there are four words 'this is a' and 'sentence. And
 
 8
 00:00:52,789 --> 00:00:57,449
-this is so automatic that you don&#39;t even think about it but there is [inaudible]
+this is so automatic that you don't even think about it but there is [inaudible]
 
 9
 00:00:57,449 --> 00:01:01,209
@@ -52,11 +52,11 @@ words that you can understand. And just to emphasize that this is not completely
 
 13
 00:01:18,030 --> 00:01:24,100
-trivial, let&#39;s take a look at this sentence. And you can read this, but it
+trivial, let's take a look at this sentence. And you can read this, but it
 
 14
 00:01:24,100 --> 00:01:28,250
-takes a little bit of time Because I&#39;ve put the separators in, in odd places. So
+takes a little bit of time Because I've put the separators in, in odd places. So
 
 15
 00:01:28,250 --> 00:01:34,799
@@ -64,15 +64,15 @@ you can see the word is, the word this, the word a, and the word sentence. But
 
 16
 00:01:34,799 --> 00:01:38,820
-again this isn&#39;t something that comes to you immediately. You actually have to do
+again this isn't something that comes to you immediately. You actually have to do
 
 17
 00:01:38,820 --> 00:01:44,060
-some work to see where the divisions lie Because they&#39;re not given to you in the
+some work to see where the divisions lie Because they're not given to you in the
 
 18
 00:01:44,060 --> 00:01:49,920
-way that you&#39;re used to. The goal of lexical analysis, then, is to divide the
+way that you're used to. The goal of lexical analysis, then, is to divide the
 
 19
 00:01:49,920 --> 00:01:56,259
@@ -80,15 +80,15 @@ program text into its words, or what we call in compiler speak, the tokens. So,
 
 20
 00:01:56,259 --> 00:02:00,009
-here&#39;s an, an example piece of program text now, instead of a piece of English
+here's an, an example piece of program text now, instead of a piece of English
 
 21
 00:02:00,009 --> 00:02:05,579
-text, and let&#39;s walk through this and identify the tokens. So, there&#39;s some
+text, and let's walk through this and identify the tokens. So, there's some
 
 22
 00:02:05,579 --> 00:02:11,489
-obvious ones that are keywords, like if, and then. &gt;&gt; And else that we want to
+obvious ones that are keywords, like if, and then. >> And else that we want to
 
 23
 00:02:11,489 --> 00:02:18,489
@@ -96,7 +96,7 @@ identify. And then there are variable names, things like X, and Y, and Z.
 
 24
 00:02:19,120 --> 00:02:25,519
-There&#39;s also constants, things like number one, and the number two. And then there
+There's also constants, things like number one, and the number two. And then there
 
 25
 00:02:25,519 --> 00:02:32,019
@@ -104,7 +104,7 @@ are some operators, double equals is one, and the assignment operator is another
 
 26
 00:02:32,019 --> 00:02:36,260
-And here&#39;s already an interesting question. How do we know that double
+And here's already an interesting question. How do we know that double
 
 27
 00:02:36,260 --> 00:02:41,170
@@ -112,15 +112,15 @@ equals is not two individual equals signs? How do we know that we want this? To 
 
 28
 00:02:41,170 --> 00:02:45,909
-double equal so we want, and not two single equals. Well, we don&#39;t know right
+double equal so we want, and not two single equals. Well, we don't know right
 
 29
 00:02:45,909 --> 00:02:50,610
-now but we&#39;ll talk about that. &gt;&gt; In the lecture on how we implement Lexico
+now but we'll talk about that. >> In the lecture on how we implement Lexico
 
 30
 00:02:50,610 --> 00:02:53,959
-analysis. But we&#39;re not done with all the tokens in this example either, there&#39;s a
+analysis. But we're not done with all the tokens in this example either, there's a
 
 31
 00:02:53,959 --> 00:03:00,040
@@ -128,7 +128,7 @@ few more. The semi colons, the punctuation are also tokens, and then the separat
 
 32
 00:03:00,040 --> 00:03:04,560
-are also tokens, so here&#39;s a blank, that&#39;s a token, here&#39;s another blank, that&#39;s
+are also tokens, so here's a blank, that's a token, here's another blank, that's
 
 33
 00:03:04,560 --> 00:03:08,230
@@ -152,7 +152,7 @@ called parsing. And as we all learned in elementary school, this means diagrammi
 
 38
 00:03:26,879 --> 00:03:32,110
-sentences, and these diagrams are trees, and it&#39;s a very simple procedure. Let&#39;s
+sentences, and these diagrams are trees, and it's a very simple procedure. Let's
 
 39
 00:03:32,110 --> 00:03:36,969
@@ -180,7 +180,7 @@ actually forms an entire sentence. So, right here we have the root of the tree
 
 45
 00:04:04,719 --> 00:04:07,989
-called a sentence, and that&#39;s broken down into constituent parts. The high level
+called a sentence, and that's broken down into constituent parts. The high level
 
 46
 00:04:07,989 --> 00:04:11,890
@@ -196,11 +196,11 @@ The analogy between parsing English text and parsing program text is very strong
 
 49
 00:04:24,420 --> 00:04:28,510
-In fact, they&#39;re exactly the same thing. So here&#39;s our little example piece of code
+In fact, they're exactly the same thing. So here's our little example piece of code
 
 50
 00:04:28,510 --> 00:04:32,880
-again, so let&#39;s work through parsing it. So, clearly, this is an if then else
+again, so let's work through parsing it. So, clearly, this is an if then else
 
 51
 00:04:32,880 --> 00:04:38,160
@@ -208,7 +208,7 @@ statement, and so, the root of our diagram, of our parse tree, is gonna be if
 
 52
 00:04:38,160 --> 00:04:42,350
-then else. [inaudible] Nothing else consists of three parts. There&#39;s a
+then else. [inaudible] Nothing else consists of three parts. There's a
 
 53
 00:04:42,350 --> 00:04:46,290
@@ -216,7 +216,7 @@ predicate, a then statement, and an L statement. And now let?s look at the
 
 54
 00:04:46,290 --> 00:04:51,920
-predicate which consists of three pieces. There&#39;s a variable, a comparison operator
+predicate which consists of three pieces. There's a variable, a comparison operator
 
 55
 00:04:51,920 --> 00:04:57,850
@@ -240,7 +240,7 @@ of the if-then-else, showing its structure, breaking it up into its
 
 60
 00:05:19,320 --> 00:05:26,320
-constituent pieces. Now, once we&#39;ve understood the sentence structure, the
+constituent pieces. Now, once we've understood the sentence structure, the
 
 61
 00:05:26,600 --> 00:05:30,930
@@ -248,7 +248,7 @@ next step is to try to understand the meaning, of what has been written. And,
 
 62
 00:05:30,930 --> 00:05:36,180
-this is hard. So, actually we don&#39;t know how this works for humans still. We don&#39;t
+this is hard. So, actually we don't know how this works for humans still. We don't
 
 63
 00:05:36,180 --> 00:05:40,850
@@ -284,7 +284,7 @@ somehow self inconsistent, [inaudible] compilers can often notice that and repor
 
 71
 00:06:15,930 --> 00:06:22,130
-errors. But they don&#39;t really know what the program is supposed to do. As an
+errors. But they don't really know what the program is supposed to do. As an
 
 72
 00:06:22,130 --> 00:06:27,590
@@ -292,7 +292,7 @@ example of the kind of thing that we do in semantic analysis, again, using an an
 
 73
 00:06:27,590 --> 00:06:32,180
-in English, let&#39;s consider the following sentence. So, Jack said Jerry left his
+in English, let's consider the following sentence. So, Jack said Jerry left his
 
 74
 00:06:32,180 --> 00:06:37,930
@@ -304,19 +304,19 @@ could be that his refers to Jerry, in which case we would read, Jack said Jerry
 
 76
 00:06:42,580 --> 00:06:48,540
-left Jerry&#39;s assignment at home. Or it could refer to Jack. In which case, we
+left Jerry's assignment at home. Or it could refer to Jack. In which case, we
 
 77
 00:06:48,540 --> 00:06:52,630
-could read the sentence as, Jack said Jerry left Jack&#39;s assignment at home. And
+could read the sentence as, Jack said Jerry left Jack's assignment at home. And
 
 78
 00:06:52,630 --> 00:06:58,450
-without more information, we actually don&#39;t know which one. His is referring to,
+without more information, we actually don't know which one. His is referring to,
 
 79
 00:06:58,450 --> 00:07:02,980
-whether it&#39;s Jack, or it&#39;s Jerry. And even worse, let&#39;s take a look at this sentence
+whether it's Jack, or it's Jerry. And even worse, let's take a look at this sentence
 
 80
 00:07:02,980 --> 00:07:07,700
@@ -332,7 +332,7 @@ three, there could be two separate Jacks and his, could even refer to somebody
 
 83
 00:07:19,280 --> 00:07:23,450
-completely different. We don&#39;t know without seeing the rest of the story. That
+completely different. We don't know without seeing the rest of the story. That
 
 84
 00:07:23,450 --> 00:07:27,910
@@ -368,7 +368,7 @@ English sentences on the previous slide. So you know, in this example. Question 
 
 92
 00:08:06,900 --> 00:08:12,180
-what value is printed by this output statement, and the answer is it&#39;s going to
+what value is printed by this output statement, and the answer is it's going to
 
 93
 00:08:12,180 --> 00:08:18,110
@@ -392,11 +392,11 @@ perform many semantic texts besides analyzing the variable bindings. And so
 
 98
 00:08:39,299 --> 00:08:45,829
-here&#39;s another example in English. So Jack looked her homework at home. And, under
+here's another example in English. So Jack looked her homework at home. And, under
 
 99
 00:08:45,829 --> 00:08:49,949
-the usual naming conventions, assuming that Jack is male, we know there&#39;s a type
+the usual naming conventions, assuming that Jack is male, we know there's a type
 
 100
 00:08:49,949 --> 00:08:56,050
@@ -412,11 +412,11 @@ people. And so this is, analogous to type checking. The fourth compiler phase,
 
 103
 00:09:06,569 --> 00:09:10,959
-optimization, doesn&#39;t have a very strong counterpart in everyday English usage but
+optimization, doesn't have a very strong counterpart in everyday English usage but
 
 104
 00:09:10,959 --> 00:09:14,480
-it&#39;s a little bit like editing. And, in fact, it&#39;s a lot like what professional
+it's a little bit like editing. And, in fact, it's a lot like what professional
 
 105
 00:09:14,480 --> 00:09:18,779
@@ -428,7 +428,7 @@ some word budget. So, for example, I have this phrase right here, but a little b
 
 107
 00:09:23,889 --> 00:09:29,060
-like ending; and if I didn&#39;t like it, if I thought it was too long, I could replace
+like ending; and if I didn't like it, if I thought it was too long, I could replace
 
 108
 00:09:29,060 --> 00:09:36,060
@@ -464,11 +464,11 @@ reducing the number of network messages or the number of database accesses. And
 
 116
 00:10:12,220 --> 00:10:17,800
-there&#39;s any number of resources that we might want to improve other program&#39;s use
+there's any number of resources that we might want to improve other program's use
 
 117
 00:10:17,800 --> 00:10:24,800
-of. So here&#39;s a simple example of the kinds of optimizations a program might do.
+of. So here's a simple example of the kinds of optimizations a program might do.
 
 118
 00:10:28,019 --> 00:10:32,600
@@ -488,11 +488,11 @@ Now unfortunately this is not a correct rule. And this is one of the important
 
 122
 00:10:47,670 --> 00:10:51,449
-things to know about compiling optimization, is that it&#39;s not always
+things to know about compiling optimization, is that it's not always
 
 123
 00:10:51,449 --> 00:10:57,249
-obvious when it&#39;s legal to do certain optimizations or not. Now it turns out
+obvious when it's legal to do certain optimizations or not. Now it turns out
 
 124
 00:10:57,249 --> 00:11:04,249
@@ -504,7 +504,7 @@ integers, then multiplying by zero is always the same thing as just signing
 
 126
 00:11:10,379 --> 00:11:17,379
-zero. But, it&#39;s invalid for floating point. And why is that, well because you
+zero. But, it's invalid for floating point. And why is that, well because you
 
 127
 00:11:20,350 --> 00:11:24,540
@@ -524,7 +524,7 @@ non-number times zero is not equal to zero If X and Y are plotting point numbers
 
 131
 00:11:43,540 --> 00:11:47,790
-can&#39;t do this optimization. In fact, if you did this optimization, it would break
+can't do this optimization. In fact, if you did this optimization, it would break
 
 132
 00:11:47,790 --> 00:11:52,470
@@ -536,11 +536,11 @@ not a number. Finally, the last compiler phase is code generation, often
 
 134
 00:12:00,689 --> 00:12:07,040
-referred to as Code Gen, and Code Gen, can produce assembly code. That&#39;s the most
+referred to as Code Gen, and Code Gen, can produce assembly code. That's the most
 
 135
 00:12:07,040 --> 00:12:10,579
-common thing that a compiler would produce. But in general, it&#39;s a
+common thing that a compiler would produce. But in general, it's a
 
 136
 00:12:10,579 --> 00:12:15,040
@@ -588,7 +588,7 @@ except for its semantic analysis which is very weak in the early days. And today
 
 147
 00:13:15,199 --> 00:13:19,749
-if we look at a modern compiler you&#39;ll see almost nothing in lengthening, very little
+if we look at a modern compiler you'll see almost nothing in lengthening, very little
 
 148
 00:13:19,749 --> 00:13:25,269
@@ -608,9 +608,8 @@ compilers, and the a small code-generation phase because again we understand tha
 
 152
 00:13:43,290 --> 00:13:48,949
-phase very, very well. That&#39;s it for this lecture. Future lectures, we&#39;ll look at
+phase very, very well. That's it for this lecture. Future lectures, we'll look at
 
 153
 00:13:48,949 --> 00:13:50,580
 each of these phases in detail.
-

@@ -4,7 +4,7 @@ Now you might think that the unambiguous if, then, else grammar is complicated a
 
 1
 00:00:06,050 --> 00:00:10,959
-to understand and frankly I would have to agree with you. Unfortunately, it&#39;s
+to understand and frankly I would have to agree with you. Unfortunately, it's
 
 2
 00:00:10,959 --> 00:00:15,699
@@ -12,7 +12,7 @@ impossible to automatically convert an unambiguous grammar to an ambiguous one,
 
 3
 00:00:15,699 --> 00:00:19,190
-so we have to do these conversions by hand. If we&#39;re going to have unambiguous
+so we have to do these conversions by hand. If we're going to have unambiguous
 
 4
 00:00:19,190 --> 00:00:23,020
@@ -28,7 +28,7 @@ maintain than if we use the, well more straightforward ambiguous grammars. A
 
 7
 00:00:33,160 --> 00:00:38,670
-possibility is to we&#39;ll try to somehow live with ambiguity cuz that will allow us
+possibility is to we'll try to somehow live with ambiguity cuz that will allow us
 
 8
 00:00:38,670 --> 00:00:43,899
@@ -64,7 +64,7 @@ and this is ambiguous even just with a single infix operation, we can get
 
 16
 00:01:21,040 --> 00:01:25,650
-ambiguity because this grammar doesn&#39;t tell us whether plus is left associative
+ambiguity because this grammar doesn't tell us whether plus is left associative
 
 17
 00:01:25,650 --> 00:01:30,840
@@ -96,7 +96,7 @@ plus and times over the integers and again this grammar is ambiguous because it
 
 24
 00:02:00,920 --> 00:02:05,960
-doesn&#39;t say what the precedence of times is with respect to plus. And the solution
+doesn't say what the precedence of times is with respect to plus. And the solution
 
 25
 00:02:05,960 --> 00:02:11,830
@@ -120,7 +120,7 @@ caution, These declarations are called associativity and precedence declarations
 
 30
 00:02:37,810 --> 00:02:42,170
-but that&#39;s not what&#39;s quite what&#39;s going on inside the parser. The parser doesn&#39;t
+but that's not what's quite what's going on inside the parser. The parser doesn't
 
 31
 00:02:42,170 --> 00:02:45,750
@@ -128,7 +128,7 @@ really understand about associativity and precedence. Instead, these declaration
 
 32
 00:02:45,750 --> 00:02:50,560
-tell it to make certain kinds of moves in certain situations. We won&#39;t really be
+tell it to make certain kinds of moves in certain situations. We won't really be
 
 33
 00:02:50,560 --> 00:02:54,480
@@ -149,4 +149,3 @@ are some situations in which they will cause Rising behavior And is important
 37
 00:03:07,709 --> 00:03:11,590
 that you check the behavior of your grammar after you add these declarations.
-

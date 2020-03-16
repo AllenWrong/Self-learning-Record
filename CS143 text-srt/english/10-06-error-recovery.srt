@@ -1,6 +1,6 @@
 0
 00:00:04,059 --> 00:00:08,350
-In this video we&#39;re going to wrap up our series on type checking with a discussion
+In this video we're going to wrap up our series on type checking with a discussion
 
 1
 00:00:08,350 --> 00:00:15,350
@@ -8,11 +8,11 @@ of how to recover from type errors. So as with all the other front end phases, l
 
 2
 00:00:17,199 --> 00:00:20,550
-flexing and parsing, it&#39;s important to recover from errors that happen during
+flexing and parsing, it's important to recover from errors that happen during
 
 3
 00:00:20,550 --> 00:00:25,320
-type checking But unlike parsing, it&#39;s much, much easier to recover from errors
+type checking But unlike parsing, it's much, much easier to recover from errors
 
 4
 00:00:25,320 --> 00:00:28,949
@@ -20,7 +20,7 @@ in the type checker because we already have the up stacks and text tree and so
 
 5
 00:00:28,949 --> 00:00:33,340
-there&#39;s no need to skip over portions of the code as we did in parsing before we
+there's no need to skip over portions of the code as we did in parsing before we
 
 6
 00:00:33,340 --> 00:00:38,870
@@ -32,7 +32,7 @@ type should we assign to an expression that has no legitimate type? The type
 
 8
 00:00:43,910 --> 00:00:48,370
-checker works by structural induction, and it can&#39;t just get stuck. So if we find
+checker works by structural induction, and it can't just get stuck. So if we find
 
 9
 00:00:48,370 --> 00:00:52,750
@@ -48,7 +48,7 @@ surround it. One possibility is to simply assign the type object as the type of 
 
 12
 00:01:03,010 --> 00:01:06,900
-ill typed expression. And the intuition here is that even if we couldn&#39;t figure
+ill typed expression. And the intuition here is that even if we couldn't figure
 
 13
 00:01:06,900 --> 00:01:10,640
@@ -60,7 +60,7 @@ that was a sub type of object. So it is certainly safe to assign any expression
 
 15
 00:01:15,799 --> 00:01:21,299
-the type object. So let&#39;s consider what happens with this strategy in a simple
+the type object. So let's consider what happens with this strategy in a simple
 
 16
 00:01:21,299 --> 00:01:25,920
@@ -68,19 +68,19 @@ piece of code. So here we have a little code fragment and we just assume here th
 
 17
 00:01:25,920 --> 00:01:30,280
-X is undefined, that actually there&#39;s a bug in this code and that&#39;s at X has no
+X is undefined, that actually there's a bug in this code and that's at X has no
 
 18
 00:01:30,280 --> 00:01:34,560
-binding. So there&#39;s no type anywhere for X. So what happens when we type check
+binding. So there's no type anywhere for X. So what happens when we type check
 
 19
 00:01:34,560 --> 00:01:38,399
-this? Well, we&#39;re going to recursively walk down the abstract syntax tree,
+this? Well, we're going to recursively walk down the abstract syntax tree,
 
 20
 00:01:38,399 --> 00:01:40,969
-eventually we&#39;ll get to the leaves, and we&#39;ll try to type check X. And then we&#39;ll
+eventually we'll get to the leaves, and we'll try to type check X. And then we'll
 
 21
 00:01:40,969 --> 00:01:46,299
@@ -92,11 +92,11 @@ message Saying that X is undefined And then in order to proceed with type
 
 23
 00:01:54,929 --> 00:01:59,090
-checking, in order to recover, we&#39;ll have to assign X a type And so, we&#39;ll just
+checking, in order to recover, we'll have to assign X a type And so, we'll just
 
 24
 00:01:59,090 --> 00:02:04,590
-assume that X has type object, because that&#39;s our recovery strategy And now we&#39;ll
+assume that X has type object, because that's our recovery strategy And now we'll
 
 25
 00:02:04,590 --> 00:02:08,060
@@ -104,19 +104,19 @@ continue to type check as we walk up the abstr act syntax tree, and the next thi
 
 26
 00:02:08,060 --> 00:02:11,569
-we&#39;ll try to do is to type check this plus operation. We&#39;ll see that we&#39;re adding
+we'll try to do is to type check this plus operation. We'll see that we're adding
 
 27
 00:02:11,569 --> 00:02:17,569
-something of type object to, an integer. And of course plus doesn&#39;t work on things
+something of type object to, an integer. And of course plus doesn't work on things
 
 28
 00:02:17,569 --> 00:02:24,569
-of type object, so we&#39;ll get an error. Something like plus applied to an object.
+of type object, so we'll get an error. Something like plus applied to an object.
 
 29
 00:02:28,939 --> 00:02:32,430
-And then we&#39;ll have to decide, now that we couldn&#39;t type check this plus, what the
+And then we'll have to decide, now that we couldn't type check this plus, what the
 
 30
 00:02:32,430 --> 00:02:36,939
@@ -128,15 +128,15 @@ strategy is to say, well that also has type object And now the next thing up in
 
 32
 00:02:42,420 --> 00:02:45,310
-the abstract syntax tree is this initialization assignment. Here we&#39;re
+the abstract syntax tree is this initialization assignment. Here we're
 
 33
 00:02:45,310 --> 00:02:50,840
-assigning Y the result of this expression But we couldn&#39;t type check this expression
+assigning Y the result of this expression But we couldn't type check this expression
 
 34
 00:02:50,840 --> 00:02:54,189
-so it has type object And now the type checker sees that we&#39;re assigning
+so it has type object And now the type checker sees that we're assigning
 
 35
 00:02:54,189 --> 00:02:58,489
@@ -184,15 +184,15 @@ a new type, a No type that is specifically for use with ill typed expressions An
 
 46
 00:03:57,209 --> 00:04:01,999
-type is very special. It&#39;s not a type that is available to the programmer. It&#39;s only
+type is very special. It's not a type that is available to the programmer. It's only
 
 47
 00:04:01,999 --> 00:04:05,900
-available to the compiler and it&#39;s just there for error recovery and type
+available to the compiler and it's just there for error recovery and type
 
 48
 00:04:05,900 --> 00:04:10,249
-checking. And the special property of No type is that it&#39;s going to be a sub type
+checking. And the special property of No type is that it's going to be a sub type
 
 49
 00:04:10,249 --> 00:04:15,739
@@ -208,7 +208,7 @@ few methods that defined on object and so if you plug in type object. Where you
 
 52
 00:04:25,960 --> 00:04:31,130
-expected some other type probably it&#39;s not going to type check. So we can fix that
+expected some other type probably it's not going to type check. So we can fix that
 
 53
 00:04:31,130 --> 00:04:35,240
@@ -216,7 +216,7 @@ problem by introducing no type. And no type will have this special property that
 
 54
 00:04:35,240 --> 00:04:40,360
-every operation, every operation is defined for no type And furthermore we&#39;ll
+every operation, every operation is defined for no type And furthermore we'll
 
 55
 00:04:40,360 --> 00:04:45,370
@@ -228,11 +228,11 @@ takes an argument of type no type it will produce a result of type no type. So t
 
 57
 00:04:49,780 --> 00:04:55,490
-no types will propagate. And now let&#39;s take a look at our same code fragment and
+no types will propagate. And now let's take a look at our same code fragment and
 
 58
 00:04:55,490 --> 00:05:00,270
-let&#39;s work through what happens if we use no type. So, again we walk down the
+let's work through what happens if we use no type. So, again we walk down the
 
 59
 00:05:00,270 --> 00:05:04,669
@@ -248,19 +248,19 @@ we say well X has type no type and now we consider the plus operation And now pl
 
 62
 00:05:21,750 --> 00:05:26,460
-is taking an augmentative type no type integer And this is fine. We&#39;re not gonna
+is taking an augmentative type no type integer And this is fine. We're not gonna
 
 63
 00:05:26,460 --> 00:05:31,110
-produce any errors that&#39;s consider to be well type and the results is also of type
+produce any errors that's consider to be well type and the results is also of type
 
 64
 00:05:31,110 --> 00:05:38,110
-no type. And now we&#39;re doing an assignment And no type is compatible with N. No type
+no type. And now we're doing an assignment And no type is compatible with N. No type
 
 65
 00:05:39,990 --> 00:05:44,800
-is a subtype of N. So this assignment is also type correct And we don&#39;t produce any
+is a subtype of N. So this assignment is also type correct And we don't produce any
 
 66
 00:05:44,800 --> 00:05:49,610
@@ -272,11 +272,11 @@ types propagate up the abstract syntax tree just like the object types did befor
 
 68
 00:05:54,430 --> 00:05:57,789
-But since no type is a special type it&#39;s used only for error recovery. We can
+But since no type is a special type it's used only for error recovery. We can
 
 69
 00:05:57,789 --> 00:06:01,419
-distinguish it from all the other regular types And we know that we shouldn&#39;t print
+distinguish it from all the other regular types And we know that we shouldn't print
 
 70
 00:06:01,419 --> 00:06:08,419
@@ -320,7 +320,7 @@ something more general. And this is just enough extra hassle that I personally
 
 80
 00:06:52,639 --> 00:06:57,300
-don&#39;t think it&#39;s worth doing for the course project and I recommend that you
+don't think it's worth doing for the course project and I recommend that you
 
 81
 00:06:57,300 --> 00:07:02,620
@@ -329,4 +329,3 @@ use the object solution and we just live with the propagating, or compounding,
 82
 00:07:02,620 --> 00:07:04,240
 errors that, that produces.
-

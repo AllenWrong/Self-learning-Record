@@ -4,7 +4,7 @@ To wrap up and summarize our discussion of the global analysis of control flow g
 
 1
 00:00:05,600 --> 00:00:10,050
-we&#39;ve talked about two kinds of analysis in the past several videos. Constant
+we've talked about two kinds of analysis in the past several videos. Constant
 
 2
 00:00:10,050 --> 00:00:15,190
@@ -52,7 +52,7 @@ flow, of execution, backwards towards the beginning of the program.
 
 13
 00:01:07,109 --> 00:01:11,789
-So they&#39;re many other kinds of global flow analysis in the literature. The
+So they're many other kinds of global flow analysis in the literature. The
 
 14
 00:01:11,789 --> 00:01:15,579
@@ -88,7 +88,7 @@ of local Rules that relay information between adjacent program points.
 
 22
 00:01:43,619 --> 00:01:47,780
-So it, it&#39;s the local rules part that&#39;s important. So we break down the complicate
+So it, it's the local rules part that's important. So we break down the complicate
 
 23
 00:01:47,780 --> 00:01:52,219
@@ -97,4 +97,3 @@ d problem of analyzing an entire control flow graph into a collection
 24
 00:01:52,219 --> 00:01:55,939
 of rules that only do ver, propagate information very, very locally.
-

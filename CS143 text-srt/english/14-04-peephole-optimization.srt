@@ -1,6 +1,6 @@
 0
 00:00:03,929 --> 00:00:07,240
-In this short video, I&#39;m going to say a few words about a variation on local
+In this short video, I'm going to say a few words about a variation on local
 
 1
 00:00:07,240 --> 00:00:10,690
@@ -64,11 +64,11 @@ assembly program. So, people optimizations are generally written as replacement
 
 16
 00:01:19,080 --> 00:01:22,630
-rules. So, the we&#39;ll have the window of instructions on the left. So, it&#39;ll be
+rules. So, the we'll have the window of instructions on the left. So, it'll be
 
 17
 00:01:22,630 --> 00:01:25,920
-some sequence of instructions and we&#39;ll know some other sequence of instructions
+some sequence of instructions and we'll know some other sequence of instructions
 
 18
 00:01:25,920 --> 00:01:29,799
@@ -76,7 +76,7 @@ that we would prefer on the right. So, if we see this instruction sequence on th
 
 19
 00:01:29,799 --> 00:01:35,049
-left, then we&#39;ll replace by the one on the right-hand side. So, for example, if I
+left, then we'll replace by the one on the right-hand side. So, for example, if I
 
 20
 00:01:35,049 --> 00:01:41,880
@@ -84,7 +84,7 @@ have a move from register b to register a and then I move back from register a t
 
 21
 00:01:41,880 --> 00:01:47,000
-register b well, that&#39;s the second move is useless, can, can just be deleted as a way
+register b well, that's the second move is useless, can, can just be deleted as a way
 
 22
 00:01:47,000 --> 00:01:52,159
@@ -92,11 +92,11 @@ to replace this two instruction sequence by a one instruction, instruction
 
 23
 00:01:52,159 --> 00:01:57,930
-sequence. And this will work provided that there&#39;s no possible jump target here. So
+sequence. And this will work provided that there's no possible jump target here. So
 
 24
 00:01:57,930 --> 00:02:01,979
-if, if there&#39;s no possibility that the code would ever jump to this instruction
+if, if there's no possibility that the code would ever jump to this instruction
 
 25
 00:02:01,979 --> 00:02:08,450
@@ -116,7 +116,7 @@ addition where I add the sum of i = j to the register A. So, many but not quite 
 
 29
 00:02:25,370 --> 00:02:29,439
-of the basic block optimizations that we&#39;ve discussed in the last video, can be
+of the basic block optimizations that we've discussed in the last video, can be
 
 30
 00:02:29,439 --> 00:02:36,439
@@ -124,11 +124,11 @@ cast also as peephole optimizations. So, for example if we are adding zero to a
 
 31
 00:02:37,579 --> 00:02:41,099
-register and we&#39;re storing it in another register, well, that can be replaced by a
+register and we're storing it in another register, well, that can be replaced by a
 
 32
 00:02:41,099 --> 00:02:46,879
-register move. If we&#39;re moving a value from the same register to itself so this
+register move. If we're moving a value from the same register to itself so this
 
 33
 00:02:46,879 --> 00:02:50,230
@@ -164,7 +164,7 @@ discussion has illustrated for you that many optimizations can be applied direct
 
 41
 00:03:27,689 --> 00:03:32,219
-to assembly code and that there&#39;s really nothing magic about optimizing
+to assembly code and that there's really nothing magic about optimizing
 
 42
 00:03:32,219 --> 00:03:36,189
@@ -180,11 +180,11 @@ doing transformations of programs written in that language to improve the behavi
 
 45
 00:03:45,269 --> 00:03:50,359
-of the program. And it&#39;s also a good time here to mention that program optimization
+of the program. And it's also a good time here to mention that program optimization
 
 46
 00:03:50,359 --> 00:03:56,719
-is really a terrible term. The compilers do not produce optimal code and it&#39;s
+is really a terrible term. The compilers do not produce optimal code and it's
 
 47
 00:03:56,719 --> 00:04:03,719
@@ -200,13 +200,12 @@ transformations that they know will improve the behavior of the program. And
 
 50
 00:04:11,939 --> 00:04:16,269
-they&#39;ll just improve it as much as they ca N. So, really what program optimization is
+they'll just improve it as much as they ca N. So, really what program optimization is
 
 51
 00:04:16,269 --> 00:04:20,780
-all about is program improvement. We&#39;re trying to make the program better but
+all about is program improvement. We're trying to make the program better but
 
 52
 00:04:20,779 --> 00:04:26,360
-there&#39;s no guarantee that we will reach the best possible code for a given program.
-
+there's no guarantee that we will reach the best possible code for a given program.

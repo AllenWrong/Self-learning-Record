@@ -1,6 +1,6 @@
 0
 00:00:04,690 --> 00:00:07,980
-In this video, we&#39;re gonna continue our discussion of parsing with the idea of a
+In this video, we're gonna continue our discussion of parsing with the idea of a
 
 1
 00:00:07,980 --> 00:00:14,980
@@ -32,19 +32,19 @@ replace x. So I applied production x goes to y1 to yn, I add the y1 to yn is
 
 8
 00:00:54,879 --> 00:01:01,499
-children of x in the tree that I&#39;m building up. Let&#39;s do an example. Here is
+children of x in the tree that I'm building up. Let's do an example. Here is
 
 9
 00:01:01,499 --> 00:01:06,010
-our simple grammar of arithmetic expressions and let&#39;s consider this
+our simple grammar of arithmetic expressions and let's consider this
 
 10
 00:01:06,010 --> 00:01:11,720
-particular string id id + id. So what we&#39;re going to do now is we&#39;re going to
+particular string id id + id. So what we're going to do now is we're going to
 
 11
 00:01:11,720 --> 00:01:16,690
-parse this string and we&#39;re going to show how to produce a derivation for the string
+parse this string and we're going to show how to produce a derivation for the string
 
 12
 00:01:16,690 --> 00:01:23,690
@@ -52,7 +52,7 @@ and also at the same time build the tree. And here it is, Over here, there is
 
 13
 00:01:25,030 --> 00:01:30,680
-derivation beginning in e and ending in the string that we&#39;re interested in with
+derivation beginning in e and ending in the string that we're interested in with
 
 14
 00:01:30,680 --> 00:01:36,100
@@ -64,15 +64,15 @@ this is called a parse tree. This is a parse tree of this expression or this
 
 16
 00:01:45,900 --> 00:01:51,650
-input string. So let&#39;s walk through this derivation in detail. The right side in
+input string. So let's walk through this derivation in detail. The right side in
 
 17
 00:01:51,650 --> 00:01:55,840
-red, we&#39;re going to have the tree that we&#39;re building up. And on the left side in
+red, we're going to have the tree that we're building up. And on the left side in
 
 18
 00:01:55,840 --> 00:02:00,360
-blue, we&#39;re going to have the steps in the derivation that we&#39;ve taken so far. So
+blue, we're going to have the steps in the derivation that we've taken so far. So
 
 19
 00:02:00,360 --> 00:02:05,030
@@ -108,7 +108,7 @@ expression and we replace it by id which means we make id a child of the left mo
 
 27
 00:02:51,600 --> 00:02:58,130
-e in the tree that we&#39;re building. And then we replace the second e by id using
+e in the tree that we're building. And then we replace the second e by id using
 
 28
 00:02:58,130 --> 00:03:02,790
@@ -136,7 +136,7 @@ at the interior nodes and furthermore, in-order traversal of the leaves is the
 
 34
 00:03:29,370 --> 00:03:34,370
-original input. So let&#39;s back up and look at our example and confirm all this. If we
+original input. So let's back up and look at our example and confirm all this. If we
 
 35
 00:03:34,370 --> 00:03:41,370
@@ -144,7 +144,7 @@ look at the leaves, we can see that they are all terminals, Okay? And the interi
 
 36
 00:03:41,620 --> 00:03:45,380
-nodes are all nonterminals. In this case, it&#39;s only one nonterminal in our language,
+nodes are all nonterminals. In this case, it's only one nonterminal in our language,
 
 37
 00:03:45,380 --> 00:03:50,800
@@ -180,7 +180,7 @@ of you may have wondered well, how did I know. To pick this Parse Tree because
 
 45
 00:04:26,900 --> 00:04:30,250
-actually if you think about it, there&#39;s another derivation. Actually there are
+actually if you think about it, there's another derivation. Actually there are
 
 46
 00:04:30,250 --> 00:04:35,310
@@ -188,11 +188,11 @@ several derivations that will give me a different Parse Tree where the plus, whe
 
 47
 00:04:35,310 --> 00:04:40,060
-the times is towards the root and the plus is nested inside the times. So let&#39;s not
+the times is towards the root and the plus is nested inside the times. So let's not
 
 48
 00:04:40,060 --> 00:04:44,770
-worry about that for right now, and let&#39;s just say that somehow we knew that this
+worry about that for right now, and let's just say that somehow we knew that this
 
 49
 00:04:44,770 --> 00:04:49,400
@@ -204,7 +204,7 @@ Tree. Continuing on, the previous derivation I showed you is actually a very
 
 51
 00:04:54,580 --> 00:04:58,900
-special derivation. It&#39;s what&#39;s called a leftmost derivation where each step will
+special derivation. It's what's called a leftmost derivation where each step will
 
 52
 00:04:58,900 --> 00:05:04,470
@@ -212,7 +212,7 @@ replace the leftmost nonterminal in our string of terminals and nonterminals. An
 
 53
 00:05:04,470 --> 00:05:08,960
-there&#39;s a natural and equivalent notion of a rightmost derivation and here it is.
+there's a natural and equivalent notion of a rightmost derivation and here it is.
 
 54
 00:05:08,960 --> 00:05:13,960
@@ -220,11 +220,11 @@ Here is a rightmost derivation for the same string. Again, beginning with the
 
 55
 00:05:13,960 --> 00:05:17,520
-start symbol ending with a string we&#39;re interested in. And notice that at each
+start symbol ending with a string we're interested in. And notice that at each
 
 56
 00:05:17,520 --> 00:05:22,440
-step, we&#39;re replacing the rightmost non-terminal. So here, we replace the only
+step, we're replacing the rightmost non-terminal. So here, we replace the only
 
 57
 00:05:22,440 --> 00:05:27,600
@@ -232,7 +232,7 @@ non-terminal e and we get e + c. And then in the second step, we replace the sec
 
 58
 00:05:27,600 --> 00:05:32,940
-non-terminal e with id and so on for the rest of the string. So let&#39;s just
+non-terminal e with id and so on for the rest of the string. So let's just
 
 59
 00:05:32,940 --> 00:05:36,810
@@ -248,7 +248,7 @@ root, the start symbol e and, and in blue is our derivation so we begin by repla
 
 62
 00:05:45,180 --> 00:05:50,150
-e by e + e. That&#39;s the only nonterminal so it&#39;s the rightmost one and then working
+e by e + e. That's the only nonterminal so it's the rightmost one and then working
 
 63
 00:05:50,150 --> 00:05:55,500
@@ -272,7 +272,7 @@ same Parse Tree. And, this was not an accident. Every Parse Tree has a rightmost
 
 68
 00:06:19,729 --> 00:06:25,120
-and a leftmost derivation. It&#39;s just about the order in which the branches are added.
+and a leftmost derivation. It's just about the order in which the branches are added.
 
 69
 00:06:25,120 --> 00:06:31,979
@@ -292,7 +292,7 @@ derivation. If I continue to always work on the rightmost non-terminal of course
 
 73
 00:06:45,889 --> 00:06:50,840
-And if I work on this one first, I can use that to do a leftmost derivation. Now it&#39;s
+And if I work on this one first, I can use that to do a leftmost derivation. Now it's
 
 74
 00:06:50,840 --> 00:06:54,820
@@ -304,9 +304,8 @@ leftmost. I could, I could choose non-terminals in some random order to do
 
 76
 00:06:59,759 --> 00:07:04,570
-my replacements. But th e rightmost and leftmost ones are the ones that we&#39;re most
+my replacements. But th e rightmost and leftmost ones are the ones that we're most
 
 77
 00:07:04,570 --> 00:07:05,349
 concerned with.
-

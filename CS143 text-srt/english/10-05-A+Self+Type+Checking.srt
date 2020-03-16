@@ -4,7 +4,7 @@ In this video we are going to use what we have learned so far about self-type to
 
 1
 00:00:07,259 --> 00:00:13,970
-incorporate the self-type into the type checking rules for Cool. First let&#39;s
+incorporate the self-type into the type checking rules for Cool. First let's
 
 2
 00:00:13,970 --> 00:00:18,429
@@ -32,7 +32,7 @@ our type checking, is class C. And the whole reason for this additional piece
 
 8
 00:00:43,889 --> 00:00:48,620
-here we haven&#39;t actually discussed this before why we needed this C. It is because
+here we haven't actually discussed this before why we needed this C. It is because
 
 9
 00:00:48,620 --> 00:00:54,510
@@ -52,11 +52,11 @@ subscript, it is tracking what class we are in. So when we see occurrences, an
 
 13
 00:01:09,909 --> 00:01:16,909
-occurrence of self-type we know what kind of self-type. We&#39;re talking about so now
+occurrence of self-type we know what kind of self-type. We're talking about so now
 
 14
 00:01:16,909 --> 00:01:21,640
-I&#39;m ready to actually give the type rules that use self-type. And for the most part,
+I'm ready to actually give the type rules that use self-type. And for the most part,
 
 15
 00:01:21,640 --> 00:01:26,859
@@ -64,7 +64,7 @@ this is really easy, because the rules just remain the same. That is, they look
 
 16
 00:01:26,859 --> 00:01:30,679
-the same, but they&#39;re actually a little bit different, because they use the new
+the same, but they're actually a little bit different, because they use the new
 
 17
 00:01:30,679 --> 00:01:34,869
@@ -96,7 +96,7 @@ in particular the dispatch rules need to be updated. So here is the old rule for
 
 24
 00:02:07,630 --> 00:02:13,340
-dynamic dispatch. And this rule, this part of the rule, actually doesn&#39;t change. It
+dynamic dispatch. And this rule, this part of the rule, actually doesn't change. It
 
 25
 00:02:13,340 --> 00:02:17,010
@@ -104,7 +104,7 @@ stays the same. But, I just wanna point out the essential restriction in this
 
 26
 00:02:17,010 --> 00:02:21,610
-rule, is that the return type of the method could not be self-type. And that&#39;s
+rule, is that the return type of the method could not be self-type. And that's
 
 27
 00:02:21,610 --> 00:02:25,180
@@ -112,7 +112,7 @@ actually the place where self-type buys us something. So the whole purpose of ha
 
 28
 00:02:25,180 --> 00:02:29,480
-self-type is to have methods who&#39;s return type is self-type. Because that&#39;s were we
+self-type is to have methods who's return type is self-type. Because that's were we
 
 29
 00:02:29,480 --> 00:02:35,780
@@ -124,11 +124,11 @@ that we have self typing we done all this work, what if the methods return type 
 
 31
 00:02:39,629 --> 00:02:44,909
-self type. How are we going to type check that? Well here&#39;s the rule. So as usual,
+self type. How are we going to type check that? Well here's the rule. So as usual,
 
 32
 00:02:44,909 --> 00:02:50,140
-we type check the. The expression that we&#39;re dispatching to that&#39;s E zero and all
+we type check the. The expression that we're dispatching to that's E zero and all
 
 33
 00:02:50,140 --> 00:02:53,420
@@ -148,7 +148,7 @@ And then we have to check that the arguments conform. That every actual
 
 37
 00:03:10,610 --> 00:03:15,060
-argument, E1 through En, has a type that&#39;s compatible with the corresponding formal
+argument, E1 through En, has a type that's compatible with the corresponding formal
 
 38
 00:03:15,060 --> 00:03:20,430
@@ -192,7 +192,7 @@ interesting detail is that the dispatch expression itself could have a type,
 
 48
 00:04:13,260 --> 00:04:20,260
-self-type. And, so what do I mean by that, well, let&#39;s think about E zero.
+self-type. And, so what do I mean by that, well, let's think about E zero.
 
 49
 00:04:22,450 --> 00:04:26,880
@@ -224,15 +224,15 @@ type do we use here? Well, if this whole thing is occurring in class C. If we ha
 
 56
 00:04:59,470 --> 00:05:05,510
-if we&#39;re type checking in class C. &gt;&gt; You just put the line there. &gt;&gt; And it&#39;s safe
+if we're type checking in class C. >> You just put the line there. >> And it's safe
 
 57
 00:05:05,510 --> 00:05:11,190
-and this is a soft type sub c and as always it&#39;s safe to replace soft type sub
+and this is a soft type sub c and as always it's safe to replace soft type sub
 
 58
 00:05:11,190 --> 00:05:17,700
-c by c. So, we&#39;ll just use the class c there. The correct class that we are type
+c by c. So, we'll just use the class c there. The correct class that we are type
 
 59
 00:05:17,700 --> 00:05:24,700
@@ -256,7 +256,7 @@ the return type of the method is self-typed, then the rule looks a little
 
 64
 00:05:44,850 --> 00:05:50,300
-bit different. So, we, once again we type check, the, expression that we&#39;re
+bit different. So, we, once again we type check, the, expression that we're
 
 65
 00:05:50,300 --> 00:05:54,650
@@ -264,7 +264,7 @@ dispatching to and all the arguments in the same environment as that of the enti
 
 66
 00:05:54,650 --> 00:06:00,240
-expression. We have to check that the class we&#39;re dispatching to, the type t
+expression. We have to check that the class we're dispatching to, the type t
 
 67
 00:06:00,240 --> 00:06:06,770
@@ -272,7 +272,7 @@ zero, is a sub type of the class, named in the static dispatch. We have to look 
 
 68
 00:06:06,770 --> 00:06:11,050
-the method. It has to exist in that class that we&#39;re statically dispatching to. So
+the method. It has to exist in that class that we're statically dispatching to. So
 
 69
 00:06:11,050 --> 00:06:15,560
@@ -288,7 +288,7 @@ If the types of the arguments match the types, the declared types of the formal
 
 72
 00:06:24,000 --> 00:06:28,800
-parameters. And then, the only thing that&#39;s kind of curious about this rule, is
+parameters. And then, the only thing that's kind of curious about this rule, is
 
 73
 00:06:28,800 --> 00:06:35,800
@@ -300,11 +300,11 @@ have been a, a T. It could have been the type to which we statically dispatched.
 
 75
 00:06:41,460 --> 00:06:46,340
-And it&#39;s not because self-type is the type of the self-parameter. And even though
+And it's not because self-type is the type of the self-parameter. And even though
 
 76
 00:06:46,340 --> 00:06:51,960
-we&#39;re dispatching to a method in class T , the self-parameter still has type T0. And
+we're dispatching to a method in class T , the self-parameter still has type T0. And
 
 77
 00:06:51,960 --> 00:06:56,970
@@ -312,15 +312,15 @@ recall that T0 is a subtype of T. So we use the static dispatch to reach a metho
 
 78
 00:06:56,970 --> 00:07:01,740
-definition that&#39;s hidden potentially by overwrite, overwritten methods, in the
+definition that's hidden potentially by overwrite, overwritten methods, in the
 
 79
 00:07:01,740 --> 00:07:04,810
-subclasses. But that doesn&#39;t change the type of the self-parameter. The
+subclasses. But that doesn't change the type of the self-parameter. The
 
 80
 00:07:04,810 --> 00:07:09,310
-self-parameter still has type T0 even though we&#39;re running a method. Of the, in
+self-parameter still has type T0 even though we're running a method. Of the, in
 
 81
 00:07:09,310 --> 00:07:16,310
@@ -336,7 +336,7 @@ those places where we need to know the enclosing class. So, we know what kind of
 
 84
 00:07:25,370 --> 00:07:30,220
-self-type we&#39;re referring to. And similarly there&#39;s a rule for allocating
+self-type we're referring to. And similarly there's a rule for allocating
 
 85
 00:07:30,220 --> 00:07:34,780
@@ -345,4 +345,3 @@ something of type self-type. So, a, the expression new self-type also produces
 86
 00:07:34,780 --> 00:07:36,900
 something of type self-type sub-C.
-

@@ -1,6 +1,6 @@
 0
 00:00:01,050 --> 00:00:04,510
-Now that we&#39;ve dealt with the layout of an object&#39;s attributes, we can switch
+Now that we've dealt with the layout of an object's attributes, we can switch
 
 1
 00:00:04,510 --> 00:00:09,420
@@ -8,7 +8,7 @@ gears and talk about how we layout its methods and how we implement dynamic disp
 
 2
 00:00:09,420 --> 00:00:16,420
-So, let&#39;s consider a dispatch called e.g where e here, let&#39;s say, is a class
+So, let's consider a dispatch called e.g where e here, let's say, is a class
 
 3
 00:00:18,289 --> 00:00:24,409
@@ -16,7 +16,7 @@ b. Okay? So what do we wanted to have happen? Well, we want to invoke the g
 
 4
 00:00:24,409 --> 00:00:29,419
-method here in class b, okay? So that seems pretty straight forward. So now let&#39;s
+method here in class b, okay? So that seems pretty straight forward. So now let's
 
 5
 00:00:29,419 --> 00:00:34,690
@@ -24,7 +24,7 @@ consider a slightly more complicated example. What if we are invoking e.f of if
 
 6
 00:00:34,690 --> 00:00:41,690
-we&#39;re calling the f method? Well, if we have a b object. Then we are going to want
+we're calling the f method? Well, if we have a b object. Then we are going to want
 
 7
 00:00:42,179 --> 00:00:49,179
@@ -80,7 +80,7 @@ a class, then you know exactly which methods it has. Those methods never change
 
 20
 00:02:05,990 --> 00:02:11,340
-at runtime. Okay? So don&#39;t be confused here because overriding is something that&#39;s
+at runtime. Okay? So don't be confused here because overriding is something that's
 
 21
 00:02:11,340 --> 00:02:15,730
@@ -96,7 +96,7 @@ a compile time all the methods of a particular class. Methods never change while
 
 24
 00:02:25,860 --> 00:02:30,440
-the prog ram is executing. Alright So, a dispatch tape of there&#39;s a table of
+the prog ram is executing. Alright So, a dispatch tape of there's a table of
 
 25
 00:02:30,440 --> 00:02:35,819
@@ -104,7 +104,7 @@ some sort is used to index these methods and this is just in the ray of method e
 
 26
 00:02:35,819 --> 00:02:40,069
-point. So, essentially for every method of the class there&#39;s an entry in the
+point. So, essentially for every method of the class there's an entry in the
 
 27
 00:02:40,069 --> 00:02:44,640
@@ -120,7 +120,7 @@ so once we determine the position that a method lives in. It lives
 
 30
 00:02:56,600 --> 00:03:03,600
-in the dispatch table; it will stay there for any subclasses of that class. So let&#39;s
+in the dispatch table; it will stay there for any subclasses of that class. So let's
 
 31
 00:03:04,959 --> 00:03:09,150
@@ -144,7 +144,7 @@ Alright so those three classes and these methods, Okay? And so the dispatch tabl
 
 36
 00:03:44,540 --> 00:03:50,880
-for class a only has one method in it so it&#39;s also at zero. We store a pointer
+for class a only has one method in it so it's also at zero. We store a pointer
 
 37
 00:03:50,880 --> 00:03:57,360
@@ -160,15 +160,15 @@ a. So this is a pointer to the caller side or the calling sequence or the
 
 40
 00:04:07,940 --> 00:04:14,940
-label labeled instruction as the entry point for the method. Now, what about let&#39;s
+label labeled instruction as the entry point for the method. Now, what about let's
 
 41
 00:04:15,709 --> 00:04:21,579
-take a look next actually at class c. Okay? So class inherits from a. So what&#39;s
+take a look next actually at class c. Okay? So class inherits from a. So what's
 
 42
 00:04:21,579 --> 00:04:25,059
-going to happen with all the methods of a and they&#39;re going to be at the
+going to happen with all the methods of a and they're going to be at the
 
 43
 00:04:25,059 --> 00:04:31,800
@@ -220,7 +220,7 @@ of the f method in class b. Okay so the important thing to see here is
 
 55
 00:05:34,699 --> 00:05:40,569
-that the pointer to the code for the f method lives in the same position. It&#39;s still
+that the pointer to the code for the f method lives in the same position. It's still
 
 56
 00:05:40,569 --> 00:05:45,759
@@ -228,7 +228,7 @@ the first entry in the table, okay so the position of the f method in the dispat
 
 57
 00:05:45,759 --> 00:05:49,900
-table for class b is exactly the same that never changes. What&#39;s difference
+table for class b is exactly the same that never changes. What's difference
 
 58
 00:05:49,900 --> 00:05:55,159
@@ -332,7 +332,7 @@ table of the methods And again every method of the class or every class is
 
 83
 00:08:08,929 --> 00:08:15,270
-a sign and offset and we&#39;ll call that Os of f. In the dispatch table compiled times.
+a sign and offset and we'll call that Os of f. In the dispatch table compiled times.
 
 84
 00:08:15,270 --> 00:08:18,800
@@ -344,11 +344,11 @@ then assign each of those methods, a fixed position, a fixed offset in that disp
 
 86
 00:08:23,800 --> 00:08:30,800
-table, So to wrap up, how do we implement dynamic dispatch? So let&#39;s say we
+table, So to wrap up, how do we implement dynamic dispatch? So let's say we
 
 87
 00:08:30,869 --> 00:08:37,469
-have a dispatch to an expression e and we&#39;re calling the f method. So, here&#39;s the,
+have a dispatch to an expression e and we're calling the f method. So, here's the,
 
 88
 00:08:37,469 --> 00:08:41,750
@@ -356,11 +356,11 @@ a slightly simplified version of the sequence of steps. So first, we evaluate th
 
 89
 00:08:41,750 --> 00:08:47,949
-expression e and that&#39;s going to give us back an object x. Okay, and then we are
+expression e and that's going to give us back an object x. Okay, and then we are
 
 90
 00:08:47,949 --> 00:08:52,040
-going to get the dispatch table for x, where that does come from. Well, it&#39;s in the
+going to get the dispatch table for x, where that does come from. Well, it's in the
 
 91
 00:08:52,040 --> 00:08:56,350
@@ -368,7 +368,7 @@ header of x so we can just take the object x itself and we know that in every
 
 92
 00:08:56,350 --> 00:09:03,350
-object at the, in the third word there is a dispatch pointer for the, that&#39;s appropriate
+object at the, in the third word there is a dispatch pointer for the, that's appropriate
 
 93
 00:09:03,420 --> 00:09:08,170
@@ -376,17 +376,16 @@ to the class of x. So, we take that table and then we look up the entry point
 
 94
 00:09:08,170 --> 00:09:14,750
-of f at the offset For f in that dispatch table And then we&#39;ll jump to that
+of f at the offset For f in that dispatch table And then we'll jump to that
 
 95
 00:09:14,750 --> 00:09:19,980
-to that address, okay? That&#39;s the entry point of the function and, and when we do
+to that address, okay? That's the entry point of the function and, and when we do
 
 96
 00:09:19,980 --> 00:09:25,699
-that, we&#39;re buying self to x. So the, the self parameter inside of the f method will
+that, we're buying self to x. So the, the self parameter inside of the f method will
 
 97
 00:09:25,699 --> 00:09:26,980
 be the x object.
-

@@ -4,7 +4,7 @@ To summarize this video, The type environment gives types to the free
 
 1
 00:00:05,680 --> 00:00:09,770
-identifiers in the current scope. And this is very important, because it doesn&#39;t even
+identifiers in the current scope. And this is very important, because it doesn't even
 
 2
 00:00:09,770 --> 00:00:13,500
@@ -61,4 +61,3 @@ up the types of variables, in the type environment. And then we compute the type
 15
 00:01:00,320 --> 00:01:03,749
 for the more complicated expressions in a bottom up fashion.
-

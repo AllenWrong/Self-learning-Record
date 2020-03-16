@@ -1,6 +1,6 @@
 0
 00:00:00,760 --> 00:00:04,800
-To sum up our discussion of activations it&#39;s obvious I think that
+To sum up our discussion of activations it's obvious I think that
 
 1
 00:00:04,800 --> 00:00:09,140
@@ -8,7 +8,7 @@ the activation tree depends on the runtime behavior of the program. So it depend
 
 2
 00:00:09,140 --> 00:00:12,700
-the runtime value who&#39;s exactly which procedures are called and what the
+the runtime value who's exactly which procedures are called and what the
 
 3
 00:00:12,700 --> 00:00:17,530
@@ -20,11 +20,11 @@ should be obvious that the activation tree can be different for different inputs
 
 5
 00:00:22,890 --> 00:00:27,720
-so the programs I showed you didn&#39;t take input and so we didn&#39;t have, every time
+so the programs I showed you didn't take input and so we didn't have, every time
 
 6
 00:00:27,720 --> 00:00:31,830
-you run those programs we&#39;ll get the same activation tree, playing general if
+you run those programs we'll get the same activation tree, playing general if
 
 7
 00:00:31,830 --> 00:00:35,010
@@ -32,7 +32,7 @@ program takes input, it will execute differently and may call different
 
 8
 00:00:35,010 --> 00:00:41,399
-procedures and different orders. And finally here&#39;s perhaps the most important
+procedures and different orders. And finally here's perhaps the most important
 
 9
 00:00:41,399 --> 00:00:46,049
@@ -44,15 +44,15 @@ can use a stack to implement of detract the currently active activations. So,
 
 11
 00:00:53,769 --> 00:00:59,219
-let&#39;s see how we can use a stack to track activations. We&#39;ll use these examples that
+let's see how we can use a stack to track activations. We'll use these examples that
 
 12
 00:00:59,219 --> 00:01:04,659
-we looked at before. And what I&#39;m going to do is I&#39;m going to show the activation
+we looked at before. And what I'm going to do is I'm going to show the activation
 
 13
 00:01:04,659 --> 00:01:10,780
-tree over here on the left and I&#39;m going to show the stack of currently executing
+tree over here on the left and I'm going to show the stack of currently executing
 
 14
 00:01:10,780 --> 00:01:14,820
@@ -60,7 +60,7 @@ activations on the right. So the stack is not gonna keep track of the entire
 
 15
 00:01:14,820 --> 00:01:19,350
-activation tree. It&#39;s only going to keep track of the activations that are
+activation tree. It's only going to keep track of the activations that are
 
 16
 00:01:19,350 --> 00:01:24,810
@@ -128,11 +128,11 @@ stack and finally main will finish and main will also be popped off the stack.
 
 32
 00:03:04,019 --> 00:03:07,709
-And so that&#39;s the idea. So that is how we can use the stack. So essentially when a
+And so that's the idea. So that is how we can use the stack. So essentially when a
 
 33
 00:03:07,709 --> 00:03:11,870
-procedure is called we&#39;ll push an activation for that procedure on to the
+procedure is called we'll push an activation for that procedure on to the
 
 34
 00:03:11,870 --> 00:03:16,840
@@ -144,7 +144,7 @@ And because activation lifetimes are properly nested this will work out. So, to
 
 36
 00:03:23,939 --> 00:03:29,599
-conclude our discussion of activations, let&#39;s return to the runtime organization
+conclude our discussion of activations, let's return to the runtime organization
 
 37
 00:03:29,599 --> 00:03:34,430
@@ -176,9 +176,8 @@ of the memory space of the program and the stack will grow when procedures are c
 
 44
 00:04:05,079 --> 00:04:09,879
-and it will shrink when procedures return. And as we&#39;ll see, there are other things
+and it will shrink when procedures return. And as we'll see, there are other things
 
 45
 00:04:09,879 --> 00:04:15,239
 that go in this data area that we are going to be discussing in the upcoming videos.
-

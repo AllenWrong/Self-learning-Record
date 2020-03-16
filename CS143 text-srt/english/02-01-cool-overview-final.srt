@@ -1,10 +1,10 @@
 0
 00:00:04,630 --> 00:00:09,630
-Hello, in this and the next few videos I&#39;m going to be giving a overview of COOL the
+Hello, in this and the next few videos I'm going to be giving a overview of COOL the
 
 1
 00:00:09,630 --> 00:00:16,630
-programming language in which you&#39;ll be writing a compiler. Cool is the Classroom
+programming language in which you'll be writing a compiler. Cool is the Classroom
 
 2
 00:00:18,349 --> 00:00:25,040
@@ -24,7 +24,7 @@ semester for students to write the compilers. And so COOL has to be
 
 6
 00:00:40,850 --> 00:00:46,800
-implementable quickly. And actually since it&#39;s used primarily for teaching
+implementable quickly. And actually since it's used primarily for teaching
 
 7
 00:00:46,800 --> 00:00:52,700
@@ -40,7 +40,7 @@ compilers, maybe tens of thousands of compilers have been written for COOL, but
 
 10
 00:01:01,450 --> 00:01:05,970
-probably only some dozens, or hundreds COOL programs. And so, it&#39;s probably the
+probably only some dozens, or hundreds COOL programs. And so, it's probably the
 
 11
 00:01:05,970 --> 00:01:10,229
@@ -52,7 +52,7 @@ compilers actually exceeds the number of programs, but it does Tell you about th
 
 13
 00:01:15,200 --> 00:01:19,439
-main design requirement. It&#39;s much more important in COOL that the compiler be
+main design requirement. It's much more important in COOL that the compiler be
 
 14
 00:01:19,439 --> 00:01:24,139
@@ -64,7 +64,7 @@ quirks in the language, Things that have been done specifically to make it easie
 
 16
 00:01:29,340 --> 00:01:35,450
-to implement where that wouldn&#39;t take away from the, the teaching value of the, of
+to implement where that wouldn't take away from the, the teaching value of the, of
 
 17
 00:01:35,450 --> 00:01:39,030
@@ -72,11 +72,11 @@ the language. But that would make it inconvenient to use the language on a
 
 18
 00:01:39,030 --> 00:01:45,630
-day-to-day basis as a working programmer. So, what is in the language? Well it&#39;s,
+day-to-day basis as a working programmer. So, what is in the language? Well it's,
 
 19
 00:01:45,630 --> 00:01:49,159
-we&#39;ve tried to design it so that it will give you a taste of modern notions of
+we've tried to design it so that it will give you a taste of modern notions of
 
 20
 00:01:49,159 --> 00:01:53,759
@@ -84,27 +84,27 @@ extraction static typing reuse through inheritance, automatic memory management.
 
 21
 00:01:53,759 --> 00:01:57,679
-And there&#39;s actually a few more things that we&#39;ll talk about when we come to
+And there's actually a few more things that we'll talk about when we come to
 
 22
 00:01:57,679 --> 00:02:02,420
-them. But many things are left out. We&#39;re not gonna be able to put everything in the
+them. But many things are left out. We're not gonna be able to put everything in the
 
 23
 00:02:02,420 --> 00:02:05,849
-language and have it be implementable quickly. We&#39;ll be able to cover some
+language and have it be implementable quickly. We'll be able to cover some
 
 24
 00:02:05,849 --> 00:02:09,789
-things in lectures, but unfortunately, there&#39;ll even be some interesting language
+things in lectures, but unfortunately, there'll even be some interesting language
 
 25
 00:02:09,788 --> 00:02:16,789
-ideas that we won&#39;t be able to get to in this class. So the course project is to
+ideas that we won't be able to get to in this class. So the course project is to
 
 26
 00:02:17,280 --> 00:02:22,160
-build a complete compiler. And specifically you&#39;re going to compile COOL
+build a complete compiler. And specifically you're going to compile COOL
 
 27
 00:02:22,160 --> 00:02:27,810
@@ -112,7 +112,7 @@ into MIPS assembly language. So MIPS is a real instruction set, It was for a mac
 
 28
 00:02:27,810 --> 00:02:33,200
-that was designed in the 1980&#39;s. And there is a simulator for MIPS that runs on just
+that was designed in the 1980's. And there is a simulator for MIPS that runs on just
 
 29
 00:02:33,200 --> 00:02:36,860
@@ -132,7 +132,7 @@ machine you have access to. The project is broken up into five assignments. Firs
 
 33
 00:02:50,740 --> 00:02:54,840
-you&#39;re gonna write a COOL program. And that program itself will be an interpreter
+you're gonna write a COOL program. And that program itself will be an interpreter
 
 34
 00:02:54,840 --> 00:02:58,080
@@ -172,15 +172,15 @@ and, and test it against the reference components. And so this way if you have
 
 43
 00:03:36,510 --> 00:03:40,560
-trouble with one component or aren&#39;t sure that your components is working very well
+trouble with one component or aren't sure that your components is working very well
 
 44
 00:03:40,560 --> 00:03:44,080
-you won&#39;t have a problem in working on a different component because you&#39;ll be able
+you won't have a problem in working on a different component because you'll be able
 
 45
 00:03:44,080 --> 00:03:50,090
-to test that independently. And finally there&#39;s no required optimization
+to test that independently. And finally there's no required optimization
 
 46
 00:03:50,090 --> 00:03:54,730
@@ -192,11 +192,11 @@ do. And many people have written optimizations for COOL. And so this is an
 
 48
 00:04:00,100 --> 00:04:05,819
-optional assignment if you&#39;re interested in learning something about program
+optional assignment if you're interested in learning something about program
 
 49
 00:04:05,819 --> 00:04:12,819
-optimization. So, let&#39;s write the simplest possible COOL program. And the first thing
+optimization. So, let's write the simplest possible COOL program. And the first thing
 
 50
 00:04:17,029 --> 00:04:22,440
@@ -212,7 +212,7 @@ use some other editor if you like. And every COOL program has to have a class
 
 53
 00:04:34,600 --> 00:04:40,750
-called main. And let&#39;s talk about that business in a second. So a class
+called main. And let's talk about that business in a second. So a class
 
 54
 00:04:40,750 --> 00:04:44,790
@@ -236,11 +236,11 @@ list of class declarations. Each class declaration terminated by a semi-colon. S
 
 59
 00:05:06,460 --> 00:05:11,000
-that&#39;s the structure of a class. And now we need this class to actually do
+that's the structure of a class. And now we need this class to actually do
 
 60
 00:05:11,000 --> 00:05:16,680
-something so we&#39;re going to have a method in this class, and let&#39;s call the method
+something so we're going to have a method in this class, and let's call the method
 
 61
 00:05:16,680 --> 00:05:23,200
@@ -248,11 +248,11 @@ main. In fact the main method of the main class must always exist. This is the
 
 62
 00:05:23,200 --> 00:05:27,660
-method that&#39;s run to start the program and furthermore this method must take no
+method that's run to start the program and furthermore this method must take no
 
 63
 00:05:27,660 --> 00:05:32,980
-arguments. So the empty argument list for the main method is always empty. And let&#39;s
+arguments. So the empty argument list for the main method is always empty. And let's
 
 64
 00:05:32,980 --> 00:05:39,900
@@ -280,7 +280,7 @@ we can say what we want the method actually do so this is the place for the
 
 70
 00:06:02,030 --> 00:06:05,889
-code for the method goes and let&#39;s just have the simplest possible method the one
+code for the method goes and let's just have the simplest possible method the one
 
 71
 00:06:05,889 --> 00:06:12,889
@@ -292,11 +292,11 @@ language, which means that wherever a piece of code can go, you can put an
 
 73
 00:06:18,060 --> 00:06:22,400
-arbitrary expression, any expression can go there there&#39;s no explicit return
+arbitrary expression, any expression can go there there's no explicit return
 
 74
 00:06:22,400 --> 00:06:27,470
-statement for a method. It&#39;s just a value of the method body is the value of the
+statement for a method. It's just a value of the method body is the value of the
 
 75
 00:06:27,470 --> 00:06:30,810
@@ -304,7 +304,7 @@ methods. So in this case we just put the number one in there, and that will be t
 
 76
 00:06:30,810 --> 00:06:37,000
-value of this method when we run it. So let&#39;s save that. And now we can try
+value of this method when we run it. So let's save that. And now we can try
 
 77
 00:06:37,000 --> 00:06:43,250
@@ -316,7 +316,7 @@ for the COOL compiler and you just give the COOL compiler a list of COOL source
 
 79
 00:06:50,040 --> 00:06:55,880
-files. So in this case there&#39;s just one file 1.CL hit enter and ooh we got a
+files. So in this case there's just one file 1.CL hit enter and ooh we got a
 
 80
 00:06:55,880 --> 00:07:02,680
@@ -324,11 +324,11 @@ syntax error so we have to come back and fix that and the error said at or near 
 
 81
 00:07:02,680 --> 00:07:09,130
-open curly brace on line three there&#39;s a mistake. And I know what the mistake is,
+open curly brace on line three there's a mistake. And I know what the mistake is,
 
 82
 00:07:09,130 --> 00:07:12,570
-because I&#39;m a competent COOL programmer, at least somewhat competent COOL
+because I'm a competent COOL programmer, at least somewhat competent COOL
 
 83
 00:07:12,570 --> 00:07:17,460
@@ -344,7 +344,7 @@ name of the method and the argument list, and then the name of a type. And since
 
 86
 00:07:24,889 --> 00:07:30,340
-we&#39;re returning the number one for this program for sorry, for this method we
+we're returning the number one for this program for sorry, for this method we
 
 87
 00:07:30,340 --> 00:07:37,340
@@ -352,7 +352,7 @@ might as well say that the main method is going to return an integer, So save th
 
 88
 00:07:37,860 --> 00:07:43,740
-Go back to our compilation window and let&#39;s compile the program again. And this
+Go back to our compilation window and let's compile the program again. And this
 
 89
 00:07:43,740 --> 00:07:48,680
@@ -360,7 +360,7 @@ time it compiles successfully. And now if we look in our directory we see that t
 
 90
 00:07:48,680 --> 00:07:55,680
-is a new file called 1.s. That&#39;s the assembly code for the program one. And now
+is a new file called 1.s. That's the assembly code for the program one. And now
 
 91
 00:07:56,360 --> 00:08:03,360
@@ -380,7 +380,7 @@ as you can see, it says part way down that the COOL program successfully execute
 
 95
 00:08:21,290 --> 00:08:24,660
-that&#39;s good, and then afterwards there are some statistics and things like number of
+that's good, and then afterwards there are some statistics and things like number of
 
 96
 00:08:24,660 --> 00:08:29,419
@@ -388,23 +388,23 @@ instructions executed, a number of loads and stores, a number of branches, those
 
 97
 00:08:29,419 --> 00:08:32,519
-things would be interesting if we&#39;re worried about performance if we were to
+things would be interesting if we're worried about performance if we were to
 
 98
 00:08:32,519 --> 00:08:37,399
-say working on the optimization of the compiled code, but we&#39;re not doing that
+say working on the optimization of the compiled code, but we're not doing that
 
 99
 00:08:37,399 --> 00:08:43,120
-right now. We&#39;re just running programs. And we can see if this program works. So
+right now. We're just running programs. And we can see if this program works. So
 
 100
 00:08:43,120 --> 00:08:45,520
-the program ran. It terminated successfully. But it didn&#39;t actually
+the program ran. It terminated successfully. But it didn't actually
 
 101
 00:08:45,520 --> 00:08:52,480
-produce any output. And that&#39;s because we didn&#39;t ask it to produce any output, If we
+produce any output. And that's because we didn't ask it to produce any output, If we
 
 102
 00:08:52,480 --> 00:08:59,230
@@ -416,7 +416,7 @@ this program does currently, is that it just returns its value but that, but
 
 104
 00:09:02,170 --> 00:09:05,740
-nothing is done with that value. It&#39;s not printed out or anything like that. If you
+nothing is done with that value. It's not printed out or anything like that. If you
 
 105
 00:09:05,740 --> 00:09:10,270
@@ -424,11 +424,11 @@ wanted to have something printed out in a COOL program, you have to do that
 
 106
 00:09:10,270 --> 00:09:16,230
-explicitly. So there&#39;s a special class built in, a primitive class called IO. And
+explicitly. So there's a special class built in, a primitive class called IO. And
 
 107
 00:09:16,230 --> 00:09:23,230
-we can declare, what&#39;s called a attribute of this class, it will be a IO attribute
+we can declare, what's called a attribute of this class, it will be a IO attribute
 
 108
 00:09:23,640 --> 00:09:30,640
@@ -456,7 +456,7 @@ what to do, with our, with our number one there. And let me show you one more
 
 114
 00:10:10,020 --> 00:10:13,730
-feature of COOL. Let&#39;s leave the one there, and let&#39;s make it part of a
+feature of COOL. Let's leave the one there, and let's make it part of a
 
 115
 00:10:13,730 --> 00:10:17,790
@@ -496,7 +496,7 @@ then the second one evaluates to one, which is the value of the entire of the
 
 124
 00:11:00,680 --> 00:11:05,940
-entire method. Okay, actually I should say it&#39;s the value of the block, okay, and
+entire method. Okay, actually I should say it's the value of the block, okay, and
 
 125
 00:11:05,940 --> 00:11:11,310
@@ -504,15 +504,15 @@ then because the block is the body of the method the value of the block becomes 
 
 126
 00:11:11,310 --> 00:11:15,870
-value of the entire method, So one will be returned from this method call. So let&#39;s
+value of the entire method, So one will be returned from this method call. So let's
 
 127
 00:11:15,870 --> 00:11:22,870
-save this. Go back over here and let&#39;s compile this again. So, Looks like I
+save this. Go back over here and let's compile this again. So, Looks like I
 
 128
 00:11:25,610 --> 00:11:32,610
-failed to save it. Let&#39;s compile this and we see we have a syntax error. And so it
+failed to save it. Let's compile this and we see we have a syntax error. And so it
 
 129
 00:11:37,890 --> 00:11:44,890
@@ -544,11 +544,11 @@ mistake. So we have an, when the program ran it complained that we have a
 
 136
 00:12:24,990 --> 00:12:31,350
-dispatched void. So that on line four, our dispatch was to an object that didn&#39;t
+dispatched void. So that on line four, our dispatch was to an object that didn't
 
 137
 00:12:31,350 --> 00:12:37,120
-exist. And, you can see the dispatch call right here to I, and it doesn&#39;t exist,
+exist. And, you can see the dispatch call right here to I, and it doesn't exist,
 
 138
 00:12:37,120 --> 00:12:43,149
@@ -556,11 +556,11 @@ because, in fact, we forgot to allocate an object for I. So here we declare I to
 
 139
 00:12:43,149 --> 00:12:48,399
-of type IO, but that doesn&#39;t actually create any objects. That just says that it
+of type IO, but that doesn't actually create any objects. That just says that it
 
 140
 00:12:48,399 --> 00:12:53,670
-creates a variable name I but I doesn&#39;t actually have a value. So if you want I to
+creates a variable name I but I doesn't actually have a value. So if you want I to
 
 141
 00:12:53,670 --> 00:12:57,450
@@ -580,7 +580,7 @@ new object in type IO and were assigning it To this object i. And notice here th
 
 145
 00:13:13,610 --> 00:13:18,330
-I is a, is a, is what would be called a field name in Java. It&#39;s what we call an
+I is a, is a, is what would be called a field name in Java. It's what we call an
 
 146
 00:13:18,330 --> 00:13:25,000
@@ -596,7 +596,7 @@ fields that hold values as well as methods that can perform computation. [sound]
 
 149
 00:13:38,110 --> 00:13:45,110
-Let&#39;s save this and switch back. And now we&#39;ll compile this again. So and it still
+Let's save this and switch back. And now we'll compile this again. So and it still
 
 150
 00:13:48,300 --> 00:13:54,200
@@ -612,7 +612,7 @@ looks a little bit ugly because the, the successful execution message is on the
 
 153
 00:14:05,980 --> 00:14:12,980
-same line as our hello world message. So let&#39;s fix that. Let&#39;s come back over here.
+same line as our hello world message. So let's fix that. Let's come back over here.
 
 154
 00:14:13,410 --> 00:14:17,510
@@ -624,7 +624,7 @@ backslash N is how you write a new line character in the string. Save that, come
 
 156
 00:14:23,399 --> 00:14:30,079
-back over here let&#39;s compile. So if you don&#39;t know Unix bang will repeat the
+back over here let's compile. So if you don't know Unix bang will repeat the
 
 157
 00:14:30,079 --> 00:14:34,550
@@ -644,11 +644,11 @@ spin. And now we can see there it is all nice hello world is on a line by itself
 
 161
 00:14:51,870 --> 00:14:57,600
-Let&#39;s continue now, let&#39;s [sound] clear all this out [sound]. So let me just show
+Let's continue now, let's [sound] clear all this out [sound]. So let me just show
 
 162
 00:14:57,600 --> 00:15:02,610
-you a few variations on the same program. What I&#39;m going to do here is just rewrite
+you a few variations on the same program. What I'm going to do here is just rewrite
 
 163
 00:15:02,610 --> 00:15:06,110
@@ -668,23 +668,23 @@ expressions is kind of a clumsy way to, to implement the Hello World program. So
 
 167
 00:15:24,110 --> 00:15:29,149
-let&#39;s get rid of that. Let&#39;s get rid of the, the block. Let&#39;s get rid of the one
+let's get rid of that. Let's get rid of the, the block. Let's get rid of the one
 
 168
 00:15:29,149 --> 00:15:36,110
-here at the end. Okay, let&#39;s just make the statement body a single expression again,
+here at the end. Okay, let's just make the statement body a single expression again,
 
 169
 00:15:36,110 --> 00:15:41,839
-and, and now the problem we&#39;re going to have is that the types won&#39;t match. But
+and, and now the problem we're going to have is that the types won't match. But
 
 170
 00:15:41,839 --> 00:15:47,450
-just to illustrate that, let me show it to you so let&#39;s do COOL C of one dot CL, and
+just to illustrate that, let me show it to you so let's do COOL C of one dot CL, and
 
 171
 00:15:47,450 --> 00:15:51,120
-you&#39;ll see here that in complains that the inferred return type of the IO of the
+you'll see here that in complains that the inferred return type of the IO of the
 
 172
 00:15:51,120 --> 00:15:55,769
@@ -704,15 +704,15 @@ results evaluating this expression. And that does not match the type it. And so
 
 176
 00:16:13,970 --> 00:16:17,240
-naturally, the compiler says, hey, something&#39;s wrong with the types. Well,
+naturally, the compiler says, hey, something's wrong with the types. Well,
 
 177
 00:16:17,240 --> 00:16:21,200
-that&#39;s easily repaired. We can just change the return type or the main method to say
+that's easily repaired. We can just change the return type or the main method to say
 
 178
 00:16:21,200 --> 00:16:27,680
-it returns something of type IO. So let&#39;s go back over here and see if that now
+it returns something of type IO. So let's go back over here and see if that now
 
 179
 00:16:27,680 --> 00:16:34,680
@@ -720,11 +720,11 @@ works. So, we compile the program. And then we run spin on the output, and yes,
 
 180
 00:16:36,800 --> 00:16:41,610
-everything still works as expected. Now, We don&#39;t have to be so specific about the
+everything still works as expected. Now, We don't have to be so specific about the
 
 181
 00:16:41,610 --> 00:16:46,480
-type over here, since we&#39;re not actually using the result of the method body for
+type over here, since we're not actually using the result of the method body for
 
 182
 00:16:46,480 --> 00:16:51,550
@@ -732,7 +732,7 @@ anything. I mean, the program just exits once it prints the string. We could hav
 
 183
 00:16:51,550 --> 00:16:55,670
-allowed ourselves more flexibility here. We could&#39;ve just declared the result type
+allowed ourselves more flexibility here. We could've just declared the result type
 
 184
 00:16:55,670 --> 00:17:01,579
@@ -740,7 +740,7 @@ of main to be of type Object. So Object is the root of the class hierarchy in CO
 
 185
 00:17:01,579 --> 00:17:07,120
-Every other class is a subclass of Object. So let&#39;s come back over h, let&#39;s save this
+Every other class is a subclass of Object. So let's come back over h, let's save this
 
 186
 00:17:07,119 --> 00:17:14,120
@@ -752,7 +752,7 @@ And we can run it and it still works. So now another thing we can do if we want,
 
 188
 00:17:22,540 --> 00:17:29,530
-we could observe. Here that this attribute that we declare, this field I isn&#39;t really
+we could observe. Here that this attribute that we declare, this field I isn't really
 
 189
 00:17:29,530 --> 00:17:36,500
@@ -776,11 +776,11 @@ here and then calling out string on that object. Alright, So this should also wo
 
 194
 00:18:01,230 --> 00:18:08,230
-And let&#39;s check it out. So it compiles. And lo and behold, it rots. Alright, So
+And let's check it out. So it compiles. And lo and behold, it rots. Alright, So
 
 195
 00:18:12,290 --> 00:18:15,520
-coming back over here let&#39;s illustrate one more, or a couple more things that we
+coming back over here let's illustrate one more, or a couple more things that we
 
 196
 00:18:15,520 --> 00:18:22,520
@@ -800,7 +800,7 @@ say well just the main object is itself. And something that has all the
 
 200
 00:18:36,030 --> 00:18:41,470
-capabilities of IO by inheriting from IO. And if you&#39;ve seen any [inaudible]
+capabilities of IO by inheriting from IO. And if you've seen any [inaudible]
 
 201
 00:18:41,470 --> 00:18:45,900
@@ -824,23 +824,23 @@ the current object when the main method runs In other languages self is called
 
 206
 00:19:07,390 --> 00:19:14,390
-this. Okay, and so let&#39;s we saved it, so let&#39;s go over and compile this. So it
+this. Okay, and so let's we saved it, so let's go over and compile this. So it
 
 207
 00:19:14,929 --> 00:19:21,929
-compiles, it compiles and, and it runs, right? So last example here, we don&#39;t have
+compiles, it compiles and, and it runs, right? So last example here, we don't have
 
 208
 00:19:24,690 --> 00:19:31,280
-to name self actually in this dispatch. There&#39;s a feature that allows us to call a
+to name self actually in this dispatch. There's a feature that allows us to call a
 
 209
 00:19:31,280 --> 00:19:35,260
-method without explicitly naming the object on which it&#39;s dispatched and
+method without explicitly naming the object on which it's dispatched and
 
 210
 00:19:35,260 --> 00:19:40,440
-defaults to self, so if no object is named in a dispatch then it&#39;s just a dispatched
+defaults to self, so if no object is named in a dispatch then it's just a dispatched
 
 211
 00:19:40,440 --> 00:19:47,440
@@ -848,9 +848,8 @@ self. So this should also work. [sound], And indeed it does. So that concludes o
 
 212
 00:19:50,290 --> 00:19:54,100
-first example. In the next couple of videos we&#39;ll look at some more complex
+first example. In the next couple of videos we'll look at some more complex
 
 213
 00:19:54,100 --> 00:19:55,580
 examples of COOL programming.
-

@@ -8,7 +8,7 @@ have to know how big it is and we also need to know where the pointers and the
 
 2
 00:00:09,340 --> 00:00:13,840
-object are. So, if we think about this for a minute, let&#39;s say we&#39;re scanning this
+object are. So, if we think about this for a minute, let's say we're scanning this
 
 3
 00:00:13,840 --> 00:00:17,560
@@ -16,11 +16,11 @@ object, so this is our scan pointer and we want now to process all the pointers 
 
 4
 00:00:17,560 --> 00:00:20,670
-it, well, we have to know where the pointers are. So, there&#39;s a pointer here
+it, well, we have to know where the pointers are. So, there's a pointer here
 
 5
 00:00:20,670 --> 00:00:23,820
-and there&#39;s a pointer here and we&#39;ll be able to find those pointers and we don&#39;t
+and there's a pointer here and we'll be able to find those pointers and we don't
 
 6
 00:00:23,820 --> 00:00:28,250
@@ -48,7 +48,7 @@ imagine easily a little bit of information stored with the program indicating fo
 
 12
 00:00:49,730 --> 00:00:55,899
-each type where the pointers are. And similarly once we&#39;ve scanned this object,
+each type where the pointers are. And similarly once we've scanned this object,
 
 13
 00:00:55,899 --> 00:00:59,850
@@ -56,7 +56,7 @@ we need to be able to advance our scan pointer just past the object so that we
 
 14
 00:00:59,850 --> 00:01:03,410
-can find the beginning of the next object and that&#39;s why we need to know the size,
+can find the beginning of the next object and that's why we need to know the size,
 
 15
 00:01:03,410 --> 00:01:07,709
@@ -68,7 +68,7 @@ the object and we can find the beginning of the next object. Another issue is th
 
 17
 00:01:12,359 --> 00:01:15,389
-whenever we do a garbage collection, I haven&#39;t mentioned this up to this point
+whenever we do a garbage collection, I haven't mentioned this up to this point
 
 18
 00:01:15,389 --> 00:01:20,630
@@ -88,11 +88,11 @@ still have to walk the entire stack each time you do a collection in order to ma
 
 22
 00:01:35,499 --> 00:01:42,090
-sure that you&#39;ve copied all the objects pointed to by the stack. To conclude
+sure that you've copied all the objects pointed to by the stack. To conclude
 
 23
 00:01:42,090 --> 00:01:46,779
-stop-and-copy, I think it&#39;s fair to say, is generally believed to be the fastest
+stop-and-copy, I think it's fair to say, is generally believed to be the fastest
 
 24
 00:01:46,779 --> 00:01:50,679
@@ -108,7 +108,7 @@ very cheap, alright. So, cuz all you have to do is increment the e-pointer. So,
 
 27
 00:02:00,499 --> 00:02:05,049
-you&#39;re just moving a, a, single pointer forward to allocate space. There&#39;s no
+you're just moving a, a, single pointer forward to allocate space. There's no
 
 28
 00:02:05,049 --> 00:02:10,810
@@ -116,7 +116,7 @@ complicated free list future verse or decisions to make about where to put the
 
 29
 00:02:10,810 --> 00:02:13,159
-object, you know, you&#39;re just going to allocate it directly at the allocation
+object, you know, you're just going to allocate it directly at the allocation
 
 30
 00:02:13,159 --> 00:02:18,040
@@ -128,7 +128,7 @@ And at the same time, collection is also relatively cheap. And, and interestingl
 
 32
 00:02:22,019 --> 00:02:27,689
-it&#39;s especially cheap if there is a lot of garbage because, because of making a copy
+it's especially cheap if there is a lot of garbage because, because of making a copy
 
 33
 00:02:27,689 --> 00:02:32,969
@@ -144,19 +144,19 @@ minute, that means that the garbage collection is in stop-and-copy is order
 
 36
 00:02:46,680 --> 00:02:52,859
-the size of the live objects. So, whatever the sub-graph is that you&#39;re copying,
+the size of the live objects. So, whatever the sub-graph is that you're copying,
 
 37
 00:02:52,859 --> 00:02:59,780
-that&#39;s the cost of a garbage collection and that&#39;s in contrast to mark-and-sweep
+that's the cost of a garbage collection and that's in contrast to mark-and-sweep
 
 38
 00:02:59,780 --> 00:03:05,030
-were the cost is proportional to all the memory that you&#39;re using cuz you have the
+were the cost is proportional to all the memory that you're using cuz you have the
 
 39
 00:03:05,030 --> 00:03:08,329
-sweep phase where you have to go through and touch every single object whether it&#39;s
+sweep phase where you have to go through and touch every single object whether it's
 
 40
 00:03:08,329 --> 00:03:13,890
@@ -172,7 +172,7 @@ faster than mark-and-sweep. Now, of course the down side of stop-and-copy is tha
 
 43
 00:03:22,640 --> 00:03:28,400
-moves the objects in some languages, in particular C and C++, can&#39;t allow you to
+moves the objects in some languages, in particular C and C++, can't allow you to
 
 44
 00:03:28,400 --> 00:03:33,689
@@ -184,5 +184,4 @@ exposed in the program and is part of the semantics of the object. And so there,
 
 46
 00:03:38,079 --> 00:03:41,090
-really have to use mark-and-sweep because you&#39;re not allowed to move anything.
-
+really have to use mark-and-sweep because you're not allowed to move anything.

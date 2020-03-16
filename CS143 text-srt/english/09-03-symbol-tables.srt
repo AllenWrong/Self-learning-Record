@@ -1,6 +1,6 @@
 0
 00:00:03,530 --> 00:00:07,350
-In this video we&#39;re going to talk about simple tables an important data structure
+In this video we're going to talk about simple tables an important data structure
 
 1
 00:00:07,350 --> 00:00:14,350
@@ -8,7 +8,7 @@ in many filers before we talk about what a simple table is I want to talk about 
 
 2
 00:00:16,209 --> 00:00:21,090
-generic algorithm that we&#39;re going to be seeing instances of over and over again
+generic algorithm that we're going to be seeing instances of over and over again
 
 3
 00:00:21,090 --> 00:00:25,090
@@ -24,7 +24,7 @@ tree. And the basic idea is that in each step we do the following three things:
 
 6
 00:00:36,019 --> 00:00:40,269
-we&#39;re always processing a particular node in the tree, so if I draw a picture of the
+we're always processing a particular node in the tree, so if I draw a picture of the
 
 7
 00:00:40,269 --> 00:00:47,239
@@ -40,7 +40,7 @@ the node say from the parents, we come to here for the parent, we do some proces
 
 10
 00:00:55,550 --> 00:00:59,300
-in the node and I&#39;m just indicating that by coloring it blue to indicate that we
+in the node and I'm just indicating that by coloring it blue to indicate that we
 
 11
 00:00:59,300 --> 00:01:05,950
@@ -56,11 +56,11 @@ may do some post processing of the node, and then we return. And of course, at t
 
 14
 00:01:16,240 --> 00:01:19,619
-same time, when we&#39;ve gone off and processed the children, then we&#39;re
+same time, when we've gone off and processed the children, then we're
 
 15
 00:01:19,619 --> 00:01:23,579
-processing all their nodes in the same pre imposed fashion, so they&#39;re getting the
+processing all their nodes in the same pre imposed fashion, so they're getting the
 
 16
 00:01:23,579 --> 00:01:28,380
@@ -76,7 +76,7 @@ many, many examples of this kind of an algorithm. This is called a recursive
 
 19
 00:01:39,310 --> 00:01:44,219
-descent traversal of a tree. There are some instances in which we&#39;ll only process
+descent traversal of a tree. There are some instances in which we'll only process
 
 20
 00:01:44,219 --> 00:01:47,810
@@ -88,11 +88,11 @@ we process all the children. Some where we do both as illustrated here in this l
 
 22
 00:01:52,130 --> 00:01:57,689
-diagram And returning to the main topic of this particular video. When we&#39;re
+diagram And returning to the main topic of this particular video. When we're
 
 23
 00:01:57,689 --> 00:02:01,229
-performing semantic analysis on a portion of the abstract syntax tree, we&#39;re going
+performing semantic analysis on a portion of the abstract syntax tree, we're going
 
 24
 00:02:01,229 --> 00:02:06,859
@@ -116,7 +116,7 @@ initialization, and in the other sub tree we have e, the body of the let, and th
 
 29
 00:02:29,599 --> 00:02:33,010
-this is a let for some particular variable, and let&#39;s just write that
+this is a let for some particular variable, and let's just write that
 
 30
 00:02:33,010 --> 00:02:40,010
@@ -124,7 +124,7 @@ variable inside the parent node here. And so, when we begin processing of this O
 
 31
 00:02:40,440 --> 00:02:43,950
-just imagine that we&#39;re coming from above. So we&#39;re doing this. We&#39;re processing the
+just imagine that we're coming from above. So we're doing this. We're processing the
 
 32
 00:02:43,950 --> 00:02:50,129
@@ -132,31 +132,31 @@ abstract syntax tree recursively. And so we reach this point from some parent an
 
 33
 00:02:50,129 --> 00:02:54,470
-There&#39;s going to be a set of symbols that are currently in scope. That, that&#39;s some
+There's going to be a set of symbols that are currently in scope. That, that's some
 
 34
 00:02:54,470 --> 00:02:58,580
-data structure that lives off to the side, And in fact, that&#39;s going to be our symbol
+data structure that lives off to the side, And in fact, that's going to be our symbol
 
 35
 00:02:58,580 --> 00:03:03,450
-table And what is going to happen here? Well, the first we&#39;re going to have to do
+table And what is going to happen here? Well, the first we're going to have to do
 
 36
 00:03:03,450 --> 00:03:07,750
-is we&#39;re going to have to process, the initializer. We&#39;re going to need to know
+is we're going to have to process, the initializer. We're going to need to know
 
 37
 00:03:07,750 --> 00:03:11,360
-whether that&#39;s, what, whatever function we&#39;re doing on this, like type checking or
+whether that's, what, whatever function we're doing on this, like type checking or
 
 38
 00:03:11,360 --> 00:03:16,000
-whatever. We might get on and process that first And we&#39;ll pass the symbol table in.
+whatever. We might get on and process that first And we'll pass the symbol table in.
 
 39
 00:03:16,000 --> 00:03:22,330
-Okay. And then we&#39;re going to process the body of the let But when we do that we&#39;re
+Okay. And then we're going to process the body of the let But when we do that we're
 
 40
 00:03:22,330 --> 00:03:26,790
@@ -168,11 +168,11 @@ be in scope. So X is going to be added before we process E to the set of symbols
 
 42
 00:03:32,510 --> 00:03:36,250
-And then when we return from some expression E it&#39;s going to be removed. So,
+And then when we return from some expression E it's going to be removed. So,
 
 43
 00:03:36,250 --> 00:03:42,400
-it&#39;ll restore the symbol table to its previous state. So that after we leave
+it'll restore the symbol table to its previous state. So that after we leave
 
 44
 00:03:42,400 --> 00:03:46,829
@@ -232,7 +232,7 @@ just push the symbol, push the variable onto the stack and whatever other
 
 58
 00:04:47,639 --> 00:04:52,289
-information we want, like its type. We&#39;ll have a find symbol operation that will
+information we want, like its type. We'll have a find symbol operation that will
 
 59
 00:04:52,289 --> 00:04:57,770
@@ -248,7 +248,7 @@ variable name, And this will automatically take care of the hiding of all
 
 62
 00:05:07,449 --> 00:05:14,180
-definitions. So, for example, If we have a stack, let&#39;s say has X, Y and Z on it and
+definitions. So, for example, If we have a stack, let's say has X, Y and Z on it and
 
 63
 00:05:14,180 --> 00:05:20,389
@@ -260,7 +260,7 @@ stack we find this y first effectively hiding the old definition of y and then.
 
 65
 00:05:26,430 --> 00:05:30,199
-When we leave a scope we can remove a symbol simple popping a stack. We&#39;ll just
+When we leave a scope we can remove a symbol simple popping a stack. We'll just
 
 66
 00:05:30,199 --> 00:05:34,430
@@ -280,7 +280,7 @@ the scope where the Y is defined and that was popped off the stack, So that was
 
 70
 00:05:48,940 --> 00:05:52,810
-gone. Now, when we search for Y we&#39;ll find the outer definition. The one that was
+gone. Now, when we search for Y we'll find the outer definition. The one that was
 
 71
 00:05:52,810 --> 00:05:59,360
@@ -300,11 +300,11 @@ really the whole reason that we can use a stack/ So, take a look at this little
 
 75
 00:06:15,400 --> 00:06:19,490
-example, let&#39;s say we have three nested lets, and here I&#39;m not showing the
+example, let's say we have three nested lets, and here I'm not showing the
 
 76
 00:06:19,490 --> 00:06:25,919
-initializers in the less sub trees, and they, they don&#39;t matter, for what I want
+initializers in the less sub trees, and they, they don't matter, for what I want
 
 77
 00:06:25,919 --> 00:06:32,060
@@ -312,15 +312,15 @@ to illustrate. So if you think about it as we walk from the root here down to th
 
 78
 00:06:32,060 --> 00:06:37,259
-inner bindings, we&#39;re pushing things on the stack, we&#39;ll push things on the stack
+inner bindings, we're pushing things on the stack, we'll push things on the stack
 
 79
 00:06:37,259 --> 00:06:41,590
-in the order X, Y, and then Z. And then as we leave, after we&#39;ve processed this sub
+in the order X, Y, and then Z. And then as we leave, after we've processed this sub
 
 80
 00:06:41,590 --> 00:06:46,360
-tree, and we&#39;re leaving it, walking back out, we&#39;re going to encounter these left
+tree, and we're leaving it, walking back out, we're going to encounter these left
 
 81
 00:06:46,360 --> 00:06:51,860
@@ -328,11 +328,11 @@ scopes in exactly the reverse order. And popping them off the stack is exactly t
 
 82
 00:06:51,860 --> 00:06:57,270
-order in which we want to remove them, and that&#39;s why a stack works well. So
+order in which we want to remove them, and that's why a stack works well. So
 
 83
 00:06:57,270 --> 00:07:04,270
-Structure works fine for lets, but for some other constructs it&#39;s not quite as
+Structure works fine for lets, but for some other constructs it's not quite as
 
 84
 00:07:04,349 --> 00:07:11,349
@@ -340,15 +340,15 @@ good as it could be so for example consider the following piece of code.
 
 85
 00:07:11,650 --> 00:07:15,669
-Illegal piece of code I should add. Let&#39;s say we&#39;re declaring a method, and it has
+Illegal piece of code I should add. Let's say we're declaring a method, and it has
 
 86
 00:07:15,669 --> 00:07:20,800
-two arguments named X. Now, that&#39;s not legal but in order to detect that it&#39;s not
+two arguments named X. Now, that's not legal but in order to detect that it's not
 
 87
 00:07:20,800 --> 00:07:25,020
-legal you. Why is it not legal? It&#39;s not legal cause they&#39;re both defined in the
+legal you. Why is it not legal? It's not legal cause they're both defined in the
 
 88
 00:07:25,020 --> 00:07:30,220
@@ -356,7 +356,7 @@ same scope. So, Functions, or methods, have the property that they introduce
 
 89
 00:07:30,220 --> 00:07:35,470
-multiple names at once into the same scope. And it&#39;s not quite so easy, to use
+multiple names at once into the same scope. And it's not quite so easy, to use
 
 90
 00:07:35,470 --> 00:07:40,650
@@ -400,7 +400,7 @@ name, and it will return the current definition, or null if there is no
 
 100
 00:08:22,680 --> 00:08:28,110
-definition in any scope that&#39;s currently available. We&#39;ll have an add symbol
+definition in any scope that's currently available. We'll have an add symbol
 
 101
 00:08:28,110 --> 00:08:32,950
@@ -420,7 +420,7 @@ scope, So this, just to be clear what this does, this returns true if X is defin
 
 105
 00:08:48,700 --> 00:08:54,270
-exactly the top scope. It doesn&#39;t return true unless, X is defined in the scope at
+exactly the top scope. It doesn't return true unless, X is defined in the scope at
 
 106
 00:08:54,270 --> 00:08:57,750
@@ -456,11 +456,11 @@ close to this is the simple table interface that is supplied with the cool
 
 114
 00:09:32,880 --> 00:09:36,290
-project. And there&#39;s already implementation of this interface provided
+project. And there's already implementation of this interface provided
 
 115
 00:09:36,290 --> 00:09:41,600
-if you don&#39;t want to write your own. So let&#39;s wrap up this video by talking a
+if you don't want to write your own. So let's wrap up this video by talking a
 
 116
 00:09:41,600 --> 00:09:45,640
@@ -476,7 +476,7 @@ be used before they are defined, as we discussed a few videos ago. And what that
 
 119
 00:09:55,960 --> 00:10:00,670
-means is that we can&#39;t check class names, in a single pass. We can&#39;t just walk over
+means is that we can't check class names, in a single pass. We can't just walk over
 
 120
 00:10:00,670 --> 00:10:05,600
@@ -484,7 +484,7 @@ the program once. And check that every class that is used is defined because we
 
 121
 00:10:05,600 --> 00:10:09,120
-don&#39;t know that we&#39;ve seen all the definitions of the classes until we reach
+don't know that we've seen all the definitions of the classes until we reach
 
 122
 00:10:09,120 --> 00:10:13,280
@@ -508,7 +508,7 @@ classes and make sure they only use classes that were defined. And the lesson
 
 127
 00:10:30,590 --> 00:10:34,130
-here, this is actually not complicated to implement I think it&#39;s quite clear. Should
+here, this is actually not complicated to implement I think it's quite clear. Should
 
 128
 00:10:34,130 --> 00:10:38,660
@@ -524,7 +524,7 @@ should not be afraid when structuring your compiler to add lots and lots of simp
 
 131
 00:10:47,390 --> 00:10:53,410
-passes if that makes your life easier, so it&#39;s better to break something up into
+passes if that makes your life easier, so it's better to break something up into
 
 132
 00:10:53,410 --> 00:10:56,920
@@ -532,9 +532,8 @@ three or four simple passes rather than to have one very, very complicated pass 
 
 133
 00:10:56,920 --> 00:11:00,990
-all the code is entangled. I think you&#39;ll find it much easier to debug your
+all the code is entangled. I think you'll find it much easier to debug your
 
 134
 00:11:00,990 --> 00:11:04,540
-compilers if you&#39;re willing to make multiple passes over the input.
-
+compilers if you're willing to make multiple passes over the input.

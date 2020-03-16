@@ -1,18 +1,18 @@
 0
 00:00:00,870 --> 00:00:04,420
-So far we&#39;ve talked about what a register interference graph is and to
+So far we've talked about what a register interference graph is and to
 
 1
 00:00:04,420 --> 00:00:07,899
-find the notion of a graph coloring but we haven&#39;t actually talked about how to
+find the notion of a graph coloring but we haven't actually talked about how to
 
 2
 00:00:07,899 --> 00:00:12,570
-compute graph coloring so that&#39;s the next issue that we have to deal with. And
+compute graph coloring so that's the next issue that we have to deal with. And
 
 3
 00:00:12,570 --> 00:00:17,330
-unfortunately it isn&#39;t easy so graph coloring is a very hard problem. If you
+unfortunately it isn't easy so graph coloring is a very hard problem. If you
 
 4
 00:00:17,330 --> 00:00:21,430
@@ -24,11 +24,11 @@ that it is an NP-hard problem to compute a coloring of the graph. If you have no
 
 6
 00:00:27,770 --> 00:00:33,070
-heard about NP hardness before, that&#39;s not a problem. The important thing is that
+heard about NP hardness before, that's not a problem. The important thing is that
 
 7
 00:00:33,070 --> 00:00:38,109
-nobody knows an efficient algorithm for this problem so there&#39;s no fast procedure
+nobody knows an efficient algorithm for this problem so there's no fast procedure
 
 8
 00:00:38,109 --> 00:00:43,309
@@ -36,11 +36,11 @@ known. And so the solution that we will talk about, one that every compiler uses
 
 9
 00:00:43,309 --> 00:00:47,499
-is to use some heuristics or basically approximation techniques that don&#39;t the
+is to use some heuristics or basically approximation techniques that don't the
 
 10
 00:00:47,499 --> 00:00:52,870
-problem completely. But, there&#39;s a second problem which is that a coloring might not
+problem completely. But, there's a second problem which is that a coloring might not
 
 11
 00:00:52,870 --> 00:00:57,329
@@ -52,15 +52,15 @@ eight registers on our machine and there is no coloring of the graph that uses
 
 13
 00:01:01,469 --> 00:01:05,440
-fewer than say nine or ten colors and so we&#39;re going to have to have our way to
+fewer than say nine or ten colors and so we're going to have to have our way to
 
 14
 00:01:05,440 --> 00:01:09,260
-deal with that and we&#39;ll talk about that later. I won&#39;t say anything more about the
+deal with that and we'll talk about that later. I won't say anything more about the
 
 15
 00:01:09,260 --> 00:01:14,230
-solution to that problem just now. So, now I&#39;ll present the most popular heuristic
+solution to that problem just now. So, now I'll present the most popular heuristic
 
 16
 00:01:14,230 --> 00:01:18,780
@@ -68,7 +68,7 @@ for coloring register interference graphs. And the basic idea is very, very simp
 
 17
 00:01:18,780 --> 00:01:25,310
-So, what we&#39;ll do is we&#39;ll pick a node t that has fewer than k-neighbors in the
+So, what we'll do is we'll pick a node t that has fewer than k-neighbors in the
 
 18
 00:01:25,310 --> 00:01:28,520
@@ -76,11 +76,11 @@ register interference gr aph, okay. And this is actually the key things to just
 
 19
 00:01:28,520 --> 00:01:32,640
-find any node in the graph that has fewer than k-neighbors. And then we&#39;ll eliminate
+find any node in the graph that has fewer than k-neighbors. And then we'll eliminate
 
 20
 00:01:32,640 --> 00:01:35,910
-t in its edges from register interference graphs so we&#39;ll just delete that node and
+t in its edges from register interference graphs so we'll just delete that node and
 
 21
 00:01:35,910 --> 00:01:42,240
@@ -96,7 +96,7 @@ approach. We pick one node, we delete it from the graph, we color the remainder 
 
 24
 00:01:51,700 --> 00:01:55,430
-the graph. It&#39;s a smaller problem with one fewer nodes and then when we&#39;re done with
+the graph. It's a smaller problem with one fewer nodes and then when we're done with
 
 25
 00:01:55,430 --> 00:02:01,260
@@ -104,31 +104,31 @@ that, I claim that we can find the coloring for the original graph and why is
 
 26
 00:02:01,260 --> 00:02:08,260
-that? That has fewer than k-neighbors and let&#39;s just say for the sake of argument
+that? That has fewer than k-neighbors and let's just say for the sake of argument
 
 27
 00:02:10,519 --> 00:02:13,370
-that it has two neighbors and here&#39;s the rest of the graph. So, this big circle is
+that it has two neighbors and here's the rest of the graph. So, this big circle is
 
 28
 00:02:13,370 --> 00:02:17,400
-the rest of the graph, here is the node t that we&#39;re going to delete, and let&#39;s say
+the rest of the graph, here is the node t that we're going to delete, and let's say
 
 29
 00:02:17,400 --> 00:02:21,620
-that it just has two neighbors, okay. So, now what we&#39;re going to do is we&#39;re going
+that it just has two neighbors, okay. So, now what we're going to do is we're going
 
 30
 00:02:21,620 --> 00:02:23,280
-to, conceptually we&#39;re going to delete t from the graph Well, let&#39;s draw a picture
+to, conceptually we're going to delete t from the graph Well, let's draw a picture
 
 31
 00:02:23,280 --> 00:02:25,239
-here. So, let&#39;s say we have a node and so, and then we&#39;re going to color the
+here. So, let's say we have a node and so, and then we're going to color the
 
 32
 00:02:25,239 --> 00:02:29,150
-sub-graph. Now, let&#39;s say that we succeed in coloring the sub-graph. So, we can now
+sub-graph. Now, let's say that we succeed in coloring the sub-graph. So, we can now
 
 33
 00:02:29,150 --> 00:02:33,989
@@ -152,11 +152,11 @@ the nodes that are adjacent to t. Since there are fewer than k of these, they
 
 38
 00:02:54,810 --> 00:02:58,579
-can&#39;t use all k of the colors and then we can pick one of the leftover colors for t.
+can't use all k of the colors and then we can pick one of the leftover colors for t.
 
 39
 00:02:58,579 --> 00:03:05,579
-So, here&#39;s a procedure that works very well in practice. First, we pick a node t
+So, here's a procedure that works very well in practice. First, we pick a node t
 
 40
 00:03:05,819 --> 00:03:09,840
@@ -176,7 +176,7 @@ k-neighbors, pushing them onto a stack a nd delete them from the graph and we do
 
 44
 00:03:20,310 --> 00:03:25,230
-that until the graph is completely empty out. And that&#39;s the first phase so that&#39;s
+that until the graph is completely empty out. And that's the first phase so that's
 
 45
 00:03:25,230 --> 00:03:32,230
@@ -220,7 +220,7 @@ then we repeat, by picking another node from the stack. And we do that until all
 
 55
 00:04:12,519 --> 00:04:18,190
-the nodes of the graph have been processed. Let&#39;s do an example. Here is
+the nodes of the graph have been processed. Let's do an example. Here is
 
 56
 00:04:18,190 --> 00:04:23,770
@@ -236,7 +236,7 @@ Alright? So the first step is to pick some node that has fewer than four neighbo
 
 59
 00:04:33,680 --> 00:04:38,479
-So let&#39;s pick A, since it only has two neighbors. So what do we do? We delete A
+So let's pick A, since it only has two neighbors. So what do we do? We delete A
 
 60
 00:04:38,479 --> 00:04:43,550
@@ -244,7 +244,7 @@ from the graph and we push it onto the stack. So after that step our graph,
 
 61
 00:04:43,550 --> 00:04:48,210
-here&#39;s our graph with A removed and here&#39;s our stack, alright. Now we&#39;re going to
+here's our graph with A removed and here's our stack, alright. Now we're going to
 
 62
 00:04:48,210 --> 00:04:52,229
@@ -256,15 +256,15 @@ than four neighbors. And if we look at this graph, we can see that we have the
 
 64
 00:04:56,690 --> 00:05:02,310
-option of picking a few different nodes. We can pick D or B. Actually, there&#39;s only
+option of picking a few different nodes. We can pick D or B. Actually, there's only
 
 65
 00:05:02,310 --> 00:05:07,639
-two different nodes we could pick, C, E, and F all have four neighbors. So let&#39;s
+two different nodes we could pick, C, E, and F all have four neighbors. So let's
 
 66
 00:05:07,639 --> 00:05:14,090
-remove D. An arbitrary choice here, it doesn&#39;t matter which one we pick. And now
+remove D. An arbitrary choice here, it doesn't matter which one we pick. And now
 
 67
 00:05:14,090 --> 00:05:19,340
@@ -280,7 +280,7 @@ have fewer than four neighbors. And so, since every node in the graph has fewer
 
 70
 00:05:29,449 --> 00:05:33,379
-neighbors than the number of colors we&#39;re allowed to use, at this point the graph
+neighbors than the number of colors we're allowed to use, at this point the graph
 
 71
 00:05:33,379 --> 00:05:37,599
@@ -288,7 +288,7 @@ coloring is guaranteed to succeed. Because every time we remove a node we can on
 
 72
 00:05:37,599 --> 00:05:42,330
-reduce the number of neighbors of every other node in the graph. It&#39;s also
+reduce the number of neighbors of every other node in the graph. It's also
 
 73
 00:05:42,330 --> 00:05:49,050
@@ -296,7 +296,7 @@ interesting to note That even though some of the notes had four neighbors in the
 
 74
 00:05:49,050 --> 00:05:54,750
-previous step and so might not have been colorable. We couldn&#39;t choose them at that
+previous step and so might not have been colorable. We couldn't choose them at that
 
 75
 00:05:54,750 --> 00:05:58,680
@@ -316,27 +316,27 @@ heuristic is that even if a note has many more than k-neighbors eventually, we m
 
 79
 00:06:11,509 --> 00:06:15,330
-remove enough nodes from the graph that, that it&#39;s number of neighbors will drop
+remove enough nodes from the graph that, that it's number of neighbors will drop
 
 80
 00:06:15,330 --> 00:06:20,659
-below the number of colors available and then we&#39;ll be able to, to color it. So
+below the number of colors available and then we'll be able to, to color it. So
 
 81
 00:06:20,659 --> 00:06:24,509
-anyway now it doesn&#39;t matter which node we pick because we can process them in any
+anyway now it doesn't matter which node we pick because we can process them in any
 
 82
 00:06:24,509 --> 00:06:30,310
-order at this point. We&#39;ll remove c from the graph and we wind up with this graph.
+order at this point. We'll remove c from the graph and we wind up with this graph.
 
 83
 00:06:30,310 --> 00:06:34,389
-And now, picking another node, we can remove b. Now we&#39;re down to just a two
+And now, picking another node, we can remove b. Now we're down to just a two
 
 84
 00:06:34,389 --> 00:06:38,699
-node graph. Let&#39;s pick e and remove it from the graph. Now we&#39;re down to just a
+node graph. Let's pick e and remove it from the graph. Now we're down to just a
 
 85
 00:06:38,699 --> 00:06:43,580
@@ -344,7 +344,7 @@ one node graph, and we move f from the graph, and now the graph is empty and we
 
 86
 00:06:43,580 --> 00:06:48,860
-have our stack. And notice that the stack, all we&#39;ve really done in this procedure, I
+have our stack. And notice that the stack, all we've really done in this procedure, I
 
 87
 00:06:48,860 --> 00:06:54,050
@@ -360,15 +360,15 @@ of the graph, alright. So now, working backwards, afterward, you know done with
 
 90
 00:07:03,689 --> 00:07:08,780
-the first part now we got to do the second part which we&#39;ll assign the colors. And,
+the first part now we got to do the second part which we'll assign the colors. And,
 
 91
 00:07:08,780 --> 00:07:12,960
-we&#39;re going to begin with the top of the stack. So we&#39;ll take note f and put it
+we're going to begin with the top of the stack. So we'll take note f and put it
 
 92
 00:07:12,960 --> 00:07:17,389
-back into the graph. And we&#39;ll assign it a color and let&#39;s just say we&#39;re going to
+back into the graph. And we'll assign it a color and let's just say we're going to
 
 93
 00:07:17,389 --> 00:07:22,469
@@ -376,7 +376,7 @@ pick the lowest numbered register that is not used by any of its neighbors. And 
 
 94
 00:07:22,469 --> 00:07:28,229
-since f is in th e graph by itself, we&#39;ll just assign it register one. Now we add e
+since f is in th e graph by itself, we'll just assign it register one. Now we add e
 
 95
 00:07:28,229 --> 00:07:35,229
@@ -384,11 +384,11 @@ back into the graph and it has to have a different register from f. And so, sinc
 
 96
 00:07:35,750 --> 00:07:42,750
-is using register r1, we&#39;ll just assign e register r2. Now we add b back into the
+is using register r1, we'll just assign e register r2. Now we add b back into the
 
 97
 00:07:42,879 --> 00:07:48,449
-graph. It has to have a different color or register than both f and d so we&#39;ll sign
+graph. It has to have a different color or register than both f and d so we'll sign
 
 98
 00:07:48,449 --> 00:07:54,780
@@ -396,11 +396,11 @@ it register r3. We assign c back into the graph. Now, notice that c has both, ha
 
 99
 00:07:54,780 --> 00:07:59,069
-all of f, e, and b as neighbors. They&#39;re using the first three registers so c will
+all of f, e, and b as neighbors. They're using the first three registers so c will
 
 100
 00:07:59,069 --> 00:08:06,069
-get assigned register r4. And now, we&#39;re out of registers. I mean these, these four
+get assigned register r4. And now, we're out of registers. I mean these, these four
 
 101
 00:08:06,699 --> 00:08:11,650
@@ -412,11 +412,11 @@ order in the first phase, we know that when we add in other nodes the rest of th
 
 103
 00:08:15,819 --> 00:08:18,550
-nodes on the stack, they won&#39;t have all of those nodes as neighbors. So there will be
+nodes on the stack, they won't have all of those nodes as neighbors. So there will be
 
 104
 00:08:18,550 --> 00:08:24,249
-some register available to sign. So, looking at register d, I&#39;m sorry. Looking
+some register available to sign. So, looking at register d, I'm sorry. Looking
 
 105
 00:08:24,249 --> 00:08:30,979
@@ -428,7 +428,7 @@ only register that it could be assigned is r3 which is the same register as b. T
 
 107
 00:08:36,370 --> 00:08:40,880
-is the only register that isn&#39;t used by one of its neighbors, okay. So d gets
+is the only register that isn't used by one of its neighbors, okay. So d gets
 
 108
 00:08:40,880 --> 00:08:47,139
@@ -436,7 +436,7 @@ assigned register r3. And then we assign a sorry, we add a back into the graph a
 
 109
 00:08:47,139 --> 00:08:53,300
-look at its neighbors and they&#39;re using registers r1 and r4. So a can be assigned
+look at its neighbors and they're using registers r1 and r4. So a can be assigned
 
 110
 00:08:53,300 --> 00:08:58,070
@@ -444,9 +444,8 @@ either register r2 or r3. And since our rule is just to use the lowest number
 
 111
 00:08:58,070 --> 00:09:03,180
-register that isn&#39;t used by one of the neighbors, we&#39;ll assign it register r2.
+register that isn't used by one of the neighbors, we'll assign it register r2.
 
 112
 00:09:03,180 --> 00:09:05,430
-And there&#39;s our complete coloring of the graph.
-
+And there's our complete coloring of the graph.

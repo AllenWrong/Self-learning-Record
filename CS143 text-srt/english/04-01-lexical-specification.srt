@@ -1,6 +1,6 @@
 0
 00:00:04,410 --> 00:00:08,130
-[inaudible] Welcome back. At this video, we&#39;re going to talk about how [inaudible]
+[inaudible] Welcome back. At this video, we're going to talk about how [inaudible]
 
 1
 00:00:08,130 --> 00:00:12,350
@@ -16,7 +16,7 @@ expressions. One of the shorthand?s we talked about last time is a+ which means 
 
 4
 00:00:27,420 --> 00:00:34,420
-sequence of at least 1a or the language aa&lt;i&gt;. Sometimes you&#39;ll see a vertical bar&lt;/i&gt;
+sequence of at least 1a or the language aa'lt;i>. Sometimes you'll see a vertical bar'lt;/i>
 
 5
 00:00:34,960 --> 00:00:41,960
@@ -32,7 +32,7 @@ ranges which allows us to do a big union, a bunch of characters in order. And th
 
 8
 00:00:54,510 --> 00:01:00,039
-one more that&#39;s used, that&#39;s, that&#39;s actually fairly important but we didn&#39;t
+one more that's used, that's, that's actually fairly important but we didn't
 
 9
 00:01:00,039 --> 00:01:03,289
@@ -68,11 +68,11 @@ this turns out not to be enough for what we wanted to do. So just to review, wha
 
 17
 00:01:41,560 --> 00:01:46,670
-is it we wanted to do when we&#39;re given an input, which is a bunch of characters, so
+is it we wanted to do when we're given an input, which is a bunch of characters, so
 
 18
 00:01:46,670 --> 00:01:53,110
-here&#39;s a string of characters And it can be much longer than just setting
+here's a string of characters And it can be much longer than just setting
 
 19
 00:01:53,110 --> 00:01:57,640
@@ -92,7 +92,7 @@ having a, a, a definition or a yes no answers, not quite the same thing as
 
 23
 00:02:12,530 --> 00:02:18,160
-having a method for partitioning a string into its constituting parts. And so we&#39;re
+having a method for partitioning a string into its constituting parts. And so we're
 
 24
 00:02:18,160 --> 00:02:23,570
@@ -100,11 +100,11 @@ gonna have to adapt regular expressions, to this problem and, and this requires
 
 25
 00:02:23,570 --> 00:02:29,110
-some small extensions and that&#39;s what this video is all about. So let&#39;s talk about
+some small extensions and that's what this video is all about. So let's talk about
 
 26
 00:02:29,110 --> 00:02:33,850
-how to do this. The first thing we&#39;re going to do, when we want to design the
+how to do this. The first thing we're going to do, when we want to design the
 
 27
 00:02:33,850 --> 00:02:37,950
@@ -132,7 +132,7 @@ There is the, definitely we talked about it last time. Sequences of letters or
 
 33
 00:02:59,470 --> 00:03:04,069
-digits that begin with, with the letter and then we&#39;re having a bunch of. Bunch of
+digits that begin with, with the letter and then we're having a bunch of. Bunch of
 
 34
 00:03:04,069 --> 00:03:08,810
@@ -144,11 +144,11 @@ whole set of regular expressions. One for each syntactic category in the languag
 
 36
 00:03:15,350 --> 00:03:21,170
-and that&#39;s the starting point for our lexical specification. The second step,
+and that's the starting point for our lexical specification. The second step,
 
 37
 00:03:21,170 --> 00:03:24,660
-what we&#39;re going to do is we&#39;re going to construct a gigantic regular expression
+what we're going to do is we're going to construct a gigantic regular expression
 
 38
 00:03:24,660 --> 00:03:29,380
@@ -156,7 +156,7 @@ which just matches all the lexings for all the tokens and this is just the union
 
 39
 00:03:29,380 --> 00:03:33,880
-all the regular expressions, that we wrote out on the previous slides. So we&#39;ll just
+all the regular expressions, that we wrote out on the previous slides. So we'll just
 
 40
 00:03:33,880 --> 00:03:37,950
@@ -164,19 +164,19 @@ take the union of all those regular expressions and that forms, the lexical
 
 41
 00:03:37,950 --> 00:03:41,680
-specification of the language. And, we&#39;ll just write this out, we don&#39;t really care
+specification of the language. And, we'll just write this out, we don't really care
 
 42
 00:03:41,680 --> 00:03:46,870
-what these regular expressions are but they&#39;re just some, set r1, r2 and so on
+what these regular expressions are but they're just some, set r1, r2 and so on
 
 43
 00:03:46,870 --> 00:03:53,870
-and the whole thing we&#39;re going to call r. And now, here&#39;s the heart of how we
+and the whole thing we're going to call r. And now, here's the heart of how we
 
 44
 00:03:55,900 --> 00:04:01,380
-actually use this bicycle&#39;s specification to perform lexical analysis. So, let&#39;s
+actually use this bicycle's specification to perform lexical analysis. So, let's
 
 45
 00:04:01,380 --> 00:04:07,900
@@ -184,15 +184,15 @@ consider an input. We input the string x1 up to xn. And now for every prefix of 
 
 46
 00:04:07,900 --> 00:04:13,569
-input, okay. We&#39;re going to check whether it&#39;s in the language of the regular
+input, okay. We're going to check whether it's in the language of the regular
 
 47
 00:04:13,569 --> 00:04:15,910
-expression. So we&#39;re gonna look at some prefix trying with the first character and
+expression. So we're gonna look at some prefix trying with the first character and
 
 48
 00:04:15,910 --> 00:04:21,810
-we&#39;re gonna ask ourselves is it in the language of that big regular expression.
+we're gonna ask ourselves is it in the language of that big regular expression.
 
 49
 00:04:21,810 --> 00:04:26,660
@@ -212,11 +212,11 @@ okay. So we know that this prefix x1 through xi is in the language of sum rj.
 
 53
 00:04:45,300 --> 00:04:51,280
-Okay And so that we know that, that&#39;s a word. In our language is one of. Is in one
+Okay And so that we know that, that's a word. In our language is one of. Is in one
 
 54
 00:04:51,280 --> 00:04:54,120
-of the talking classes that we&#39;re interested in, And so what we do is we
+of the talking classes that we're interested in, And so what we do is we
 
 55
 00:04:54,120 --> 00:05:00,210
@@ -224,7 +224,7 @@ simply delete that prefix from the input and then we go back to three and we
 
 56
 00:05:00,210 --> 00:05:05,620
-repeat. And in this way we keep biting off prefixes of the input and we&#39;ll do this
+repeat. And in this way we keep biting off prefixes of the input and we'll do this
 
 57
 00:05:05,620 --> 00:05:12,620
@@ -236,23 +236,23 @@ Now this algorithm has a couple of ambiguities or a couple of things that are
 
 59
 00:05:16,780 --> 00:05:21,430
-under specified and those are actually interesting. So let&#39;s take a moment and
+under specified and those are actually interesting. So let's take a moment and
 
 60
 00:05:21,430 --> 00:05:28,220
-talk about those. The first question is how much input is actually used? So, let&#39;s
+talk about those. The first question is how much input is actually used? So, let's
 
 61
 00:05:28,220 --> 00:05:34,650
-consider the following situation. Let&#39;s say that, we have, the x1 to xi, is in the
+consider the following situation. Let's say that, we have, the x1 to xi, is in the
 
 62
 00:05:34,650 --> 00:05:40,490
-language of our lexical specification. And let&#39;s say there&#39;s a different prefix,
+language of our lexical specification. And let's say there's a different prefix,
 
 63
 00:05:40,490 --> 00:05:46,150
-that&#39;s also in the language of our lexical specification and of course your I is, is
+that's also in the language of our lexical specification and of course your I is, is
 
 64
 00:05:46,150 --> 00:05:51,990
@@ -272,7 +272,7 @@ these do we want? And, you know just be kind of [inaudible] here to have a
 
 68
 00:06:07,669 --> 00:06:14,669
-concrete example, let&#39;s consider. What happens when a =,,,, = is at the, is at
+concrete example, let's consider. What happens when a =,,,, = is at the, is at
 
 69
 00:06:15,169 --> 00:06:18,430
@@ -280,7 +280,7 @@ the beginning of the input. After we chopped off a bunch of other input and
 
 70
 00:06:18,430 --> 00:06:22,949
-perhaps we have this sub-string or this prefix of the input that we&#39;re looking at
+perhaps we have this sub-string or this prefix of the input that we're looking at
 
 71
 00:06:22,949 --> 00:06:27,169
@@ -292,11 +292,11 @@ an assignment operator in most languages or would it be regards to =,,,, = which
 
 73
 00:06:32,040 --> 00:06:36,830
-some language is a comparison operator? And, and this is an example we&#39;ve looked
+some language is a comparison operator? And, and this is an example we've looked
 
 74
 00:06:36,830 --> 00:06:40,180
-at before and discussed, and there&#39;s actually a well defined answer to this
+at before and discussed, and there's actually a well defined answer to this
 
 75
 00:06:40,180 --> 00:06:44,970
@@ -304,7 +304,7 @@ question. And, it is, that we should always take the longer one and this has a
 
 76
 00:06:44,970 --> 00:06:51,970
-name that&#39;s c alled the maximal munch. So the rule is that when faced with a choice
+name that's c alled the maximal munch. So the rule is that when faced with a choice
 
 77
 00:06:53,490 --> 00:06:58,759
@@ -312,11 +312,11 @@ of two different prefixes of the input, either which would be a valid token, we
 
 78
 00:06:58,759 --> 00:07:02,530
-should always choose the longer one. And, the reason for this is that&#39;s just the way
+should always choose the longer one. And, the reason for this is that's just the way
 
 79
 00:07:02,530 --> 00:07:09,020
-humans themselves read things so when we see =,,,, = we don&#39;t see two different
+humans themselves read things so when we see =,,,, = we don't see two different
 
 80
 00:07:09,020 --> 00:07:13,990
@@ -324,7 +324,7 @@ equal operators, we see =,,,, = and if I. Look at, you know that the sentence th
 
 81
 00:07:13,990 --> 00:07:20,840
-wrote up here, you know when we look at HOW, we don&#39;t see three letters. We gather
+wrote up here, you know when we look at HOW, we don't see three letters. We gather
 
 82
 00:07:20,840 --> 00:07:26,610
@@ -344,7 +344,7 @@ token should be used if more than one token matches? So what do I mean by that?
 
 86
 00:07:45,630 --> 00:07:50,590
-Well, again we have our prefix of the input and it&#39;s in the language of our
+Well, again we have our prefix of the input and it's in the language of our
 
 87
 00:07:50,590 --> 00:07:55,470
@@ -364,7 +364,7 @@ specification, that means that it again, it must be in the language of some
 
 91
 00:08:11,910 --> 00:08:18,340
-particular token class, rj. But nothing says that it isn&#39;t also in the language of
+particular token class, rj. But nothing says that it isn't also in the language of
 
 92
 00:08:18,340 --> 00:08:22,479
@@ -392,11 +392,11 @@ the letter Followed by a letter or a digit. Repeat it, okay. And if you look at
 
 98
 00:09:07,509 --> 00:09:13,610
-these two specifications, you&#39;ll see that the string if, IF is both of them. So IF
+these two specifications, you'll see that the string if, IF is both of them. So IF
 
 99
 00:09:13,610 --> 00:09:20,610
-is in the language of keywords, And it&#39;s also in the language of the identifiers.
+is in the language of keywords, And it's also in the language of the identifiers.
 
 100
 00:09:24,639 --> 00:09:29,309
@@ -404,11 +404,11 @@ And so should we treat it as a keyword or an identifier. Now the normal rule in 
 
 101
 00:09:29,309 --> 00:09:33,819
-languages is that if it&#39;s a keyword then i t&#39;s always a keyword and you know the
+languages is that if it's a keyword then i t's always a keyword and you know the
 
 102
 00:09:33,819 --> 00:09:39,769
-identifier is actually don&#39;t include the keywords. And but actually it&#39;s a real
+identifier is actually don't include the keywords. And but actually it's a real
 
 103
 00:09:39,769 --> 00:09:44,019
@@ -416,7 +416,7 @@ pain to write out the identifiers in such a way that you explicitly exclude the 
 
 104
 00:09:44,019 --> 00:09:48,069
-words. This is a much more natural definition I&#39;ve written here for the
+words. This is a much more natural definition I've written here for the
 
 105
 00:09:48,069 --> 00:09:52,360
@@ -456,11 +456,11 @@ are not gonna be in the language of the lexical specification of most languages.
 
 114
 00:10:49,279 --> 00:10:53,550
-And the question is how to handle that situation? So it&#39;s very important for
+And the question is how to handle that situation? So it's very important for
 
 115
 00:10:53,550 --> 00:10:57,670
-compilers to do good error handling. They can&#39;t simply crash. They need to be able
+compilers to do good error handling. They can't simply crash. They need to be able
 
 116
 00:10:57,670 --> 00:11:01,239
@@ -472,7 +472,7 @@ kind of error it is so we do need to handle this gracefully. And the best
 
 118
 00:11:05,170 --> 00:11:12,170
-solution for lexical analysis is to not do this so don&#39;t let this ever happen. And so
+solution for lexical analysis is to not do this so don't let this ever happen. And so
 
 119
 00:11:13,759 --> 00:11:20,619
@@ -516,7 +516,7 @@ last in priority, then it will only match if no earlier regular expression match
 
 129
 00:12:16,549 --> 00:12:20,389
-so in fact, they will only catch the error strings. Then the action that we&#39;ll take
+so in fact, they will only catch the error strings. Then the action that we'll take
 
 130
 00:12:20,389 --> 00:12:23,459
@@ -548,7 +548,7 @@ to choose the highest Priority match. So, the regular expressions are given a
 
 137
 00:13:05,709 --> 00:13:10,079
-priority. The different token classes have priorities and, when there&#39;s tie, when the
+priority. The different token classes have priorities and, when there's tie, when the
 
 138
 00:13:10,079 --> 00:13:14,980
@@ -576,15 +576,15 @@ rules that we take longest possible matches and we break ties and favor of the
 
 144
 00:13:35,209 --> 00:13:41,749
-highest priority rules. That this lead to some tricky situations and it&#39;s not always
+highest priority rules. That this lead to some tricky situations and it's not always
 
 145
 00:13:41,749 --> 00:13:45,739
-obvious that you&#39;re getting exactly what you want, You have to think carefully
+obvious that you're getting exactly what you want, You have to think carefully
 
 146
 00:13:45,739 --> 00:13:50,410
-about the Ordering of the rules and it&#39;s actually how you write the rules so that
+about the Ordering of the rules and it's actually how you write the rules so that
 
 147
 00:13:50,410 --> 00:13:55,220
@@ -600,7 +600,7 @@ strings and give it the lowest priority so that it only triggers if no valid tok
 
 150
 00:14:07,299 --> 00:14:11,209
-class matches some piece of the input. If I leave, we haven&#39;t discussed these yet
+class matches some piece of the input. If I leave, we haven't discussed these yet
 
 151
 00:14:11,209 --> 00:14:15,999
@@ -608,7 +608,7 @@ but they are very good algorithm to know for implementing all of these and in fa
 
 152
 00:14:15,999 --> 00:14:20,319
-we&#39;ll be able to do it in only single pass over the input and with very few
+we'll be able to do it in only single pass over the input and with very few
 
 153
 00:14:20,319 --> 00:14:25,160
@@ -617,4 +617,3 @@ operations per character. Just a few, Just a simple table look up and this would
 154
 00:14:25,160 --> 00:14:27,170
 the subject of our future videos.
-

@@ -1,26 +1,26 @@
 0
 00:00:03,820 --> 00:00:06,870
-In this video, we&#39;re gonna talk a little bit about concurrency in programming
+In this video, we're gonna talk a little bit about concurrency in programming
 
 1
 00:00:06,870 --> 00:00:13,870
-languages and in particular, Java&#39;s use of threads. Java has concurrency built in
+languages and in particular, Java's use of threads. Java has concurrency built in
 
 2
 00:00:16,129 --> 00:00:21,810
-through threads and I&#39;m not going to explain what a thread is from first
+through threads and I'm not going to explain what a thread is from first
 
 3
 00:00:21,810 --> 00:00:25,590
-principles in this video. So I&#39;m going to assume a little bit of background but
+principles in this video. So I'm going to assume a little bit of background but
 
 4
 00:00:25,590 --> 00:00:30,679
-we&#39;ll say a few words here about what threads are. So a thread is like its own
+we'll say a few words here about what threads are. So a thread is like its own
 
 5
 00:00:30,679 --> 00:00:34,670
-program. It has its own program counter, meaning, it has an instruction that it&#39;s
+program. It has its own program counter, meaning, it has an instruction that it's
 
 6
 00:00:34,670 --> 00:00:39,510
@@ -48,11 +48,11 @@ common data in the heap. So they could refer to the same heap data structures.
 
 12
 00:01:04,720 --> 00:01:09,290
-And, each thread is executing a particular instruction, so let&#39;s say that the threads
+And, each thread is executing a particular instruction, so let's say that the threads
 
 13
 00:01:09,290 --> 00:01:15,280
-are all, here we have three threads, one, two, and three. And they&#39;re each at some
+are all, here we have three threads, one, two, and three. And they're each at some
 
 14
 00:01:15,280 --> 00:01:22,280
@@ -60,19 +60,19 @@ instruction or some, statement in the program. And then there is a scheduler and
 
 15
 00:01:23,159 --> 00:01:30,159
-at each step of execution, the scheduler will pick one thread to execute. And it&#39;ll
+at each step of execution, the scheduler will pick one thread to execute. And it'll
 
 16
 00:01:32,280 --> 00:01:38,729
-execute one statement. And this is conceptual. Meaning, this isn&#39;t exactly
+execute one statement. And this is conceptual. Meaning, this isn't exactly
 
 17
 00:01:38,729 --> 00:01:44,530
-the way it&#39;s usually implemented. And then it will repeat this loop. So it&#39;ll pick a
+the way it's usually implemented. And then it will repeat this loop. So it'll pick a
 
 18
 00:01:44,530 --> 00:01:47,240
-thread, it&#39;ll execute one statement of that thread and it&#39;ll just keep doing that
+thread, it'll execute one statement of that thread and it'll just keep doing that
 
 19
 00:01:47,240 --> 00:01:50,689
@@ -104,7 +104,7 @@ again for a while, and so on. All right, so, the threads execute in some order. 
 
 26
 00:02:18,210 --> 00:02:22,520
-it&#39;s non-deterministic at each step of execution which thread will execute, how
+it's non-deterministic at each step of execution which thread will execute, how
 
 27
 00:02:22,520 --> 00:02:28,300
@@ -120,7 +120,7 @@ completely arbitrary order. Alright? Now, coming back to how this is done in Jav
 
 30
 00:02:38,910 --> 00:02:43,000
-thread objects in Java all have class threads. So there&#39;s a special class that
+thread objects in Java all have class threads. So there's a special class that
 
 31
 00:02:43,000 --> 00:02:47,200
@@ -132,7 +132,7 @@ from the thread class is, you will have start and stop methods for beginning and
 
 33
 00:02:52,120 --> 00:02:57,730
-ending the thread. Alright? And there&#39;s some other special properties of threads.
+ending the thread. Alright? And there's some other special properties of threads.
 
 34
 00:02:57,730 --> 00:03:04,730
@@ -152,7 +152,7 @@ acquire a lock on x before it executes e. So the procedure here will be to lock 
 
 38
 00:03:26,840 --> 00:03:33,840
-then evaluate e, and then unlock x, alright? So it&#39;s a structured
+then evaluate e, and then unlock x, alright? So it's a structured
 
 39
 00:03:34,920 --> 00:03:40,920
@@ -184,7 +184,7 @@ syntactic construct if they were locking, if, if their local variables actually
 
 46
 00:04:13,320 --> 00:04:17,430
-referred to different objects. But they&#39;re guaranteed not to interfere with each
+referred to different objects. But they're guaranteed not to interfere with each
 
 47
 00:04:17,430 --> 00:04:23,090
@@ -192,7 +192,7 @@ other, not to interweave, if they tried to lock the same object x, alright? Now
 
 48
 00:04:23,090 --> 00:04:27,820
-there&#39;s one shorthand in Java which is used more commonly than this form, the
+there's one shorthand in Java which is used more commonly than this form, the
 
 49
 00:04:27,820 --> 00:04:31,570
@@ -208,7 +208,7 @@ means is that, when this method is called, that this object will be locked. So h
 
 52
 00:04:45,780 --> 00:04:49,030
-the object that&#39;s going to be locked is implicit. And when synchronized is
+the object that's going to be locked is implicit. And when synchronized is
 
 53
 00:04:49,030 --> 00:04:53,680
@@ -216,7 +216,7 @@ attached to a method name, or a method declaration, that always means that this
 
 54
 00:04:53,680 --> 00:05:00,150
-parameter will be the synchronized or locked object. Let&#39;s take a look at the
+parameter will be the synchronized or locked object. Let's take a look at the
 
 55
 00:05:00,150 --> 00:05:04,150
@@ -228,7 +228,7 @@ which calls the method two of the class simple and one of which calls the method
 
 57
 00:05:08,460 --> 00:05:15,460
-fro. So let&#39;s take a look at that, let&#39;s say we have thread one and thread two. And
+fro. So let's take a look at that, let's say we have thread one and thread two. And
 
 58
 00:05:15,510 --> 00:05:21,100
@@ -236,7 +236,7 @@ now, thread one is going to invoke the method two and thread two is going to
 
 59
 00:05:21,100 --> 00:05:26,280
-invoke the method fro. All right? So one possibility here, let&#39;s say that, that two
+invoke the method fro. All right? So one possibility here, let's say that, that two
 
 60
 00:05:26,280 --> 00:05:31,150
@@ -244,11 +244,11 @@ gets to run all the way to completion before fro executes anything. So then
 
 61
 00:05:31,150 --> 00:05:38,070
-we&#39;ll have a = three and b = four, okay? And then fro will run and it will print
+we'll have a = three and b = four, okay? And then fro will run and it will print
 
 62
 00:05:38,070 --> 00:05:45,070
-out the string a = three, b = four. Okay? So that&#39;s a relatively simple straight
+out the string a = three, b = four. Okay? So that's a relatively simple straight
 
 63
 00:05:49,330 --> 00:05:56,250
@@ -256,7 +256,7 @@ forward case. You know another possibility is that thread two gets to run before
 
 64
 00:05:56,250 --> 00:05:59,730
-thread one ever does anything. So thread two executes all of it&#39;s instructions
+thread one ever does anything. So thread two executes all of it's instructions
 
 65
 00:05:59,730 --> 00:06:04,870
@@ -272,7 +272,7 @@ it will set after this executes. So, after this, after fro finishes executing, i
 
 68
 00:06:21,150 --> 00:06:25,660
-will then set a = three and b = four. That&#39;s another possibility and both of
+will then set a = three and b = four. That's another possibility and both of
 
 69
 00:06:25,660 --> 00:06:29,120
@@ -280,15 +280,15 @@ those are fine, alright? But then there are some other odd possibilities, and
 
 70
 00:06:29,120 --> 00:06:33,460
-let&#39;s take a look at one of those. What happens if the thread is actually enter
+let's take a look at one of those. What happens if the thread is actually enter
 
 71
 00:06:33,460 --> 00:06:39,570
-leave in a non-trivial way. So let&#39;s consider the following possibilities.
+leave in a non-trivial way. So let's consider the following possibilities.
 
 72
 00:06:39,570 --> 00:06:46,260
-Let&#39;s say that two executes these assignment, a = three. And now fro
+Let's say that two executes these assignment, a = three. And now fro
 
 73
 00:06:46,260 --> 00:06:53,260
@@ -296,7 +296,7 @@ executes the first part of the print. So, it does the read of a and starts build
 
 74
 00:06:53,770 --> 00:07:00,770
-up this output string, okay? So, it&#39;s going to print out here, a = three,
+up this output string, okay? So, it's going to print out here, a = three,
 
 75
 00:07:02,940 --> 00:07:08,870
@@ -316,7 +316,7 @@ will run, the rest of the way through, excuse me, b = four. And so here we got a
 
 79
 00:07:30,090 --> 00:07:34,110
-output that doesn&#39;t seem quite right. Here we got, we were able to see an
+output that doesn't seem quite right. Here we got, we were able to see an
 
 80
 00:07:34,110 --> 00:07:41,110
@@ -328,7 +328,7 @@ out over here, in fro show you know, just a partial update of the variables a an
 
 82
 00:07:48,919 --> 00:07:53,270
-So one had been written but not the other. And if we didn&#39;t want to do that, if we
+So one had been written but not the other. And if we didn't want to do that, if we
 
 83
 00:07:53,270 --> 00:07:58,360
@@ -336,15 +336,15 @@ thought this was wrong, we would have to use synchronization in order to control
 
 84
 00:07:58,360 --> 00:08:02,199
-that. So, let&#39;s take a look then at using synchronization to try to prevent this
+that. So, let's take a look then at using synchronization to try to prevent this
 
 85
 00:08:02,199 --> 00:08:07,419
-from happening. And I&#39;ll tell you right upfront that this piece of code or this
+from happening. And I'll tell you right upfront that this piece of code or this
 
 86
 00:08:07,419 --> 00:08:11,610
-attempt is incorrect and actually it doesn&#39;t solve the problem at all. But it
+attempt is incorrect and actually it doesn't solve the problem at all. But it
 
 87
 00:08:11,610 --> 00:08:16,550
@@ -360,7 +360,7 @@ this mistake and lots of production Java programs have this particular mistake i
 
 90
 00:08:26,300 --> 00:08:31,070
-them. So it&#39;s a very instructive example, I think. So let&#39;s take a look here. Let&#39;s
+them. So it's a very instructive example, I think. So let's take a look here. Let's
 
 91
 00:08:31,070 --> 00:08:36,500
@@ -368,31 +368,31 @@ assume we have the, the two threads again. The thread is going to call two and t
 
 92
 00:08:36,500 --> 00:08:40,710
-thread is going to call fro. And let&#39;s say that, in our heap, there is only one
+thread is going to call fro. And let's say that, in our heap, there is only one
 
 93
 00:08:40,710 --> 00:08:46,630
-object simple, and let&#39;s just call it s. So this is globally, in the entire heap
+object simple, and let's just call it s. So this is globally, in the entire heap
 
 94
 00:08:46,630 --> 00:08:53,310
-just one object, s, of the simple class. Alright? So what is, let&#39;s say that thread
+just one object, s, of the simple class. Alright? So what is, let's say that thread
 
 95
 00:08:53,310 --> 00:08:58,460
-one is going to go first, alright, and the first that it&#39;s going to do, because it&#39;s,
+one is going to go first, alright, and the first that it's going to do, because it's,
 
 96
 00:08:58,460 --> 00:09:02,490
-synchronized method, is it&#39;s going to lock the this parameter of the call since
+synchronized method, is it's going to lock the this parameter of the call since
 
 97
 00:09:02,490 --> 00:09:07,310
-there&#39;s only one simple, only one, object of the simple class that has to be the
+there's only one simple, only one, object of the simple class that has to be the
 
 98
 00:09:07,310 --> 00:09:11,820
-object s, so it&#39;s going to lock s. Alright, now we&#39;ll prevent any other
+object s, so it's going to lock s. Alright, now we'll prevent any other
 
 99
 00:09:11,820 --> 00:09:18,820
@@ -408,15 +408,15 @@ could have interruption and thread two can get to run. And notice here that thre
 
 102
 00:09:27,810 --> 00:09:34,360
-two doesn&#39;t check the lock. It goes ahead execute this code over here. In the f ro
+two doesn't check the lock. It goes ahead execute this code over here. In the f ro
 
 103
 00:09:34,360 --> 00:09:38,750
-method but that&#39;s not synchronized, there is no synchronize keyword there. And so
+method but that's not synchronized, there is no synchronize keyword there. And so
 
 104
 00:09:38,750 --> 00:09:45,040
-just the fact that somebody else holds the lock on a simple object doesn&#39;t prevent
+just the fact that somebody else holds the lock on a simple object doesn't prevent
 
 105
 00:09:45,040 --> 00:09:51,510
@@ -424,7 +424,7 @@ another method from accessing the fields or the data of that object if that othe
 
 106
 00:09:51,510 --> 00:09:56,150
-method doesn&#39;t itself check the lock. So if the other method is not synchronized,
+method doesn't itself check the lock. So if the other method is not synchronized,
 
 107
 00:09:56,150 --> 00:10:02,960
@@ -436,11 +436,11 @@ thread holds the lock on the object. So, in this case, this will just, this can
 
 109
 00:10:07,760 --> 00:10:14,750
-just run to completion. And we&#39;ll print out, a = three, b = two. Okay? So we only
+just run to completion. And we'll print out, a = three, b = two. Okay? So we only
 
 110
 00:10:14,750 --> 00:10:21,750
-see one of the two updates. And, and then the scheduler can come back in. Let&#39;s the
+see one of the two updates. And, and then the scheduler can come back in. Let's the
 
 111
 00:10:24,330 --> 00:10:31,330
@@ -468,11 +468,11 @@ think well, I, you know if reads are okay I can always read from things in paral
 
 117
 00:10:57,649 --> 00:11:01,390
-and that won&#39;t cause any problems because I&#39;m not altering any data. It&#39;s my writes
+and that won't cause any problems because I'm not altering any data. It's my writes
 
 118
 00:11:01,390 --> 00:11:06,440
-that have to be synchronized, so if I&#39;m going to write to fields of objects well
+that have to be synchronized, so if I'm going to write to fields of objects well
 
 119
 00:11:06,440 --> 00:11:11,510
@@ -480,7 +480,7 @@ that needs to be coordinated with other methods because writes are dangerous but
 
 120
 00:11:11,510 --> 00:11:16,140
-reads somehow don&#39;t interfere. And the point here is that if, having only one
+reads somehow don't interfere. And the point here is that if, having only one
 
 121
 00:11:16,140 --> 00:11:22,120
@@ -488,7 +488,7 @@ method, or only having one half of the accesses to the, of two accesses to share
 
 122
 00:11:22,120 --> 00:11:28,820
-data be synchronized doesn&#39;t help because synchronization only works if everybody is
+data be synchronized doesn't help because synchronization only works if everybody is
 
 123
 00:11:28,820 --> 00:11:33,680
@@ -504,11 +504,11 @@ what would be a correct way to do it? Well, is just to put the synchronized
 
 126
 00:11:40,720 --> 00:11:46,380
-keyword on both methods. And now. It&#39;s not possible to have the interleaving we saw
+keyword on both methods. And now. It's not possible to have the interleaving we saw
 
 127
 00:11:46,380 --> 00:11:52,420
-before it&#39;s not just only two possible outputs. One, there are only two possible
+before it's not just only two possible outputs. One, there are only two possible
 
 128
 00:11:52,420 --> 00:11:59,410
@@ -516,7 +516,7 @@ strings that could be p rinted. One is that a = one and b = two. So, in this
 
 129
 00:11:59,410 --> 00:12:06,410
-case, the fro method executes before the two method, so that&#39;s fro before two,
+case, the fro method executes before the two method, so that's fro before two,
 
 130
 00:12:06,640 --> 00:12:13,640
@@ -532,11 +532,11 @@ entirety before the fro method. And those become the only two possible
 
 133
 00:12:26,779 --> 00:12:32,860
-inter-leavings when both methods here are synchronized. I&#39;m going to conclude this
+inter-leavings when both methods here are synchronized. I'm going to conclude this
 
 134
 00:12:32,860 --> 00:12:37,910
-video by making a couple of other comments on Java&#39;s threads. So, one property we
+video by making a couple of other comments on Java's threads. So, one property we
 
 135
 00:12:37,910 --> 00:12:42,790
@@ -548,15 +548,15 @@ hold values that were actually written by some threads. So, what do I mean by th
 
 137
 00:12:46,980 --> 00:12:52,110
-Let&#39;s say that we have two assignments. This is in thread one, where we&#39;re
+Let's say that we have two assignments. This is in thread one, where we're
 
 138
 00:12:52,110 --> 00:12:58,440
-assigning a the value of 3.14, then in thread two, we&#39;re assigning a the value
+assigning a the value of 3.14, then in thread two, we're assigning a the value
 
 139
 00:12:58,440 --> 00:13:02,880
-2.78. And so after these assignments are done, after they&#39;ve executed in some
+2.78. And so after these assignments are done, after they've executed in some
 
 140
 00:13:02,880 --> 00:13:09,350
@@ -564,7 +564,7 @@ order, what do we expect? Well, we expect that a ends up being equal either to 3
 
 141
 00:13:09,350 --> 00:13:16,339
-or 2.78, alright? Now what we don&#39;t want is for a to wind up being some other
+or 2.78, alright? Now what we don't want is for a to wind up being some other
 
 142
 00:13:16,339 --> 00:13:22,959
@@ -572,11 +572,11 @@ value, okay? I mean what if a turned out to be 3.78 for example, okay? This woul
 
 143
 00:13:22,959 --> 00:13:29,959
-be bad, we don&#39;t want this, right? Because this value, 3.78, was never written by
+be bad, we don't want this, right? Because this value, 3.78, was never written by
 
 144
 00:13:30,320 --> 00:13:35,950
-either thread. Okay, this value was somehow manufactured. And I&#39;ve chose 3.78,
+either thread. Okay, this value was somehow manufactured. And I've chose 3.78,
 
 145
 00:13:35,950 --> 00:13:39,600
@@ -592,7 +592,7 @@ they were re-combined in some strange way, then we could create a number, that w
 
 148
 00:13:50,550 --> 00:13:55,860
-assigned to a that didn&#39;t exist in either thread. Okay, it was never actually
+assigned to a that didn't exist in either thread. Okay, it was never actually
 
 149
 00:13:55,860 --> 00:14:01,820
@@ -604,7 +604,7 @@ atomic. Meaning that if I write to a value, if I sign a primitive type to
 
 151
 00:14:05,790 --> 00:14:08,800
-something, that is going to happen atomically and won&#39;t be interfered with by
+something, that is going to happen atomically and won't be interfered with by
 
 152
 00:14:08,800 --> 00:14:14,269
@@ -620,11 +620,11 @@ why would that be? Well, a double is a floating point number, but it consumes
 
 155
 00:14:25,850 --> 00:14:31,180
-twice the memory. That&#39;s why it&#39;s called a double, it consumes two words. Okay, and
+twice the memory. That's why it's called a double, it consumes two words. Okay, and
 
 156
 00:14:31,180 --> 00:14:35,209
-what that means is that if a here is a double, so let&#39;s assume that a is a
+what that means is that if a here is a double, so let's assume that a is a
 
 157
 00:14:35,209 --> 00:14:40,970
@@ -644,7 +644,7 @@ that represent a after writing the high half and the low half. Okay because ther
 
 161
 00:14:57,740 --> 00:15:03,480
-isn&#39;t a, a primitive double word write on most machines. And the same thing would
+isn't a, a primitive double word write on most machines. And the same thing would
 
 162
 00:15:03,480 --> 00:15:07,370
@@ -672,7 +672,7 @@ know, something not exactly 3.78, but some mix of the bits from the write in thr
 
 168
 00:15:30,980 --> 00:15:35,140
-one and the write at thread two, and you would create what&#39;s called an out of thin
+one and the write at thread two, and you would create what's called an out of thin
 
 169
 00:15:35,140 --> 00:15:42,140
@@ -684,7 +684,7 @@ those. And, and Java guarantees, again, that the rights of almost all the
 
 171
 00:15:49,420 --> 00:15:52,240
-primitive data types are going to be atomic so you can&#39;t get out of thin air
+primitive data types are going to be atomic so you can't get out of thin air
 
 172
 00:15:52,240 --> 00:15:57,950
@@ -704,7 +704,7 @@ programmer go and mark the type as volatile. So you have to declare doubles
 
 176
 00:16:15,839 --> 00:16:20,610
-to be volatile, and if you do that, then they&#39;re guaranteed to be atomic writes.
+to be volatile, and if you do that, then they're guaranteed to be atomic writes.
 
 177
 00:16:20,610 --> 00:16:25,660
@@ -720,7 +720,7 @@ careful to declare those double types volatil e, at least currently, and this
 
 180
 00:16:35,550 --> 00:16:38,899
-may change in the future, and I&#39;m sure they&#39;d like to change it. But currently
+may change in the future, and I'm sure they'd like to change it. But currently
 
 181
 00:16:38,899 --> 00:16:42,640
@@ -744,11 +744,11 @@ aspect of this. There are several other aspects, of it. And, and, and this is
 
 186
 00:17:05,980 --> 00:17:09,959
-really not Java&#39;s fault. It turns out the concurrency semantics are hard and
+really not Java's fault. It turns out the concurrency semantics are hard and
 
 187
 00:17:09,959 --> 00:17:15,029
-actually, this is kind of at the frontier of research. We don&#39;t really understand
+actually, this is kind of at the frontier of research. We don't really understand
 
 188
 00:17:15,029 --> 00:17:21,730
@@ -756,7 +756,7 @@ exactly what we want or what the right thing is to do, to specify the behavior o
 
 189
 00:17:21,730 --> 00:17:26,149
-languages, in concurrent settings. And, that&#39;s not to say that we don&#39;t understand
+languages, in concurrent settings. And, that's not to say that we don't understand
 
 190
 00:17:26,148 --> 00:17:30,809
@@ -812,5 +812,4 @@ trouble. Alright, so it surely pays to try to understand. Java concurrency and t
 
 203
 00:18:28,220 --> 00:18:31,480
-threads if you&#39;re writing significant concurrency Java programs
-
+threads if you're writing significant concurrency Java programs

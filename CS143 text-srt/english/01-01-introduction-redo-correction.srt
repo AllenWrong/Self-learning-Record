@@ -1,14 +1,14 @@
 0
 00:00:03,310 --> 00:00:07,580
-Welcome to this course on compilers. My name is Alex Aiken. I&#39;m a professor here
+Welcome to this course on compilers. My name is Alex Aiken. I'm a professor here
 
 1
 00:00:07,580 --> 00:00:11,539
-at Stanford University. And we&#39;re going to be talking about the implementation of
+at Stanford University. And we're going to be talking about the implementation of
 
 2
 00:00:11,539 --> 00:00:18,539
-programming languages. &gt;&gt; There are two major approaches to implementing
+programming languages. >> There are two major approaches to implementing
 
 3
 00:00:19,619 --> 00:00:24,599
@@ -20,7 +20,7 @@ about compilers. But, I do want to say a few words about interpreters here in th
 
 5
 00:00:30,210 --> 00:00:36,250
-first lecture. So, what does an interpreter do? Well, I&#39;m gonna draw a
+first lecture. So, what does an interpreter do? Well, I'm gonna draw a
 
 6
 00:00:36,250 --> 00:00:41,240
@@ -36,7 +36,7 @@ want to run the program on. And it produces the output directly. Meaning that
 
 9
 00:00:56,920 --> 00:01:01,580
-it doesn&#39;t do any processing of the program before it executes it on the
+it doesn't do any processing of the program before it executes it on the
 
 10
 00:01:01,580 --> 00:01:06,470
@@ -56,7 +56,7 @@ your program. Now a compiler is structured differently. So, we can draw a pictur
 
 14
 00:01:23,950 --> 00:01:30,799
-here. Which we&#39;ll label with a big C, for the compiler, And the compiler takes as
+here. Which we'll label with a big C, for the compiler, And the compiler takes as
 
 15
 00:01:30,799 --> 00:01:37,799
@@ -92,7 +92,7 @@ on many different data sets without having to recompile or do any other processi
 
 23
 00:02:26,540 --> 00:02:31,590
-the program. I think it&#39;s helpful to give a little bit of history about how
+the program. I think it's helpful to give a little bit of history about how
 
 24
 00:02:31,590 --> 00:02:35,860
@@ -168,11 +168,11 @@ disadvantages, code written, speed code programs were ten to twenty times slower
 
 42
 00:04:07,310 --> 00:04:11,909
-Then handwritten programs and that&#39;s also true of interpreted programs today. So if
+Then handwritten programs and that's also true of interpreted programs today. So if
 
 43
 00:04:11,909 --> 00:04:14,890
-you have an implementation that uses an interpreter, they&#39;re going to be much
+you have an implementation that uses an interpreter, they're going to be much
 
 44
 00:04:14,890 --> 00:04:21,139
@@ -180,7 +180,7 @@ slower than either a compiler or writing code by hand. And also, the speed code
 
 45
 00:04:21,139 --> 00:04:26,970
-interpreter took up, 300 bytes of memory. And that doesn&#39;t seem like very much. In
+interpreter took up, 300 bytes of memory. And that doesn't seem like very much. In
 
 46
 00:04:26,970 --> 00:04:32,259
@@ -240,7 +240,7 @@ would only take them one year to build the compiler but it would end up taking t
 
 60
 00:05:44,780 --> 00:05:49,300
-So just like today, they weren&#39;t very good at predicting how long software projects
+So just like today, they weren't very good at predicting how long software projects
 
 61
 00:05:49,300 --> 00:05:56,190
@@ -280,7 +280,7 @@ one of the interesting things about programming languages, actually, is the
 
 70
 00:06:37,419 --> 00:06:43,520
-combination of theory. And practice because it&#39;s not really possible in
+combination of theory. And practice because it's not really possible in
 
 71
 00:06:43,520 --> 00:06:49,000
@@ -288,7 +288,7 @@ programming languages to do a good job without having both a, a very good grasp
 
 72
 00:06:49,000 --> 00:06:52,699
-of fairly deep theory and also good engineering skills. So there&#39;s a lot of
+of fairly deep theory and also good engineering skills. So there's a lot of
 
 73
 00:06:52,699 --> 00:06:56,639
@@ -300,7 +300,7 @@ involves a very subtle and fruitful interaction with theory. And so, and this
 
 75
 00:07:00,990 --> 00:07:04,550
-is one of the things, I think, that&#39;s most attractive about the area&#39;s the subject of
+is one of the things, I think, that's most attractive about the area's the subject of
 
 76
 00:07:04,550 --> 00:07:09,830
@@ -352,9 +352,8 @@ virtual machine. It might be to another high level programming language. Well
 
 88
 00:08:12,069 --> 00:08:16,139
-that&#39;s it for this lecture, and next time we&#39;ll pick up here and talk about these
+that's it for this lecture, and next time we'll pick up here and talk about these
 
 89
 00:08:16,139 --> 00:08:17,999
 five phases in more detail.
-

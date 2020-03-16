@@ -1,6 +1,6 @@
 0
 00:00:04,400 --> 00:00:07,520
-In the next couple of videos, we&#39;re going to be looking at the details of the Cool
+In the next couple of videos, we're going to be looking at the details of the Cool
 
 1
 00:00:07,520 --> 00:00:11,330
@@ -8,7 +8,7 @@ operational semantics going over the semantics of each individual kind of
 
 2
 00:00:11,330 --> 00:00:14,830
-expression. We&#39;ll start with easy ones and work our way up to the more complicated
+expression. We'll start with easy ones and work our way up to the more complicated
 
 3
 00:00:14,830 --> 00:00:21,830
@@ -20,11 +20,11 @@ true, the expression true I should say, evaluates to a Boolean with the value tr
 
 5
 00:00:30,089 --> 00:00:34,690
-And it doesn&#39;t modify the store so the store is unchanged because it doesn&#39;t do
+And it doesn't modify the store so the store is unchanged because it doesn't do
 
 6
 00:00:34,690 --> 00:00:40,550
-any updates obviously And there&#39;s a corresponding rule for false And integers
+any updates obviously And there's a corresponding rule for false And integers
 
 7
 00:00:40,550 --> 00:00:47,550
@@ -92,7 +92,7 @@ self object. So, this is a place where we just make use of the fact that the sel
 
 23
 00:02:14,370 --> 00:02:18,900
-object is part of the environment so let&#39;s just copy them over here as the result of
+object is part of the environment so let's just copy them over here as the result of
 
 24
 00:02:18,900 --> 00:02:25,900
@@ -100,7 +100,7 @@ expression and that was again that the store is unaffected by evaluation of self
 
 25
 00:02:27,719 --> 00:02:31,379
-Now let&#39;s see of a more slightly more complicated evaluation is evaluated, in
+Now let's see of a more slightly more complicated evaluation is evaluated, in
 
 26
 00:02:31,379 --> 00:02:35,799
@@ -124,11 +124,11 @@ All right? And so in order to evaluate the assignment, the first thing we have t
 
 31
 00:02:58,079 --> 00:03:02,279
-is we have to know what value we&#39;re going to be writing into the identifier. So what
+is we have to know what value we're going to be writing into the identifier. So what
 
 32
 00:03:02,279 --> 00:03:06,120
-is the, what is the update we&#39;re going to perform? So the first thing to do is to
+is the, what is the update we're going to perform? So the first thing to do is to
 
 33
 00:03:06,120 --> 00:03:12,159
@@ -140,7 +140,7 @@ has the same three components here, and here, all right? So it just says the fir
 
 35
 00:03:17,189 --> 00:03:22,450
-thing we do is we run e. Okay. That will give us back a new value. We&#39;re going to
+thing we do is we run e. Okay. That will give us back a new value. We're going to
 
 36
 00:03:22,450 --> 00:03:28,469
@@ -156,7 +156,7 @@ that we get out might be different. Alright, so e produces the value of e and
 
 39
 00:03:36,349 --> 00:03:42,379
-an update store s1 And now it&#39;s actually due to assignment, what do we do? Well we
+an update store s1 And now it's actually due to assignment, what do we do? Well we
 
 40
 00:03:42,379 --> 00:03:46,499
@@ -180,7 +180,7 @@ value of e, the value b and we do that in store s1 which gives us a new store s2
 
 45
 00:04:10,409 --> 00:04:15,839
-And I&#39;ve noticed. That s2 is the store that results from the evaluation of e,
+And I've noticed. That s2 is the store that results from the evaluation of e,
 
 46
 00:04:15,839 --> 00:04:20,419
@@ -192,7 +192,7 @@ course the value of a, of running e. And, it returns the updated store s2. Next,
 
 48
 00:04:28,289 --> 00:04:33,889
-let&#39;s talk about the operational rule for addition. So, to evaluate e1+e2, what we
+let's talk about the operational rule for addition. So, to evaluate e1+e2, what we
 
 49
 00:04:33,889 --> 00:04:39,680
@@ -208,11 +208,11 @@ context here for evaluating one are exactly the same as the components for the
 
 52
 00:04:51,970 --> 00:04:56,400
-overall expression e1 + e2. So when we evaluate e1 it&#39;s going to give us a value
+overall expression e1 + e2. So when we evaluate e1 it's going to give us a value
 
 53
 00:04:56,400 --> 00:05:01,169
-of e1 and it&#39;s also going to give us an updated store s1 And then we&#39;re going to
+of e1 and it's also going to give us an updated store s1 And then we're going to
 
 54
 00:05:01,169 --> 00:05:07,479
@@ -220,7 +220,7 @@ evaluate e2 and notice here And I think context is different. The soft objects i
 
 55
 00:05:07,479 --> 00:05:14,479
-the environment are the same; same but now we&#39;re running e2 in the new store s1. And
+the environment are the same; same but now we're running e2 in the new store s1. And
 
 56
 00:05:14,699 --> 00:05:20,300
@@ -232,7 +232,7 @@ it those assignments and variable references have to be done on the store
 
 58
 00:05:25,030 --> 00:05:30,449
-that resulted from running e1, okay? So, it&#39;s very important that we get that any
+that resulted from running e1, okay? So, it's very important that we get that any
 
 59
 00:05:30,449 --> 00:05:35,830
@@ -240,7 +240,7 @@ side effects would happen in running e1 are visible or that are seen by the
 
 60
 00:05:35,830 --> 00:05:39,960
-expression e2. So we run e2 in this environment, we&#39;re going to get the value
+expression e2. So we run e2 in this environment, we're going to get the value
 
 61
 00:05:39,960 --> 00:05:44,759
@@ -264,11 +264,11 @@ that tells you that e1 has to be evaluated first. And then because e2 is evaluat
 
 66
 00:06:09,689 --> 00:06:15,919
-the store that&#39;s produced by e1, that tells you that e1, e2 excuse me, has to be
+the store that's produced by e1, that tells you that e1, e2 excuse me, has to be
 
 67
 00:06:15,919 --> 00:06:22,919
-evaluated after you&#39;ve evaluated e1 and then the fact that. S2 is the result of
+evaluated after you've evaluated e1 and then the fact that. S2 is the result of
 
 68
 00:06:23,129 --> 00:06:26,889
@@ -276,7 +276,7 @@ the whole thing. It tells you that E2 is also the last thing that you evaluate
 
 69
 00:06:26,889 --> 00:06:33,889
-during the execution of this particular expression. Okay, let&#39;s take a look at the
+during the execution of this particular expression. Okay, let's take a look at the
 
 70
 00:06:34,419 --> 00:06:39,879
@@ -292,7 +292,7 @@ this is semantics, this is that we should run, I mean order beginning of e1 and 
 
 73
 00:06:50,909 --> 00:06:54,979
-results of the entire execution will be the, let&#39;s say the value of the entire
+results of the entire execution will be the, let's say the value of the entire
 
 74
 00:06:54,979 --> 00:06:59,919
@@ -300,7 +300,7 @@ block with the value of the last expression. And this, this rule just says
 
 75
 00:06:59,919 --> 00:07:05,229
-that. So, first, we evaluate e1 and also it&#39;s done on the same store as the overall
+that. So, first, we evaluate e1 and also it's done on the same store as the overall
 
 76
 00:07:05,229 --> 00:07:09,639
@@ -340,7 +340,7 @@ effects to get. You know the side effects in the correct order for all of these
 
 85
 00:07:52,590 --> 00:07:56,060
-expressions And furthermore, it also tells you the only value that you&#39;re going to
+expressions And furthermore, it also tells you the only value that you're going to
 
 86
 00:07:56,060 --> 00:08:00,669
@@ -348,15 +348,15 @@ keep is the value vn. Notice that none of the other values that are produced her
 
 87
 00:08:00,669 --> 00:08:07,490
-are used for anything. They don&#39;t appear anywhere else in the rules. Let&#39;s think
+are used for anything. They don't appear anywhere else in the rules. Let's think
 
 88
 00:08:07,490 --> 00:08:13,710
-what we&#39;ve learned so far and do a small example. So we want to know what happens
+what we've learned so far and do a small example. So we want to know what happens
 
 89
 00:08:13,710 --> 00:08:20,620
-when we evaluate the block. X gets assigns seven + five, that&#39;s the first statement
+when we evaluate the block. X gets assigns seven + five, that's the first statement
 
 90
 00:08:20,620 --> 00:08:24,370
@@ -368,27 +368,27 @@ And the first thing we have to do is to say what the context did and which we ar
 
 92
 00:08:28,340 --> 00:08:32,250
-going to evaluate this and the context consists of three parts. There&#39;ll be a
+going to evaluate this and the context consists of three parts. There'll be a
 
 93
 00:08:32,250 --> 00:08:36,720
-self object and in this case it doesn&#39;t really matter what&#39;s in the self object
+self object and in this case it doesn't really matter what's in the self object
 
 94
 00:08:36,720 --> 00:08:41,510
-because self is not referred to in the program and so it won&#39;t play any role in
+because self is not referred to in the program and so it won't play any role in
 
 95
 00:08:41,510 --> 00:08:44,940
-the evaluation. But we, we still need it so there still be, there&#39;ll be some self
+the evaluation. But we, we still need it so there still be, there'll be some self
 
 96
 00:08:44,940 --> 00:08:50,450
-object out there just won&#39;t get used and Now, in the new environment which tells us
+object out there just won't get used and Now, in the new environment which tells us
 
 97
 00:08:50,450 --> 00:08:55,260
-the locations where all the free variables in the programs. So, we&#39;ll just need a
+the locations where all the free variables in the programs. So, we'll just need a
 
 98
 00:08:55,260 --> 00:09:01,540
@@ -396,7 +396,7 @@ place for x is going to be stored and so s will be stored in some location l And
 
 99
 00:09:01,540 --> 00:09:07,390
-we know our memory content is, where our store is and let&#39;s just say that at l we
+we know our memory content is, where our store is and let's just say that at l we
 
 100
 00:09:07,390 --> 00:09:13,960
@@ -404,7 +404,7 @@ have initially the value zero, okay? So now we can use our rules to run this
 
 101
 00:09:13,960 --> 00:09:19,600
-program or to evaluate thi s program. I&#39;m going to make this line here much longer
+program or to evaluate thi s program. I'm going to make this line here much longer
 
 102
 00:09:19,600 --> 00:09:25,660
@@ -428,7 +428,7 @@ and I realize and say environment for the entire left hand side of one of these
 
 107
 00:09:50,600 --> 00:09:57,600
-judgments. I&#39;ll try to be consistent. And just use environment for the, for the
+judgments. I'll try to be consistent. And just use environment for the, for the
 
 108
 00:09:59,090 --> 00:10:03,370
@@ -436,11 +436,11 @@ second components of the context often in the literature people call the entire
 
 109
 00:10:03,370 --> 00:10:05,620
-thing on the left hand side of the environment that&#39;s why they make this
+thing on the left hand side of the environment that's why they make this
 
 110
 00:10:05,620 --> 00:10:10,380
-mistake but you know for this instead of notes I&#39;m trying to be consistent the
+mistake but you know for this instead of notes I'm trying to be consistent the
 
 111
 00:10:10,380 --> 00:10:14,430
@@ -456,19 +456,19 @@ their locations Anyway coming back to the example, The first statement in the bl
 
 114
 00:10:25,950 --> 00:10:31,710
-is s gets seven+5 alright. And then we&#39;re going to have the second statement as
+is s gets seven+5 alright. And then we're going to have the second statement as
 
 115
 00:10:31,710 --> 00:10:38,710
-well. And we know that the self object and the environment won&#39;t change but we don&#39;t
+well. And we know that the self object and the environment won't change but we don't
 
 116
 00:10:39,830 --> 00:10:43,910
-know what the store will be. The store might be different so I&#39;ll leave the store
+know what the store will be. The store might be different so I'll leave the store
 
 117
 00:10:43,910 --> 00:10:49,320
-empty for now and we&#39;ll figure that out later and we&#39;re going to be evaluating the
+empty for now and we'll figure that out later and we're going to be evaluating the
 
 118
 00:10:49,320 --> 00:10:55,750
@@ -488,19 +488,19 @@ the very first thing we have to do is we have to evaluate the right hand side so
 
 122
 00:11:11,370 --> 00:11:18,140
-we&#39;re going to have the context for that is going to be the same And the context
+we're going to have the context for that is going to be the same And the context
 
 123
 00:11:18,140 --> 00:11:22,900
-we&#39;ve been looking at all on because it&#39;s the first thing that&#39;s actually going to
+we've been looking at all on because it's the first thing that's actually going to
 
 124
 00:11:22,900 --> 00:11:29,900
-happen is to evaluate Seven + five, okay? And now, I&#39;m leaving a little space down
+happen is to evaluate Seven + five, okay? And now, I'm leaving a little space down
 
 125
 00:11:31,480 --> 00:11:35,120
-here for the rest of the assignment role which we&#39;re not going to fill in just yet.
+here for the rest of the assignment role which we're not going to fill in just yet.
 
 126
 00:11:35,120 --> 00:11:39,480
@@ -512,7 +512,7 @@ the second expression, okay? And so, how do we do that? Well, we know, finally, 
 
 128
 00:11:46,220 --> 00:11:49,620
-think how to do that because we&#39;re finally down and we&#39;re going to have a single
+think how to do that because we're finally down and we're going to have a single
 
 129
 00:11:49,620 --> 00:11:56,620
@@ -536,15 +536,15 @@ integer object with the value of five and the store will be unmodified okay so
 
 134
 00:12:36,980 --> 00:12:43,980
-that&#39;s the two sum expressions of this edition and so now we can fill in the
+that's the two sum expressions of this edition and so now we can fill in the
 
 135
 00:12:45,430 --> 00:12:49,050
-results here so to take the contents of the two integers we&#39;ll add them. That will
+results here so to take the contents of the two integers we'll add them. That will
 
 136
 00:12:49,050 --> 00:12:56,050
-also be integer object so we&#39;re going to have the integer object twelve. And the
+also be integer object so we're going to have the integer object twelve. And the
 
 137
 00:12:56,110 --> 00:13:00,570
@@ -556,11 +556,11 @@ to be the same as the store that went in just because this expression had no
 
 139
 00:13:04,690 --> 00:13:10,270
-assignments in it, okay? And now we&#39;re ready to do the assignment. Okay. So how
+assignments in it, okay? And now we're ready to do the assignment. Okay. So how
 
 140
 00:13:10,270 --> 00:13:14,510
-do we do that? Well, we have to form a new store. Alright, so we&#39;re going to have a
+do we do that? Well, we have to form a new store. Alright, so we're going to have a
 
 141
 00:13:14,510 --> 00:13:21,510
@@ -568,11 +568,11 @@ new store which will the L gets zero with the value of l. Number which way, my
 
 142
 00:13:27,930 --> 00:13:32,210
-notation went here, I think it&#39;s the number comes first and we&#39;re going to put
+notation went here, I think it's the number comes first and we're going to put
 
 143
 00:13:32,210 --> 00:13:38,060
-twelve in the location l and of course, that&#39;s store was just equal to the store
+twelve in the location l and of course, that's store was just equal to the store
 
 144
 00:13:38,060 --> 00:13:45,060
@@ -588,7 +588,7 @@ is twelve and we have a new store where the location l has twelve, all right? So
 
 147
 00:13:58,920 --> 00:14:02,600
-now we&#39;re going to evaluate the second statement in the block and that will be
+now we're going to evaluate the second statement in the block and that will be
 
 148
 00:14:02,600 --> 00:14:09,600
@@ -604,11 +604,11 @@ value excuse me, 4or integer object containing, the integer object with the
 
 151
 00:14:19,930 --> 00:14:26,930
-value four and our store. And it&#39;s just going to fit not quite, all right? And
+value four and our store. And it's just going to fit not quite, all right? And
 
 152
 00:14:28,440 --> 00:14:33,890
-that&#39;s then the result of the entire evaluation . So, this block will produce
+that's then the result of the entire evaluation . So, this block will produce
 
 153
 00:14:33,890 --> 00:14:38,940
@@ -628,7 +628,7 @@ do? Actually there should be if, then, else. See of course, so evaluating if,
 
 157
 00:14:58,630 --> 00:15:02,340
-then, else as well. First we have to evaluate the, the predicate and it&#39;s done
+then, else as well. First we have to evaluate the, the predicate and it's done
 
 158
 00:15:02,340 --> 00:15:07,450
@@ -640,11 +640,11 @@ true If the, if the Boolean predicate returns the value true. Then we want to
 
 160
 00:15:12,610 --> 00:15:16,820
-evaluate just the true branch and not the false branch so that&#39;s why you only see
+evaluate just the true branch and not the false branch so that's why you only see
 
 161
 00:15:16,820 --> 00:15:22,170
-here, evaluation of e2 and e3 isn&#39;t mentioned anywhere and just know here that
+here, evaluation of e2 and e3 isn't mentioned anywhere and just know here that
 
 162
 00:15:22,170 --> 00:15:28,070
@@ -656,7 +656,7 @@ produces And then the results of the entire expression is the value of e2.
 
 164
 00:15:32,120 --> 00:15:37,060
-Okay, that&#39;s v and also just the final store is produced by running the then
+Okay, that's v and also just the final store is produced by running the then
 
 165
 00:15:37,060 --> 00:15:43,780
@@ -664,7 +664,7 @@ branch. And there is a symmetric rule for what happens if the predicate evaluate
 
 166
 00:15:43,780 --> 00:15:50,620
-the false. In that case, you would evaluate e3 and not e2. Next we&#39;ll take a
+the false. In that case, you would evaluate e3 and not e2. Next we'll take a
 
 167
 00:15:50,620 --> 00:15:55,160
@@ -680,7 +680,7 @@ loop body is not going to execute, alright so the first thing we do is we evalua
 
 170
 00:16:05,090 --> 00:16:11,070
-the predicate and that&#39;s done in the same context as the evaluation of the overall
+the predicate and that's done in the same context as the evaluation of the overall
 
 171
 00:16:11,070 --> 00:16:14,510
@@ -700,11 +700,11 @@ evaluates the true. So here we evaluate the predicate again in the same context 
 
 175
 00:16:30,710 --> 00:16:35,390
-the overall loop. And if the predicate evaluates the true then we&#39;re going to run
+the overall loop. And if the predicate evaluates the true then we're going to run
 
 176
 00:16:35,390 --> 00:16:39,620
-the loop audio once. Okay. So we&#39;ll evaluate the loop audio and also that&#39;s
+the loop audio once. Okay. So we'll evaluate the loop audio and also that's
 
 177
 00:16:39,620 --> 00:16:45,070
@@ -720,7 +720,7 @@ need to do is we need to go back around and execute the loop again and how can w
 
 180
 00:16:54,580 --> 00:17:00,430
-do that? Well, we&#39;re really just running the whole loop in the new context. So, the
+do that? Well, we're really just running the whole loop in the new context. So, the
 
 181
 00:17:00,430 --> 00:17:07,430
@@ -740,7 +740,7 @@ finally terminate, if it terminates, it will produce it will produce a new store
 
 185
 00:17:23,810 --> 00:17:28,670
-s3 evaluated while because always produced the value of a void. And then what we&#39;ll
+s3 evaluated while because always produced the value of a void. And then what we'll
 
 186
 00:17:28,670 --> 00:17:33,310
@@ -756,7 +756,7 @@ is the let expression. So recall how, what this looks like so let and cool has a
 
 189
 00:17:46,470 --> 00:17:51,430
-variable thing declared and it&#39;s type and an initializer which is optional so this
+variable thing declared and it's type and an initializer which is optional so this
 
 190
 00:17:51,430 --> 00:17:56,270
@@ -768,15 +768,15 @@ which that new variable is available. And so how do we evaluate this? Well first
 
 192
 00:18:00,490 --> 00:18:04,590
-we&#39;re going to evaluate the initial value of the, of the new variables. So we
+we're going to evaluate the initial value of the, of the new variables. So we
 
 193
 00:18:04,590 --> 00:18:10,590
-evaluate e1 and as usual that&#39;s done in the initial store it produces possibly
+evaluate e1 and as usual that's done in the initial store it produces possibly
 
 194
 00:18:10,590 --> 00:18:16,430
-modified store. And now the question is, what are going to, what&#39;s going to be the
+modified store. And now the question is, what are going to, what's going to be the
 
 195
 00:18:16,430 --> 00:18:21,910
@@ -784,7 +784,7 @@ context here for the evaluation of e2 for the body of the latter? And so it seem
 
 196
 00:18:21,910 --> 00:18:26,380
-clear that it&#39;s going to involve s1 because it has all the updates from e2 but
+clear that it's going to involve s1 because it has all the updates from e2 but
 
 197
 00:18:26,380 --> 00:18:31,170
@@ -796,7 +796,7 @@ So, what we want is to have a new environment e but with new binding of ID
 
 199
 00:18:38,830 --> 00:18:43,240
-to refresh location. So, we&#39;re introducing a new variable. Remember that the
+to refresh location. So, we're introducing a new variable. Remember that the
 
 200
 00:18:43,240 --> 00:18:47,150
@@ -812,11 +812,11 @@ location, the location for the new variable has to be a fresh location. We
 
 203
 00:18:54,810 --> 00:18:59,410
-don&#39;t want to conflict with any other memory locations we are already using.
+don't want to conflict with any other memory locations we are already using.
 
 204
 00:18:59,410 --> 00:19:04,570
-Okay And so, we&#39;re going to allocate a new memory location for the variable And then
+Okay And so, we're going to allocate a new memory location for the variable And then
 
 205
 00:19:04,570 --> 00:19:09,600
@@ -828,27 +828,27 @@ all the, the values for s1 But also, we can have these new location for the
 
 207
 00:19:14,150 --> 00:19:20,620
-variable and that&#39;s going to have the initial value of the variable e1. To
+variable and that's going to have the initial value of the variable e1. To
 
 208
 00:19:20,620 --> 00:19:24,780
-express that we need a new location, we&#39;re going to introduce a new operation on the
+express that we need a new location, we're going to introduce a new operation on the
 
 209
 00:19:24,780 --> 00:19:30,470
-store which gives us a new fresh location. So new lo applied to a store it&#39;s just
+store which gives us a new fresh location. So new lo applied to a store it's just
 
 210
 00:19:30,470 --> 00:19:36,250
-going to give us some location that isn&#39;t being used by the store. So, the store has
+going to give us some location that isn't being used by the store. So, the store has
 
 211
 00:19:36,250 --> 00:19:41,190
-a domain where it&#39;s a mapping from locations to values and we&#39;ll just pick
+a domain where it's a mapping from locations to values and we'll just pick
 
 212
 00:19:41,190 --> 00:19:47,690
-some new location that isn&#39;t in the current list of locations within the store
+some new location that isn't in the current list of locations within the store
 
 213
 00:19:47,690 --> 00:19:51,390
@@ -864,7 +864,7 @@ function in the runtime system. So, then, here we can write out the rule. So, th
 
 216
 00:20:02,900 --> 00:20:06,610
-is the most complicated rule we seen so far. So, I&#39;ll just take a moment to walk
+is the most complicated rule we seen so far. So, I'll just take a moment to walk
 
 217
 00:20:06,610 --> 00:20:13,610
@@ -884,19 +884,19 @@ updated store, all right? Then in the updated store, using the updated store
 
 221
 00:20:25,620 --> 00:20:32,059
-here we find an unused location, l new. Okay And then we&#39;re going to create a
+here we find an unused location, l new. Okay And then we're going to create a
 
 222
 00:20:32,059 --> 00:20:39,059
-store where that new location has, has the value of e1. So we&#39;re going to store the
+store where that new location has, has the value of e1. So we're going to store the
 
 223
 00:20:39,850 --> 00:20:44,620
-value of e1 at that new location. We&#39;re going to update the store s1 to reflect
+value of e1 at that new location. We're going to update the store s1 to reflect
 
 224
 00:20:44,620 --> 00:20:49,420
-that and further more we&#39;re going to extend our environment with the new
+that and further more we're going to extend our environment with the new
 
 225
 00:20:49,420 --> 00:20:54,820
@@ -913,4 +913,3 @@ lab which will produce the value b2 and possible update in store s2 and those ar
 228
 00:21:04,850 --> 00:21:07,360
 the results of the overall expression.
-

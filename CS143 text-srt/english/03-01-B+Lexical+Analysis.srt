@@ -8,7 +8,7 @@ job is to recognize the substrings in the input that correspond to tokens. And
 
 2
 00:00:11,089 --> 00:00:16,690
-here&#39;s a little bit of compiler lingo these substrings are called the lexemes. So
+here's a little bit of compiler lingo these substrings are called the lexemes. So
 
 3
 00:00:16,690 --> 00:00:21,920
@@ -25,4 +25,3 @@ analyzer is a series of pairs which are the token class. And lexing, Okay, And t
 6
 00:00:35,610 --> 00:00:39,750
 whole thing, one of these pairsis called A token.
-

@@ -1,18 +1,18 @@
 0
 00:00:01,079 --> 00:00:03,850
-So next we&#39;re going to talk about code generation for if then else
+So next we're going to talk about code generation for if then else
 
 1
 00:00:03,850 --> 00:00:08,950
-expressions And to do that we&#39;re going to need some control flow instructions. So
+expressions And to do that we're going to need some control flow instructions. So
 
 2
 00:00:08,950 --> 00:00:13,780
-we&#39;ll have, we&#39;ll need two in fact. So here&#39;s the branch equal instruction, and
+we'll have, we'll need two in fact. So here's the branch equal instruction, and
 
 3
 00:00:13,780 --> 00:00:18,270
-this jumps to a label if the contents of two registers are equal And then we&#39;ll
+this jumps to a label if the contents of two registers are equal And then we'll
 
 4
 00:00:18,270 --> 00:00:22,150
@@ -20,7 +20,7 @@ also need an unconditional jump. So this just does an unconditional branch, not
 
 5
 00:00:22,150 --> 00:00:29,150
-branch, an unconditional jump to a particular assembly instruction. So let&#39;s
+branch, an unconditional jump to a particular assembly instruction. So let's
 
 6
 00:00:30,640 --> 00:00:35,159
@@ -72,15 +72,15 @@ do a branch equal. So if the value of E One is equal. Sorry this is actually the
 
 18
 00:01:32,390 --> 00:01:35,780
-value of E Two and E Zero and if that&#39;s equal to the value of E One. Then we
+value of E Two and E Zero and if that's equal to the value of E One. Then we
 
 19
 00:01:35,780 --> 00:01:42,270
-branch to the true branch. Otherwise we&#39;re going to fall through if there not equal.
+branch to the true branch. Otherwise we're going to fall through if there not equal.
 
 20
 00:01:42,270 --> 00:01:47,520
-Okay And so we&#39;ll call that the false branch And what are we going to do if we
+Okay And so we'll call that the false branch And what are we going to do if we
 
 21
 00:01:47,520 --> 00:01:51,409
@@ -92,19 +92,19 @@ leave the value of E4 in the accumulator and that will be the value of the entir
 
 23
 00:01:55,880 --> 00:02:00,460
-if then else in the case where the predicate is false. So when we&#39;re done,
+if then else in the case where the predicate is false. So when we're done,
 
 24
 00:02:00,460 --> 00:02:05,229
-we&#39;re going to branch now to some code that we&#39;ll just clean up and end the if
+we're going to branch now to some code that we'll just clean up and end the if
 
 25
 00:02:05,229 --> 00:02:10,200
-statement. We&#39;ll see what that does in a moment. Otherwise, we still need to
+statement. We'll see what that does in a moment. Otherwise, we still need to
 
 26
 00:02:10,199 --> 00:02:13,450
-implement the true branch, so we&#39;ll stick the label for the true branch here And
+implement the true branch, so we'll stick the label for the true branch here And
 
 27
 00:02:13,450 --> 00:02:19,590
@@ -133,4 +133,3 @@ branch if we executed the false branch And then the value in the accumulator is 
 33
 00:02:44,090 --> 00:02:48,680
 value of E4 And so this correctly implements an if then else expression.
-

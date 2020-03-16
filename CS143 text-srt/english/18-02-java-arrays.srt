@@ -1,26 +1,26 @@
 0
 00:00:04,420 --> 00:00:11,030
-In this video, we&#39;re going to take a look at Java Arrays. Let&#39;s say we have two
+In this video, we're going to take a look at Java Arrays. Let's say we have two
 
 1
 00:00:11,030 --> 00:00:15,820
-classes, a and b, and that b is a sub class of a. And let&#39;s think about what
+classes, a and b, and that b is a sub class of a. And let's think about what
 
 2
 00:00:15,820 --> 00:00:20,270
-happens when we execute the following piece of code. So, the first thing we&#39;re
+happens when we execute the following piece of code. So, the first thing we're
 
 3
 00:00:20,270 --> 00:00:25,449
-going to do is we&#39;re going to allocate an array of b&#39;s. So, this is an array that&#39;s
+going to do is we're going to allocate an array of b's. So, this is an array that's
 
 4
 00:00:25,449 --> 00:00:32,449
-supposed to hold B&#39;s, okay? And, we&#39;re going to have an array variable b here
+supposed to hold B's, okay? And, we're going to have an array variable b here
 
 5
 00:00:33,970 --> 00:00:39,059
-that points to it. And then, we&#39;re going to have another variable, array variable
+that points to it. And then, we're going to have another variable, array variable
 
 6
 00:00:39,059 --> 00:00:45,489
@@ -28,11 +28,11 @@ A, that also points to the same array as B. But notice the type of a. So a is an
 
 7
 00:00:45,489 --> 00:00:51,370
-array of A&#39;s, little a here is an array of A&#39;s, and b is typed as an array of B&#39;s.
+array of A's, little a here is an array of A's, and b is typed as an array of B's.
 
 8
 00:00:51,370 --> 00:00:57,350
-And now what we&#39;re going to do is we&#39;re going to assign into a sub zero, okay,
+And now what we're going to do is we're going to assign into a sub zero, okay,
 
 9
 00:00:57,350 --> 00:01:02,369
@@ -40,7 +40,7 @@ into the first position of a, a new a object. And that should be fine, right?
 
 10
 00:01:02,369 --> 00:01:06,680
-Because a is an array of A&#39;s and that seems like that should work out alright.
+Because a is an array of A's and that seems like that should work out alright.
 
 11
 00:01:06,680 --> 00:01:13,590
@@ -48,11 +48,11 @@ Alright, so here there will be an a sitting in the first position. And then,
 
 12
 00:01:13,590 --> 00:01:19,840
-we&#39;re going to access b sub zero which, because A and B point to the same array,
+we're going to access b sub zero which, because A and B point to the same array,
 
 13
 00:01:19,840 --> 00:01:23,939
-is the same element as a sub zero. And we&#39;re going to call some method that is
+is the same element as a sub zero. And we're going to call some method that is
 
 14
 00:01:23,939 --> 00:01:30,100
@@ -64,11 +64,11 @@ methods of A. A but B might have more methods. And since this is an array of
 
 16
 00:01:35,049 --> 00:01:38,979
-B&#39;s, we should be able to call all the B methods on it and yet here, when we call
+B's, we should be able to call all the B methods on it and yet here, when we call
 
 17
 00:01:38,979 --> 00:01:42,990
-some methods that&#39;s declared in B but not in A, we are going to get a run-time error
+some methods that's declared in B but not in A, we are going to get a run-time error
 
 18
 00:01:42,990 --> 00:01:48,259
@@ -76,7 +76,7 @@ because the object stored in the array is actually an A object at the first
 
 19
 00:01:48,259 --> 00:01:53,009
-position. To understand what&#39;s going on in this example, we have to take a look at
+position. To understand what's going on in this example, we have to take a look at
 
 20
 00:01:53,009 --> 00:01:59,170
@@ -84,15 +84,15 @@ the sub typing rules in Java. So, if we use a subtype of A if B inherits from A,
 
 21
 00:01:59,170 --> 00:02:02,380
-that&#39;s one case. So if B and B inherits from A, then B is a subtype of A. And
+that's one case. So if B and B inherits from A, then B is a subtype of A. And
 
 22
 00:02:02,380 --> 00:02:04,689
-that&#39;s just like in Cool and, and most other object oriented languages. And
+that's just like in Cool and, and most other object oriented languages. And
 
 23
 00:02:04,689 --> 00:02:09,369
-we&#39;re, we&#39;re very familiar with that from our lectures in type checking. Further
+we're, we're very familiar with that from our lectures in type checking. Further
 
 24
 00:02:09,369 --> 00:02:15,150
@@ -100,15 +100,15 @@ more, type, sub typing is transitive. So if C is a subtype of B, and B is a subt
 
 25
 00:02:15,150 --> 00:02:21,019
-of A then C is also a subtype of A. Okay, a nd that&#39;s also completely standard. But
+of A then C is also a subtype of A. Okay, a nd that's also completely standard. But
 
 26
 00:02:21,019 --> 00:02:25,700
-then there&#39;s this other rule that&#39;s not quite standard or is definitely
+then there's this other rule that's not quite standard or is definitely
 
 27
 00:02:25,700 --> 00:02:31,310
-nonstandard. And that&#39;s that, an array of B&#39;s is a sub-type of an array of A&#39;s if
+nonstandard. And that's that, an array of B's is a sub-type of an array of A's if
 
 28
 00:02:31,310 --> 00:02:35,140
@@ -116,19 +116,19 @@ the element types are in a sub-type relationship. So if B is a sub-type of A,
 
 29
 00:02:35,140 --> 00:02:39,280
-then array of B is a sub-type of array of A. And Cool doesn&#39;t have anything like
+then array of B is a sub-type of array of A. And Cool doesn't have anything like
 
 30
 00:02:39,280 --> 00:02:42,500
-that, Cool doesn&#39;t have arrays so it wouldn&#39;t even have the opportunity to have
+that, Cool doesn't have arrays so it wouldn't even have the opportunity to have
 
 31
 00:02:42,500 --> 00:02:47,129
-something like that. But this is also not the way it&#39;s done in other languages that
+something like that. But this is also not the way it's done in other languages that
 
 32
 00:02:47,129 --> 00:02:52,709
-have objects and sub-typing. So let&#39;s take a look at our little example again and let
+have objects and sub-typing. So let's take a look at our little example again and let
 
 33
 00:02:52,709 --> 00:02:59,120
@@ -136,11 +136,11 @@ me explain it in a slightly different way. So, the issue here is that we have a,
 
 34
 00:02:59,120 --> 00:03:02,819
-of memory, and it actually doesn&#39;t matter here. It&#39;s not essential that this be an
+of memory, and it actually doesn't matter here. It's not essential that this be an
 
 35
 00:03:02,819 --> 00:03:07,549
-array. What&#39;s important is that&#39;s an updatable part of memory so that we have
+array. What's important is that's an updatable part of memory so that we have
 
 36
 00:03:07,549 --> 00:03:12,329
@@ -148,11 +148,11 @@ pointers to it. We have two pointers to it, a and b and we can, they can both re
 
 37
 00:03:12,329 --> 00:03:15,280
-and write this part of memory. So this could be just a single cell, it doesn&#39;t
+and write this part of memory. So this could be just a single cell, it doesn't
 
 38
 00:03:15,280 --> 00:03:20,189
-have to be an array of multiple cells. But what&#39;s important is that there is some
+have to be an array of multiple cells. But what's important is that there is some
 
 39
 00:03:20,189 --> 00:03:25,319
@@ -160,7 +160,7 @@ memory location that both of these point to, that they can both read and write,
 
 40
 00:03:25,319 --> 00:03:30,129
-okay? And the trouble comes and by the way, that there&#39;s a name that, that&#39;s
+okay? And the trouble comes and by the way, that there's a name that, that's
 
 41
 00:03:30,129 --> 00:03:37,129
@@ -192,11 +192,11 @@ is both readable and writable, so it can be updated through the two names. And
 
 48
 00:04:13,329 --> 00:04:18,690
-those two names have different types then that is going to be unsound, okay? We&#39;re
+those two names have different types then that is going to be unsound, okay? We're
 
 49
 00:04:18,690 --> 00:04:24,800
-not going to have a sound type system and to see the problem, let&#39;s say here in this
+not going to have a sound type system and to see the problem, let's say here in this
 
 50
 00:04:24,800 --> 00:04:31,800
@@ -212,7 +212,7 @@ write an A object into this location and then we could read that out through thi
 
 53
 00:04:44,360 --> 00:04:50,510
-point over here as a B object. But now, it doesn&#39;t have all the methods and, and
+point over here as a B object. But now, it doesn't have all the methods and, and
 
 54
 00:04:50,510 --> 00:04:54,590
@@ -220,7 +220,7 @@ fields of A and treating it as the object, we could potentially use an operation
 
 55
 00:04:54,590 --> 00:05:00,100
-it that&#39;s undefined. And you can see that it doesn&#39;t help if we swap the roles of,
+it that's undefined. And you can see that it doesn't help if we swap the roles of,
 
 56
 00:05:00,100 --> 00:05:05,070
@@ -252,11 +252,11 @@ up in many different programming languages. Java is not the only
 
 63
 00:05:32,460 --> 00:05:36,620
-programming language to have had this issue. It&#39;s a fairly subtle aspect of type
+programming language to have had this issue. It's a fairly subtle aspect of type
 
 64
 00:05:36,620 --> 00:05:42,080
-systems and in many languages have done things similar to Java where they&#39;ve
+systems and in many languages have done things similar to Java where they've
 
 65
 00:05:42,080 --> 00:05:47,090
@@ -264,7 +264,7 @@ created a problem really for the static type system by wanting to have a
 
 66
 00:05:47,090 --> 00:05:52,750
-sub-typing work through arrays. Now, the standard solution or the solution that&#39;s
+sub-typing work through arrays. Now, the standard solution or the solution that's
 
 67
 00:05:52,750 --> 00:05:57,660
@@ -288,7 +288,7 @@ following things. So you only allows sub-typing on arrays. So, you know, an
 
 72
 00:06:18,320 --> 00:06:25,320
-array of B&#39;s is a sub-type in array of A&#39;s only if B and A are the same type. If B =
+array of B's is a sub-type in array of A's only if B and A are the same type. If B =
 
 73
 00:06:25,350 --> 00:06:30,610
@@ -304,7 +304,7 @@ type of B. Well, that only h appens if the element types are, are equal. And so 
 
 76
 00:06:41,710 --> 00:06:45,940
-can&#39;t create two references to an updateable location with different types.
+can't create two references to an updateable location with different types.
 
 77
 00:06:45,940 --> 00:06:52,060
@@ -336,7 +336,7 @@ supposed to be an array of Bs. And then whatever you assign into the array, it
 
 84
 00:07:23,930 --> 00:07:28,960
-will check that the thing you&#39;re assigning is either a B or a sub type of B. Now,
+will check that the thing you're assigning is either a B or a sub type of B. Now,
 
 85
 00:07:28,960 --> 00:07:34,460
@@ -356,7 +356,7 @@ ints and arrays of floating point numbers and these are not affected because the
 
 89
 00:07:48,500 --> 00:07:52,490
-primitive types are not classes. There&#39;s no subtyping on them and so you can never
+primitive types are not classes. There's no subtyping on them and so you can never
 
 90
 00:07:52,490 --> 00:07:57,970
@@ -364,11 +364,11 @@ create an array, say, of floating point numbers, with any kind of subtyping
 
 91
 00:07:57,970 --> 00:08:03,060
-relationship that would result in this problem. So, so, that we&#39;re saved, or in
+relationship that would result in this problem. So, so, that we're saved, or in
 
 92
 00:08:03,060 --> 00:08:07,210
-better shape, for the primitive types, and they don&#39;t need these extra checks. But if
+better shape, for the primitive types, and they don't need these extra checks. But if
 
 93
 00:08:07,210 --> 00:08:11,090
@@ -376,5 +376,4 @@ you have arrays of objects, then we do assignments into those arrays in Java,
 
 94
 00:08:11,090 --> 00:08:12,550
-there&#39;s additional run time overhead.
-
+there's additional run time overhead.

@@ -1,6 +1,6 @@
 0
 00:00:03,590 --> 00:00:07,859
-Welcome back. In this video we&#39;re gonna begin our discussion of semantic analysis
+Welcome back. In this video we're gonna begin our discussion of semantic analysis
 
 1
 00:00:07,859 --> 00:00:14,859
@@ -12,7 +12,7 @@ want to be able to match identifier declarations with the uses of those
 
 3
 00:00:21,100 --> 00:00:24,570
-identifiers. We need to know which variable we&#39;re talking about when we see
+identifiers. We need to know which variable we're talking about when we see
 
 4
 00:00:24,570 --> 00:00:29,640
@@ -28,43 +28,43 @@ including, [inaudible]. So here are a couple of examples taken from cool. This
 
 7
 00:00:39,600 --> 00:00:44,570
-definition Y, this declaration Y that it&#39;s a string will be matched with this used
+definition Y, this declaration Y that it's a string will be matched with this used
 
 8
 00:00:44,570 --> 00:00:48,899
-and so we&#39;ll know at this point here that Y is supposed to be a string and you&#39;ll
+and so we'll know at this point here that Y is supposed to be a string and you'll
 
 9
 00:00:48,899 --> 00:00:53,969
-get some kind of an air for a compiler because you&#39;re trying to add a string and
+get some kind of an air for a compiler because you're trying to add a string and
 
 10
 00:00:53,969 --> 00:01:00,239
-a number. In the second example Here&#39;s a declaration of Y And then in the body of
+a number. In the second example Here's a declaration of Y And then in the body of
 
 11
 00:01:00,239 --> 00:01:04,170
-the [inaudible] we, we don&#39;t see any use of Y And that, by itself is not an error.
+the [inaudible] we, we don't see any use of Y And that, by itself is not an error.
 
 12
 00:01:04,170 --> 00:01:07,280
-It&#39;s perfectly fine to declare a variable that you don&#39;t use. Although you could
+It's perfectly fine to declare a variable that you don't use. Although you could
 
 13
 00:01:07,280 --> 00:01:11,499
-imagine generating a warning for that, that doesn&#39;t actually cause the program to
+imagine generating a warning for that, that doesn't actually cause the program to
 
 14
 00:01:11,499 --> 00:01:16,829
-behave badly, But instead what we see here is a use of X and there&#39;s no matching
+behave badly, But instead what we see here is a use of X and there's no matching
 
 15
 00:01:16,829 --> 00:01:21,049
-definitions. So the question is where is the definition of X? We can&#39;t see it And
+definitions. So the question is where is the definition of X? We can't see it And
 
 16
 00:01:21,049 --> 00:01:25,099
-if there is no outer definition of X then we&#39;ll get and undefined or undeclared
+if there is no outer definition of X then we'll get and undefined or undeclared
 
 17
 00:01:25,099 --> 00:01:32,099
@@ -84,7 +84,7 @@ different things and different parts of the program. And different scopes for th
 
 21
 00:01:45,359 --> 00:01:50,749
-same name can&#39;t overlap. So whenever the variable x, for example, means, it can
+same name can't overlap. So whenever the variable x, for example, means, it can
 
 22
 00:01:50,749 --> 00:01:55,649
@@ -92,7 +92,7 @@ only refer to one thing in an given part of the program. And identifiers can hav
 
 23
 00:01:55,649 --> 00:01:58,609
-restricted scope. There are lots of examples, I&#39;m sure you&#39;re familiar with
+restricted scope. There are lots of examples, I'm sure you're familiar with
 
 24
 00:01:58,609 --> 00:02:05,380
@@ -112,7 +112,7 @@ the scope of the variable depends only on the program text, not on any kind of
 
 28
 00:02:17,790 --> 00:02:22,049
-runtime behavior. So what the program actually does at runtime doesn&#39;t matter.
+runtime behavior. So what the program actually does at runtime doesn't matter.
 
 29
 00:02:22,049 --> 00:02:28,510
@@ -152,7 +152,7 @@ is actually a long time ago now that it changed, to static scoping. Another
 
 38
 00:03:07,280 --> 00:03:11,569
-language which is now mostly of historical interest, it isn&#39;t really used anymore,
+language which is now mostly of historical interest, it isn't really used anymore,
 
 39
 00:03:11,569 --> 00:03:16,189
@@ -164,7 +164,7 @@ scoping is that the scope of a variable depends on the execution behavior of the
 
 41
 00:03:20,769 --> 00:03:27,239
-program. So let&#39;s take a look at an example of [inaudible]. So, here we have
+program. So let's take a look at an example of [inaudible]. So, here we have
 
 42
 00:03:27,239 --> 00:03:33,530
@@ -176,7 +176,7 @@ some different uses of X. Let me erase these. [inaudible] underline so I can use
 
 44
 00:03:38,579 --> 00:03:43,299
-the color to indicate, binding. So, let&#39;s take a look at this definition. The
+the color to indicate, binding. So, let's take a look at this definition. The
 
 45
 00:03:43,299 --> 00:03:48,090
@@ -200,11 +200,11 @@ x, is, is used by this use of x. So this use of x, gets this va-, this meaning o
 
 50
 00:04:12,249 --> 00:04:15,709
-x, which in this case, returns the value one. And what&#39;s going on here is that
+x, which in this case, returns the value one. And what's going on here is that
 
 51
 00:04:15,709 --> 00:04:20,069
-we&#39;re using the most closely, what&#39;s called the most closely nested rule. So a
+we're using the most closely, what's called the most closely nested rule. So a
 
 52
 00:04:20,069 --> 00:04:25,650
@@ -216,7 +216,7 @@ name. So this x the closest enclosing definition of x is this one, but for these
 
 54
 00:04:30,340 --> 00:04:37,340
-two x&#39;s, the closest and only enclosing definition of x is this outer one. So in
+two x's, the closest and only enclosing definition of x is this outer one. So in
 
 55
 00:04:39,380 --> 00:04:44,410
@@ -224,11 +224,11 @@ dynamically scoped language, a variable would refer to the closest binding in th
 
 56
 00:04:44,410 --> 00:04:48,840
-execution of the program, meaning the most recent binding of the variables, so here&#39;s
+execution of the program, meaning the most recent binding of the variables, so here's
 
 57
 00:04:48,840 --> 00:04:53,310
-an example, let&#39;s say we have a function G, and G defines a variable A, and here&#39;s
+an example, let's say we have a function G, and G defines a variable A, and here's
 
 58
 00:04:53,310 --> 00:04:56,830
@@ -236,7 +236,7 @@ it initialized say to four, and then it calls another function Another function
 
 59
 00:04:56,830 --> 00:05:01,090
-that isn&#39;t in the same syntactic scope. So here I&#39;ve written F right next to G but
+that isn't in the same syntactic scope. So here I've written F right next to G but
 
 60
 00:05:01,090 --> 00:05:05,620
@@ -244,11 +244,11 @@ actually F could be in some completely other part of the code and F refers to A.
 
 61
 00:05:05,620 --> 00:05:11,030
-And the question is, what is the value of A here? Well. If it&#39;s if we dynamically
+And the question is, what is the value of A here? Well. If it's if we dynamically
 
 62
 00:05:11,030 --> 00:05:15,500
-scoped then it&#39;s going to be the value that was defined in G and here F of X will
+scoped then it's going to be the value that was defined in G and here F of X will
 
 63
 00:05:15,500 --> 00:05:20,490
@@ -256,7 +256,7 @@ actually return four, that will be the result of this call because this referenc
 
 64
 00:05:20,490 --> 00:05:27,039
-to A. We&#39;ll refer to this binding or this definition of A and G. And, we can&#39;t say
+to A. We'll refer to this binding or this definition of A and G. And, we can't say
 
 65
 00:05:27,039 --> 00:05:30,360
@@ -264,7 +264,7 @@ much more about how dynamics, how dynamics scope works until we talk in a little
 
 66
 00:05:30,360 --> 00:05:34,629
-detail about how languages are implemented. So we&#39;ll talk about dynamic
+detail about how languages are implemented. So we'll talk about dynamic
 
 67
 00:05:34,629 --> 00:05:41,629
@@ -292,7 +292,7 @@ attribute definitions in classes, and finally in the branches of case
 
 73
 00:06:03,080 --> 00:06:10,080
-expressions. It&#39;s important to understand that not all identifiers follow the most
+expressions. It's important to understand that not all identifiers follow the most
 
 74
 00:06:10,110 --> 00:06:15,000
@@ -308,7 +308,7 @@ cannot be nested. And in fact they are globally visibl e throughout the program.
 
 77
 00:06:25,409 --> 00:06:28,729
-And what does that mean? That means that a class name is defined everywhere If it&#39;s
+And what does that mean? That means that a class name is defined everywhere If it's
 
 78
 00:06:28,729 --> 00:06:32,759
@@ -360,7 +360,7 @@ legal. So normally The list attribute definitions before method definitions, but
 
 90
 00:07:30,379 --> 00:07:34,060
-that&#39;s not required. A actually the method and attributory definitions can come in
+that's not required. A actually the method and attributory definitions can come in
 
 91
 00:07:34,060 --> 00:07:38,150
@@ -372,21 +372,20 @@ before it is defined. Finally method names have quite complex rules. For example
 
 93
 00:07:45,139 --> 00:07:49,250
-method doesn&#39;t have to be defined in the class in which it is used. It could just
+method doesn't have to be defined in the class in which it is used. It could just
 
 94
 00:07:49,250 --> 00:07:54,530
-be defined in some pairing class. And also methods can be redefined. So it&#39;s possible
+be defined in some pairing class. And also methods can be redefined. So it's possible
 
 95
 00:07:54,530 --> 00:07:59,189
-to what&#39;s called overwriting of a method and give a method a new definition Even
+to what's called overwriting of a method and give a method a new definition Even
 
 96
 00:07:59,189 --> 00:08:03,020
-though it has been defined before. We don&#39;t actually have the language yet to
+though it has been defined before. We don't actually have the language yet to
 
 97
 00:08:03,020 --> 00:08:07,389
-talk about these rules with any precision but we&#39;ll be going into this in future videos.
-
+talk about these rules with any precision but we'll be going into this in future videos.

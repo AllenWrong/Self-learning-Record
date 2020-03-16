@@ -1,10 +1,10 @@
 0
 00:00:03,980 --> 00:00:07,859
-PROFESSOR: In this video, we&#39;re going to begin our discussion of global program optimization.
+PROFESSOR: In this video, we're going to begin our discussion of global program optimization.
 
 1
 00:00:07,859 --> 00:00:12,030
-And it turns out that, in order to talk about global optimization, there&#39;s another topic
+And it turns out that, in order to talk about global optimization, there's another topic
 
 2
 00:00:12,030 --> 00:00:19,030
@@ -12,11 +12,11 @@ that we have to deal with first known as data flow analysis.
 
 3
 00:00:19,240 --> 00:00:23,910
-Let&#39;s begin by reviewing the simple basic-block optimizations. In particular, constant propagation
+Let's begin by reviewing the simple basic-block optimizations. In particular, constant propagation
 
 4
 00:00:23,910 --> 00:00:29,050
-and dead code elimination. So here&#39;s a little piece of code. And you&#39;ll notice that there&#39;s
+and dead code elimination. So here's a little piece of code. And you'll notice that there's
 
 5
 00:00:29,050 --> 00:00:36,050
@@ -36,7 +36,7 @@ is not used anyplace else in the program, that statement is dead and can be dele
 
 9
 00:00:53,430 --> 00:00:58,769
-So here&#39;s a simple example over a basic block combining constant propagation and dead code
+So here's a simple example over a basic block combining constant propagation and dead code
 
 10
 00:00:58,769 --> 00:01:00,660
@@ -60,7 +60,7 @@ basic blocks. And so this first basic block here has a testament, an if statemen
 
 15
 00:01:26,360 --> 00:01:30,740
-it&#39;ll go to one basic block if the test is true. Into a different basic block if the
+it'll go to one basic block if the test is true. Into a different basic block if the
 
 16
 00:01:30,740 --> 00:01:32,930
@@ -88,11 +88,11 @@ across entire control-flow graphs.
 
 22
 00:02:01,070 --> 00:02:08,070
-Now, it turns out that there are some situations in which it&#39;s not safe to propagate constants.
+Now, it turns out that there are some situations in which it's not safe to propagate constants.
 
 23
 00:02:08,280 --> 00:02:14,879
-So here again let&#39;s observe that we have an assignment of X, an assignment of a constant
+So here again let's observe that we have an assignment of X, an assignment of a constant
 
 24
 00:02:14,879 --> 00:02:21,879
@@ -100,7 +100,7 @@ X, and down here we have a use of X. But we cannot replace this X here by 3. And
 
 25
 00:02:22,390 --> 00:02:27,209
-that? Well, that&#39;s because over here, we have another assignment X where X gets the value
+that? Well, that's because over here, we have another assignment X where X gets the value
 
 26
 00:02:27,209 --> 00:02:28,430
@@ -116,7 +116,7 @@ So X is assigned a constant here, and X is assigned a constant here, but this va
 
 29
 00:02:39,420 --> 00:02:44,780
-X down here is not known. We don&#39;t know which constant it&#39;s going to be, because if we come
+X down here is not known. We don't know which constant it's going to be, because if we come
 
 30
 00:02:44,780 --> 00:02:50,840
@@ -124,7 +124,7 @@ from this path in the execution, then X will be 4. And if we come from this path
 
 31
 00:02:50,840 --> 00:02:55,950
-of X will be 3. And so we can&#39;t replace x here by either one of those values, and it&#39;s
+of X will be 3. And so we can't replace x here by either one of those values, and it's
 
 32
 00:02:55,950 --> 00:03:02,189
@@ -136,7 +136,7 @@ And so the question then is, how do we know when it is OK to globally propagate 
 
 34
 00:03:08,450 --> 00:03:14,680
-Now, for constant propagation, it turns out there&#39;s a simple criteria. To replace a use
+Now, for constant propagation, it turns out there's a simple criteria. To replace a use
 
 35
 00:03:14,680 --> 00:03:20,129
@@ -160,7 +160,7 @@ assignment to x on each path.
 
 40
 00:03:41,159 --> 00:03:45,549
-Let&#39;s take a look at our example again, and I&#39;ll switch colors here. So here we have the
+Let's take a look at our example again, and I'll switch colors here. So here we have the
 
 41
 00:03:45,549 --> 00:03:49,930
@@ -176,7 +176,7 @@ X. It reaches this X that X is assigned 3 along that path. Well, there are only 
 
 44
 00:04:00,909 --> 00:04:06,279
-paths. There&#39;s this path, and there&#39;s this path. And it&#39;s easy to see that this assignment
+paths. There's this path, and there's this path. And it's easy to see that this assignment
 
 45
 00:04:06,279 --> 00:04:11,319
@@ -208,7 +208,7 @@ In general, the correctness condition that a variable is assigned the same const
 
 52
 00:04:44,640 --> 00:04:50,730
-lock all paths to a use of that variable is not that easy to check, because &quot;all paths&quot;
+lock all paths to a use of that variable is not that easy to check, because 'quot;all paths'quot;
 
 53
 00:04:50,730 --> 00:04:55,200
@@ -220,11 +220,11 @@ we saw in the example. So checking these conditions is done through a family of 
 
 55
 00:05:03,370 --> 00:05:08,210
-&quot;global dataflow analysis,&quot; and it&#39;s designed specifically to check conditions like this.
+'quot;global dataflow analysis,'quot; and it's designed specifically to check conditions like this.
 
 56
 00:05:08,210 --> 00:05:12,090
-And essentially, global dataflow analysis is called &quot;global&quot; because it requires an
+And essentially, global dataflow analysis is called 'quot;global'quot; because it requires an
 
 57
 00:05:12,090 --> 00:05:16,990
@@ -256,11 +256,11 @@ So, for example, is X at a particular point in the program guaranteed to be a co
 
 64
 00:05:49,410 --> 00:05:52,780
-OK? That&#39;s the property for a constant propagation.
+OK? That's the property for a constant propagation.
 
 65
 00:05:52,780 --> 00:05:58,680
-Now, however, even though we want to know some local fact, something that&#39;s specific
+Now, however, even though we want to know some local fact, something that's specific
 
 66
 00:05:58,680 --> 00:06:03,900
@@ -288,11 +288,11 @@ of the method all the way through loops and across conditionals to the particula
 
 72
 00:06:29,510 --> 00:06:35,820
-So, in general, that&#39;s a very hard problem to solve. And for certain kinds of questions,
+So, in general, that's a very hard problem to solve. And for certain kinds of questions,
 
 73
 00:06:35,820 --> 00:06:40,860
-it&#39;s really extremely expensive to solve it exactly. The thing that saves us is that it
+it's really extremely expensive to solve it exactly. The thing that saves us is that it
 
 74
 00:06:40,860 --> 00:06:47,820
@@ -304,19 +304,19 @@ know some property X-- then what we really want to know is either X is definitel
 
 76
 00:06:53,050 --> 00:06:57,870
-So if we say that the property is true, then we have to be right. We can&#39;t make a mistake.
+So if we say that the property is true, then we have to be right. We can't make a mistake.
 
 77
 00:06:57,870 --> 00:07:03,100
-But it is always OK to say that you don&#39;t know. So it&#39;s OK to give up and say we don&#39;t
+But it is always OK to say that you don't know. So it's OK to give up and say we don't
 
 78
 00:07:03,100 --> 00:07:07,140
-know whether the property holds or not. Because of the worst case, we just don&#39;t do the optimization.
+know whether the property holds or not. Because of the worst case, we just don't do the optimization.
 
 79
 00:07:07,140 --> 00:07:12,820
-If we can&#39;t establish the conditions that would mean it was definitely correct to the
+If we can't establish the conditions that would mean it was definitely correct to the
 
 80
 00:07:12,820 --> 00:07:17,460
@@ -324,7 +324,7 @@ optimizations, then we want to play it safe and not do the optimization.
 
 81
 00:07:17,460 --> 00:07:22,150
-So having approximate techniques or techniques that don&#39;t always give the correct answer
+So having approximate techniques or techniques that don't always give the correct answer
 
 82
 00:07:22,150 --> 00:07:27,960
@@ -332,7 +332,7 @@ to the questions that we wanted to ask is OK as long as we are always right when
 
 83
 00:07:27,960 --> 00:07:32,990
-say that the property holds and otherwise we just say that we don&#39;t know whether the
+say that the property holds and otherwise we just say that we don't know whether the
 
 84
 00:07:32,990 --> 00:07:36,200
@@ -352,9 +352,8 @@ is one example of an optimization that requires global dataflow analysis. And in
 
 88
 00:07:52,810 --> 00:07:57,750
-several videos, we&#39;ll be looking at global constant propagation and another dataflow
+several videos, we'll be looking at global constant propagation and another dataflow
 
 89
 00:07:57,750 --> 00:07:59,590
 analysis in more detail.
-

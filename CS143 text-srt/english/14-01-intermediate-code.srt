@@ -1,6 +1,6 @@
 0
 00:00:04,210 --> 00:00:07,480
-In this video I&#39;m going to give a very brief introduction to Intermediate Code
+In this video I'm going to give a very brief introduction to Intermediate Code
 
 1
 00:00:07,480 --> 00:00:14,480
@@ -12,7 +12,7 @@ Intermediate Code or an Intermediate Language? And as the name suggests, an
 
 3
 00:00:20,210 --> 00:00:24,430
-Intermediate Language is just that, it&#39;s a language that&#39;s intermediate between the
+Intermediate Language is just that, it's a language that's intermediate between the
 
 4
 00:00:24,430 --> 00:00:29,860
@@ -72,7 +72,7 @@ optimize register usage you know, a source language like Cool has no notion of
 
 18
 00:01:43,170 --> 00:01:47,799
-registers at the source level, and so there&#39;s no way to even express the kinds
+registers at the source level, and so there's no way to even express the kinds
 
 19
 00:01:47,799 --> 00:01:51,420
@@ -100,7 +100,7 @@ example, if the Intermediate Language is a little bit above the level of the par
 
 25
 00:02:14,890 --> 00:02:18,940
-cular instruction set of a particular machine, and therefore it&#39;s easier to
+cular instruction set of a particular machine, and therefore it's easier to
 
 26
 00:02:18,940 --> 00:02:23,330
@@ -108,7 +108,7 @@ retarget that, that intermediate level of code to lots of different kinds of
 
 27
 00:02:23,330 --> 00:02:27,920
-machines. Precisely because doesn&#39;t have all the grubby details in a, of a
+machines. Precisely because doesn't have all the grubby details in a, of a
 
 28
 00:02:27,920 --> 00:02:32,650
@@ -128,7 +128,7 @@ more than one. Some compilers actually translate through an entire the series of
 
 32
 00:02:45,420 --> 00:02:49,590
-Intermediate Languages between the source and target language. Now we&#39;re only going
+Intermediate Languages between the source and target language. Now we're only going
 
 33
 00:02:49,590 --> 00:02:56,010
@@ -136,7 +136,7 @@ to consider one Intermediate Language for the rest of this course. The kind of
 
 34
 00:02:56,010 --> 00:02:59,600
-Intermediate Language which we&#39;re going to look at is going to be a high level
+Intermediate Language which we're going to look at is going to be a high level
 
 35
 00:02:59,600 --> 00:03:04,100
@@ -148,7 +148,7 @@ use register names but it will have an unlimited number, so we can use any numbe
 
 37
 00:03:07,980 --> 00:03:13,950
-of registers that we like. We&#39;re not bound to 32 or 64 registers. The control
+of registers that we like. We're not bound to 32 or 64 registers. The control
 
 38
 00:03:13,950 --> 00:03:17,450
@@ -160,7 +160,7 @@ explicit jumps and labels on instructions. And the language will also have op co
 
 40
 00:03:24,130 --> 00:03:27,630
-in it so it&#39;ll look like assembly language level op codes. But some of these op codes
+in it so it'll look like assembly language level op codes. But some of these op codes
 
 41
 00:03:27,630 --> 00:03:32,510
@@ -172,7 +172,7 @@ Push would end up translating into several concrete assembly language instructio
 
 43
 00:03:37,260 --> 00:03:43,510
-for a particular target machine. In the intermediate code that we&#39;ll be looking
+for a particular target machine. In the intermediate code that we'll be looking
 
 44
 00:03:43,510 --> 00:03:48,180
@@ -196,7 +196,7 @@ form of Intermediate Code, so widely used, and so widely used it actually has a 
 
 49
 00:04:09,290 --> 00:04:16,290
-It&#39;s called Three Address Code because every instruction has at most three
+It's called Three Address Code because every instruction has at most three
 
 50
 00:04:17,279 --> 00:04:21,139
@@ -220,11 +220,11 @@ if I have the expression, x = sorry, x + y z, and let me put in parens here to s
 
 55
 00:04:46,900 --> 00:04:51,139
-the association. So the times binds more tightly than the plus, we&#39;re going to have
+the association. So the times binds more tightly than the plus, we're going to have
 
 56
 00:04:51,139 --> 00:04:55,620
-to, this can&#39;t be written directly in an intermediate , language of this form.
+to, this can't be written directly in an intermediate , language of this form.
 
 57
 00:04:55,620 --> 00:04:58,289
@@ -264,7 +264,7 @@ if I look back at this expression here, I see you know, like y z is anonymous.
 
 66
 00:05:41,009 --> 00:05:47,270
-That in this expression x + y &lt;i&gt;z the expression y &lt;/i&gt; z itself doesn&#39;t have a
+That in this expression x + y 'lt;i>z the expression y 'lt;/i> z itself doesn't have a
 
 67
 00:05:47,270 --> 00:05:52,090
@@ -284,7 +284,7 @@ time is that every intermediate value will be given its own name. Generating
 
 71
 00:06:12,009 --> 00:06:16,749
-Intermediate Code is very similar to generating assembly code and we&#39;re not
+Intermediate Code is very similar to generating assembly code and we're not
 
 72
 00:06:16,749 --> 00:06:19,879
@@ -308,7 +308,7 @@ intermediate code, we could write a function called IGEN for Intermediate Code
 
 77
 00:06:41,990 --> 00:06:44,999
-Generation that takes two arguments. It takes the expression for which we&#39;re
+Generation that takes two arguments. It takes the expression for which we're
 
 78
 00:06:44,999 --> 00:06:50,090
@@ -320,7 +320,7 @@ should be stored. And to give you just one example, and this is the only example
 
 80
 00:06:54,479 --> 00:07:00,020
-I&#39;ll do. Let&#39;s take a look at generating intermediate code for a+ expressions. I
+I'll do. Let's take a look at generating intermediate code for a+ expressions. I
 
 81
 00:07:00,020 --> 00:07:05,159
@@ -328,7 +328,7 @@ wanna generate code for e1 + e2 and I want the results of that to be stored in t
 
 82
 00:07:05,159 --> 00:07:09,349
-register t, okay? So the first thing I&#39;m going to do is I&#39;m going to generate code
+register t, okay? So the first thing I'm going to do is I'm going to generate code
 
 83
 00:07:09,349 --> 00:07:12,789
@@ -336,15 +336,15 @@ for the subexpressions and I need some place to store the results of the sub
 
 84
 00:07:12,789 --> 00:07:17,529
-expressions so I&#39;m just going to make up new register names for those results. So
+expressions so I'm just going to make up new register names for those results. So
 
 85
 00:07:17,529 --> 00:07:21,849
-I&#39;ll generate code for e1 and store that in some register, t1 and I&#39;ll generate
+I'll generate code for e1 and store that in some register, t1 and I'll generate
 
 86
 00:07:21,849 --> 00:07:26,680
-code for e2 and I&#39;ll store the results of that in some register t2. And then, we can
+code for e2 and I'll store the results of that in some register t2. And then, we can
 
 87
 00:07:26,680 --> 00:07:33,610
@@ -352,7 +352,7 @@ just compute the sum. So t = t1 + t2 and notice that this is a Three Address
 
 88
 00:07:33,610 --> 00:07:38,189
-Instruction. So we&#39;re sticking to the rules here and only using three Address
+Instruction. So we're sticking to the rules here and only using three Address
 
 89
 00:07:38,189 --> 00:07:45,189
@@ -364,7 +364,7 @@ have an unlimited number of registers, this actually leads to very simple code
 
 91
 00:07:49,839 --> 00:07:53,330
-generation of intermediate code. In fact, it&#39;s even a little bit simpler than
+generation of intermediate code. In fact, it's even a little bit simpler than
 
 92
 00:07:53,330 --> 00:07:57,719
@@ -396,7 +396,7 @@ the level in which we are going to be using it in, in lectures. The, in the
 
 99
 00:08:30,309 --> 00:08:34,380
-future videos we&#39;ll actually be looking at Intermediate Code quite a bit and using it
+future videos we'll actually be looking at Intermediate Code quite a bit and using it
 
 100
 00:08:34,380 --> 00:08:39,070
@@ -408,17 +408,16 @@ write simple Intermediate Code programs and you should be able to write algorith
 
 102
 00:08:43,940 --> 00:08:47,720
-that work on Intermediate Code. But I&#39;m not going to expect you to know how to
+that work on Intermediate Code. But I'm not going to expect you to know how to
 
 103
 00:08:47,720 --> 00:08:51,960
-generate Intermediate Code because we&#39;re not going to discuss it any further. And
+generate Intermediate Code because we're not going to discuss it any further. And
 
 104
 00:08:51,960 --> 00:08:55,010
-quite frankly, it doesn&#39;t introduce any new any idea. That&#39;s really just a
+quite frankly, it doesn't introduce any new any idea. That's really just a
 
 105
 00:08:55,010 --> 00:09:01,010
-variation on the cogeneration ideas that we&#39;ve already discussed in quite a bit of detail.
-
+variation on the cogeneration ideas that we've already discussed in quite a bit of detail.

@@ -8,7 +8,7 @@ invoked with, within environment e. That has definitions for the formal argument
 
 2
 00:00:11,050 --> 00:00:17,730
-and the attributes of the self object and a store that&#39;s just like color store
+and the attributes of the self object and a store that's just like color store
 
 3
 00:00:17,730 --> 00:00:22,210
@@ -20,7 +20,7 @@ for the formal parameters. Notice in the rules that the notion of a frame or
 
 5
 00:00:27,429 --> 00:00:33,160
-activation records is implicit. We don&#39;t actually build a data structure. That
+activation records is implicit. We don't actually build a data structure. That
 
 6
 00:00:33,160 --> 00:00:38,140
@@ -32,11 +32,11 @@ address and all that stuff together. That information is not gathered together i
 
 8
 00:00:42,809 --> 00:00:47,120
-one place, it&#39;s a little more abstract. We don&#39;t actually have to say you know,
+one place, it's a little more abstract. We don't actually have to say you know,
 
 9
 00:00:47,120 --> 00:00:50,550
-whether things are allocated on the stack or on the heat and that&#39;s a good feature.
+whether things are allocated on the stack or on the heat and that's a good feature.
 
 10
 00:00:50,550 --> 00:00:54,260
@@ -44,11 +44,11 @@ That allows us to have, potentially have a range of implementations like all
 
 11
 00:00:54,260 --> 00:00:59,789
-implement the semantics correctly. Now, we didn&#39;t do the semantics on the semantics
+implement the semantics correctly. Now, we didn't do the semantics on the semantics
 
 12
 00:00:59,789 --> 00:01:06,290
-dispatch but it&#39;s extremely similar. The only difference is in how the class that
+dispatch but it's extremely similar. The only difference is in how the class that
 
 13
 00:01:06,290 --> 00:01:10,140
@@ -64,7 +64,7 @@ this one extra line to the side where the class is being dispatched to in the fo
 
 16
 00:01:18,280 --> 00:01:24,509
-rule and you can look in the manual to see how that works. So it&#39;s worth pointing out
+rule and you can look in the manual to see how that works. So it's worth pointing out
 
 17
 00:01:24,509 --> 00:01:29,790
@@ -72,7 +72,7 @@ that while the operation of rules are very detailed, they intentionally omit som
 
 18
 00:01:29,790 --> 00:01:34,049
-cases that you might think they should cover so let&#39;s take a look at our dispatch
+cases that you might think they should cover so let's take a look at our dispatch
 
 19
 00:01:34,049 --> 00:01:41,049
@@ -84,7 +84,7 @@ we checked what is class tag is and then we look up in that class, the name of t
 
 21
 00:01:51,869 --> 00:01:57,619
-method that we&#39;re dispatching to and we get out a definition of the method or not
+method that we're dispatching to and we get out a definition of the method or not
 
 22
 00:01:57,619 --> 00:02:02,829
@@ -96,15 +96,15 @@ happen If there was no such method f in the class x, I mean this, this rule just
 
 24
 00:02:09,729 --> 00:02:15,750
-assumes that method is in fact to define the class x, And the rule doesn&#39;t say
+assumes that method is in fact to define the class x, And the rule doesn't say
 
 25
 00:02:15,750 --> 00:02:22,010
-anything about what to do if it turns out that this class x doesn&#39;t have any method
+anything about what to do if it turns out that this class x doesn't have any method
 
 26
 00:02:22,010 --> 00:02:29,010
-f? Well, that actually can&#39;t happen. So, type-checking has already guaranteed That
+f? Well, that actually can't happen. So, type-checking has already guaranteed That
 
 27
 00:02:29,019 --> 00:02:33,430
@@ -116,19 +116,19 @@ with the type checking rules was that no dynamic dispatch could ever dispatch to
 
 29
 00:02:39,040 --> 00:02:44,349
-method that wasn&#39;t defined. And so the fact that the time checking is already
+method that wasn't defined. And so the fact that the time checking is already
 
 30
 00:02:44,349 --> 00:02:49,500
-been done, it will allows us to meet some cases. So there&#39;s some checks that we
+been done, it will allows us to meet some cases. So there's some checks that we
 
 31
 00:02:49,500 --> 00:02:54,269
-don&#39;t have to do because we know that, that system has already effectively done
+don't have to do because we know that, that system has already effectively done
 
 32
 00:02:54,269 --> 00:02:58,190
-that And the rules would only be more complicated if we didn&#39;t have type
+that And the rules would only be more complicated if we didn't have type
 
 33
 00:02:58,190 --> 00:03:02,129
@@ -140,7 +140,7 @@ cases where type checking will work where things were not typed correct. Now the
 
 35
 00:03:09,590 --> 00:03:13,860
-are some run time errors that the type checker doesn&#39;t prevent however and in
+are some run time errors that the type checker doesn't prevent however and in
 
 36
 00:03:13,860 --> 00:03:20,860
@@ -180,7 +180,7 @@ you really understand how to implement a correct cool compiler. So the rules are
 
 45
 00:04:03,989 --> 00:04:09,700
-complete enough and give you enough detail that it really can&#39;t go wrong if you just
+complete enough and give you enough detail that it really can't go wrong if you just
 
 46
 00:04:09,700 --> 00:04:14,019
@@ -188,11 +188,11 @@ implement what the rules tell you to do. So you need to read the rules very
 
 47
 00:04:14,019 --> 00:04:18,630
-carefully And I&#39;ll emphasize that because there&#39;s actually quite a lot going on in
+carefully And I'll emphasize that because there's actually quite a lot going on in
 
 48
 00:04:18,630 --> 00:04:22,630
-the rules. They&#39;re written in a certain way and you know, to, to achieve a certain
+the rules. They're written in a certain way and you know, to, to achieve a certain
 
 49
 00:04:22,630 --> 00:04:27,070
@@ -204,7 +204,7 @@ know, you really have to actually study the rules in order to internalize what
 
 51
 00:04:31,080 --> 00:04:37,000
-they mean and be able to. Implement them correctly. It&#39;s also a great way
+they mean and be able to. Implement them correctly. It's also a great way
 
 52
 00:04:37,000 --> 00:04:40,440
@@ -232,7 +232,7 @@ some there are some substantial languages and fairly realistic languages that do
 
 58
 00:05:03,970 --> 00:05:08,780
-have a formal semantics but most of the language is that you&#39;re familiar with do
+have a formal semantics but most of the language is that you're familiar with do
 
 59
 00:05:08,780 --> 00:05:13,510
@@ -260,9 +260,8 @@ the new environment then I really need some independent defin ition of what it
 
 65
 00:05:40,370 --> 00:05:44,550
-means what the behavior of these programs should be. And that&#39;s where a formal
+means what the behavior of these programs should be. And that's where a formal
 
 66
 00:05:44,550 --> 00:05:47,180
 semantics becomes a really critical.
-

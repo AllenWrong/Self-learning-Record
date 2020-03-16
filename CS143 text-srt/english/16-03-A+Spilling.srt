@@ -1,6 +1,6 @@
 0
 00:00:10,469 --> 00:00:17,469
-The graph  coloring here is like that we discussed in the previous video doesn&#39;t
+The graph  coloring here is like that we discussed in the previous video doesn't
 
 1
 00:00:21,460 --> 00:00:26,160
@@ -12,7 +12,7 @@ be able to find a coloring. And so in that case the only conclusion we can reach
 
 3
 00:00:31,029 --> 00:00:34,920
-that we can&#39;t hold all the values that we&#39;d like to register. We have more
+that we can't hold all the values that we'd like to register. We have more
 
 4
 00:00:34,920 --> 00:00:38,970
@@ -20,11 +20,11 @@ temporary values and we have registers to hold them. And those temporary values 
 
 5
 00:00:38,970 --> 00:00:41,680
-to live somewhere so where should they live? Well, they&#39;re going to have to live
+to live somewhere so where should they live? Well, they're going to have to live
 
 6
 00:00:41,680 --> 00:00:45,369
-in memory. That&#39;s the only other kind of stories that we have. And so we&#39;re going
+in memory. That's the only other kind of stories that we have. And so we're going
 
 7
 00:00:45,369 --> 00:00:49,970
@@ -44,11 +44,11 @@ and, and ends up some place else. Now, when does the graph coloring here do get
 
 11
 00:01:03,900 --> 00:01:08,310
-stuck? Well, this only situation which we won&#39;t be able to make progress as if all
+stuck? Well, this only situation which we won't be able to make progress as if all
 
 12
 00:01:08,310 --> 00:01:13,079
-the notes have k or more neighbors. So, let&#39;s take a look at our
+the notes have k or more neighbors. So, let's take a look at our
 
 13
 00:01:13,079 --> 00:01:16,890
@@ -56,7 +56,7 @@ favorite register interference graph when we will be using at our examples and n
 
 14
 00:01:16,890 --> 00:01:21,690
-let&#39;s say that our, the machine we want to use only has three registers and so we,
+let's say that our, the machine we want to use only has three registers and so we,
 
 15
 00:01:21,690 --> 00:01:25,880
@@ -64,15 +64,15 @@ instead of finding a 4-coloring of this graph, we need to find a 3-coloring. So
 
 16
 00:01:25,880 --> 00:01:29,960
-let&#39;s think about how to find the three coloring of this graph. If we apply the
+let's think about how to find the three coloring of this graph. If we apply the
 
 17
 00:01:29,960 --> 00:01:33,600
-heuristic, we&#39;ll remove A from the graph but then we&#39;re going to get stuck. Because
+heuristic, we'll remove A from the graph but then we're going to get stuck. Because
 
 18
 00:01:33,600 --> 00:01:37,680
-once you take A out of the graph and it&#39;s edge is out and every node that&#39;s
+once you take A out of the graph and it's edge is out and every node that's
 
 19
 00:01:37,680 --> 00:01:44,060
@@ -80,7 +80,7 @@ left has more than has three or more neighbors as at least three neighbors. So,
 
 20
 00:01:44,060 --> 00:01:48,700
-there&#39;s no node that we can delete from the graph and be guaranteed to be able to
+there's no node that we can delete from the graph and be guaranteed to be able to
 
 21
 00:01:48,700 --> 00:01:54,619
@@ -88,7 +88,7 @@ find the coloring for it with the heuristic that we discussed in the previous vi
 
 22
 00:01:54,619 --> 00:01:59,799
-So, in this situation, what we&#39;re going to do is we&#39;re going to pick and know that
+So, in this situation, what we're going to do is we're going to pick and know that
 
 23
 00:01:59,799 --> 00:02:05,400
@@ -104,7 +104,7 @@ register and let is assume for the sake of this example that we pick f and we ta
 
 26
 00:02:16,030 --> 00:02:20,670
-later about how to choose a, the know to spill, there&#39;s a number of different ways
+later about how to choose a, the know to spill, there's a number of different ways
 
 27
 00:02:20,670 --> 00:02:24,560
@@ -112,15 +112,15 @@ to, to chose the particular know to spill but for the illustration of this examp
 
 28
 00:02:24,560 --> 00:02:29,020
-it doesn&#39;t matter how pick, we just have to pick one to remove from the. Graph. As
+it doesn't matter how pick, we just have to pick one to remove from the. Graph. As
 
 29
 00:02:29,020 --> 00:02:33,590
-were going to say, we&#39;re going to remove, that we going to spill F. So what we&#39;ll do
+were going to say, we're going to remove, that we going to spill F. So what we'll do
 
 30
 00:02:33,590 --> 00:02:39,010
-then is we&#39;ll remove f from the graph just like before and then we&#39;ll continue with
+then is we'll remove f from the graph just like before and then we'll continue with
 
 31
 00:02:39,010 --> 00:02:42,140
@@ -140,7 +140,7 @@ neighbors when [inaudible] E and C will only have one neighbor each and so clear
 
 35
 00:02:59,170 --> 00:03:04,030
-coloring will now succeed and here&#39;s one order that we&#39;ll succeed with this reduced
+coloring will now succeed and here's one order that we'll succeed with this reduced
 
 36
 00:03:04,030 --> 00:03:11,030
@@ -160,7 +160,7 @@ we remove it from the graph, it could be that when we go to construct the colori
 
 40
 00:03:28,440 --> 00:03:33,410
-for the sub-graph that. Those neighbors actually don&#39;t use all of the register. It
+for the sub-graph that. Those neighbors actually don't use all of the register. It
 
 41
 00:03:33,410 --> 00:03:36,739
@@ -188,19 +188,19 @@ go ahead and continue the color of the rest of the graph as if nothing had
 
 47
 00:04:00,489 --> 00:04:04,500
-happened. So in this case let&#39;s take a look what happens. We&#39;re going add F back
+happened. So in this case let's take a look what happens. We're going add F back
 
 48
 00:04:04,500 --> 00:04:11,500
-into the graph. And. And look at all, and look at it&#39;s neighbors and we see that we
+into the graph. And. And look at all, and look at it's neighbors and we see that we
 
 49
 00:04:12,769 --> 00:04:15,290
-have a neighbor that&#39;s using r1. We have a neighbor that&#39;s using r2 and we have a
+have a neighbor that's using r1. We have a neighbor that's using r2 and we have a
 
 50
 00:04:15,290 --> 00:04:19,090
-neighbor that&#39;s using r2 and we have a neighbor that&#39;s using r3. And so on in
+neighbor that's using r2 and we have a neighbor that's using r3. And so on in
 
 51
 00:04:19,089 --> 00:04:24,849
@@ -216,7 +216,7 @@ neighbors are using all K. In this case three, all three of the register names.
 
 54
 00:04:33,160 --> 00:04:37,400
-And so F where there is no register left over for F and we&#39;re going to have to
+And so F where there is no register left over for F and we're going to have to
 
 55
 00:04:37,400 --> 00:04:44,020
@@ -224,23 +224,23 @@ actually spill it and store in memory. So, if optimistic coloring fails as it do
 
 56
 00:04:44,020 --> 00:04:48,000
-this example, then we spill f. So, what we&#39;re going to do is allocate the memory
+this example, then we spill f. So, what we're going to do is allocate the memory
 
 57
 00:04:48,000 --> 00:04:52,560
-location for f and typically, what that means is that we&#39;ll allocate a position in
+location for f and typically, what that means is that we'll allocate a position in
 
 58
 00:04:52,560 --> 00:04:59,560
-the current stack frame. Let&#39;s call this address fa for the address of f. And then
+the current stack frame. Let's call this address fa for the address of f. And then
 
 59
 00:05:00,130 --> 00:05:04,410
-we&#39;re going to modify the control flow graph. We&#39;re going to change the code for
+we're going to modify the control flow graph. We're going to change the code for
 
 60
 00:05:04,410 --> 00:05:10,220
-that compiling. So, before each operation that reads f, we&#39;re going to insert a load
+that compiling. So, before each operation that reads f, we're going to insert a load
 
 61
 00:05:10,220 --> 00:05:17,160
@@ -252,7 +252,7 @@ that makes sense because if the value is out of memory, then if we have an
 
 63
 00:05:19,870 --> 00:05:23,840
-operation that needs to actually use the value. We&#39;re going to have to load it from
+operation that needs to actually use the value. We're going to have to load it from
 
 64
 00:05:23,840 --> 00:05:29,800
@@ -260,11 +260,11 @@ a memory first then to the register. And similarly after each operation that wri
 
 65
 00:05:29,800 --> 00:05:34,430
-F, we&#39;re going to insert the store so we&#39;re going to save the current value of F
+F, we're going to insert the store so we're going to save the current value of F
 
 66
 00:05:34,430 --> 00:05:41,240
-into it&#39;s location in memory. So, here is the original code from which we
+into it's location in memory. So, here is the original code from which we
 
 67
 00:05:41,240 --> 00:05:45,070
@@ -284,11 +284,11 @@ we had the use of F, the read of F in this statement and now we preceded that by
 
 71
 00:06:01,240 --> 00:06:05,740
-a load. And notice that I&#39;ve given a new name here. I&#39;ve called this F1. And, that&#39;s
+a load. And notice that I've given a new name here. I've called this F1. And, that's
 
 72
 00:06:05,740 --> 00:06:10,460
-because the different uses of F in the control flow graph don&#39;t all have to have
+because the different uses of F in the control flow graph don't all have to have
 
 73
 00:06:10,460 --> 00:06:14,889
@@ -296,7 +296,7 @@ the same temporary name. And actually it would be a good idea to separate them s
 
 74
 00:06:14,889 --> 00:06:19,360
-each distinct to use of F will get it&#39;s own name. So here we load the value of F
+each distinct to use of F will get it's own name. So here we load the value of F
 
 75
 00:06:19,360 --> 00:06:24,050
@@ -304,15 +304,15 @@ and then it get to use in the statement. Here we have a right to f and so we sto
 
 76
 00:06:24,050 --> 00:06:28,460
-the current value of f and those argument to a different name, f2. So, that&#39;s
+the current value of f and those argument to a different name, f2. So, that's
 
 77
 00:06:28,460 --> 00:06:32,270
-temporary is computed here as going to be stored and it&#39;s called f2. And finally,
+temporary is computed here as going to be stored and it's called f2. And finally,
 
 78
 00:06:32,270 --> 00:06:38,930
-the third use of f there&#39;s another load of f right here. Which is then used in this
+the third use of f there's another load of f right here. Which is then used in this
 
 79
 00:06:38,930 --> 00:06:45,930
@@ -352,11 +352,11 @@ that value if live right before the use in the next statement. Here, we have the
 
 88
 00:07:33,569 --> 00:07:37,169
-right of the current value of f and that&#39;s live right before the store and then
+right of the current value of f and that's live right before the store and then
 
 89
 00:07:37,169 --> 00:07:42,460
-here&#39;s another load of the current value of f which is live until the store, I&#39;m
+here's another load of the current value of f which is live until the store, I'm
 
 90
 00:07:42,460 --> 00:07:47,699
@@ -368,7 +368,7 @@ that f used to be live in many, many, many places in the, in the code. And now n
 
 92
 00:07:55,550 --> 00:08:02,039
-only is f or the, the different versions of f live in fewer places also we&#39;ve
+only is f or the, the different versions of f live in fewer places also we've
 
 93
 00:08:02,039 --> 00:08:05,830
@@ -376,7 +376,7 @@ distinguish them. So, it actually separate the different uses of f and so this w
 
 94
 00:08:05,830 --> 00:08:10,069
-have their own nodes in their own set of interferences in the graph and they won&#39;t
+have their own nodes in their own set of interferences in the graph and they won't
 
 95
 00:08:10,069 --> 00:08:14,740
@@ -388,7 +388,7 @@ of edges in the graph. To summarize the example on the previous slide, once we
 
 97
 00:08:22,009 --> 00:08:26,699
-have decided that we are actually going to spill a temporary f, that means we&#39;re
+have decided that we are actually going to spill a temporary f, that means we're
 
 98
 00:08:26,699 --> 00:08:30,110
@@ -396,15 +396,15 @@ going to change the program where have loads and stores to the program and now
 
 99
 00:08:30,110 --> 00:08:33,240
-we&#39;re going to have a different program and that&#39;s going to change our register
+we're going to have a different program and that's going to change our register
 
 100
 00:08:33,240 --> 00:08:36,569
-allocation problems. We&#39;re going to have to recompute the aliveness of information,
+allocation problems. We're going to have to recompute the aliveness of information,
 
 101
 00:08:36,568 --> 00:08:39,490
-we&#39;re have to rebuild the restrain interference graph and then we&#39;re going to
+we're have to rebuild the restrain interference graph and then we're going to
 
 102
 00:08:39,490 --> 00:08:44,629
@@ -424,19 +424,19 @@ added. There are a few program points where they might be live but I replaced
 
 106
 00:08:59,300 --> 00:09:06,089
-they were alive before and they&#39;re still alive. And, F itself has changed fairly
+they were alive before and they're still alive. And, F itself has changed fairly
 
 107
 00:09:06,089 --> 00:09:09,769
-dramatically. It&#39;s like this information has changed really dramatically. Certainly
+dramatically. It's like this information has changed really dramatically. Certainly
 
 108
 00:09:09,769 --> 00:09:14,959
-the old name F is no longer used and so it&#39;s like this information goes away and
+the old name F is no longer used and so it's like this information goes away and
 
 109
 00:09:14,959 --> 00:09:20,379
-then we&#39;ve also split F into three in this case three different temporaries. One for
+then we've also split F into three in this case three different temporaries. One for
 
 110
 00:09:20,379 --> 00:09:24,809
@@ -456,11 +456,11 @@ as filling. For a load instruction The thing that were loading the temporary tha
 
 114
 00:09:38,369 --> 00:09:43,189
-we&#39;re loading fi is live only between the load and the next instruction where it&#39;s
+we're loading fi is live only between the load and the next instruction where it's
 
 115
 00:09:43,189 --> 00:09:50,110
-used and similarly for a store. It&#39;s score of a temporary fi is live only between the
+used and similarly for a store. It's score of a temporary fi is live only between the
 
 116
 00:09:50,110 --> 00:09:54,369
@@ -524,7 +524,7 @@ neighbors in the graph. And now, in fact this new graph is three tolerable. Of
 
 131
 00:11:10,209 --> 00:11:14,389
-course it might be the case that we can&#39;t just spill one name. We might have to have
+course it might be the case that we can't just spill one name. We might have to have
 
 132
 00:11:14,389 --> 00:11:18,509
@@ -536,7 +536,7 @@ tricky part is to siding what to spill. So, this is the hard decision that has t
 
 134
 00:11:23,809 --> 00:11:28,239
-be made during restore allocation. Now any choice is correct. It&#39;s only a question of
+be made during restore allocation. Now any choice is correct. It's only a question of
 
 135
 00:11:28,239 --> 00:11:32,779
@@ -548,7 +548,7 @@ others but any choice of spilling is going to resolve in a correct program. And
 
 137
 00:11:38,189 --> 00:11:44,279
-there&#39;s heuristics that people use to pick which temporaries to spill and here are a
+there's heuristics that people use to pick which temporaries to spill and here are a
 
 138
 00:11:44,279 --> 00:11:48,239
@@ -568,7 +568,7 @@ interferences in the graph. So, the idea is by possible spilling justice on
 
 142
 00:12:05,089 --> 00:12:08,649
-variable. We&#39;ll remove enough edges from the graph that they becomes tolerable with
+variable. We'll remove enough edges from the graph that they becomes tolerable with
 
 143
 00:12:08,649 --> 00:12:12,889
@@ -580,11 +580,11 @@ have few definitions and uses. And, here the idea is that by spilling those sinc
 
 145
 00:12:19,769 --> 00:12:24,089
-they&#39;re not used very much, the number of lows in storage will have to add, will be
+they're not used very much, the number of lows in storage will have to add, will be
 
 146
 00:12:24,089 --> 00:12:29,929
-relatively small and so if a variable just isn&#39;t used in many places, then the actual
+relatively small and so if a variable just isn't used in many places, then the actual
 
 147
 00:12:29,929 --> 00:12:35,920
@@ -600,7 +600,7 @@ all the compilers implement is to avoid spilling an inner loops. So, if you have
 
 150
 00:12:44,499 --> 00:12:50,069
-choice between spilling a variable that&#39;s used within the. Innermost loop for the
+choice between spilling a variable that's used within the. Innermost loop for the
 
 151
 00:12:50,069 --> 00:12:54,670
@@ -617,4 +617,3 @@ that will result in fewer loads in stores. You really want to avoid adding addit
 154
 00:13:03,649 --> 00:13:04,989
 instructions to your inner loop.
-

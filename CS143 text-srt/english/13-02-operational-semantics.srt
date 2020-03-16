@@ -1,6 +1,6 @@
 0
 00:00:04,270 --> 00:00:11,270
-In this video we&#39;re going to begin our discussion of formal operational semantics.
+In this video we're going to begin our discussion of formal operational semantics.
 
 1
 00:00:13,469 --> 00:00:18,039
@@ -24,7 +24,7 @@ are going to be using logical rule of inference. So, in the case of
 
 6
 00:00:37,210 --> 00:00:42,850
-type-checking, the kinds of inference rules we, we presented, proofing&#39;s of the
+type-checking, the kinds of inference rules we, we presented, proofing's of the
 
 7
 00:00:42,850 --> 00:00:47,610
@@ -32,7 +32,7 @@ forms that in some context. We could show that some expression had a particular 
 
 8
 00:00:47,610 --> 00:00:53,899
-in this case to type c. And for evaluation we&#39;re going to be doing something quite
+in this case to type c. And for evaluation we're going to be doing something quite
 
 9
 00:00:53,899 --> 00:00:57,700
@@ -52,19 +52,19 @@ will actually be different. But for the moment all that really matters is there 
 
 13
 00:01:09,340 --> 00:01:15,090
-some kind of a context and in that context we&#39;re going to be able to show some
+some kind of a context and in that context we're going to be able to show some
 
 14
 00:01:15,090 --> 00:01:22,090
-expression evaluates to a particular value b. So as an example, let&#39;s take a look at
+expression evaluates to a particular value b. So as an example, let's take a look at
 
 15
 00:01:23,990 --> 00:01:29,359
-this simple expression, e1 + e2 and let&#39;s say that using our rules which we, I
+this simple expression, e1 + e2 and let's say that using our rules which we, I
 
 16
 00:01:29,359 --> 00:01:33,969
-haven&#39;t shown you yet, but let&#39;s say we had a bunch of rules and we could show in
+haven't shown you yet, but let's say we had a bunch of rules and we could show in
 
 17
 00:01:33,969 --> 00:01:40,969
@@ -88,11 +88,11 @@ is that if e1 evaluates to five and e2 evaluates to seven, then if you evaluated
 
 22
 00:02:01,729 --> 00:02:05,999
-the expression e1 + e2, you&#39;re going to get the value twelve. And what&#39;s the
+the expression e1 + e2, you're going to get the value twelve. And what's the
 
 23
 00:02:05,999 --> 00:02:12,280
-context doing, well it doesn&#39;t do a whole lot in this particular rule. But remember
+context doing, well it doesn't do a whole lot in this particular rule. But remember
 
 24
 00:02:12,280 --> 00:02:17,470
@@ -112,11 +112,11 @@ in e2 in order to say what they evaluate to and, and therefore, to say what the
 
 28
 00:02:32,720 --> 00:02:39,720
-entire expression e1 + e2 will evaluated to. Now, let&#39;s be a little more precise
+entire expression e1 + e2 will evaluated to. Now, let's be a little more precise
 
 29
 00:02:40,730 --> 00:02:45,780
-about what&#39;s going to go in the context. So, let&#39;s consider the evaluation of a, a
+about what's going to go in the context. So, let's consider the evaluation of a, a
 
 30
 00:02:45,780 --> 00:02:50,850
@@ -132,7 +132,7 @@ expression. First of all, we have to know where In memory of valuable start. So,
 
 33
 00:03:06,560 --> 00:03:11,010
-example, the variable x here, we&#39;re going to have to go and look up excess value and
+example, the variable x here, we're going to have to go and look up excess value and
 
 34
 00:03:11,010 --> 00:03:17,640
@@ -152,7 +152,7 @@ and this is a little confusing maybe because it use environment for other
 
 38
 00:03:38,690 --> 00:03:42,180
-things. Okay, so now let&#39;s forget about, as all we uses of the word environment. We
+things. Okay, so now let's forget about, as all we uses of the word environment. We
 
 39
 00:03:42,180 --> 00:03:47,810
@@ -164,11 +164,11 @@ the mapping, the association in between variables and where that variable store 
 
 41
 00:03:52,850 --> 00:03:57,480
-memory. And then in addition, we&#39;re going to need a store and that&#39;s going to tell
+memory. And then in addition, we're going to need a store and that's going to tell
 
 42
 00:03:57,480 --> 00:04:03,730
-us what is in the memory. So just knowing the location for a variable isn&#39;t quite
+us what is in the memory. So just knowing the location for a variable isn't quite
 
 43
 00:04:03,730 --> 00:04:09,840
@@ -176,7 +176,7 @@ enough. When we, if we know the value of x if we know the location for x, for ex
 
 44
 00:04:09,840 --> 00:04:12,680
-or as, as important because we&#39;re going to get the value of x but we also have to
+or as, as important because we're going to get the value of x but we also have to
 
 45
 00:04:12,680 --> 00:04:19,329
@@ -188,15 +188,15 @@ memory locations Values. These are the values that are actually stored in the
 
 47
 00:04:25,740 --> 00:04:30,460
-memory so it&#39;s two levels of mapping. We associate with each variable and memory
+memory so it's two levels of mapping. We associate with each variable and memory
 
 48
 00:04:30,460 --> 00:04:37,460
-location And then each memory location will have a value in it. So let&#39;s talk
+location And then each memory location will have a value in it. So let's talk
 
 49
 00:04:37,539 --> 00:04:42,189
-about the notation that we&#39;re going to use for writing down the environment and the
+about the notation that we're going to use for writing down the environment and the
 
 50
 00:04:42,189 --> 00:04:46,249
@@ -204,7 +204,7 @@ store. So as we said, the variable environments have variables to locations
 
 51
 00:04:46,249 --> 00:04:51,169
-and we&#39;re going to w rite that out. In the following way, we&#39;re going to just have
+and we're going to w rite that out. In the following way, we're going to just have
 
 52
 00:04:51,169 --> 00:04:56,849
@@ -216,7 +216,7 @@ environment for examples of variable a, is it location l1 And variable b is in
 
 54
 00:05:02,159 --> 00:05:07,590
-location l2. And another aspect of the environment is that it&#39;s going to keep
+location l2. And another aspect of the environment is that it's going to keep
 
 55
 00:05:07,590 --> 00:05:11,539
@@ -232,7 +232,7 @@ that is being evaluated. Now as we said, stores map memory location to values an
 
 58
 00:05:22,539 --> 00:05:27,479
-we&#39;ll also write out stores as lists of pairs. So in this case, the memory
+we'll also write out stores as lists of pairs. So in this case, the memory
 
 59
 00:05:27,479 --> 00:05:33,749
@@ -248,11 +248,11 @@ to make the stores look a little bit different from the environment so that we
 
 62
 00:05:45,180 --> 00:05:50,520
-won&#39;t confuse the two. There&#39;s an operation on stores which is to replace of
+won't confuse the two. There's an operation on stores which is to replace of
 
 63
 00:05:50,520 --> 00:05:55,389
-value or update of value. So, in this case, we&#39;re taking the store s and we&#39;re
+value or update of value. So, in this case, we're taking the store s and we're
 
 64
 00:05:55,389 --> 00:06:02,389
@@ -288,11 +288,11 @@ complicated values and integers. In particular we have objects and all the
 
 72
 00:06:45,259 --> 00:06:49,639
-objects of course are instances of some class and we&#39;re going to need a notation
+objects of course are instances of some class and we're going to need a notation
 
 73
 00:06:49,639 --> 00:06:53,520
-for representing objects in our operational semantics. So we&#39;ll use the
+for representing objects in our operational semantics. So we'll use the
 
 74
 00:06:53,520 --> 00:07:00,330
@@ -328,7 +328,7 @@ the value of each of those attributes. There are few special classes in Kuhl tha
 
 82
 00:07:42,219 --> 00:07:47,639
-don&#39;t have attribute names and we&#39;ll have special way overriding them. So integers
+don't have attribute names and we'll have special way overriding them. So integers
 
 83
 00:07:47,639 --> 00:07:53,770
@@ -344,7 +344,7 @@ true of false and strings have two properties, the length of the string and
 
 86
 00:08:02,879 --> 00:08:09,689
-the sting constant. There&#39;s also a special value void typed object and we&#39;ll use the
+the sting constant. There's also a special value void typed object and we'll use the
 
 87
 00:08:09,689 --> 00:08:14,860
@@ -356,7 +356,7 @@ is a, a special and that there are no operations that can be before and on void
 
 89
 00:08:19,039 --> 00:08:23,719
-except for the test is void. So, in particular, you can&#39;t dispatch the void
+except for the test is void. So, in particular, you can't dispatch the void
 
 90
 00:08:23,719 --> 00:08:27,080
@@ -368,7 +368,7 @@ can do is to test whether the value is void or not. And concrete implementation
 
 92
 00:08:31,919 --> 00:08:38,919
-we typically use a null pointer which represent void. Now we&#39;re ready to talk
+we typically use a null pointer which represent void. Now we're ready to talk
 
 93
 00:08:39,650 --> 00:08:43,240
@@ -400,11 +400,11 @@ evaluate to two things. First of all, e will produce a value so for example we s
 
 100
 00:09:15,800 --> 00:09:20,650
-before that the expressions seven + five would produce the value twelve, that&#39;s one
+before that the expressions seven + five would produce the value twelve, that's one
 
 101
 00:09:20,650 --> 00:09:25,570
-result to the evaluation. But the second thing is that we&#39;ll produce a modified
+result to the evaluation. But the second thing is that we'll produce a modified
 
 102
 00:09:25,570 --> 00:09:30,960
@@ -428,7 +428,7 @@ after evaluation And now, those are couple of things here. First of all the curr
 
 107
 00:09:52,350 --> 00:09:58,530
-self object and the environment don&#39;t change. They are not changed by evaluation
+self object and the environment don't change. They are not changed by evaluation
 
 108
 00:09:58,530 --> 00:10:04,600
@@ -440,23 +440,23 @@ between variables and memory locations that is not modified by running a, runnin
 
 110
 00:10:11,180 --> 00:10:14,620
-an expression and that makes sense, I mean, you can&#39;t update the self object in
+an expression and that makes sense, I mean, you can't update the self object in
 
 111
 00:10:14,620 --> 00:10:21,240
-Kuhl and we don&#39;t have access in, in any form to re-locations or variables stored
+Kuhl and we don't have access in, in any form to re-locations or variables stored
 
 112
 00:10:21,240 --> 00:10:26,240
-and so those two things are in variant. They don&#39;t they are variant under
+and so those two things are in variant. They don't they are variant under
 
 113
 00:10:26,240 --> 00:10:30,240
-evaluation. They don&#39;t change when you run a piece of code. However, the story does
+evaluation. They don't change when you run a piece of code. However, the story does
 
 114
 00:10:30,240 --> 00:10:34,560
-change so the contents in the memory may be modified so that&#39;s why we need a store
+change so the contents in the memory may be modified so that's why we need a store
 
 115
 00:10:34,560 --> 00:10:40,520
@@ -468,11 +468,11 @@ judgments of this form always has a qualification. That judgment only holds if
 
 117
 00:10:47,620 --> 00:10:53,200
-the evaluation of e terminates. So, if e goes in to infinite loop, then you&#39;re not
+the evaluation of e terminates. So, if e goes in to infinite loop, then you're not
 
 118
 00:10:53,200 --> 00:10:56,900
-going to get a value and you&#39;re not going to get a new store. So, this kind of the
+going to get a value and you're not going to get a new store. So, this kind of the
 
 119
 00:10:56,900 --> 00:11:02,340
@@ -488,23 +488,23 @@ new store. And where the new store models, the side effects of the expression An
 
 122
 00:11:19,360 --> 00:11:22,810
-once again there are something don&#39;t change as a result of evaluation. And this
+once again there are something don't change as a result of evaluation. And this
 
 123
 00:11:22,810 --> 00:11:26,310
-is actually important for compilation because we&#39;ll be able to take advantage of
+is actually important for compilation because we'll be able to take advantage of
 
 124
 00:11:26,310 --> 00:11:30,450
-the fact that they don&#39;t change to generate efficient code so the variable
+the fact that they don't change to generate efficient code so the variable
 
 125
 00:11:30,450 --> 00:11:34,420
-environment doesn&#39;t change, the value itself which object we&#39;re talking about
+environment doesn't change, the value itself which object we're talking about
 
 126
 00:11:34,420 --> 00:11:39,880
-doesn&#39;t change and notice here as another detail. That the contents of the self
+doesn't change and notice here as another detail. That the contents of the self
 
 127
 00:11:39,880 --> 00:11:43,140
@@ -516,7 +516,7 @@ updated but t he locations where the attributes are stored do not change. So,
 
 129
 00:11:49,480 --> 00:11:52,980
-the layout of the object where the object stored doesn&#39;t change and that&#39;s all we&#39;re
+the layout of the object where the object stored doesn't change and that's all we're
 
 130
 00:11:52,980 --> 00:11:57,870
@@ -528,7 +528,7 @@ mapping of the store, those might get updated by evaluation. And also the
 
 132
 00:12:03,990 --> 00:12:07,420
-operational semantics allows for non-terminating evaluations. That&#39;s the
+operational semantics allows for non-terminating evaluations. That's the
 
 133
 00:12:07,420 --> 00:12:14,420
@@ -537,4 +537,3 @@ last point here and so the meaning that the judgments only holds on the assumpti
 134
 00:12:14,490 --> 00:12:17,890
 that the, that the expression actually completes.
-

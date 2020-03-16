@@ -36,7 +36,7 @@ can be used on an object of type C have to also be able to be used on any object
 
 9
 00:00:46,370 --> 00:00:52,320
-C prime that&#39;s a subtype of C. So if C defines certain attributes and methods,
+C prime that's a subtype of C. So if C defines certain attributes and methods,
 
 10
 00:00:52,320 --> 00:00:59,320
@@ -60,7 +60,7 @@ or remove a method. It will only extend or add methods and attributes to the
 
 15
 00:01:21,600 --> 00:01:25,880
-class it is inheriting fro M. And note that you&#39;re allowed to redefine methods in
+class it is inheriting fro M. And note that you're allowed to redefine methods in
 
 16
 00:01:25,880 --> 00:01:30,530
@@ -76,7 +76,7 @@ type check according to the original type that you declared. And so whatever typ
 
 19
 00:01:39,219 --> 00:01:43,259
-the method has in the first class in which it&#39;s defined, it&#39;s going to have that
+the method has in the first class in which it's defined, it's going to have that
 
 20
 00:01:43,259 --> 00:01:47,289
@@ -88,5 +88,4 @@ and the same types for the method result in all of the sub classes. And
 
 22
 00:01:51,009 --> 00:01:56,010
-that&#39;s a pretty standard, design point for a lot of object oriented languages.
-
+that's a pretty standard, design point for a lot of object oriented languages.

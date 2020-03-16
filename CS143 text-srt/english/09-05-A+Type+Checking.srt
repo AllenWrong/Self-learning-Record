@@ -1,6 +1,6 @@
 0
 00:00:04,509 --> 00:00:11,509
-In this video we&#39;re going to talk about type checking in cool. Thus far, we&#39;ve
+In this video we're going to talk about type checking in cool. Thus far, we've
 
 1
 00:00:12,160 --> 00:00:16,990
@@ -12,11 +12,11 @@ expressions were used in lexical analysis, and context free grammars which we us
 
 3
 00:00:21,820 --> 00:00:26,060
-parsing. It turns out that there&#39;s another formalism which has gained widespread
+parsing. It turns out that there's another formalism which has gained widespread
 
 4
 00:00:26,060 --> 00:00:32,710
-acceptance in type checking, and that&#39;s logical rules of inference. If-else rules
+acceptance in type checking, and that's logical rules of inference. If-else rules
 
 5
 00:00:32,710 --> 00:00:36,960
@@ -48,19 +48,19 @@ an example of an inference rule. An inference rule notation is just a compact
 
 12
 00:01:05,369 --> 00:01:11,940
-way of encoding these kinds of if then statements. Now if you haven&#39;t seen this
+way of encoding these kinds of if then statements. Now if you haven't seen this
 
 13
 00:01:11,940 --> 00:01:15,970
-notation before, it will be unfamiliar, but actually it&#39;s quite easy to read with
+notation before, it will be unfamiliar, but actually it's quite easy to read with
 
 14
 00:01:15,970 --> 00:01:20,670
-practice And we&#39;ll start with a very simple system and gradually add features.
+practice And we'll start with a very simple system and gradually add features.
 
 15
 00:01:20,670 --> 00:01:26,000
-So we&#39;ll use a logical conjunction for the English word and, and implication for the
+So we'll use a logical conjunction for the English word and, and implication for the
 
 16
 00:01:26,000 --> 00:01:32,280
@@ -108,7 +108,7 @@ that E1 + E2 has type int. And notice that, that statement that we just wrote
 
 27
 00:02:27,790 --> 00:02:32,969
-out is a special case of an inference rule. It&#39;s a bunch of hypothesis conjoined
+out is a special case of an inference rule. It's a bunch of hypothesis conjoined
 
 28
 00:02:32,969 --> 00:02:39,389
@@ -132,7 +132,7 @@ These are all the hypotheses, then the thing below. The horizontal line can be
 
 33
 00:02:56,650 --> 00:03:00,629
-concluded to be true. And there&#39;s one piece of new notation here. This is the
+concluded to be true. And there's one piece of new notation here. This is the
 
 34
 00:03:00,629 --> 00:03:06,150
@@ -140,23 +140,23 @@ turnstiles that are used for the hypotheses and the conclusion. And the
 
 35
 00:03:06,150 --> 00:03:10,989
-turnstile is read, it is provable that. And what this means is that we&#39;re just
+turnstile is read, it is provable that. And what this means is that we're just
 
 36
 00:03:10,989 --> 00:03:15,980
-going to say explicitly. That something is provable in the system of rules that we&#39;re
+going to say explicitly. That something is provable in the system of rules that we're
 
 37
 00:03:15,980 --> 00:03:20,159
-defining. So the way you would read this is that if it&#39;s provable that all these
+defining. So the way you would read this is that if it's provable that all these
 
 38
 00:03:20,159 --> 00:03:24,189
-hypotheses are true. So, if it&#39;s provable the first hypothesis is true, all the
+hypotheses are true. So, if it's provable the first hypothesis is true, all the
 
 39
 00:03:24,189 --> 00:03:27,999
-middle hypotheses, and if it&#39;s improvable, if it&#39;s provable the last hypothesis is
+middle hypotheses, and if it's improvable, if it's provable the last hypothesis is
 
 40
 00:03:27,999 --> 00:03:34,019
@@ -164,7 +164,7 @@ true. Then it is provable that the conclusion is true And cool type rules are
 
 41
 00:03:34,019 --> 00:03:39,349
-going to have. The following kinds of hypothesis and conclusions we&#39;re going to
+going to have. The following kinds of hypothesis and conclusions we're going to
 
 42
 00:03:39,349 --> 00:03:46,180
@@ -176,7 +176,7 @@ those definitions out of the way we actually have enough to write at least a
 
 44
 00:03:49,609 --> 00:03:54,249
-few simple type rules. So, if I integer literally if it&#39;s an integer class
+few simple type rules. So, if I integer literally if it's an integer class
 
 45
 00:03:54,249 --> 00:03:59,980
@@ -184,11 +184,11 @@ interfering in my program then this rules says it is provable that I has type EN
 
 46
 00:03:59,980 --> 00:04:05,049
-So every integer constant has type ENT. And here&#39;s the rule for add written out
+So every integer constant has type ENT. And here's the rule for add written out
 
 47
 00:04:05,049 --> 00:04:09,739
-now in the [inaudible] rule notation. If it&#39;s provable then that E1 has type int
+now in the [inaudible] rule notation. If it's provable then that E1 has type int
 
 48
 00:04:09,739 --> 00:04:15,529
@@ -204,11 +204,11 @@ integers and expressions. The rule for integer constants just use a generic
 
 51
 00:04:26,470 --> 00:04:30,560
-integer i. It didn&#39;t give a separate rule for every possible integer, and the rule
+integer i. It didn't give a separate rule for every possible integer, and the rule
 
 52
 00:04:30,560 --> 00:04:34,660
-for plus used expressions e one and e two. It didn&#39;t tell you what particular
+for plus used expressions e one and e two. It didn't tell you what particular
 
 53
 00:04:34,660 --> 00:04:39,340
@@ -224,7 +224,7 @@ that satisfy the hypotheses, and then we can produce a complete typing for actua
 
 56
 00:04:50,550 --> 00:04:57,550
-expressions. So as a concrete example, let&#39;s show that one plus two has type ent.
+expressions. So as a concrete example, let's show that one plus two has type ent.
 
 57
 00:04:58,220 --> 00:05:03,210
@@ -304,15 +304,15 @@ type object. Certainly if I evaluate an integer I will get back an object becaus
 
 76
 00:06:33,680 --> 00:06:38,280
-every integer in , is also an object But this isn&#39;t all that useful because now I
+every integer in , is also an object But this isn't all that useful because now I
 
 77
 00:06:38,280 --> 00:06:43,090
-can&#39;t do any of the integer operations And so there are lots of different sound
+can't do any of the integer operations And so there are lots of different sound
 
 78
 00:06:43,090 --> 00:06:47,750
-rules, there&#39;s not just one unique rule for any given [inaudible] expression that
+rules, there's not just one unique rule for any given [inaudible] expression that
 
 79
 00:06:47,750 --> 00:06:50,810
@@ -325,4 +325,3 @@ literals the one we really want. Literal has type it because that is the most
 81
 00:06:55,530 --> 00:06:58,840
 specific type that we can give to that type of program.
-

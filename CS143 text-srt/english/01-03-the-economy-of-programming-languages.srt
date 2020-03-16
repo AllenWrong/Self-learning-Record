@@ -1,6 +1,6 @@
 0
 00:00:03,699 --> 00:00:08,029
-Hello. In this video we&#39;re going to talk about something that I&#39;ve referred to as the economy
+Hello. In this video we're going to talk about something that I've referred to as the economy
 
 1
 00:00:08,029 --> 00:00:15,029
@@ -20,7 +20,7 @@ how languages work in the real world and why certain languages are used and othe
 
 5
 00:00:31,320 --> 00:00:35,180
-And if you look around, there&#39;s actually a few obvious questions that come up to anybody
+And if you look around, there's actually a few obvious questions that come up to anybody
 
 6
 00:00:35,190 --> 00:00:40,080
@@ -32,7 +32,7 @@ why are there so many of these things? We have hundreds, if not thousands, of pr
 
 8
 00:00:45,390 --> 00:00:50,310
-languages in everyday use, and why do all these things need to exist? Why wouldn&#39;t one
+languages in everyday use, and why do all these things need to exist? Why wouldn't one
 
 9
 00:00:50,310 --> 00:00:53,350
@@ -56,7 +56,7 @@ it? So what makes a good programming language and what makes a bad programming l
 
 14
 00:01:12,710 --> 00:01:19,700
-I just want to spend this video talking about these three questions. And as we&#39;ll see, I
+I just want to spend this video talking about these three questions. And as we'll see, I
 
 15
 00:01:20,209 --> 00:01:26,119
@@ -68,7 +68,7 @@ design and implementation. But very interesting in their own right.
 
 17
 00:01:33,810 --> 00:01:38,240
-So let&#39;s begin with the question of why there are so many programming languages. And at
+So let's begin with the question of why there are so many programming languages. And at
 
 18
 00:01:38,240 --> 00:01:42,459
@@ -76,11 +76,11 @@ least a partial answer to this question is not too hard to come by. If you think
 
 19
 00:01:42,459 --> 00:01:47,639
-a few minutes, you&#39;d realize that the application domains for programming have very distinctive
+a few minutes, you'd realize that the application domains for programming have very distinctive
 
 20
 00:01:47,639 --> 00:01:54,209
-and conflicting needs. That is, it&#39;s very hard to design one language that would actually
+and conflicting needs. That is, it's very hard to design one language that would actually
 
 21
 00:01:54,209 --> 00:01:58,770
@@ -88,7 +88,7 @@ do everything in every situation for all programmers.
 
 22
 00:01:58,770 --> 00:02:03,700
-And let&#39;s just go through some examples. One domain that you might not think about very
+And let's just go through some examples. One domain that you might not think about very
 
 23
 00:02:03,700 --> 00:02:12,080
@@ -108,7 +108,7 @@ And what are the needs for such computations? Well typically you need very good 
 
 27
 00:02:28,730 --> 00:02:35,730
-point support. I&#39;ll abbreviate that as FP. You need good support for arrays and operations
+point support. I'll abbreviate that as FP. You need good support for arrays and operations
 
 28
 00:02:37,420 --> 00:02:42,840
@@ -128,7 +128,7 @@ performance you really have to exploit parallelism in these applications.
 
 32
 00:02:57,360 --> 00:03:01,459
-And it&#39;s not every language actually supports all of these things well. This is actually
+And it's not every language actually supports all of these things well. This is actually
 
 33
 00:03:01,459 --> 00:03:06,290
@@ -148,11 +148,11 @@ It was originally designed for scientific applications. If you recall that the n
 
 37
 00:03:20,109 --> 00:03:27,109
-means formula translation. And it has evolved over time. It doesn&#39;t really look much like
+means formula translation. And it has evolved over time. It doesn't really look much like
 
 38
 00:03:27,659 --> 00:03:32,319
-the original language anymore but it&#39;s always retain this core constituency in scientific
+the original language anymore but it's always retain this core constituency in scientific
 
 39
 00:03:32,319 --> 00:03:37,260
@@ -164,7 +164,7 @@ Now a completely different kind of a domain is business applications. And so wha
 
 41
 00:03:47,730 --> 00:03:53,189
-need here? Well so here you&#39;re going to need things like persistence. You don&#39;t want to
+need here? Well so here you're going to need things like persistence. You don't want to
 
 42
 00:03:53,189 --> 00:03:58,079
@@ -176,7 +176,7 @@ to hold onto it, and they want that to be extremely reliable.
 
 44
 00:04:03,790 --> 00:04:10,579
-You&#39;re going to need good report facilities. Because typically you want to do something
+You're going to need good report facilities. Because typically you want to do something
 
 45
 00:04:10,579 --> 00:04:16,739
@@ -184,7 +184,7 @@ with the data. So you need good facilities for report generation. And also, you 
 
 46
 00:04:16,738 --> 00:04:20,220
-to be able to exploit the data. The data&#39;s actually in many modern businesses one of
+to be able to exploit the data. The data's actually in many modern businesses one of
 
 47
 00:04:20,220 --> 00:04:26,510
@@ -192,7 +192,7 @@ the most valuable assets and so you need good facilities for asking questions ab
 
 48
 00:04:26,510 --> 00:04:28,220
-data. Let&#39;s call it data analysis.
+data. Let's call it data analysis.
 
 49
 00:04:28,220 --> 00:04:34,530
@@ -216,7 +216,7 @@ dominate in this application domain.
 
 54
 00:04:59,100 --> 00:05:06,100
-And then another domain, let&#39;s do one more, is systems programming.
+And then another domain, let's do one more, is systems programming.
 
 55
 00:05:06,340 --> 00:05:13,140
@@ -232,7 +232,7 @@ The whole point of systems programming is to do a good job of managing resources
 
 58
 00:05:24,280 --> 00:05:32,060
-so we really want fine grained control over the resources. And often there&#39;s a time aspect,
+so we really want fine grained control over the resources. And often there's a time aspect,
 
 59
 00:05:32,060 --> 00:05:39,060
@@ -244,7 +244,7 @@ Because these are actually again devices and they need to be able to react withi
 
 61
 00:05:46,590 --> 00:05:50,960
-amount of time - if it&#39;s a network device or something like that - you need to be responsive
+amount of time - if it's a network device or something like that - you need to be responsive
 
 62
 00:05:50,960 --> 00:05:56,470
@@ -252,7 +252,7 @@ to the network. Lots and lots of examples where timing is important. And these a
 
 63
 00:05:56,470 --> 00:06:00,780
-two aspects and I&#39;m a little bit - I&#39;m running out of space here so I&#39;ll just stop with that.
+two aspects and I'm a little bit - I'm running out of space here so I'll just stop with that.
 
 64
 00:06:00,780 --> 00:06:05,900
@@ -272,11 +272,11 @@ And as you can see the requirements in these different domains are just complete
 
 68
 00:06:23,350 --> 00:06:26,490
-different from each other. What&#39;s important in one domain or most important in one
+different from each other. What's important in one domain or most important in one
 
 69
 00:06:26,490 --> 00:06:32,140
-domain is not the same as in another domain. And it&#39;s easy I think to imagine at least
+domain is not the same as in another domain. And it's easy I think to imagine at least
 
 70
 00:06:32,140 --> 00:06:37,430
@@ -292,7 +292,7 @@ That brings us to our second question: Why are there new programming languages?
 
 73
 00:06:47,980 --> 00:06:54,180
-There are so many languages in existence, why would we ever need to design a new one? And I&#39;m
+There are so many languages in existence, why would we ever need to design a new one? And I'm
 
 74
 00:06:54,180 --> 00:06:58,830
@@ -308,7 +308,7 @@ I claim that programmer training is the dominant cost for a programming language
 
 77
 00:07:07,680 --> 00:07:13,800
-this is really important so just going to emphasize the bit that&#39;s important here. It&#39;s
+this is really important so just going to emphasize the bit that's important here. It's
 
 78
 00:07:13,800 --> 00:07:18,590
@@ -320,7 +320,7 @@ about a programming language there are several things that have to happen for th
 
 80
 00:07:23,750 --> 00:07:28,310
-to get used. Somebody has to design it. But that&#39;s really not very expensive. That&#39;s just
+to get used. Somebody has to design it. But that's really not very expensive. That's just
 
 81
 00:07:28,310 --> 00:07:33,840
@@ -344,7 +344,7 @@ of thousands or millions of users of the language, the time and money that it ta
 
 86
 00:07:53,930 --> 00:07:59,590
-them all the language is really the dominant cost. And here I don&#39;t mean just the actual
+them all the language is really the dominant cost. And here I don't mean just the actual
 
 87
 00:07:59,590 --> 00:08:04,180
@@ -352,11 +352,11 @@ dollar expense of buying textbooks and taking classes and things like that.
 
 88
 00:08:04,180 --> 00:08:08,420
-It&#39;s also the fact that the programmers have to decide it&#39;s worth it for them to learn
+It's also the fact that the programmers have to decide it's worth it for them to learn
 
 89
 00:08:08,420 --> 00:08:13,560
-this language and many programmers learn on their own time, but that&#39;s a use of their
+this language and many programmers learn on their own time, but that's a use of their
 
 90
 00:08:13,560 --> 00:08:19,180
@@ -364,7 +364,7 @@ time and the expense of their time is a real economic cost. And so if you think 
 
 91
 00:08:19,180 --> 00:08:25,560
-number of hours that it takes to teach a population of a million programmers a language, that&#39;s
+number of hours that it takes to teach a population of a million programmers a language, that's
 
 92
 00:08:25,560 --> 00:08:30,710
@@ -376,7 +376,7 @@ Now from this observation, we can make a couple of predictions pretty easily. An
 
 94
 00:08:35,880 --> 00:08:42,880
-are just predictions now that follow from this claim. If you believe that it&#39;s true.
+are just predictions now that follow from this claim. If you believe that it's true.
 
 95
 00:08:44,070 --> 00:08:51,070
@@ -432,7 +432,7 @@ Now at the other end of the spectrum, this same observation makes an almost what
 
 108
 00:10:06,170 --> 00:10:13,170
-to be contradictory prediction, which is that easy to start, it&#39;s easy to start a new language.
+to be contradictory prediction, which is that easy to start, it's easy to start a new language.
 
 109
 00:10:13,840 --> 00:10:20,840
@@ -448,15 +448,15 @@ and then even when you have just a few users the cost of teaching them the chang
 
 112
 00:10:32,340 --> 00:10:39,310
-language is not very high. And it&#39;s so new languages can evolve much more quickly. They
+language is not very high. And it's so new languages can evolve much more quickly. They
 
 113
 00:10:39,310 --> 00:10:46,310
-can adapt much more quickly to changing situations. And it&#39;s just not very costly to experiment
+can adapt much more quickly to changing situations. And it's just not very costly to experiment
 
 114
 00:10:48,710 --> 00:10:55,710
-with a new language at all. And there&#39;s a tension between these two things.
+with a new language at all. And there's a tension between these two things.
 
 115
 00:10:55,900 --> 00:11:01,540
@@ -464,7 +464,7 @@ When is a programmer going to choose between a widely used existing language tha
 
 116
 00:11:01,540 --> 00:11:06,710
-doesn&#39;t change very quickly, and a brand new language? Well they&#39;re going to choose it
+doesn't change very quickly, and a brand new language? Well they're going to choose it
 
 117
 00:11:06,710 --> 00:11:13,710
@@ -472,11 +472,11 @@ if the productivity, if their productivity exceeds the training cost. So if they
 
 118
 00:11:17,340 --> 00:11:21,890
-that by spending a little bit of time and money to learn this new language, they&#39;re
+that by spending a little bit of time and money to learn this new language, they're
 
 119
 00:11:21,890 --> 00:11:26,240
-going to be much more productive over a relatively short period of time then they&#39;re going to
+going to be much more productive over a relatively short period of time then they're going to
 
 120
 00:11:26,240 --> 00:11:30,029
@@ -496,7 +496,7 @@ training is the main cost. What do I mean by this? Well what I mean is that, pro
 
 124
 00:12:00,170 --> 00:12:07,120
-languages exist for purpose, people use them to get work done. And because we&#39;re still
+languages exist for purpose, people use them to get work done. And because we're still
 
 125
 00:12:07,120 --> 00:12:11,460
@@ -512,11 +512,11 @@ So there are new kinds of programming that emerge every few years or even more o
 
 128
 00:12:18,940 --> 00:12:24,070
-than that. So just in terms of recent history mobile applications are now something that&#39;s
+than that. So just in terms of recent history mobile applications are now something that's
 
 129
 00:12:24,070 --> 00:12:29,940
-relatively new. And there&#39;s a lot of new technology being built up to support mobile computing.
+relatively new. And there's a lot of new technology being built up to support mobile computing.
 
 130
 00:12:29,940 --> 00:12:34,240
@@ -540,11 +540,11 @@ are slow to change and so they have some difficulty in adapting to fit these new
 
 135
 00:13:02,050 --> 00:13:05,810
-they aren&#39;t really necessarily well suited to them for the reasons we talked about on
+they aren't really necessarily well suited to them for the reasons we talked about on
 
 136
 00:13:05,810 --> 00:13:11,000
-the previous slide with the previous question because it&#39;s hard to have one language that
+the previous slide with the previous question because it's hard to have one language that
 
 137
 00:13:11,000 --> 00:13:13,860
@@ -556,11 +556,11 @@ And so there are so these languages are not necessarily perfect for these applic
 
 139
 00:13:19,330 --> 00:13:26,130
-domains. They&#39;re slow to adapt to the new situation. And this tends to call forth new
+domains. They're slow to adapt to the new situation. And this tends to call forth new
 
 140
 00:13:26,130 --> 00:13:31,430
-languages. So when there&#39;s a new opportunity and some application domain. If there are
+languages. So when there's a new opportunity and some application domain. If there are
 
 141
 00:13:31,430 --> 00:13:35,750
@@ -572,7 +572,7 @@ Just want to point out another prediction that can be made from this one observa
 
 143
 00:13:44,520 --> 00:13:48,899
-That programmer training and I&#39;ll underline that, is a dominant cost per programming language.
+That programmer training and I'll underline that, is a dominant cost per programming language.
 
 144
 00:13:48,899 --> 00:13:55,899
@@ -588,11 +588,11 @@ predecessor languages.
 
 147
 00:14:19,130 --> 00:14:24,310
-And why is that? Well partly that it&#39;s hard to think of truly new things. But also I think
+And why is that? Well partly that it's hard to think of truly new things. But also I think
 
 148
 00:14:24,310 --> 00:14:29,890
-if there&#39;s an economic benefit to this namely that it reduces the training cost by having
+if there's an economic benefit to this namely that it reduces the training cost by having
 
 149
 00:14:29,890 --> 00:14:33,839
@@ -620,7 +620,7 @@ Finally, we can ask ourselves what is a good programming language. And here unfo
 
 155
 00:15:06,270 --> 00:15:13,270
-the situation is much less clear. I would just make one claim that there is no and I&#39;ll
+the situation is much less clear. I would just make one claim that there is no and I'll
 
 156
 00:15:14,550 --> 00:15:21,550
@@ -632,7 +632,7 @@ Well I guess the most important part of this statement is the universally accept
 
 158
 00:15:37,880 --> 00:15:41,600
-So I mean that people don&#39;t agree on what makes a good language.
+So I mean that people don't agree on what makes a good language.
 
 159
 00:15:41,600 --> 00:15:46,839
@@ -640,11 +640,11 @@ There are lots of metrics out there and people have proposed lots of ways of mea
 
 160
 00:15:46,839 --> 00:15:53,839
-languages but most people don&#39;t believe that these are very good measures and there is
+languages but most people don't believe that these are very good measures and there is
 
 161
 00:15:54,410 --> 00:15:59,080
-certainly no consensus. If you just look at the world of programmers, they can&#39;t agree
+certainly no consensus. If you just look at the world of programmers, they can't agree
 
 162
 00:15:59,080 --> 00:16:02,940
@@ -672,11 +672,11 @@ And to just kind of illustrate the difficulties in trying to come up with such a
 
 168
 00:16:31,770 --> 00:16:37,720
-me discuss one that I&#39;ve heard people propose in all seriousness and that is that a good
+me discuss one that I've heard people propose in all seriousness and that is that a good
 
 169
 00:16:37,720 --> 00:16:44,720
-language  is one people use. And let me put a question mark on that because I don&#39;t believe this
+language  is one people use. And let me put a question mark on that because I don't believe this
 
 170
 00:16:53,930 --> 00:16:56,370
@@ -684,11 +684,11 @@ statement.
 
 171
 00:16:56,370 --> 00:17:02,620
-And I think a moment&#39;s reflection with a moment&#39;s reflection I can convince you that this isn&#39;t
+And I think a moment's reflection with a moment's reflection I can convince you that this isn't
 
 172
 00:17:02,620 --> 00:17:08,319
-a great measure. On the positive side I guess the argument for this is that it&#39;s a very
+a great measure. On the positive side I guess the argument for this is that it's a very
 
 173
 00:17:08,319 --> 00:17:12,689
@@ -712,11 +712,11 @@ languages.
 
 178
 00:17:38,739 --> 00:17:43,429
-And I&#39;ve nothing against Visual Basic. It&#39;s a well designed system but I don&#39;t even think
+And I've nothing against Visual Basic. It's a well designed system but I don't even think
 
 179
 00:17:43,429 --> 00:17:50,429
-the designers of Visual Basic, would claim that it is in fact the world&#39;s best programming
+the designers of Visual Basic, would claim that it is in fact the world's best programming
 
 180
 00:17:50,529 --> 00:17:55,549
@@ -740,11 +740,11 @@ language might be used. It has much more to do with whether it addresses a niche
 
 185
 00:18:15,539 --> 00:18:19,850
-domain for which there isn&#39;t a better tool. And then once it&#39;s established and has lots
+domain for which there isn't a better tool. And then once it's established and has lots
 
 186
 00:18:19,850 --> 00:18:24,379
-of users of course there&#39;s inertia in history that aided in surviving. And that&#39;s why we
+of users of course there's inertia in history that aided in surviving. And that's why we
 
 187
 00:18:24,379 --> 00:18:31,379
@@ -768,11 +768,11 @@ it is difficult to design one system that incorporates everything that you would
 
 192
 00:18:57,110 --> 00:19:04,110
-to have. So you can&#39;t get all the features that you would like into a single system in
+to have. So you can't get all the features that you would like into a single system in
 
 193
 00:19:04,759 --> 00:19:09,769
-a coherent design at least it&#39;s very hard to do that and so it takes a lot of time to
+a coherent design at least it's very hard to do that and so it takes a lot of time to
 
 194
 00:19:09,769 --> 00:19:14,279
@@ -792,7 +792,7 @@ we get new programming languages, because the old languages are difficult to cha
 
 198
 00:19:30,909 --> 00:19:36,769
-and when we have new opportunities, it&#39;s often easier and more direct to just design a new
+and when we have new opportunities, it's often easier and more direct to just design a new
 
 199
 00:19:36,769 --> 00:19:43,279
@@ -801,4 +801,3 @@ language for those rather than trying to move the entire community of programmer
 200
 00:19:43,279 --> 00:19:46,989
 existing systems to accommodate those new applications.
-

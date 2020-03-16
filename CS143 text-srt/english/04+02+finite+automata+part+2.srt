@@ -4,11 +4,11 @@ Up to this point a finite automaton consumes a character of input
 
 1
 00:00:06,560 --> 00:00:09,920
-every time it makes a move. So if you can&#39;t make any move at all, the input
+every time it makes a move. So if you can't make any move at all, the input
 
 2
 00:00:09,920 --> 00:00:16,000
-pointer advances. Now we&#39;re talking about a new kind of move, the epsilon move and
+pointer advances. Now we're talking about a new kind of move, the epsilon move and
 
 3
 00:00:16,000 --> 00:00:19,840
@@ -16,11 +16,11 @@ the idea behind the epsilon move is that the machine can make a state transition
 
 4
 00:00:19,840 --> 00:00:26,840
-without consuming input, So for example if I have my states and I&#39;m in state A and my
+without consuming input, So for example if I have my states and I'm in state A and my
 
 5
 00:00:28,829 --> 00:00:35,829
-input. And let&#39;s just say that we have x1, x2, x3 and for some reason we&#39;re about to
+input. And let's just say that we have x1, x2, x3 and for some reason we're about to
 
 6
 00:00:41,440 --> 00:00:48,000
@@ -44,7 +44,7 @@ to a different state without consuming any input. And just to be clear here the
 
 11
 00:01:07,330 --> 00:01:11,310
-machine does not have to make the epsilon move. It&#39;s a choice so they can decide
+machine does not have to make the epsilon move. It's a choice so they can decide
 
 12
 00:01:11,310 --> 00:01:18,310
@@ -56,11 +56,11 @@ mentioned the possibility that a finite automata might have a choice and what
 
 14
 00:01:23,740 --> 00:01:28,000
-moves it makes. There&#39;s actually an important distinction between automata
+moves it makes. There's actually an important distinction between automata
 
 15
 00:01:28,000 --> 00:01:33,390
-that have choices and those have don&#39;t. So deterministic finite automata have two
+that have choices and those have don't. So deterministic finite automata have two
 
 16
 00:01:33,390 --> 00:01:38,830
@@ -168,7 +168,7 @@ input. What do I mean by that? Well, the automaton always begins at the start st
 
 42
 00:03:51,329 --> 00:03:55,229
-and let&#39;s take a very simple input string like ABC and if we can look at the
+and let's take a very simple input string like ABC and if we can look at the
 
 43
 00:03:55,229 --> 00:04:02,229
@@ -232,15 +232,15 @@ if any path accepts. So if NFA Accepts, If some Choices Lead to an accepting sta
 
 58
 00:05:31,600 --> 00:05:38,600
-the end of the input. Now there&#39;s a [inaudible] automaton, I can choose what
+the end of the input. Now there's a [inaudible] automaton, I can choose what
 
 59
 00:05:39,600 --> 00:05:43,140
-move to make and as long as there are some choice it can make, then we&#39;ll get it to
+move to make and as long as there are some choice it can make, then we'll get it to
 
 60
 00:05:43,140 --> 00:05:47,590
-an accepting state. So let&#39;s say switching colors here that you know this was an
+an accepting state. So let's say switching colors here that you know this was an
 
 61
 00:05:47,590 --> 00:05:53,450
@@ -248,7 +248,7 @@ accepting state down here and they took this path. Then it would accept and mayb
 
 62
 00:05:53,450 --> 00:05:56,950
-all of these other pass are rejecting pass, that doesn&#39;t matter. As long as
+all of these other pass are rejecting pass, that doesn't matter. As long as
 
 63
 00:05:56,950 --> 00:06:01,980
@@ -268,11 +268,11 @@ depending on the choices they make during a run is important and will actually p
 
 67
 00:06:18,840 --> 00:06:23,340
-central role in the future video, so we&#39;re gonna do a quick example here to just make
+central role in the future video, so we're gonna do a quick example here to just make
 
 68
 00:06:23,340 --> 00:06:28,580
-sure that this is clear. So here&#39;s a little automaton and note that it is
+sure that this is clear. So here's a little automaton and note that it is
 
 69
 00:06:28,580 --> 00:06:33,360
@@ -280,7 +280,7 @@ Nondeterministic Automata from the start state there are two possible moves inpu
 
 70
 00:06:33,360 --> 00:06:38,300
-zero. And what we&#39;re going to do is just walk through in execution of this machine
+zero. And what we're going to do is just walk through in execution of this machine
 
 71
 00:06:38,300 --> 00:06:44,310
@@ -292,11 +292,11 @@ start state and we should probably label our states actually so that we can refe
 
 73
 00:06:48,710 --> 00:06:55,710
-to them. Let&#39;s call them A, B, and C. And let&#39;s say at the first input is one and so
+to them. Let's call them A, B, and C. And let's say at the first input is one and so
 
 74
 00:06:56,400 --> 00:07:01,170
-what does that mean? That means we&#39;ll take this transition. We&#39;ll just go from the
+what does that mean? That means we'll take this transition. We'll just go from the
 
 75
 00:07:01,170 --> 00:07:04,340
@@ -304,15 +304,15 @@ start state and come back to the start state and so the set of states that the
 
 76
 00:07:04,340 --> 00:07:09,710
-machine could be in after the first transition is just the set A. So it&#39;s
+machine could be in after the first transition is just the set A. So it's
 
 77
 00:07:09,710 --> 00:07:15,000
-guaranteed to still be in the start state. So there&#39;s no, no choices with the first
+guaranteed to still be in the start state. So there's no, no choices with the first
 
 78
 00:07:15,000 --> 00:07:19,120
-move. Now let&#39;s say at the second input character is a zero and now we do have a
+move. Now let's say at the second input character is a zero and now we do have a
 
 79
 00:07:19,120 --> 00:07:25,010
@@ -328,7 +328,7 @@ move, this transition, the machine could be in anyone of the set of states and
 
 82
 00:07:36,700 --> 00:07:41,000
-actually this completely characterizes the possibilities for the machine. We&#39;ve only
+actually this completely characterizes the possibilities for the machine. We've only
 
 83
 00:07:41,000 --> 00:07:46,280
@@ -336,15 +336,15 @@ read the second input character and now we could be in a set of states, okay? An
 
 84
 00:07:46,280 --> 00:07:53,280
-could be either in state a or in state b. And so now let&#39;s say we read another zero.
+could be either in state a or in state b. And so now let's say we read another zero.
 
 85
 00:07:55,330 --> 00:08:01,110
-And where could we go then, well if we&#39;re in state B we could make the transition to
+And where could we go then, well if we're in state B we could make the transition to
 
 86
 00:08:01,110 --> 00:08:07,990
-state C but if we&#39;re in state A then we&#39;ll make the transition either to state B or
+state C but if we're in state A then we'll make the transition either to state B or
 
 87
 00:08:07,990 --> 00:08:14,040
@@ -372,7 +372,7 @@ then the, the, finally has to decide whether the machine accepts while we look
 
 93
 00:08:43,179 --> 00:08:48,199
-at the final state after the last bid of input is red and if there&#39;s any I&#39;m sorry,
+at the final state after the last bid of input is red and if there's any I'm sorry,
 
 94
 00:08:48,199 --> 00:08:53,149
@@ -380,7 +380,7 @@ we look at the last set of states after the last input character is red and if
 
 95
 00:08:53,149 --> 00:08:57,160
-there&#39;s any final state in that set, then the machine accepts and in this case,
+there's any final state in that set, then the machine accepts and in this case,
 
 96
 00:08:57,160 --> 00:09:02,740
@@ -392,11 +392,11 @@ possible states. So what that means is, if there was some sort of choices that t
 
 98
 00:09:06,579 --> 00:09:09,959
-machine could make, that we&#39;ll get it into the final state at the end of the input
+machine could make, that we'll get it into the final state at the end of the input
 
 99
 00:09:09,959 --> 00:09:14,999
-and so with the machine. Accepts this input, okay? So if there&#39;s a final state
+and so with the machine. Accepts this input, okay? So if there's a final state
 
 100
 00:09:14,999 --> 00:09:21,999
@@ -404,15 +404,15 @@ in the final set of possible states, then the Nondeterministic machine accepts. 
 
 101
 00:09:22,279 --> 00:09:26,779
-turns out that NFA&#39;s and DFA&#39;s are recognized exactly the same languages and
+turns out that NFA's and DFA's are recognized exactly the same languages and
 
 102
 00:09:26,779 --> 00:09:31,600
-particularly the regular languages. So NFA&#39;s, DFA&#39;s and regular expressions all
+particularly the regular languages. So NFA's, DFA's and regular expressions all
 
 103
 00:09:31,600 --> 00:09:36,480
-have equivalent power. They can only specify regular languages. Dfa&#39;s are
+have equivalent power. They can only specify regular languages. Dfa's are
 
 104
 00:09:36,480 --> 00:09:41,220
@@ -432,7 +432,7 @@ be in set of states. However there are some advantages to NFA so they are in
 
 108
 00:09:56,199 --> 00:10:03,199
-general much smaller. And DFA&#39;s, In fact, they can be exponentially smaller so the
+general much smaller. And DFA's, In fact, they can be exponentially smaller so the
 
 109
 00:10:03,930 --> 00:10:10,930
@@ -440,7 +440,7 @@ smallest. Nfa, Maybe much, much smaller than the smallest equivalent DFA for the
 
 110
 00:10:13,449 --> 00:10:17,829
-same language, And, there&#39;s, so essentially there&#39;s a space time tradeoff
+same language, And, there's, so essentially there's a space time tradeoff
 
 111
 00:10:17,829 --> 00:10:24,459
@@ -449,4 +449,3 @@ between NFAs and DFAs. Nfas might be more compact but DFAs will be faster to
 112
 00:10:24,459 --> 00:10:25,019
 execute.
-

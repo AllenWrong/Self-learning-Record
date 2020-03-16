@@ -13,4 +13,3 @@ trees into larger ones. It precedes bottom up. Instead of expanding out from the
 3
 00:00:12,990 --> 00:00:17,300
 start symbol top down, it builds from the leaves of the tree up towards the root.
-

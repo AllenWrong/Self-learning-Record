@@ -1,6 +1,6 @@
 0
 00:00:03,460 --> 00:00:07,210
-In this video, we&#39;re going to wrap up our discussion of Java by taking a look at a
+In this video, we're going to wrap up our discussion of Java by taking a look at a
 
 1
 00:00:07,210 --> 00:00:12,800
@@ -8,7 +8,7 @@ couple of additional topics and how they are integrated into the language design
 
 2
 00:00:12,800 --> 00:00:19,800
-Consistent with Java&#39;s dynamic nature Java allows classes to be loaded at runtime.
+Consistent with Java's dynamic nature Java allows classes to be loaded at runtime.
 
 3
 00:00:20,340 --> 00:00:24,220
@@ -16,7 +16,7 @@ But this means that you can actually add functionality to an executing Java prog
 
 4
 00:00:24,220 --> 00:00:29,430
-so, while it&#39;s running, by loading a new class. And this creates potential issues
+so, while it's running, by loading a new class. And this creates potential issues
 
 5
 00:00:29,430 --> 00:00:35,649
@@ -32,15 +32,15 @@ this is the kind of type checking we discussed in earlier in earlier videos.
 
 8
 00:00:47,309 --> 00:00:50,749
-But the, the loader, when you actually go to load a class, you&#39;re loading bytecode,
+But the, the loader, when you actually go to load a class, you're loading bytecode,
 
 9
 00:00:50,749 --> 00:00:56,449
-you&#39;re not loading source and it&#39;s not being type checked again. And it could be,
+you're not loading source and it's not being type checked again. And it could be,
 
 10
 00:00:56,449 --> 00:01:00,909
-that this bytecode didn&#39;t come, you know, from a trusted source. This bytecode might
+that this bytecode didn't come, you know, from a trusted source. This bytecode might
 
 11
 00:01:00,909 --> 00:01:05,880
@@ -64,15 +64,15 @@ loaded, alright. And, and byte code verification is really a type checking of
 
 16
 00:01:25,200 --> 00:01:29,329
-bytecode. That&#39;s, that&#39;s essentially what it does. The procedure is a little bit
+bytecode. That's, that's essentially what it does. The procedure is a little bit
 
 17
 00:01:29,329 --> 00:01:35,740
-different because we don&#39;t have you know, the code here is much lower level and so
+different because we don't have you know, the code here is much lower level and so
 
 18
 00:01:35,740 --> 00:01:38,950
-the algorithms look a little bit different. But what they&#39;re really doing
+the algorithms look a little bit different. But what they're really doing
 
 19
 00:01:38,950 --> 00:01:44,600
@@ -92,7 +92,7 @@ security problems were discovered. Aware an attacker could get control of the cl
 
 23
 00:01:58,640 --> 00:02:04,329
-loader install it&#39;s own class loader that would be much more permissive than the
+loader install it's own class loader that would be much more permissive than the
 
 24
 00:02:04,329 --> 00:02:09,420
@@ -104,7 +104,7 @@ quite awhile ago, alright. And another interesting thing about Java is that the
 
 26
 00:02:14,010 --> 00:02:18,420
-classes may also be unloaded. So, you don&#39;t, you can not, not only load classes,
+classes may also be unloaded. So, you don't, you can not, not only load classes,
 
 27
 00:02:18,420 --> 00:02:23,220
@@ -112,7 +112,7 @@ you can also unload classes. And the last time I checked this was not particular
 
 28
 00:02:23,220 --> 00:02:28,060
-well specified in the definition and so it&#39;s a little bit unclear exactly what it
+well specified in the definition and so it's a little bit unclear exactly what it
 
 29
 00:02:28,060 --> 00:02:31,950
@@ -120,11 +120,11 @@ meant when you unloaded the class and what happened to all the existing objects,
 
 30
 00:02:31,950 --> 00:02:38,110
-example, of that class. Now, I&#39;d like to spend a few minutes talking about
+example, of that class. Now, I'd like to spend a few minutes talking about
 
 31
 00:02:38,110 --> 00:02:42,990
-initialization in Java, which is quite complex, and this shouldn&#39;t be too much of
+initialization in Java, which is quite complex, and this shouldn't be too much of
 
 32
 00:02:42,990 --> 00:02:48,010
@@ -164,11 +164,11 @@ what all those interactions are and how they are sorted out in order to have a
 
 41
 00:03:35,950 --> 00:03:41,070
-well-defined initialization procedure, alright. So, now let&#39;s talk about class
+well-defined initialization procedure, alright. So, now let's talk about class
 
 42
 00:03:41,070 --> 00:03:44,160
-initialization. We won&#39;t talk about object initialization, we&#39;ll just talk about
+initialization. We won't talk about object initialization, we'll just talk about
 
 43
 00:03:44,160 --> 00:03:51,040
@@ -208,7 +208,7 @@ initialization if you run the program five times you know, that error will proba
 
 52
 00:04:32,389 --> 00:04:36,169
-happen in the same place every time. So, it&#39;ll be repeatable and predictable where
+happen in the same place every time. So, it'll be repeatable and predictable where
 
 53
 00:04:36,169 --> 00:04:42,550
@@ -224,15 +224,15 @@ different times. And, and, and so this, this, this error here the error in the
 
 56
 00:04:52,800 --> 00:04:58,650
-initialization of the class would become non-deterministic if we didn&#39;t if we
+initialization of the class would become non-deterministic if we didn't if we
 
 57
 00:04:58,650 --> 00:05:05,650
-didn&#39;t delay the initialization until some deterministic point in the execution. So,
+didn't delay the initialization until some deterministic point in the execution. So,
 
 58
 00:05:06,259 --> 00:05:10,319
-now I&#39;ll discuss the procedure for initializing class objects in Java. And
+now I'll discuss the procedure for initializing class objects in Java. And
 
 59
 00:05:10,319 --> 00:05:14,919
@@ -268,7 +268,7 @@ class are, and everything else. So, this is used for introspection or reflection
 
 67
 00:05:54,110 --> 00:05:59,139
-And it&#39;s necessary in Java because of features like dynamic loading. So, if, you
+And it's necessary in Java because of features like dynamic loading. So, if, you
 
 68
 00:05:59,139 --> 00:06:03,210
@@ -296,11 +296,11 @@ that done? Well, we lock the class object for the class, alright. And if th at, 
 
 74
 00:06:27,740 --> 00:06:32,650
-that object is already locked by another thread, then we&#39;ll simply wait on the
+that object is already locked by another thread, then we'll simply wait on the
 
 75
 00:06:32,650 --> 00:06:37,990
-lock, okay. So, we will wait until somebody tells us that it&#39;s okay to
+lock, okay. So, we will wait until somebody tells us that it's okay to
 
 76
 00:06:37,990 --> 00:06:44,990
@@ -324,11 +324,11 @@ So, I could have a class of class called X and then it could have a field of typ
 
 81
 00:07:10,999 --> 00:07:16,809
-in it. And the way classes are going to be initialize if we&#39;re going to have to
+in it. And the way classes are going to be initialize if we're going to have to
 
 82
 00:07:16,809 --> 00:07:21,309
-initialize the class itself and then, and we&#39;re going to do that by recursively
+initialize the class itself and then, and we're going to do that by recursively
 
 83
 00:07:21,309 --> 00:07:24,509
@@ -348,7 +348,7 @@ class, then we will get the situation where the thread initializing the class
 
 87
 00:07:37,449 --> 00:07:40,990
-may attempt to initialize the same class again. So, if we discover that we&#39;re
+may attempt to initialize the same class again. So, if we discover that we're
 
 88
 00:07:40,990 --> 00:07:45,370
@@ -364,7 +364,7 @@ the lock we discover that some other thread got in there and initialized the
 
 91
 00:07:53,680 --> 00:07:57,110
-class before we have a chance to., well, then there&#39;s nothing to do and we just
+class before we have a chance to., well, then there's nothing to do and we just
 
 92
 00:07:57,110 --> 00:08:02,300
@@ -376,7 +376,7 @@ get the lock and we discover that the class is not already initialized and that
 
 94
 00:08:08,279 --> 00:08:13,469
-we&#39;re not already in the process of initializing the class, then we will mark
+we're not already in the process of initializing the class, then we will mark
 
 95
 00:08:13,469 --> 00:08:18,800
@@ -384,19 +384,19 @@ the class to, to note the initialization is in progress by this thread, okay. So
 
 96
 00:08:18,800 --> 00:08:21,620
-we&#39;ll indicate, you know, this class is being initialized and that we are
+we'll indicate, you know, this class is being initialized and that we are
 
 97
 00:08:21,620 --> 00:08:27,219
-initializing it and then we&#39;ll unlock the class. Alright, the next thing that
+initializing it and then we'll unlock the class. Alright, the next thing that
 
 98
 00:08:27,219 --> 00:08:31,169
-happens is we&#39;ll have to initialize the superclass and that will m ean initial,
+happens is we'll have to initialize the superclass and that will m ean initial,
 
 99
 00:08:31,169 --> 00:08:36,180
-and then we&#39;ll initialize all the fields in textual order. But because Java has
+and then we'll initialize all the fields in textual order. But because Java has
 
 100
 00:08:36,179 --> 00:08:40,940
@@ -416,19 +416,19 @@ initialization just as in COOL. So, this step, step five is very similar to what
 
 104
 00:08:53,730 --> 00:09:00,730
-goes on in COOL. Now if there&#39;s an error during the initialization, so some part of
+goes on in COOL. Now if there's an error during the initialization, so some part of
 
 105
 00:09:03,770 --> 00:09:08,410
-the initialization throws an exception, then we&#39;re going to mark the class as
+the initialization throws an exception, then we're going to mark the class as
 
 106
 00:09:08,410 --> 00:09:12,840
-erroneous, okay, we&#39;re going to mark this class as no good and can&#39;t be used and,
+erroneous, okay, we're going to mark this class as no good and can't be used and,
 
 107
 00:09:12,840 --> 00:09:16,470
-and that&#39;s the best we can do. So, if there&#39;s an exception during
+and that's the best we can do. So, if there's an exception during
 
 108
 00:09:16,470 --> 00:09:20,320
@@ -436,11 +436,11 @@ initialization, we just have to give up on that class. And so it gets a special 
 
 109
 00:09:20,320 --> 00:09:25,960
-on it saying that it&#39;s erroneous. And, if there are no errors if we succeed in
+on it saying that it's erroneous. And, if there are no errors if we succeed in
 
 110
 00:09:25,960 --> 00:09:30,430
-initializing the class and with and without any errors, then we&#39;re going to
+initializing the class and with and without any errors, then we're going to
 
 111
 00:09:30,430 --> 00:09:34,500
@@ -448,7 +448,7 @@ lock the class again. We will label the class as initialized, alright? And then
 
 112
 00:09:34,500 --> 00:09:38,880
-we&#39;ll notify the threads that are waiting on the class object. So. Anybody who was
+we'll notify the threads that are waiting on the class object. So. Anybody who was
 
 113
 00:09:38,880 --> 00:09:44,500
@@ -456,7 +456,7 @@ locked waiting on the class object will now be alerted that the object is, is
 
 114
 00:09:44,500 --> 00:09:49,400
-ready and then we&#39;ll unlock the class. Okay, and so that&#39;s a rough outline of how
+ready and then we'll unlock the class. Okay, and so that's a rough outline of how
 
 115
 00:09:49,400 --> 00:09:52,520
@@ -464,7 +464,7 @@ class initialization in Java works. I skipped over a few things and
 
 116
 00:09:52,520 --> 00:09:57,230
-oversimplified it a bit. So, this isn&#39;t the complete description but these are the
+oversimplified it a bit. So, this isn't the complete description but these are the
 
 117
 00:09:57,230 --> 00:10:03,070
@@ -496,7 +496,7 @@ designing complex systems. So, in any system with a certain number of featu res
 
 124
 00:10:30,710 --> 00:10:34,490
-and every system is going to have some number of features, let&#39;s call it N,
+and every system is going to have some number of features, let's call it N,
 
 125
 00:10:34,490 --> 00:10:36,790
@@ -504,7 +504,7 @@ because you want to provide some functionality, obviously the thing the
 
 126
 00:10:36,790 --> 00:10:40,160
-system&#39;s suppose to d so its going to have features to do those things. But as you
+system's suppose to d so its going to have features to do those things. But as you
 
 127
 00:10:40,160 --> 00:10:43,690
@@ -516,7 +516,7 @@ between the features and if we think about, even just the pairwise
 
 129
 00:10:46,940 --> 00:10:53,710
-interactions. If I have N features, then I&#39;ll have, I don&#39;t know, about N^2
+interactions. If I have N features, then I'll have, I don't know, about N^2
 
 130
 00:10:53,710 --> 00:10:58,230
@@ -532,7 +532,7 @@ number of features, I mean, it grows much more quickly than the number of featur
 
 133
 00:11:06,320 --> 00:11:09,160
-And so, adding the next feature, you&#39;re going to have to consider all of the
+And so, adding the next feature, you're going to have to consider all of the
 
 134
 00:11:09,160 --> 00:11:13,190
@@ -552,7 +552,7 @@ are just, this is just considering pairwise interactions between one feature
 
 138
 00:11:27,900 --> 00:11:31,280
-and another. If I have to start worrying about subsets of features, I&#39;m thinking
+and another. If I have to start worrying about subsets of features, I'm thinking
 
 139
 00:11:31,280 --> 00:11:35,040
@@ -564,7 +564,7 @@ this step, this number of, of potential interactions will grow not just it will
 
 141
 00:11:39,920 --> 00:11:45,700
-grow, in fact, exponentially. So, it&#39;d be, you know, way more than quadratic. And the
+grow, in fact, exponentially. So, it'd be, you know, way more than quadratic. And the
 
 142
 00:11:45,700 --> 00:11:50,970
@@ -612,7 +612,7 @@ use productively. Alright? And that really I think is the big, big idea that, on
 
 153
 00:12:41,390 --> 00:12:46,310
-the big ideas that we&#39;ve talked about throughout the course. And, and I hope one
+the big ideas that we've talked about throughout the course. And, and I hope one
 
 154
 00:12:46,310 --> 00:12:51,520
@@ -628,7 +628,7 @@ a well-done language. By production standards, it is extremely well-done. So,
 
 157
 00:13:00,810 --> 00:13:05,470
-it&#39;s one of the best designed and best specified languages that&#39;s in, in use
+it's one of the best designed and best specified languages that's in, in use
 
 158
 00:13:05,470 --> 00:13:11,780
@@ -656,11 +656,11 @@ by the type-system and also there was a manage language and had a garbage
 
 164
 00:13:37,750 --> 00:13:41,870
-collected memory. But that doesn&#39;t mean it&#39;s perfect. And it, and Java also
+collected memory. But that doesn't mean it's perfect. And it, and Java also
 
 165
 00:13:41,870 --> 00:13:47,070
-includes some features that, at the time that it was designed, that we didn&#39;t fully
+includes some features that, at the time that it was designed, that we didn't fully
 
 166
 00:13:47,070 --> 00:13:50,480
@@ -668,7 +668,7 @@ understand and I would say, you know, that this are probably the rough areas whe
 
 167
 00:13:50,480 --> 00:13:55,230
-there&#39;s still some roughness in the, in, in the Java design. So, things like the
+there's still some roughness in the, in, in the Java design. So, things like the
 
 168
 00:13:55,230 --> 00:13:59,260
@@ -688,9 +688,8 @@ And the other thing is that Java has a lot of features. And as I said before whe
 
 172
 00:14:15,750 --> 00:14:19,830
-have a lot of features, you&#39;re going to have even more feature interactions and
+have a lot of features, you're going to have even more feature interactions and
 
 173
 00:14:19,830 --> 00:14:23,850
 that leads to complexity that becomes difficult to manage.
-

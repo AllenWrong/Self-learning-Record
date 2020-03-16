@@ -1,6 +1,6 @@
 0
 00:00:04,089 --> 00:00:07,629
-In the next several videos we&#39;re going to apply what we&#39;ve learned in the class to
+In the next several videos we're going to apply what we've learned in the class to
 
 1
 00:00:07,629 --> 00:00:12,090
@@ -8,11 +8,11 @@ analysis of various features of Java. This will give us a chance to both look at
 
 2
 00:00:12,090 --> 00:00:16,760
-real programming language and how it&#39;s designed and been done. And also to talk
+real programming language and how it's designed and been done. And also to talk
 
 3
 00:00:16,760 --> 00:00:22,190
-about some features that art in Cool that we haven&#39;t been able to cover thus far in
+about some features that art in Cool that we haven't been able to cover thus far in
 
 4
 00:00:22,190 --> 00:00:29,190
@@ -20,7 +20,7 @@ the course. For the perspective of this class, Java is a kind of Cool on steroid
 
 5
 00:00:29,270 --> 00:00:35,539
-It&#39;s Cool plus more features, many more features. At, at their core Java and Cool
+It's Cool plus more features, many more features. At, at their core Java and Cool
 
 6
 00:00:35,539 --> 00:00:41,370
@@ -36,11 +36,11 @@ culture there with the ideas that were current at that time. So in this video,
 
 9
 00:00:52,350 --> 00:00:56,079
-I&#39;m just going to give a little bit of history of Java so that will be the focus
+I'm just going to give a little bit of history of Java so that will be the focus
 
 10
 00:00:56,079 --> 00:00:59,969
-really of this rather short video. And then in the subsequent videos, we&#39;ll talk
+really of this rather short video. And then in the subsequent videos, we'll talk
 
 11
 00:00:59,969 --> 00:01:05,149
@@ -48,7 +48,7 @@ about all the features or some of the features of Java that are not in Cool. And
 
 12
 00:01:05,149 --> 00:01:08,420
-we&#39;ll use the ideas of course that we&#39;ve been discussing all along through the
+we'll use the ideas of course that we've been discussing all along through the
 
 13
 00:01:08,420 --> 00:01:12,479
@@ -60,7 +60,7 @@ language constructs that are unfortunately were too time consuming or too compli
 
 15
 00:01:18,869 --> 00:01:24,259
-to add to the course project. So I think it&#39;s useful to use a language like
+to add to the course project. So I think it's useful to use a language like
 
 16
 00:01:24,259 --> 00:01:31,259
@@ -136,7 +136,7 @@ the Internet. And in particular people were very concerned about security. And,
 
 34
 00:03:03,769 --> 00:03:10,170
-they didn&#39;t want to be downloading lots of binaries that were programs written in C
+they didn't want to be downloading lots of binaries that were programs written in C
 
 35
 00:03:10,170 --> 00:03:14,249
@@ -152,7 +152,7 @@ they needed to be able to share code over the Internet from other people that yo
 
 38
 00:03:24,680 --> 00:03:30,579
-didn&#39;t necessarily trust completely meant that we needed safer languages than
+didn't necessarily trust completely meant that we needed safer languages than
 
 39
 00:03:30,579 --> 00:03:35,840
@@ -188,7 +188,7 @@ some kind of new application that people want to write that the existing languag
 
 47
 00:04:17,839 --> 00:04:23,099
-don&#39;t serve very well and that provides the opportunity and therefore makes it
+don't serve very well and that provides the opportunity and therefore makes it
 
 48
 00:04:23,099 --> 00:04:27,319
@@ -216,7 +216,7 @@ economy of programming languages. And I would recommend actually that if you
 
 54
 00:04:54,160 --> 00:04:58,120
-haven&#39;t watched that one, then you go back and take a look because there I discuss
+haven't watched that one, then you go back and take a look because there I discuss
 
 55
 00:04:58,120 --> 00:05:04,650
@@ -224,11 +224,11 @@ some of these ideas about how languages are adopted in more detail. So Java also
 
 56
 00:05:04,650 --> 00:05:09,000
-came into existence in a particular technical environment and it&#39;s very
+came into existence in a particular technical environment and it's very
 
 57
 00:05:09,000 --> 00:05:13,389
-common. In fact, it&#39;s normal for new programming languages to borrow heavily
+common. In fact, it's normal for new programming languages to borrow heavily
 
 58
 00:05:13,389 --> 00:05:19,639
@@ -268,7 +268,7 @@ which is a prominent feature in Java. And finally Java is quite a dynamic langua
 
 67
 00:06:10,060 --> 00:06:14,889
-meaning that there many things that are not done staticly. They&#39;re done
+meaning that there many things that are not done staticly. They're done
 
 68
 00:06:14,889 --> 00:06:19,520
@@ -276,7 +276,7 @@ dynamically so features like reflection would be one example of that. And there
 
 69
 00:06:19,520 --> 00:06:23,080
-are actually quite a few other features and there is some history there. There&#39;s
+are actually quite a few other features and there is some history there. There's
 
 70
 00:06:23,080 --> 00:06:28,780
@@ -288,7 +288,7 @@ but is also a very, very dynamic language. As I said at the beginning this video
 
 72
 00:06:35,150 --> 00:06:39,740
-just an introduction and overview and in the next few videos, we&#39;ll be looking at
+just an introduction and overview and in the next few videos, we'll be looking at
 
 73
 00:06:39,740 --> 00:06:43,220
@@ -300,7 +300,7 @@ exceptions, interfaces, and threads. As well as a bunch of other features that
 
 75
 00:06:48,669 --> 00:06:53,689
-we&#39;ll discuss at least, briefly. One thing to realize is that Java is a big language.
+we'll discuss at least, briefly. One thing to realize is that Java is a big language.
 
 76
 00:06:53,689 --> 00:06:59,560
@@ -321,4 +321,3 @@ all the feature interactions right. All the combinations of the features and, yo
 80
 00:07:15,159 --> 00:07:18,189
 know making sure there are no surprising interactions between them.
-

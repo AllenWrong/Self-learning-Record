@@ -1,6 +1,6 @@
 0
 00:00:04,509 --> 00:00:08,709
-In this video, we&#39;re going to use our example automaton for recognizing viable
+In this video, we're going to use our example automaton for recognizing viable
 
 1
 00:00:08,709 --> 00:00:15,709
@@ -8,7 +8,7 @@ prefixes, to introduce one more idea, The idea of a valid item. To refresh your
 
 2
 00:00:16,890 --> 00:00:19,890
-memory, here&#39;s where we left off last time. This is the complete
+memory, here's where we left off last time. This is the complete
 
 3
 00:00:19,890 --> 00:00:25,199
@@ -24,7 +24,7 @@ deterministic automaton that is equivalent to the non-deterministic automaton. S
 
 6
 00:00:34,890 --> 00:00:39,600
-here&#39;s the deterministic automaton that recognizes exactly the same language. This
+here's the deterministic automaton that recognizes exactly the same language. This
 
 7
 00:00:39,600 --> 00:00:44,069
@@ -32,7 +32,7 @@ automa, this deterministic automaton notices the viable prefixes, of our
 
 8
 00:00:44,069 --> 00:00:49,719
-example grammar. But now notice that each state is a set of items. So there&#39;s a set
+example grammar. But now notice that each state is a set of items. So there's a set
 
 9
 00:00:49,719 --> 00:00:54,670
@@ -68,7 +68,7 @@ little easier to understand if you are seeing this for the first time. Now we
 
 17
 00:01:33,270 --> 00:01:40,090
-need another definition. We&#39;ll say that a given item is valid for a viable prefix
+need another definition. We'll say that a given item is valid for a viable prefix
 
 18
 00:01:40,090 --> 00:01:45,300
@@ -108,7 +108,7 @@ items that are in the final state of the DFA after it reads that prefix. So thes
 
 27
 00:02:31,659 --> 00:02:38,659
-are the items that describe the state after you&#39;ve seen the stack alpha. Now, an
+are the items that describe the state after you've seen the stack alpha. Now, an
 
 28
 00:02:39,829 --> 00:02:44,920
@@ -136,7 +136,7 @@ go round and round in this state. So if I have a sequence of five open parens as
 
 34
 00:03:10,310 --> 00:03:16,540
-input, then I&#39;ll have transitions one, two, three, four, five, all looping in
+input, then I'll have transitions one, two, three, four, five, all looping in
 
 35
 00:03:16,540 --> 00:03:22,430
@@ -149,4 +149,3 @@ that just says that this item is valid for any prefix, or for, excuse me, any
 37
 00:03:27,109 --> 00:03:29,030
 sequence of open parens.
-

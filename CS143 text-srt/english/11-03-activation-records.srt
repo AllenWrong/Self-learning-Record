@@ -4,11 +4,11 @@ In the previous video, we talked about activation but we never said what
 
 1
 00:00:07,720 --> 00:00:11,680
-information we actually need to keep for an activation. That&#39;s the topic of this
+information we actually need to keep for an activation. That's the topic of this
 
 2
 00:00:11,680 --> 00:00:18,680
-video. An activation record is all the information that&#39;s needed to manage the
+video. An activation record is all the information that's needed to manage the
 
 3
 00:00:20,359 --> 00:00:27,289
@@ -44,7 +44,7 @@ information both about that procedure and about the procedure that called it. No
 
 11
 00:01:06,210 --> 00:01:10,810
-up this point, we haven&#39;t said why we need to keep information about activations at
+up this point, we haven't said why we need to keep information about activations at
 
 12
 00:01:10,810 --> 00:01:15,890
@@ -56,7 +56,7 @@ activation that is needed on order to properly execute the procedure and we have
 
 14
 00:01:19,509 --> 00:01:23,179
-to track that somewhere and that&#39;s the activation record is gonna be forced. It&#39;s
+to track that somewhere and that's the activation record is gonna be forced. It's
 
 15
 00:01:23,179 --> 00:01:27,929
@@ -64,7 +64,7 @@ gonna be the whole, the information needed to properly execute the procedure. So
 
 16
 00:01:27,929 --> 00:01:31,310
-let&#39;s look at that in a little bit more detail. Let&#39;s consider this situation
+let's look at that in a little bit more detail. Let's consider this situation
 
 17
 00:01:31,310 --> 00:01:37,530
@@ -88,11 +88,11 @@ to resume. And so in between, while g is running, we have to save the state of t
 
 22
 00:01:58,909 --> 00:02:03,990
-procedure activation of f somewhere so that we can resume it properly and that&#39;s
+procedure activation of f somewhere so that we can resume it properly and that's
 
 23
 00:02:03,990 --> 00:02:10,509
-again what the activation record is for, And so g&#39;s activation record Is going to
+again what the activation record is for, And so g's activation record Is going to
 
 24
 00:02:10,508 --> 00:02:15,540
@@ -104,11 +104,11 @@ there will be some inform ation about g that we just need in order to run g, But
 
 26
 00:02:19,900 --> 00:02:24,540
-also, g&#39;s activation record is going to have to store whatever we need to be able
+also, g's activation record is going to have to store whatever we need to be able
 
 27
 00:02:24,540 --> 00:02:31,540
-to resume the execution of procedure f. So let&#39;s work through an example. Here&#39;s one
+to resume the execution of procedure f. So let's work through an example. Here's one
 
 28
 00:02:32,140 --> 00:02:38,140
@@ -116,7 +116,7 @@ of the programs that we looked at in the last video, and here is a design for a
 
 29
 00:02:38,140 --> 00:02:43,439
-concrete activation record for the procedure f. So we&#39;ll have one position
+concrete activation record for the procedure f. So we'll have one position
 
 30
 00:02:43,439 --> 00:02:48,650
@@ -132,11 +132,11 @@ one parameter so I only need one word here to hold the, the argument to the func
 
 33
 00:02:59,060 --> 00:03:04,250
-There will be a control link so a pointer to the previous or the caller&#39;s activation
+There will be a control link so a pointer to the previous or the caller's activation
 
 34
 00:03:04,250 --> 00:03:10,430
-and we&#39;ll also have a slot for the return address so the address in memory or the
+and we'll also have a slot for the return address so the address in memory or the
 
 35
 00:03:10,430 --> 00:03:16,650
@@ -144,7 +144,7 @@ address of the instruction that we are supposed to jump to after the execution o
 
 36
 00:03:16,650 --> 00:03:23,650
-f completes. So now let&#39;s just execute this program by hand and work out what the
+f completes. So now let's just execute this program by hand and work out what the
 
 37
 00:03:24,730 --> 00:03:30,000
@@ -156,11 +156,11 @@ invoked, it will call main. There will be an activation record for main And we w
 
 39
 00:03:37,430 --> 00:03:40,659
-not gonna worry about that. We&#39;re just gonna focus on that. So there&#39;s some stuff
+not gonna worry about that. We're just gonna focus on that. So there's some stuff
 
 40
 00:03:40,659 --> 00:03:46,730
-for main but we&#39;re not going to do to, to, to talk about that And then main is going
+for main but we're not going to do to, to, to talk about that And then main is going
 
 41
 00:03:46,730 --> 00:03:51,109
@@ -168,15 +168,15 @@ to call f, all right And so, when main calls f, an activation record will be
 
 42
 00:03:51,109 --> 00:03:58,109
-pushed onto the stack and we&#39;ll have four slots and or four fields for values. And
+pushed onto the stack and we'll have four slots and or four fields for values. And
 
 43
 00:04:01,760 --> 00:04:05,480
-what we&#39;re going now while the first lines for the result well is just starting to
+what we're going now while the first lines for the result well is just starting to
 
 44
 00:04:05,480 --> 00:04:09,219
-run if it&#39;s just beginning execution so there is nothing to put there at the
+run if it's just beginning execution so there is nothing to put there at the
 
 45
 00:04:09,219 --> 00:04:14,379
@@ -188,7 +188,7 @@ argument to f so that would be the number three. The third slot will hold the
 
 47
 00:04:21,069 --> 00:04:26,970
-controlling so that&#39;s gonna point back. To the activation for main and the fourth
+controlling so that's gonna point back. To the activation for main and the fourth
 
 48
 00:04:26,970 --> 00:04:32,130
@@ -196,11 +196,11 @@ position will hold the return address and this is actually not completely trivia
 
 49
 00:04:32,130 --> 00:04:36,569
-because f is called in multiple places. So if you look at the program, there&#39;s a
+because f is called in multiple places. So if you look at the program, there's a
 
 50
 00:04:36,569 --> 00:04:43,569
-called f in main and there&#39;s a call to f inside of f itself. And so Depending on
+called f in main and there's a call to f inside of f itself. And so Depending on
 
 51
 00:04:44,680 --> 00:04:49,220
@@ -216,11 +216,11 @@ wanna return to the. Whatever instructions comes after the called f which is jus
 
 54
 00:04:58,580 --> 00:05:02,330
-gonna be something that wraps up the execution program since it&#39;s the only exit
+gonna be something that wraps up the execution program since it's the only exit
 
 55
 00:05:02,330 --> 00:05:08,979
-point of main inside of f. It&#39;s going to be the conclusion of the conditionals. So,
+point of main inside of f. It's going to be the conclusion of the conditionals. So,
 
 56
 00:05:08,979 --> 00:05:13,759
@@ -236,7 +236,7 @@ to one of two different places, okay? So, in this case F is being called from ma
 
 59
 00:05:25,090 --> 00:05:31,720
-and so we&#39;ll put the single star address in that position of the activation record,
+and so we'll put the single star address in that position of the activation record,
 
 60
 00:05:31,720 --> 00:05:38,150
@@ -244,7 +244,7 @@ All right? So then f is called the second time, the body of f executes and the
 
 61
 00:05:38,150 --> 00:05:42,900
-argument three is not zero that&#39;s way we wined up calling f again but that means
+argument three is not zero that's way we wined up calling f again but that means
 
 62
 00:05:42,900 --> 00:05:48,479
@@ -252,15 +252,15 @@ that another activation record will be pushed on to the stack that will also hel
 
 63
 00:05:48,479 --> 00:05:52,340
-for slots as an activation record for f (I probably should label these) so that&#39;s an
+for slots as an activation record for f (I probably should label these) so that's an
 
 64
 00:05:52,340 --> 00:05:58,580
-activation of f, so it&#39;s also an activation of f. And what goes in this one
+activation of f, so it's also an activation of f. And what goes in this one
 
 65
 00:05:58,580 --> 00:06:03,729
-well again the result doesn&#39;t have anything initially in it. The argument in
+well again the result doesn't have anything initially in it. The argument in
 
 66
 00:06:03,729 --> 00:06:09,129
@@ -280,7 +280,7 @@ activation record design. So, here is the same picture, just running a bit more
 
 70
 00:06:28,120 --> 00:06:33,039
-neatly, and there&#39;s one additional we want point out which is at this stack of
+neatly, and there's one additional we want point out which is at this stack of
 
 71
 00:06:33,039 --> 00:06:39,500
@@ -292,11 +292,11 @@ extract as the kinds of stacks who were probably taught about in a data structur
 
 73
 00:06:44,699 --> 00:06:49,930
-class if you&#39;ve had such a class. So here, there are distinct activation records on
+class if you've had such a class. So here, there are distinct activation records on
 
 74
 00:06:49,930 --> 00:06:52,930
-the stack and we treat them as such, in the Runtime system we&#39;ll treat them as
+the stack and we treat them as such, in the Runtime system we'll treat them as
 
 75
 00:06:52,930 --> 00:06:58,780
@@ -320,7 +320,7 @@ exploit the facts that these activations are adjacent to each other in memory an
 
 80
 00:07:20,430 --> 00:07:27,430
-we&#39;ll see one such potential trick in just a moment. To summarize some of the
+we'll see one such potential trick in just a moment. To summarize some of the
 
 81
 00:07:27,780 --> 00:07:33,080
@@ -332,15 +332,15 @@ interesting. So it has no argument or local variables and if results is never
 
 83
 00:07:36,629 --> 00:07:40,840
-used And so while it does have an activation record, we&#39;re just not focusing
+used And so while it does have an activation record, we're just not focusing
 
 84
 00:07:40,840 --> 00:07:45,590
-on that and we&#39;re not concerning ourselves with what goes in at activation record.
+on that and we're not concerning ourselves with what goes in at activation record.
 
 85
 00:07:45,590 --> 00:07:52,590
-We&#39;re just focusing on the activation record for f. Just be true this clear, the
+We're just focusing on the activation record for f. Just be true this clear, the
 
 86
 00:07:52,849 --> 00:07:57,659
@@ -352,7 +352,7 @@ These are actual memory addresses and they refer to addresses of code. Those are
 
 88
 00:08:03,300 --> 00:08:07,879
-addresses of the instructions that come after they call f because that&#39;s the place
+addresses of the instructions that come after they call f because that's the place
 
 89
 00:08:07,879 --> 00:08:14,030
@@ -372,11 +372,11 @@ fine depending on the structure of the rest of the cogenerator in the runtime
 
 93
 00:08:28,509 --> 00:08:33,919
-system. So, in particular many compilers don&#39;t use the controlling because they
+system. So, in particular many compilers don't use the controlling because they
 
 94
 00:08:33,919 --> 00:08:39,610
-don&#39;t need inexpensive link to be able to find the calling or the activation record
+don't need inexpensive link to be able to find the calling or the activation record
 
 95
 00:08:39,610 --> 00:08:45,829
@@ -384,11 +384,11 @@ of the calling procedure and in fact, in your class project, the Khul compiler y
 
 96
 00:08:45,829 --> 00:08:52,510
-won&#39;t be using a control link Most. Activation records won&#39;t have the return
+won't be using a control link Most. Activation records won't have the return
 
 97
 00:08:52,510 --> 00:08:56,660
-value on the activation record because it&#39;d be more efficient and convenient to
+value on the activation record because it'd be more efficient and convenient to
 
 98
 00:08:56,660 --> 00:09:02,720
@@ -408,15 +408,15 @@ sufficient information in it to e nable the generated code to properly execute t
 
 102
 00:09:18,110 --> 00:09:25,110
-procedure that&#39;s being called And also to resume execution of the calling procedure.
+procedure that's being called And also to resume execution of the calling procedure.
 
 103
 00:09:25,269 --> 00:09:28,790
-So far, we&#39;ve only looked at the procedure call for this activation record. We
+So far, we've only looked at the procedure call for this activation record. We
 
 104
 00:09:28,790 --> 00:09:34,490
-haven&#39;t talked about what happens when activations return. So let&#39;s consider what
+haven't talked about what happens when activations return. So let's consider what
 
 105
 00:09:34,490 --> 00:09:39,360
@@ -424,11 +424,11 @@ happens in our example after the second called f that this one this activation
 
 106
 00:09:39,360 --> 00:09:44,470
-down here returns. So what&#39;s going to happen is we&#39;re going to make the caller,
+down here returns. So what's going to happen is we're going to make the caller,
 
 107
 00:09:44,470 --> 00:09:49,120
-the current activation so it&#39;ll actually become the top of the stack so I&#39;ll have this big fat
+the current activation so it'll actually become the top of the stack so I'll have this big fat
 
 108
 00:09:49,120 --> 00:09:55,050
@@ -444,7 +444,7 @@ to resume executing. And the interesting thing here is to note that, like I said
 
 111
 00:10:06,130 --> 00:10:12,560
-before, this isn&#39;t as abstract as a stack in a data structures course. So while we
+before, this isn't as abstract as a stack in a data structures course. So while we
 
 112
 00:10:12,560 --> 00:10:17,079
@@ -476,7 +476,7 @@ levels called. So the advantage of placing the return value in the first positio
 
 119
 00:10:51,690 --> 00:10:56,070
-the frame that the call can find it at a fix offset from its own frame. Let&#39;s back
+the frame that the call can find it at a fix offset from its own frame. Let's back
 
 120
 00:10:56,070 --> 00:11:03,070
@@ -500,7 +500,7 @@ the four + one position and five words passed the top of the frame. So in
 
 125
 00:11:25,690 --> 00:11:29,750
-particular, they&#39;ll be able to find this where in memory and even though this has
+particular, they'll be able to find this where in memory and even though this has
 
 126
 00:11:29,750 --> 00:11:33,450
@@ -512,7 +512,7 @@ until another procedure is called. And so, if we immediately read the result of 
 
 128
 00:11:38,680 --> 00:11:42,050
-function call after we return from the function, we&#39;ll be able to pick up that
+function call after we return from the function, we'll be able to pick up that
 
 129
 00:11:42,050 --> 00:11:49,050
@@ -520,11 +520,11 @@ result and then use it in the continuation of the execution of the call in proce
 
 130
 00:11:50,389 --> 00:11:53,610
-And once again, I just wanna stress, I know this is a couple of times, but it&#39;s
+And once again, I just wanna stress, I know this is a couple of times, but it's
 
 131
 00:11:53,610 --> 00:11:57,420
-very important that there&#39;s absolutely nothing magic about this organization. We
+very important that there's absolutely nothing magic about this organization. We
 
 132
 00:11:57,420 --> 00:12:01,110
@@ -544,7 +544,7 @@ faster code or in a simpler code generator And I know I also mentioned this befo
 
 136
 00:12:15,670 --> 00:12:19,110
-it&#39;s also an important point in a production compiler we would produce much
+it's also an important point in a production compiler we would produce much
 
 137
 00:12:19,110 --> 00:12:23,449
@@ -576,7 +576,7 @@ record. And what does this mean, this mean that the activation record layout and
 
 144
 00:12:54,209 --> 00:13:00,050
-code generator have to be designed together. Okay. So, you can&#39;t just assign
+code generator have to be designed together. Okay. So, you can't just assign
 
 145
 00:13:00,050 --> 00:13:02,980
@@ -589,4 +589,3 @@ is gonna be or vice versa, This two things needs to designed together because th
 147
 00:13:07,589 --> 00:13:09,120
 depend on each other.
-

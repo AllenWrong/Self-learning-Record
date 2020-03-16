@@ -1,6 +1,6 @@
 0
 00:00:04,019 --> 00:00:08,100
-In this video we&#39;re gonna continue our discussion on self-type, by talking about
+In this video we're gonna continue our discussion on self-type, by talking about
 
 1
 00:00:08,100 --> 00:00:12,119
@@ -8,11 +8,11 @@ the type-level operations that are available on self-type. And this will help
 
 2
 00:00:12,119 --> 00:00:19,119
-to clarify what self-type actually is, and it&#39;s role in the type system. Let&#39;s begin
+to clarify what self-type actually is, and it's role in the type system. Let's begin
 
 3
 00:00:20,630 --> 00:00:23,690
-by thinking about the example that we discussed last time and if you&#39;ve
+by thinking about the example that we discussed last time and if you've
 
 4
 00:00:23,690 --> 00:00:27,150
@@ -28,11 +28,11 @@ one method called INC that returned something itself type and all it did was
 
 7
 00:00:45,149 --> 00:00:52,149
-to increment the counter field and return the self-objects. And I&#39;ve probably made
+to increment the counter field and return the self-objects. And I've probably made
 
 8
 00:00:52,270 --> 00:00:56,800
-some syntax errors here but that&#39;s not really important. That&#39;s basic code for
+some syntax errors here but that's not really important. That's basic code for
 
 9
 00:00:56,800 --> 00:01:01,480
@@ -40,7 +40,7 @@ the CAL class. And the question is what can be the dynamic type of the object
 
 10
 00:01:01,480 --> 00:01:06,930
-that&#39;s actually returned by INC. And the answer here is it could be whatever is the
+that's actually returned by INC. And the answer here is it could be whatever is the
 
 11
 00:01:06,930 --> 00:01:13,369
@@ -52,11 +52,11 @@ think about a big program where there is multiple classes that inherit from coun
 
 13
 00:01:18,729 --> 00:01:25,729
-Then the answer is that INC could return count. Or any subclass of count. So it&#39;s
+Then the answer is that INC could return count. Or any subclass of count. So it's
 
 14
 00:01:33,289 --> 00:01:37,969
-going to return something that&#39;s at least, at most count, and, but it could return
+going to return something that's at least, at most count, and, but it could return
 
 15
 00:01:37,969 --> 00:01:40,740
@@ -68,19 +68,19 @@ could be a sub classic count, or a sub class of a sub class of count. Anything
 
 17
 00:01:46,560 --> 00:01:52,520
-that inherits directly or indirectly from count is a possibility. So what&#39;s the
+that inherits directly or indirectly from count is a possibility. So what's the
 
 18
 00:01:52,520 --> 00:01:58,749
-general case? Well, let&#39;s think about a class c. And in this class C, there&#39;s some
+general case? Well, let's think about a class c. And in this class C, there's some
 
 19
 00:01:58,749 --> 00:02:05,749
-expression buried somewhere inside of it that has the type self-type. It doesn&#39;t
+expression buried somewhere inside of it that has the type self-type. It doesn't
 
 20
 00:02:05,889 --> 00:02:09,720
-really matter how that expression got the type, self-type or what it is. Let&#39;s just
+really matter how that expression got the type, self-type or what it is. Let's just
 
 21
 00:02:09,720 --> 00:02:16,170
@@ -92,7 +92,7 @@ expression e. And from our discussion on the previous slide, it seems clear the
 
 23
 00:02:20,370 --> 00:02:25,450
-dynamic type of e, when you run e, you&#39;re going to get back something that&#39;s a
+dynamic type of e, when you run e, you're going to get back something that's a
 
 24
 00:02:25,450 --> 00:02:30,660
@@ -100,7 +100,7 @@ subtype of the class c, the enclosing class in which the self-type appears. And
 
 25
 00:02:30,660 --> 00:02:34,180
-that&#39;s interestin g because it shows us that the, the meaning of self-type
+that's interestin g because it shows us that the, the meaning of self-type
 
 26
 00:02:34,180 --> 00:02:39,420
@@ -108,7 +108,7 @@ actually depends on the context. So, what this self-type means, this self-type m
 
 27
 00:02:39,420 --> 00:02:45,010
-a subtype of the class C. If I&#39;d written self-type in a class D, in the de,
+a subtype of the class C. If I'd written self-type in a class D, in the de,
 
 28
 00:02:45,010 --> 00:02:49,300
@@ -116,11 +116,11 @@ somewhere in the definition of class D, there it would mean a subtype of the cla
 
 29
 00:02:49,300 --> 00:02:55,500
-D. And so to remind ourselves, what class we&#39;re talking about, what enclosing class
+D. And so to remind ourselves, what class we're talking about, what enclosing class
 
 30
 00:02:55,500 --> 00:02:59,620
-we&#39;re talking about, we&#39;re gonna subscript occurrences of self-type with a class
+we're talking about, we're gonna subscript occurrences of self-type with a class
 
 31
 00:02:59,620 --> 00:03:04,960
@@ -148,7 +148,7 @@ illustrate what self-type really is. The best way to think of an occurrence of
 
 37
 00:03:32,940 --> 00:03:38,490
-self-type is that it&#39;s a type variable that ranges over all the sub-classes of
+self-type is that it's a type variable that ranges over all the sub-classes of
 
 38
 00:03:38,490 --> 00:03:41,500
@@ -156,11 +156,11 @@ the class in which it appears. So self-types of C you should think of as a
 
 39
 00:03:41,500 --> 00:03:45,800
-type variable, it&#39;s something that doesn&#39;t have a fixed type, but is guaranteed to be
+type variable, it's something that doesn't have a fixed type, but is guaranteed to be
 
 40
 00:03:45,800 --> 00:03:51,210
-some type founded by C, so it&#39;s gonna be only one of the class. That inherits
+some type founded by C, so it's gonna be only one of the class. That inherits
 
 41
 00:03:51,210 --> 00:03:58,210
@@ -168,7 +168,7 @@ directly or indirectly from the class c. Now that rule that self-types of c is a
 
 42
 00:03:59,650 --> 00:04:03,750
-sub type of the class c has an important consequence. It means that when we&#39;re
+sub type of the class c has an important consequence. It means that when we're
 
 43
 00:04:03,750 --> 00:04:09,319
@@ -176,11 +176,11 @@ doing type checking with self-type, it is always safe, always safe to replace
 
 44
 00:04:09,319 --> 00:04:13,980
-self-types of c by c. So I say, it&#39;s okay to promote any self-types of c, which
+self-types of c by c. So I say, it's okay to promote any self-types of c, which
 
 45
 00:04:13,980 --> 00:04:19,470
-could be c or a sub type of c, to just say, okay, we&#39;re just going to say it&#39;s c.
+could be c or a sub type of c, to just say, okay, we're just going to say it's c.
 
 46
 00:04:19,470 --> 00:04:24,770
@@ -192,15 +192,15 @@ occurrences of self-type sub C by C. Now unfortunately that turns out not to be
 
 48
 00:04:29,789 --> 00:04:33,770
-very useful. Its sound, it&#39;s correct to do that, but that&#39;s really just like not
+very useful. Its sound, it's correct to do that, but that's really just like not
 
 49
 00:04:33,770 --> 00:04:38,870
-having self-type at all. That&#39;s as if we went back to the example we did in the
+having self-type at all. That's as if we went back to the example we did in the
 
 50
 00:04:38,870 --> 00:04:43,360
-last video where we started out without self-type and we found out we couldn&#39;t use
+last video where we started out without self-type and we found out we couldn't use
 
 51
 00:04:43,360 --> 00:04:49,360
@@ -212,35 +212,35 @@ self-types away, we need to incorporate self-type into the type system. And the
 
 53
 00:04:54,499 --> 00:04:58,490
-way we&#39;re going to do that is by looking at the operations that work on types in
+way we're going to do that is by looking at the operations that work on types in
 
 54
 00:04:58,490 --> 00:05:01,680
-the type system, and there are two of them. There&#39;s the sub-type relationship
+the type system, and there are two of them. There's the sub-type relationship
 
 55
 00:05:01,680 --> 00:05:05,349
-that we&#39;ve talked about before, so when one type is a sub-type of another, and
+that we've talked about before, so when one type is a sub-type of another, and
 
 56
 00:05:05,349 --> 00:05:09,819
-there&#39;s the least upper bound operation that tells us what the smallest type is
+there's the least upper bound operation that tells us what the smallest type is
 
 57
 00:05:09,819 --> 00:05:14,909
-that&#39;s bigger than both of two argument types. And, all we have to do and what
+that's bigger than both of two argument types. And, all we have to do and what
 
 58
 00:05:14,909 --> 00:05:20,050
-we&#39;re going to do now is extend these operations to handle the type self-type.
+we're going to do now is extend these operations to handle the type self-type.
 
 59
 00:05:20,050 --> 00:05:24,300
-So let&#39;s begin with a sub-type relationship and in our definition here
+So let's begin with a sub-type relationship and in our definition here
 
 60
 00:05:24,300 --> 00:05:28,229
-we&#39;re going to use sub-types T and T&#39;, and these are just normal class names. They
+we're going to use sub-types T and T', and these are just normal class names. They
 
 61
 00:05:28,229 --> 00:05:35,229
@@ -296,11 +296,11 @@ such a way that we never need to compare self-types from different classes. And 
 
 74
 00:06:41,279 --> 00:06:44,360
-haven&#39;t shown you that, that&#39;s the case yet. But when we actually go through the
+haven't shown you that, that's the case yet. But when we actually go through the
 
 75
 00:06:44,360 --> 00:06:51,360
-type rules for self-type you&#39;ll see that is true. Now another possibility is that
+type rules for self-type you'll see that is true. Now another possibility is that
 
 76
 00:06:52,479 --> 00:06:56,180
@@ -308,11 +308,11 @@ we have self-type on one side and the n a regular type on the other side. So whe
 
 77
 00:06:56,180 --> 00:07:02,949
-self-types of c a type of t? Well, we&#39;re going to say if that&#39;s true if C is the
+self-types of c a type of t? Well, we're going to say if that's true if C is the
 
 78
 00:07:02,949 --> 00:07:07,889
-subtype of T. And here we&#39;re using our rule that it&#39;s always safe to replace
+subtype of T. And here we're using our rule that it's always safe to replace
 
 79
 00:07:07,889 --> 00:07:14,889
@@ -356,7 +356,7 @@ unrelated. You know, if they are inherent from object and they have nothing to d
 
 89
 00:08:02,169 --> 00:08:08,349
-with each other. Well, than clearly T can&#39;t be a sub type of self-type sub C.
+with each other. Well, than clearly T can't be a sub type of self-type sub C.
 
 90
 00:08:08,349 --> 00:08:12,719
@@ -372,11 +372,11 @@ type of C well then you might think that could work out. But it turns out that w
 
 93
 00:08:23,119 --> 00:08:28,439
-can&#39;t allow it even in that case. And here&#39;s the reason why, think about a
+can't allow it even in that case. And here's the reason why, think about a
 
 94
 00:08:28,439 --> 00:08:35,439
-hierarchy where T has some subclass, let&#39;s just say that it has a subclass A. And now
+hierarchy where T has some subclass, let's just say that it has a subclass A. And now
 
 95
 00:08:36,539 --> 00:08:43,330
@@ -384,11 +384,11 @@ because self-types of C ranges over all the possible subtypes of C, we could plu
 
 96
 00:08:43,330 --> 00:08:49,840
-in A here and T is not a subtype of A, they&#39;re in the wrong relationship. And so
+in A here and T is not a subtype of A, they're in the wrong relationship. And so
 
 97
 00:08:49,840 --> 00:08:55,090
-it doesn&#39;t work for all the possible values of subtypes of C we can&#39;t say that
+it doesn't work for all the possible values of subtypes of C we can't say that
 
 98
 00:08:55,090 --> 00:09:01,030
@@ -404,7 +404,7 @@ where T is actually a leaf of the class hierarchy. And let me actually draw this
 
 101
 00:09:12,870 --> 00:09:18,430
-little bit differently just to emphasize this. Let&#39;s say t hat C. Is a class up
+little bit differently just to emphasize this. Let's say t hat C. Is a class up
 
 102
 00:09:18,430 --> 00:09:24,030
@@ -412,11 +412,11 @@ here and then T you know, is through some chain of inheritance relationships is 
 
 103
 00:09:24,030 --> 00:09:27,570
-subtype of C. So it&#39;s not immediate but there might be other classes in between.
+subtype of C. So it's not immediate but there might be other classes in between.
 
 104
 00:09:27,570 --> 00:09:31,330
-Just emphasize, this isn&#39;t, doesn&#39;t, this relationship doesn&#39;t have to be immediate
+Just emphasize, this isn't, doesn't, this relationship doesn't have to be immediate
 
 105
 00:09:31,330 --> 00:09:36,770
@@ -436,11 +436,11 @@ is in the subtype hierarchy of C. But the problem is that this is extremely frag
 
 109
 00:09:58,320 --> 00:10:02,740
-and doesn&#39;t work, if you modify the program. In particular, a programmer might
+and doesn't work, if you modify the program. In particular, a programmer might
 
 110
 00:10:02,740 --> 00:10:09,740
-come along, and add some class A over here that&#39;s unrelated to T, but is also a
+come along, and add some class A over here that's unrelated to T, but is also a
 
 111
 00:10:09,830 --> 00:10:15,280
@@ -468,15 +468,15 @@ adding another class over here, all of sudden you would get type errors and
 
 117
 00:10:38,160 --> 00:10:42,290
-pieces of codes that had previously been typed check to work and hadn&#39;t changed at
+pieces of codes that had previously been typed check to work and hadn't changed at
 
 118
 00:10:42,290 --> 00:10:48,340
-all. It just wouldn&#39;t be a very nice language design. So, summarize, T, is
+all. It just wouldn't be a very nice language design. So, summarize, T, is
 
 119
 00:10:48,340 --> 00:10:55,340
-never a sub type of self-types of C. And finally if we&#39;re comparing two normal
+never a sub type of self-types of C. And finally if we're comparing two normal
 
 120
 00:10:56,190 --> 00:11:00,440
@@ -484,7 +484,7 @@ types with not self-type then we just use the rules that we gave before. So the
 
 121
 00:11:00,440 --> 00:11:04,490
-self-typing rules we had for normal class names haven&#39;t changed at all. And that
+self-typing rules we had for normal class names haven't changed at all. And that
 
 122
 00:11:04,490 --> 00:11:08,370
@@ -497,4 +497,3 @@ self-type just on the left side or just on the right side, and finally we can ha
 124
 00:11:12,250 --> 00:11:14,570
 subtyping relationship with no self-type at all.
-

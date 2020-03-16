@@ -12,11 +12,11 @@ about what the methods are. All the rest of the rules just pass the method envir
 
 3
 00:00:14,099 --> 00:00:17,820
-along. So what do I mean by that? Well, here&#39;s our rule for add, with
+along. So what do I mean by that? Well, here's our rule for add, with
 
 4
 00:00:17,820 --> 00:00:21,260
-just the object environment. So now what were going to do, is we&#39;re going to add a
+just the object environment. So now what were going to do, is we're going to add a
 
 5
 00:00:21,260 --> 00:00:24,760
@@ -44,7 +44,7 @@ actual full environment for Cool type checking consists of three things. First o
 
 11
 00:00:50,159 --> 00:00:54,559
-all, there&#39;s the mapping O, that gives types to object IDs. There&#39;s this mapping
+all, there's the mapping O, that gives types to object IDs. There's this mapping
 
 12
 00:00:54,559 --> 00:00:58,389
@@ -52,7 +52,7 @@ M, that gives types to methods. And finally, we just need to know the name of
 
 13
 00:00:58,389 --> 00:01:02,959
-the current class. So, whatever class the expression we&#39;re type checking actually sits
+the current class. So, whatever class the expression we're type checking actually sits
 
 14
 00:01:02,959 --> 00:01:09,030
@@ -72,11 +72,11 @@ that the expression sits in the class C. Then we can prove that the expression E
 
 18
 00:01:24,240 --> 00:01:30,020
-the type T. And here&#39;s an example, the ad example, the, the rule for addition again,
+the type T. And here's an example, the ad example, the, the rule for addition again,
 
 19
 00:01:30,020 --> 00:01:35,469
-written out with the full environment. So the rules that I&#39;ve given
+written out with the full environment. So the rules that I've given
 
 20
 00:01:35,469 --> 00:01:39,329
@@ -88,7 +88,7 @@ different rules. But there are some general themes in type checking. First of
 
 22
 00:01:43,090 --> 00:01:47,189
-all, type rules are defined on the structure of expressions. So they&#39;re typically
+all, type rules are defined on the structure of expressions. So they're typically
 
 23
 00:01:47,189 --> 00:01:51,590
@@ -104,11 +104,11 @@ and more generally any free names in an expression, things like method
 
 26
 00:02:01,039 --> 00:02:05,520
-names, they&#39;re going to be modeled by an environment, so we&#39;re going to have some mapping
+names, they're going to be modeled by an environment, so we're going to have some mapping
 
 27
 00:02:05,520 --> 00:02:10,259
-sitting around that&#39;s going to tell us any kind of fr-. A Russian what assumptions
+sitting around that's going to tell us any kind of fr-. A Russian what assumptions
 
 28
 00:02:10,258 --> 00:02:15,849
@@ -116,11 +116,11 @@ the type rules should make about the types of those names And one thing
 
 29
 00:02:15,849 --> 00:02:18,909
-you&#39;ve probably noticed by now but it&#39;s worth saying explicitly is that type
+you've probably noticed by now but it's worth saying explicitly is that type
 
 30
 00:02:18,909 --> 00:02:24,340
-rules are really very compact. The notation is not complicated but there&#39;s actually
+rules are really very compact. The notation is not complicated but there's actually
 
 31
 00:02:24,340 --> 00:02:27,730
@@ -129,4 +129,3 @@ a lot of information in these rules. I mean you have to take some time to
 32
 00:02:27,730 --> 00:02:30,760
 sit and read them carefully to really understand what they are saying.
-
