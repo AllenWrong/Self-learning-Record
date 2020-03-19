@@ -1,3 +1,18 @@
+## Error
+
+1. spim error
+```
+  % coolc hello_world.cl 
+  % spim hello_world.s
+  /usr/class/cs143/cool/bin/spim: line 82: /usr/class/cs143/cool/bin/../bin/.i686/spim: No such file or directory
+```
+
+The student_dist.tar.gz is missing the lib/.i686 directory. I solved this by copying the files from the VirtualBox image, but it still failed. I found that my 64-bit Linux (Ubuntu 17.10), did not have the 32-bit libc installed, so I fixed that with:
+
+do the following action:
+`sudo apt-get install libc6-i386`
+
+
 ## Syllabus
 
 This online class will be available as soon as the course begins, but is organized around a weekly cycle.
